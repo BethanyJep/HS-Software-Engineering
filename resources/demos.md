@@ -65,15 +65,16 @@ This document provides step-by-step instructions for live demos that facilitator
 
 **Option B – Simple JavaScript chatbot in CodePen:**
 ```html
-<label for="message">Message</label>
+<label for="message">Message:</label>
 <input id="message" type="text" placeholder="Type hi, help, or bye">
 <button onclick="reply()">Send</button>
 <p id="response"></p>
 ```
 ```javascript
+const messageInput = document.querySelector("#message");
+const responseElement = document.querySelector("#response");
+
 function reply() {
-  const messageInput = document.querySelector("#message");
-  const responseElement = document.querySelector("#response");
   const input = messageInput.value.trim().toLowerCase();
   const defaultResponse = "I don't understand that yet. I'm still learning!";
   const responses = {
@@ -242,8 +243,9 @@ for (let i = 0; i < 360; i++) {
   context.beginPath();
   context.moveTo(x, y);
   // Increasing each step while changing the angle (in radians) creates a spiral.
-  x += Math.cos(i) * i / spiralStepFactor;
-  y += Math.sin(i) * i / spiralStepFactor;
+  const angle = i * Math.PI / 180;
+  x += Math.cos(angle) * i / spiralStepFactor;
+  y += Math.sin(angle) * i / spiralStepFactor;
   context.lineTo(x, y);
   context.stroke();
 }
