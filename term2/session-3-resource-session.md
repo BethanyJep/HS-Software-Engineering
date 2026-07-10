@@ -13,7 +13,7 @@
 By the end of this session, students will be able to:
 
 1. Access at least two free online learning platforms.
-2. Log in to and navigate a beginner coding environment.
+2. Access and navigate a beginner coding environment without creating an account.
 3. Describe their Term 3 project idea at a high level.
 4. Know their project group and feel ready to begin.
 
@@ -44,7 +44,7 @@ By the end of this session, students will be able to:
 
 ### ⏱ 10–30 min | Hands-On: Getting Set Up
 
-**Purpose:** Every student leaves with accounts set up and ready to learn.
+**Purpose:** Every student leaves with the tools open and ready to learn.
 
 **Step-by-step with students (facilitator does it on projector, students follow):**
 
@@ -57,10 +57,10 @@ By the end of this session, students will be able to:
 - Open a new project and change the cat's costume (just to confirm it works!)
 - Facilitator demos: *"In 2 minutes I'm going to make this cat say hello."*
 
-#### Step 3 – Set up on Replit (replit.com) — for more advanced students
-- Go to `replit.com`
-- Sign up with Google
-- Click "Create Repl" → choose Python → write `print("Hello, Alliance Girls!")`
+#### Step 3 – Set up on CodePen (codepen.io) — for more advanced students
+- Go to `codepen.io/pen`
+- No account is needed for a quick coding session.
+- In the HTML panel, write `<h1>Hello, Alliance Girls!</h1>`
 - Run it and celebrate! 🎉
 
 #### Step 4 – Bookmark these learning resources
@@ -158,7 +158,7 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 │  Alliance Girls High School – Software Engineering Program         │
 │                                                                    │
 │  My username/email for Scratch: ___________________________        │
-│  My username for Replit: _________________________________         │
+│  My CodePen pen URL: _____________________________________         │
 │                                                                    │
 │  My go-to learning platform: ____________________________          │
 │                                                                    │

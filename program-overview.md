@@ -61,7 +61,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 ### Tools & Platforms
 | Purpose | Suggested Tool | Notes |
 |---|---|---|
-| Coding | Scratch, Thunkable, or Python (Replit) | Match to skill level |
+| Coding | Scratch, Thunkable, or CodePen (HTML/CSS/JavaScript) | Match to skill level |
 | Design | Figma (free for students) | Good for prototyping |
 | Collaboration | Google Docs / Slides | Already available at school |
 | Version control (advanced) | GitHub | Introduce in Session 3 |

@@ -143,7 +143,7 @@ Ask questions, first hand up gets to answer. Keep score on the whiteboard.
 | 6 | What does AI stand for? | Artificial Intelligence |
 | 7 | Who is often called the "first computer programmer"? | Ada Lovelace |
 | 8 | What does "open source" mean? | Software whose code is publicly available for anyone to use/modify |
-| 9 | What is the name of the free coding platform where many beginners start? | Scratch (or accept: freeCodeCamp, Replit) |
+| 9 | What is the name of the free coding platform where many beginners start? | Scratch (or accept: freeCodeCamp, CodePen) |
 | 10 | What programming language is most commonly used for websites? | JavaScript |
 
 ---

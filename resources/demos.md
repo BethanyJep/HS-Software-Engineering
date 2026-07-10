@@ -8,13 +8,13 @@ This document provides step-by-step instructions for live demos that facilitator
 
 | Demo | Session | Time | Tools | Wow Factor |
 |---|---|---|---|---|
-| 1. Hello World in 3 Languages | Session 1 | 5 min | Browser/Replit | See same idea in different "languages" |
-| 2. Live Chatbot / AI Response | Session 1 | 5–8 min | ChatGPT or simple Python | AI is not magic — it responds to instructions |
+| 1. Hello World in 3 Languages | Session 1 | 5 min | CodePen | See the same idea in different web languages |
+| 2. Live Chatbot / AI Response | Session 1 | 5–8 min | ChatGPT or CodePen | AI is not magic — it responds to instructions |
 | 3. Scratch Interactive Story | Session 1 | 8–10 min | Scratch | Build something playable in minutes |
 | 4. Build a Webpage in 5 Minutes | Session 3 | 10–15 min | Browser (any) | See code → real webpage instantly |
-| 5. Colour-Changing Button (JS) | Session 3 | 5 min | Replit / CodePen | Show interactivity |
-| 6. Make the Computer Speak | Any | 5 min | Python (Replit) | Computer says your name aloud |
-| 7. Draw with Code | Any | 8 min | Python Turtle / Scratch | Art from code |
+| 5. Colour-Changing Button (JS) | Session 3 | 5 min | CodePen | Show interactivity |
+| 6. Make the Computer Speak | Any | 5 min | CodePen | Computer says your name aloud |
+| 7. Draw with Code | Any | 8 min | CodePen / Scratch | Art from code |
 | 8. Simple Survey Form | Session 3 | 10 min | Google Forms or HTML | Show how data is collected |
 | 9. Figma Wireframe Live | Term 3 kickoff | 10 min | Figma (free) | Show design before building |
 | 10. A Real App's Source Code | Any | 5 min | Browser DevTools | Demystify every website |
@@ -25,23 +25,23 @@ This document provides step-by-step instructions for live demos that facilitator
 
 **Best session:** Session 1  
 **Time:** 5 minutes  
-**Tools needed:** Replit.com (open in browser, no login needed for a quick demo)
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
 **What it shows:** The same idea can be expressed in different programming "languages" — just like you can say "hello" in Swahili, English, or French.
 
 **Steps:**
-1. Open `replit.com` → "Start coding" → choose Python
+1. Open `codepen.io/pen` and use the HTML, CSS, and JS panels.
 2. Type and run:
-   ```python
-   print("Hello, Alliance Girls!")
-   ```
-3. Switch to a new Repl → choose JavaScript → type and run:
-   ```javascript
-   console.log("Hello, Alliance Girls!");
-   ```
-4. Switch to HTML → type and run:
    ```html
    <h1>Hello, Alliance Girls!</h1>
+   ```
+3. In the CSS panel, type:
+   ```css
+   h1 { color: darkblue; }
+   ```
+4. In the JS panel, type and run:
+   ```javascript
+   console.log("Hello, Alliance Girls!");
    ```
 
 **What to say:**
@@ -53,7 +53,7 @@ This document provides step-by-step instructions for live demos that facilitator
 
 **Best session:** Session 1  
 **Time:** 5–8 minutes  
-**Tools needed:** Internet browser + ChatGPT (chat.openai.com) OR a simple Python chatbot on Replit
+**Tools needed:** Internet browser + ChatGPT (chat.openai.com) OR a simple JavaScript chatbot on CodePen
 
 **What it shows:** AI responds to instructions; it's not magic — it's patterns and data.
 
@@ -63,22 +63,30 @@ This document provides step-by-step instructions for live demos that facilitator
 3. Watch it respond. Then ask: *"Now write it in Kiswahili."*
 4. Ask the students: *"What do you notice? What could you ask it?"*
 
-**Option B – Simple Python chatbot (offline-friendly):**
-```python
-print("Hello! I'm a simple chatbot.")
-print("Type 'hi', 'help', or 'bye'.")
+**Option B – Simple JavaScript chatbot in CodePen:**
+```html
+<label for="message">Message:</label>
+<input id="message" type="text" placeholder="Type hi, help, or bye"
+  onkeydown="if (event.key === 'Enter') reply()">
+<button onclick="reply()">Send</button>
+<p id="response"></p>
+```
+```javascript
+const messageInput = document.querySelector("#message");
+const responseElement = document.querySelector("#response");
 
-while True:
-    user_input = input("You: ").lower()
-    if user_input == "hi":
-        print("Bot: Hi there! Nice to meet you.")
-    elif user_input == "help":
-        print("Bot: I can say hi and say goodbye. That's about it for now!")
-    elif user_input == "bye":
-        print("Bot: Goodbye! Have a great day.")
-        break
-    else:
-        print("Bot: I don't understand that yet. I'm still learning!")
+function reply() {
+  const input = messageInput.value.trim().toLowerCase();
+  const defaultResponse = "I don't understand that yet. I'm still learning!";
+  const responses = {
+    hi: "Hi there! Nice to meet you.",
+    help: "I can say hi and say goodbye. That's about it for now!",
+    bye: "Goodbye! Have a great day."
+  };
+  responseElement.textContent = responses[input] || defaultResponse;
+  messageInput.value = "";
+  messageInput.focus();
+}
 ```
 
 **What to say:**
@@ -116,7 +124,7 @@ while True:
 
 **Best session:** Session 3 (students follow along on their own devices)  
 **Time:** 10–15 minutes  
-**Tools needed:** Any text editor + browser (or Replit HTML template)
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
 **What it builds:** A personal mini-webpage with a heading, a paragraph, and a background colour.
 
@@ -159,7 +167,7 @@ while True:
 
 **Best session:** Session 3 (to show interactivity)  
 **Time:** 5 minutes  
-**Tools needed:** Replit (HTML/CSS/JS) or CodePen (codepen.io)
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
 **What it builds:** A button that changes the page's background colour when clicked.
 
@@ -190,20 +198,24 @@ while True:
 
 **Best session:** Any (very quick crowd-pleaser)  
 **Time:** 5 minutes  
-**Tools needed:** Python on Replit (pyttsx3 library) OR use browser's Web Speech API
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
-**Option A – Python (if library is available):**
-```python
-import pyttsx3
-engine = pyttsx3.init()
-engine.say("Hello, Alliance Girls! Welcome to the future.")
-engine.runAndWait()
+**CodePen JavaScript (no install needed):**
+Add a button to the HTML panel:
+```html
+<button onclick="speak()">Make the computer speak</button>
 ```
-
-**Option B – Browser (no install needed):**
-Open browser console (F12 → Console) and type:
+Then add this to the JS panel:
 ```javascript
-speechSynthesis.speak(new SpeechSynthesisUtterance("Hello Alliance Girls!"))
+function speak() {
+  if (!("speechSynthesis" in window)) {
+    alert("Speech is not supported in this browser.");
+    return;
+  }
+  speechSynthesis.speak(
+    new SpeechSynthesisUtterance("Hello Alliance Girls!")
+  );
+}
 ```
 
 **What to say:**
@@ -211,29 +223,39 @@ speechSynthesis.speak(new SpeechSynthesisUtterance("Hello Alliance Girls!"))
 
 ---
 
-## Demo 7 – Draw with Code (Python Turtle)
+## Demo 7 – Draw with Code (JavaScript Canvas)
 
 **Best session:** Any (visually satisfying, great for creative students)  
 **Time:** 8 minutes  
-**Tools needed:** Replit → Python (Turtle graphics work there)
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
 **What it builds:** A colourful spiral drawn by code.
 
-```python
-import turtle
+```html
+<canvas id="canvas" width="500" height="400"></canvas>
+```
+```javascript
+const canvas = document.querySelector("#canvas");
+const context = canvas.getContext("2d");
+const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+let x = 250;
+let y = 200;
+// A larger spacing spreads the spiral out; a smaller one makes it tighter.
+const spiralSpacing = 10;
 
-t = turtle.Turtle()
-t.speed(0)
-
-colors = ["red", "orange", "yellow", "green", "blue", "purple"]
-
-for i in range(360):
-    t.pencolor(colors[i % len(colors)])
-    t.width(i / 100 + 1)
-    t.forward(i)
-    t.left(59)
-
-turtle.done()
+// 360 steps make one full turn while the radius grows.
+for (let i = 0; i < 360; i++) {
+  context.strokeStyle = colors[i % colors.length];
+  context.lineWidth = i / 100 + 1;
+  context.beginPath();
+  context.moveTo(x, y);
+  // Increasing each step while changing the angle (in radians) creates a spiral.
+  const angle = i * Math.PI / 180;
+  x += Math.cos(angle) * i / spiralSpacing;
+  y += Math.sin(angle) * i / spiralSpacing;
+  context.lineTo(x, y);
+  context.stroke();
+}
 ```
 
 **What to say:**
