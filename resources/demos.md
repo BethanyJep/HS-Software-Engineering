@@ -66,7 +66,8 @@ This document provides step-by-step instructions for live demos that facilitator
 **Option B – Simple JavaScript chatbot in CodePen:**
 ```html
 <label for="message">Message:</label>
-<input id="message" type="text" placeholder="Type hi, help, or bye">
+<input id="message" type="text" placeholder="Type hi, help, or bye"
+  onkeydown="if (event.key === 'Enter') reply()">
 <button onclick="reply()">Send</button>
 <p id="response"></p>
 ```
@@ -239,9 +240,10 @@ const context = canvas.getContext("2d");
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 let x = 250;
 let y = 200;
-// A larger factor spreads the spiral out; a smaller one makes it tighter.
-const spiralStepFactor = 10;
+// A larger spacing spreads the spiral out; a smaller one makes it tighter.
+const spiralSpacing = 10;
 
+// 360 steps make one full turn while the radius grows.
 for (let i = 0; i < 360; i++) {
   context.strokeStyle = colors[i % colors.length];
   context.lineWidth = i / 100 + 1;
@@ -249,8 +251,8 @@ for (let i = 0; i < 360; i++) {
   context.moveTo(x, y);
   // Increasing each step while changing the angle (in radians) creates a spiral.
   const angle = i * Math.PI / 180;
-  x += Math.cos(angle) * i / spiralStepFactor;
-  y += Math.sin(angle) * i / spiralStepFactor;
+  x += Math.cos(angle) * i / spiralSpacing;
+  y += Math.sin(angle) * i / spiralSpacing;
   context.lineTo(x, y);
   context.stroke();
 }
