@@ -65,6 +65,7 @@ This document provides step-by-step instructions for live demos that facilitator
 
 **Option B – Simple JavaScript chatbot in CodePen:**
 ```html
+<label for="message">Message</label>
 <input id="message" placeholder="Type hi, help, or bye">
 <button onclick="reply()">Send</button>
 <p id="response"></p>
@@ -79,6 +80,7 @@ function reply() {
   };
   document.querySelector("#response").textContent =
     responses[input] || "I don't understand that yet. I'm still learning!";
+  document.querySelector("#message").value = "";
 }
 ```
 
@@ -227,13 +229,17 @@ function speak() {
 const canvas = document.querySelector("#canvas");
 const context = canvas.getContext("2d");
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+let x = 250;
+let y = 200;
 
 for (let i = 0; i < 360; i++) {
   context.strokeStyle = colors[i % colors.length];
   context.lineWidth = i / 100 + 1;
   context.beginPath();
-  context.moveTo(250, 200);
-  context.lineTo(250 + i * Math.cos(i), 200 + i * Math.sin(i));
+  context.moveTo(x, y);
+  x += Math.cos(i) * i / 10;
+  y += Math.sin(i) * i / 10;
+  context.lineTo(x, y);
   context.stroke();
 }
 ```
