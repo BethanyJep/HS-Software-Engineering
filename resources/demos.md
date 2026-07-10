@@ -72,14 +72,15 @@ This document provides step-by-step instructions for live demos that facilitator
 ```
 ```javascript
 function reply() {
-  const input = document.querySelector("#message").value.toLowerCase();
+  const input = document.querySelector("#message").value.trim().toLowerCase();
+  const defaultResponse = "I don't understand that yet. I'm still learning!";
   const responses = {
     hi: "Hi there! Nice to meet you.",
     help: "I can say hi and say goodbye. That's about it for now!",
     bye: "Goodbye! Have a great day."
   };
   document.querySelector("#response").textContent =
-    responses[input] || "I don't understand that yet. I'm still learning!";
+    responses[input] || defaultResponse;
   document.querySelector("#message").value = "";
 }
 ```
@@ -237,6 +238,7 @@ for (let i = 0; i < 360; i++) {
   context.lineWidth = i / 100 + 1;
   context.beginPath();
   context.moveTo(x, y);
+  // Increasing each step while changing its angle creates a spiral.
   x += Math.cos(i) * i / 10;
   y += Math.sin(i) * i / 10;
   context.lineTo(x, y);
