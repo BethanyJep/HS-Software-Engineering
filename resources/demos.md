@@ -207,6 +207,10 @@ Add a button to the HTML panel:
 Then add this to the JS panel:
 ```javascript
 function speak() {
+  if (!("speechSynthesis" in window)) {
+    alert("Speech is not supported in this browser.");
+    return;
+  }
   speechSynthesis.speak(
     new SpeechSynthesisUtterance("Hello Alliance Girls!")
   );
@@ -235,6 +239,7 @@ const context = canvas.getContext("2d");
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 let x = 250;
 let y = 200;
+// A larger factor spreads the spiral out; a smaller one makes it tighter.
 const spiralStepFactor = 10;
 
 for (let i = 0; i < 360; i++) {
