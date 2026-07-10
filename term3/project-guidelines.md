@@ -24,7 +24,7 @@ You don't need to be an expert. You need curiosity, teamwork, and willingness to
 - [ ] Confirm your team members and choose a **Team Name**.
 - [ ] Finalize your problem statement (one sentence: *"[User] needs a way to [solve problem] because [reason]."*)
 - [ ] Decide on what type of software you'll build (app, website, game, tool).
-- [ ] Choose your main tool (Scratch, Thunkable, Replit/Python, Figma, etc.).
+- [ ] Choose your main tool (Scratch, Thunkable, CodePen, Figma, etc.).
 - [ ] Fill in and submit the **Project Kickoff Form** (see Appendix A).
 
 ---
@@ -129,7 +129,7 @@ Teams may use any of the following (choose what suits your skill level):
 | Level | Tools |
 |---|---|
 | Beginner | Scratch, Thunkable, Google Sites |
-| Intermediate | HTML/CSS/JavaScript (Replit or VS Code), Glide Apps, Bubble.io |
+| Intermediate | HTML/CSS/JavaScript (CodePen), Glide Apps, Bubble.io |
 | Advanced | Python (Flask/Django), React, Android Studio |
 | Design-first | Figma (prototypes are accepted if software is not fully functional) |
 
