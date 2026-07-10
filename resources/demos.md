@@ -66,23 +66,24 @@ This document provides step-by-step instructions for live demos that facilitator
 **Option B – Simple JavaScript chatbot in CodePen:**
 ```html
 <label for="message">Message</label>
-<input id="message" placeholder="Type hi, help, or bye">
+<input id="message" type="text" placeholder="Type hi, help, or bye">
 <button onclick="reply()">Send</button>
 <p id="response"></p>
 ```
 ```javascript
 function reply() {
-  const message = document.querySelector("#message");
-  const response = document.querySelector("#response");
-  const input = message.value.trim().toLowerCase();
+  const messageInput = document.querySelector("#message");
+  const responseElement = document.querySelector("#response");
+  const input = messageInput.value.trim().toLowerCase();
   const defaultResponse = "I don't understand that yet. I'm still learning!";
   const responses = {
     hi: "Hi there! Nice to meet you.",
     help: "I can say hi and say goodbye. That's about it for now!",
     bye: "Goodbye! Have a great day."
   };
-  response.textContent = responses[input] || defaultResponse;
-  message.value = "";
+  responseElement.textContent = responses[input] || defaultResponse;
+  messageInput.value = "";
+  messageInput.focus();
 }
 ```
 
@@ -233,6 +234,7 @@ const context = canvas.getContext("2d");
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
 let x = 250;
 let y = 200;
+const spiralStepFactor = 10;
 
 for (let i = 0; i < 360; i++) {
   context.strokeStyle = colors[i % colors.length];
@@ -240,8 +242,8 @@ for (let i = 0; i < 360; i++) {
   context.beginPath();
   context.moveTo(x, y);
   // Increasing each step while changing the angle (in radians) creates a spiral.
-  x += Math.cos(i) * i / 10;
-  y += Math.sin(i) * i / 10;
+  x += Math.cos(i) * i / spiralStepFactor;
+  y += Math.sin(i) * i / spiralStepFactor;
   context.lineTo(x, y);
   context.stroke();
 }
