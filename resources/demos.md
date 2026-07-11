@@ -62,7 +62,7 @@ This document provides step-by-step instructions for live demos that facilitator
 Add this to the HTML panel:
 ```html
 <h2>Make something happen</h2>
-<button id="welcome-button" type="button">Add a button</button>
+<button id="welcome-button" type="button">Say hello</button>
 <p id="welcome-message" aria-live="polite"></p>
 ```
 

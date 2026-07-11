@@ -79,7 +79,7 @@ Transition line:
 
 **Purpose:** Make software tangible and exciting. Show something visual that students can react to.
 
-> 💡 See [Cool Demos](../resources/demos.md) for full instructions. **Recommended for this session:**
+> 💡 See [Cool Demos](../resources/demos.md) for full instructions. **Recommended UI demos for this session:**
 > - **Demo 2:** Add a button that responds to a click
 > - **Demo 3:** Update page colours with a selector
 > - **Demo 4:** Show and hide a message with a toggle
