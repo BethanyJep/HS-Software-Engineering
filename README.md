@@ -10,6 +10,7 @@
 
 | Section | Description |
 |---|---|
+| [Session 1 Slide Deck](index.html) | Presentation slides for the first session |
 | [Program Overview](program-overview.md) | Full program roadmap, goals, and timeline |
 | **Term 2 – Foundation Sessions** | |
 | [Session 1 – Introduction to Software Engineering](term2/session-1-intro-to-software-engineering.md) | What is SE? How does software get built? |
