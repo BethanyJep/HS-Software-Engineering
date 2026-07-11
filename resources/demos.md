@@ -9,15 +9,17 @@ This document provides step-by-step instructions for live demos that facilitator
 | Demo | Session | Time | Tools | Wow Factor |
 |---|---|---|---|---|
 | 1. Hello World in 3 Languages | Session 1 | 5 min | CodePen | See the same idea in different web languages |
-| 2. Live Chatbot / AI Response | Session 1 | 5–8 min | ChatGPT or CodePen | AI is not magic — it responds to instructions |
-| 3. Scratch Interactive Story | Session 1 | 8–10 min | Scratch | Build something playable in minutes |
-| 4. Build a Webpage in 5 Minutes | Session 3 | 10–15 min | Browser (any) | See code → real webpage instantly |
-| 5. Colour-Changing Button (JS) | Session 3 | 5 min | CodePen | Show interactivity |
-| 6. Make the Computer Speak | Any | 5 min | CodePen | Computer says your name aloud |
-| 7. Draw with Code | Any | 8 min | CodePen / Scratch | Art from code |
-| 8. Simple Survey Form | Session 3 | 10 min | Google Forms or HTML | Show how data is collected |
-| 9. Figma Wireframe Live | Term 3 kickoff | 10 min | Figma (free) | Show design before building |
-| 10. A Real App's Source Code | Any | 5 min | Browser DevTools | Demystify every website |
+| 2. Add a Button | Session 1 | 5 min | CodePen | Turn a click into a response |
+| 3. Update Page Colours | Session 1 | 5 min | CodePen | See styles change with JavaScript |
+| 4. Show and Hide a Message | Session 1 | 5 min | CodePen | Build a simple interactive control |
+| 5. Scratch Interactive Story | Session 1 | 8–10 min | Scratch | Build something playable in minutes |
+| 6. Build a Webpage in 5 Minutes | Session 3 | 10–15 min | Browser (any) | See code → real webpage instantly |
+| 7. Colour-Changing Button (JS) | Session 3 | 5 min | CodePen | Show interactivity |
+| 8. Make the Computer Speak | Any | 5 min | CodePen | Computer says your name aloud |
+| 9. Draw with Code | Any | 8 min | CodePen / Scratch | Art from code |
+| 10. Simple Survey Form | Session 3 | 10 min | Google Forms or HTML | Show how data is collected |
+| 11. Figma Wireframe Live | Term 3 kickoff | 10 min | Figma (free) | Show design before building |
+| 12. A Real App's Source Code | Any | 5 min | Browser DevTools | Demystify every website |
 
 ---
 
@@ -49,52 +51,106 @@ This document provides step-by-step instructions for live demos that facilitator
 
 ---
 
-## Demo 2 – Live AI / Chatbot Response
+## Demo 2 – Add a Button
 
 **Best session:** Session 1  
-**Time:** 5–8 minutes  
-**Tools needed:** Internet browser + ChatGPT (chat.openai.com) OR a simple JavaScript chatbot on CodePen
+**Time:** 5 minutes  
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
 
-**What it shows:** AI responds to instructions; it's not magic — it's patterns and data.
+**What it builds:** A button that updates a message when someone clicks it.
 
-**Option A – Using ChatGPT:**
-1. Open ChatGPT in the browser.
-2. Type: *"Write a poem about Alliance Girls High School."*
-3. Watch it respond. Then ask: *"Now write it in Kiswahili."*
-4. Ask the students: *"What do you notice? What could you ask it?"*
-
-**Option B – Simple JavaScript chatbot in CodePen:**
+Add this to the HTML panel:
 ```html
-<label for="message">Message:</label>
-<input id="message" type="text" placeholder="Type hi, help, or bye"
-  onkeydown="if (event.key === 'Enter') reply()">
-<button onclick="reply()">Send</button>
-<p id="response"></p>
+<h2>Make something happen</h2>
+<button id="welcome-button" type="button">Add a button</button>
+<p id="welcome-message" aria-live="polite"></p>
 ```
-```javascript
-const messageInput = document.querySelector("#message");
-const responseElement = document.querySelector("#response");
 
-function reply() {
-  const input = messageInput.value.trim().toLowerCase();
-  const defaultResponse = "I don't understand that yet. I'm still learning!";
-  const responses = {
-    hi: "Hi there! Nice to meet you.",
-    help: "I can say hi and say goodbye. That's about it for now!",
-    bye: "Goodbye! Have a great day."
-  };
-  responseElement.textContent = responses[input] || defaultResponse;
-  messageInput.value = "";
-  messageInput.focus();
-}
+Add this to the JavaScript panel:
+```javascript
+const button = document.querySelector("#welcome-button");
+const message = document.querySelector("#welcome-message");
+
+button.addEventListener("click", () => {
+  message.textContent = "You made the page respond!";
+});
 ```
 
 **What to say:**
-> *"This chatbot only knows a few words. ChatGPT knows billions — but the idea is the same: it's following rules we wrote. YOU could write those rules."*
+> *"The button is the control, the click is the event, and the message is the result. Interfaces are built from small interactions like this."*
 
 ---
 
-## Demo 3 – Scratch Interactive Story / Mini Game
+## Demo 3 – Update Page Colours
+
+**Best session:** Session 1  
+**Time:** 5 minutes  
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
+
+**What it builds:** A colour picker that updates the page without reloading it.
+
+Add this to the HTML panel:
+```html
+<label for="theme">Choose a page colour:</label>
+<select id="theme">
+  <option value="#f7f3ea">Cream</option>
+  <option value="#dce6ff">Blue</option>
+  <option value="#f9d6e3">Pink</option>
+</select>
+<p id="colour-message">The page can change while it is running.</p>
+```
+
+Add this to the JavaScript panel:
+```javascript
+const themePicker = document.querySelector("#theme");
+const colourMessage = document.querySelector("#colour-message");
+
+themePicker.addEventListener("change", () => {
+  document.body.style.backgroundColor = themePicker.value;
+  colourMessage.textContent = `The page is now ${themePicker.value}.`;
+});
+```
+
+**What to say:**
+> *"CSS gives the page its starting style. JavaScript can update that style when a person makes a choice."*
+
+---
+
+## Demo 4 – Show and Hide a Message
+
+**Best session:** Session 1  
+**Time:** 5 minutes  
+**Tools needed:** CodePen (codepen.io, open in the browser without creating an account)
+
+**What it builds:** A toggle button that reveals or hides extra information.
+
+Add this to the HTML panel:
+```html
+<button id="details-button" type="button" aria-expanded="false">
+  Show details
+</button>
+<p id="details" hidden>Well done — you built a reusable interface pattern!</p>
+```
+
+Add this to the JavaScript panel:
+```javascript
+const detailsButton = document.querySelector("#details-button");
+const details = document.querySelector("#details");
+
+detailsButton.addEventListener("click", () => {
+  const isHidden = details.hidden;
+  details.hidden = !isHidden;
+  detailsButton.setAttribute("aria-expanded", String(isHidden));
+  detailsButton.textContent = isHidden ? "Hide details" : "Show details";
+});
+```
+
+**What to say:**
+> *"Good interfaces give people control over what they see. The same show-and-hide pattern appears in menus, FAQs, and settings screens."*
+
+---
+
+## Demo 5 – Scratch Interactive Story / Mini Game
 
 **Best session:** Session 1 (for a visual, beginner-friendly wow moment)  
 **Time:** 8–10 minutes  
@@ -120,7 +176,7 @@ function reply() {
 
 ---
 
-## Demo 4 – Build a "Hello, Me!" Webpage in 5 Minutes
+## Demo 6 – Build a "Hello, Me!" Webpage in 5 Minutes
 
 **Best session:** Session 3 (students follow along on their own devices)  
 **Time:** 10–15 minutes  
@@ -163,7 +219,7 @@ function reply() {
 
 ---
 
-## Demo 5 – Colour-Changing Button (JavaScript)
+## Demo 7 – Colour-Changing Button (JavaScript)
 
 **Best session:** Session 3 (to show interactivity)  
 **Time:** 5 minutes  
@@ -194,7 +250,7 @@ function reply() {
 
 ---
 
-## Demo 6 – Make the Computer Speak Your Name
+## Demo 8 – Make the Computer Speak Your Name
 
 **Best session:** Any (very quick crowd-pleaser)  
 **Time:** 5 minutes  
@@ -223,7 +279,7 @@ function speak() {
 
 ---
 
-## Demo 7 – Draw with Code (JavaScript Canvas)
+## Demo 9 – Draw with Code (JavaScript Canvas)
 
 **Best session:** Any (visually satisfying, great for creative students)  
 **Time:** 8 minutes  
@@ -263,7 +319,7 @@ for (let i = 0; i < 360; i++) {
 
 ---
 
-## Demo 8 – Simple Survey Form (HTML or Google Forms)
+## Demo 10 – Simple Survey Form (HTML or Google Forms)
 
 **Best session:** Session 3 (links well to project building)  
 **Time:** 10 minutes  
@@ -296,7 +352,7 @@ for (let i = 0; i < 360; i++) {
 
 ---
 
-## Demo 9 – Figma Wireframe Live
+## Demo 11 – Figma Wireframe Live
 
 **Best session:** Term 3 kickoff / Session 3  
 **Time:** 10 minutes  
@@ -316,7 +372,7 @@ for (let i = 0; i < 360; i++) {
 
 ---
 
-## Demo 10 – Peek Behind Any Website (Browser DevTools)
+## Demo 12 – Peek Behind Any Website (Browser DevTools)
 
 **Best session:** Any (great as a "magic trick" moment)  
 **Time:** 5 minutes  

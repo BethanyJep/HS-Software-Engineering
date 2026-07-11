@@ -80,9 +80,9 @@ Transition line:
 **Purpose:** Make software tangible and exciting. Show something visual that students can react to.
 
 > 💡 See [Cool Demos](../resources/demos.md) for full instructions. **Recommended for this session:**
-> - **Demo 1:** Build a simple webpage in 5 minutes (HTML/CSS in browser)
-> - **Demo 2:** Show an AI chatbot responding to a question (e.g., ChatGPT or a simple Python chatbot)
-> - **Demo 3:** Scratch – build a tiny interactive game live
+> - **Demo 2:** Add a button that responds to a click
+> - **Demo 3:** Update page colours with a selector
+> - **Demo 4:** Show and hide a message with a toggle
 
 **Facilitation tips:**
 - Narrate as you code/demo: *"I'm typing instructions the computer will follow exactly."*
