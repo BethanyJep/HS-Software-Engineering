@@ -23,6 +23,7 @@
 | [Icebreakers](resources/icebreakers.md) | Energisers and team-building activities |
 | [Cool Demos](resources/demos.md) | Live demos to spark curiosity in sessions |
 | [Facilitator Guide](resources/facilitator-guide.md) | Tips, logistics, and facilitation notes |
+| [Career Paths in Tech](resources/career-paths/README.md) | Beginner guides to fields like AI, security & data — resources, projects & how to start |
 
 ---
 
