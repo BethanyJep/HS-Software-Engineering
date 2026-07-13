@@ -25,6 +25,7 @@ Please read (or at least skim) all three session plans before your first session
 | [Project Ideas](../term3/project-ideas.md) | Familiarise yourself so you can coach teams |
 | [Icebreakers](icebreakers.md) | Know 2–3 options for each session |
 | [Cool Demos](demos.md) | Run through each demo you plan to use |
+| [Career Paths in Tech](career-paths/README.md) | Point students to a field they're curious about |
 
 ---
 
