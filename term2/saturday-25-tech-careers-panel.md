@@ -1,7 +1,9 @@
 # Tech Careers Panel and Group Discussion
 
-**Date:** Saturday, 25 July 2026  
-**Speakers:** Four professionals from a mix of technology roles, such as software engineering and data analysis  
+**Date:** Saturday, 25 July 2026
+
+**Speakers:** Four professionals from a mix of technology roles, such as software engineering and data analysis
+
 **Format:** Career-experience panel followed by a facilitated group discussion
 
 ---
