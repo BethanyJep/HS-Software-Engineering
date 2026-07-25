@@ -618,6 +618,20 @@ h2 em {
   opacity: 0.75;
 }
 
+.steps--quad {
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 30px;
+}
+
+.steps--quad .step {
+  min-height: 170px;
+}
+
+.steps--quad .step h3 {
+  font-size: 18px;
+  margin: 34px 0 8px;
+}
+
 .code-window {
   background: #10162c;
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -1183,6 +1197,7 @@ h2 em {
   .agenda,
   .feature-grid,
   .path-grid,
+  .steps--quad,
   .example-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1268,6 +1283,7 @@ h2 em {
   .feature-grid,
   .path-grid,
   .steps,
+  .steps--quad,
   .canvas,
   .share-list,
   .speaker-grid,
@@ -1289,6 +1305,7 @@ h2 em {
 
   .agenda-card strong,
   .step h3,
+  .steps--quad .step h3,
   .canvas h3,
   .share-list strong,
   .listen-grid h3,

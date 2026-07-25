@@ -26,6 +26,9 @@ so you can compare them easily:
 
 ## Choose a path to explore
 
+> 🖥️ Prefer slides? Open the [Career Paths in Tech slide deck](../career-paths-slides.html) for a
+> one-slide summary of every path below.
+
 | Field | You might like this if... |
 |---|---|
 | [Web Development](web-development.md) | You want to build websites and apps people can click and use |
