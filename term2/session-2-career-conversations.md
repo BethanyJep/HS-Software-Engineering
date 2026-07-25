@@ -55,7 +55,7 @@ Speakers can join **in person or via video call**.
 > - "What's the hardest part of your job?"
 > - "What advice would you give to a Grade 10 student today?"
 >
-> **Tone:** Honest, warm, and encouraging. Share real challenges — students find authenticity more inspiring than perfection.
+> **Tone:** Honest, warm, and encouraging. Share the challenges you faced — students find authenticity more inspiring than perfection.
 
 ---
 
@@ -68,7 +68,7 @@ Speakers can join **in person or via video call**.
 > 💡 See [Icebreakers](../resources/icebreakers.md). **Recommended:** *Dream Job Bingo* or *Would You Rather (Tech Edition)*.
 
 Transition line:
-> *"Last session we talked about what software engineering IS. Today we're going to meet real people doing it — and hear their honest stories."*
+> *"Last session we talked about what software engineering IS. Today we're going to meet people doing it — and hear their honest stories."*
 
 ---
 
@@ -143,7 +143,7 @@ Key pathways to cover:
 | University degree | Computer Science, Engineering, Information Technology | Many jobs, strong foundation |
 | Coding bootcamp | Intensive short programme (3–6 months) | Great for career switchers |
 | Online self-learning | FreeCodeCamp, Coursera, YouTube, Khan Academy | Free; requires discipline |
-| Internships / attachments | Learn on the job while studying | Builds real-world experience |
+| Internships / attachments | Learn on the job while studying | Builds hands-on experience |
 | Starting a project | Build something — your portfolio speaks for itself | Open source, hackathons |
 
 > *"The key message: there is NO single path. The best path is the one you actually take."*

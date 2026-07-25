@@ -25,7 +25,7 @@ into clear answers and stories.**
 - Collect data and **clean it** (fix errors, remove duplicates)
 - Explore it to spot patterns and trends
 - Build **charts and dashboards** that anyone can understand
-- Answer real questions for a team ("Why did sales drop in June?")
+- Answer questions for a team ("Why did sales drop in June?")
 - Present your findings as a clear story with recommendations
 
 ---
@@ -60,7 +60,7 @@ You might love data work if you:
 - **[Kaggle Learn](https://www.kaggle.com/learn)** — free short courses on Python, pandas, SQL, and data viz
 - **[freeCodeCamp Data Analysis](https://www.freecodecamp.org/learn/data-analysis-with-python/)**
 - **[Khan Academy Statistics](https://www.khanacademy.org/math/statistics-probability)** — free, clear maths lessons
-- **[Our World in Data](https://ourworldindata.org/)** — real datasets and beautiful charts to learn from
+- **[Our World in Data](https://ourworldindata.org/)** — open datasets and beautiful charts to learn from
 - **[Google Sheets tutorials on YouTube](https://www.youtube.com/results?search_query=google+sheets+beginner)**
 
 ---
@@ -73,7 +73,7 @@ All of these can start in **Google Sheets** — free with any Google account.
 2. **Personal spending tracker** — log your spending for a month, find where money goes.
 3. **Study-hours vs grades** — collect data from classmates, look for a pattern.
 4. **Weather diary** — record daily temperatures, then graph the trend.
-5. **Explore a real dataset** — pick one from Kaggle and answer 3 questions about it.
+5. **Explore an open dataset** — pick one from Kaggle and answer 3 questions about it.
 
 ---
 
@@ -94,4 +94,4 @@ Data Analyst • Data Scientist • Business Intelligence Analyst • Data Engin
 Research Analyst • Machine Learning Engineer
 
 > 💡 Data skills are useful in **every** field — health, farming, government, sports, and business.
-> Learning data means you can help solve real problems in your own community with evidence, not guesses.
+> Learning data means you can help solve problems in your own community with evidence, not guesses.

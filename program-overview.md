@@ -21,7 +21,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 
 | Session | Topic | Duration | Key Outcomes |
 |---|---|---|---|
-| 1 | Introduction to Software Engineering | 90 min | Understand what SE is; see real demos; get excited |
+| 1 | Introduction to Software Engineering | 90 min | Understand what SE is; see live demos; get excited |
 | 2 | Career Conversations | 90 min | Hear from alumni; explore roles in tech; visualise pathways |
 | 3 | Resource Session | 90 min | Know where to learn; set up tools; form project groups |
 
@@ -43,7 +43,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 1. **Inspire** – Show students that software engineering is an exciting, accessible career.
 2. **Educate** – Give students a foundational understanding of how software is built.
 3. **Empower** – Equip students with starter tools and resources to learn independently.
-4. **Create** – Guide students through building a real solution to a real problem.
+4. **Create** – Guide students through building a working solution to a problem that matters.
 5. **Celebrate** – Recognise effort, creativity, and teamwork at the showcase.
 
 ---
@@ -73,7 +73,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 
 | Criterion | Weight | Description |
 |---|---|---|
-| Problem relevance | 25% | Does the solution address a real, meaningful problem? |
+| Problem relevance | 25% | Does the solution address a meaningful problem? |
 | Creativity & Innovation | 25% | Is the approach original and thoughtful? |
 | Technical implementation | 25% | Does the software work? How well is it built? |
 | Presentation | 25% | Is the pitch clear, confident, and compelling? |

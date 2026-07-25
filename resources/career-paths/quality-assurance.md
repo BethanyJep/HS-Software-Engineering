@@ -1,6 +1,6 @@
 # Quality Assurance & Software Testing 🧪
 
-> Making sure apps actually *work* before real people use them — the people who catch
+> Making sure apps actually *work* before anyone else uses them — the people who catch
 > bugs, break things on purpose, and protect users from frustration.
 
 [← Back to all career paths](README.md)
@@ -14,7 +14,7 @@ happens if I enter the wrong password? Does it break on a small screen?* That's 
 Assurance (QA)**.
 
 QA testers are the **guardians of quality**. They try to break the app *on purpose* — in a
-helpful way — so that bugs are found and fixed **before** real users ever see them.
+helpful way — so that bugs are found and fixed **before** users ever see them.
 
 There are two main styles:
 

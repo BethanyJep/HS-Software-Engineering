@@ -81,7 +81,7 @@ Have students open and bookmark (or save in a shared doc):
 
 ---
 
-### ⏱ 30–50 min | 🔥 Live Demo – Building Something in Real Time
+### ⏱ 30–50 min | 🔥 Live Demo – Building Something from Scratch
 
 **Purpose:** Give students a taste of what "building" actually feels like.
 
