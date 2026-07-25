@@ -9,7 +9,7 @@
 
 ## Overview
 
-In Term 3, you and your team will design and build a **software solution to a real problem**. This is your chance to take everything you learned in Term 2 and make something real.
+In Term 3, you and your team will design and build a **software solution to a problem you care about**. This is your chance to take everything you learned in Term 2 and make something that works.
 
 You don't need to be an expert. You need curiosity, teamwork, and willingness to try — and fail — and try again. That's software engineering.
 
@@ -66,7 +66,7 @@ Each week, your team should be able to answer:
 **Goal:** Make sure your solution works and looks good.
 
 - [ ] Test your software — try to "break" it. Fix what breaks.
-- [ ] Get feedback from at least **2 people outside your team** (real users, teachers, friends).
+- [ ] Get feedback from at least **2 people outside your team** (users, teachers, friends).
 - [ ] Make small improvements based on feedback.
 - [ ] Make sure it works on the device you'll demo from.
 - [ ] Prepare your **presentation** (see Presentation Guidelines below).
@@ -115,7 +115,7 @@ Your presentation should cover:
 
 | Criterion | Weight | What judges are looking for |
 |---|---|---|
-| **Problem relevance** | 25% | Is the problem real and significant? Does the solution fit the users' needs? |
+| **Problem relevance** | 25% | Is the problem genuine and significant? Does the solution fit the users' needs? |
 | **Creativity & Innovation** | 25% | Is the approach original? Does it show creative thinking? |
 | **Technical implementation** | 25% | Does the software work? Is it functional, even if simple? |
 | **Presentation** | 25% | Is the pitch clear, confident, and engaging? Does the team show they understand their solution? |
@@ -155,7 +155,7 @@ Teams may use any of the following (choose what suits your skill level):
 ## Rules
 
 1. All work must be the team's own (use of AI assistants for learning is fine; having AI do everything for you is not).
-2. Projects must address a **real problem** — no games for the sake of games (games that solve a real problem are allowed).
+2. Projects must address a **genuine problem** — no games for the sake of games (games that solve a problem are allowed).
 3. All team members must be able to explain the project and answer questions about it.
 4. Teams must submit the **Kickoff Form** by Week 1 and show progress at mid-term check-in.
 5. Be kind, support each other, and have fun.

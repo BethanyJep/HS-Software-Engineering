@@ -13,13 +13,13 @@ This document provides step-by-step instructions for live demos that facilitator
 | 3. Update Page Colours | Session 1 | 5 min | CodePen | See styles change with JavaScript |
 | 4. Show and Hide a Message | Session 1 | 5 min | CodePen | Build a simple interactive control |
 | 5. Scratch Interactive Story | Session 1 | 8–10 min | Scratch | Build something playable in minutes |
-| 6. Build a Webpage in 5 Minutes | Session 3 | 10–15 min | Browser (any) | See code → real webpage instantly |
+| 6. Build a Webpage in 5 Minutes | Session 3 | 10–15 min | Browser (any) | See code → working webpage instantly |
 | 7. Colour-Changing Button (JS) | Session 3 | 5 min | CodePen | Show interactivity |
 | 8. Make the Computer Speak | Any | 5 min | CodePen | Computer says your name aloud |
 | 9. Draw with Code | Any | 8 min | CodePen / Scratch | Art from code |
 | 10. Simple Survey Form | Session 3 | 10 min | Google Forms or HTML | Show how data is collected |
 | 11. Figma Wireframe Live | Term 3 kickoff | 10 min | Figma (free) | Show design before building |
-| 12. A Real App's Source Code | Any | 5 min | Browser DevTools | Demystify every website |
+| 12. Peek Behind Any Website | Any | 5 min | Browser DevTools | Demystify every website |
 
 ---
 
@@ -327,7 +327,7 @@ for (let i = 0; i < 360; i++) {
 
 **What it shows:** How data is collected from users — a key part of most software.
 
-**Option A – Google Forms:** Create a 3-question form live in front of the class. Fill it in. Show the Responses tab updating in real time.
+**Option A – Google Forms:** Create a 3-question form live in front of the class. Fill it in. Show the Responses tab updating instantly.
 
 **Option B – HTML form:**
 ```html

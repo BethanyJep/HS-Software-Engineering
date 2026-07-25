@@ -59,7 +59,7 @@ You might love cybersecurity if you:
 ## Free resources
 
 - **[TryHackMe](https://tryhackme.com/)** — learn hacking through fun guided rooms (great for beginners)
-- **[Hack The Box](https://www.hackthebox.com/)** — practice on real challenges
+- **[Hack The Box](https://www.hackthebox.com/)** — practice on hands-on challenges
 - **[picoCTF](https://picoctf.org/)** — beginner-friendly security puzzles made for students
 - **[Cybrary](https://www.cybrary.it/)** — free cybersecurity courses
 - **[Google's "Be Internet Awesome"](https://beinternetawesome.withgoogle.com/)** — online safety basics
@@ -70,7 +70,7 @@ You might love cybersecurity if you:
 ## Starter projects 🚀
 
 1. **Password strength checker** — write a small program that rates how strong a password is.
-2. **Spot the phishing email** — collect real scam messages and label the warning signs.
+2. **Spot the phishing email** — collect scam messages you have received and label the warning signs.
 3. **Complete 5 beginner rooms on TryHackMe** — screenshot your progress.
 4. **Caesar cipher tool** — write code that encodes and decodes secret messages.
 5. **Home security audit** — check your family's Wi-Fi and phones for weak passwords and fix them.
@@ -80,7 +80,7 @@ You might love cybersecurity if you:
 ## Your first steps (do these this week)
 
 - [ ] Create a free [TryHackMe](https://tryhackme.com/) account and finish the intro room
-- [ ] Learn what **phishing** is and find one example in a real inbox
+- [ ] Learn what **phishing** is and find one example in an inbox
 - [ ] Turn on **two-factor authentication** on your own email or social account
 - [ ] Try one [picoCTF](https://picoctf.org/) beginner puzzle
 - [ ] Learn 3 Linux commands (`ls`, `cd`, `pwd`)

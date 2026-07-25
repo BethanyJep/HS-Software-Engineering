@@ -38,7 +38,7 @@ Term 3  ──►  Group Project Sprint  ──►  Showcase & Prize Ceremony
 ### Goals
 1. Introduce students to software engineering as a discipline and career.
 2. Build confidence through hands-on demos and peer discussion.
-3. Support students in designing and building a real software solution.
+3. Support students in designing and building a working software solution.
 4. Award and celebrate the winning team to inspire future cohorts.
 
 ---

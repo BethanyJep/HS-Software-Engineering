@@ -2,7 +2,7 @@
 
 This document is a **springboard for brainstorming**. Teams don't have to pick from this list — you're encouraged to find your own problem. But if you're stuck, these are great starting points.
 
-Good software projects solve **real problems** for **real people**. The best ideas often come from your own life: problems you've faced at school, at home, or in your community.
+Good software projects solve **problems that matter** for **the people around you**. The best ideas often come from your own life: problems you've faced at school, at home, or in your community.
 
 ---
 

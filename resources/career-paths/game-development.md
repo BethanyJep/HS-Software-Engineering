@@ -59,7 +59,7 @@ You might love game development if you:
 
 ## Free resources
 
-- **[Scratch](https://scratch.mit.edu/)** — build real games by dragging blocks (perfect first step!)
+- **[Scratch](https://scratch.mit.edu/)** — build playable games by dragging blocks (perfect first step!)
 - **[Godot Engine](https://godotengine.org/)** — free, powerful, beginner-friendly game engine
 - **[Unity Learn](https://learn.unity.com/)** — free official courses (uses C#)
 - **[Pygame tutorials](https://www.pygame.org/wiki/tutorials)** — make games with Python
@@ -73,7 +73,7 @@ You might love game development if you:
 1. **Catch the falling object** — move a basket to catch fruit, score points (great in Scratch).
 2. **A maze game** — guide a character to the exit.
 3. **A quiz game** — answer questions to level up.
-4. **Pong** — the classic bouncing-ball game (a perfect first "real" game).
+4. **Pong** — the classic bouncing-ball game (a perfect first game to finish).
 5. **A choose-your-own-adventure story** — decisions change what happens next.
 
 ---

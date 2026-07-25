@@ -78,7 +78,7 @@ You might love cloud & DevOps if you:
 
 ## Your first steps (do these this week)
 
-- [ ] Put a web page online with **[GitHub Pages](https://pages.github.com/)** — free and real!
+- [ ] Put a web page online with **[GitHub Pages](https://pages.github.com/)** — free and live on the internet!
 - [ ] Try [Linux Journey](https://linuxjourney.com/) and learn `ls`, `cd`, `mkdir`
 - [ ] Create a free [GitHub](https://github.com/) account
 - [ ] Watch one "What is the cloud?" beginner video

@@ -126,7 +126,7 @@ Write the last question's answers on the board — these become seeds for the Te
 **Key messages to reinforce:**
 - Software engineering is a creative and collaborative discipline.
 - You don't need to be a genius or a "math person" — curiosity and persistence matter most.
-- In the next session, you'll hear from real people who work in tech.
+- In the next session, you'll hear from people who work in tech.
 
 **Announce Session 2:**
 > *"Next time, we're bringing in some people who actually work in tech — including some Alliance Girls alumni — to tell you their story. Come with questions!"*

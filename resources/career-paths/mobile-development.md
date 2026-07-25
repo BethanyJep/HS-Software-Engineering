@@ -58,7 +58,7 @@ You might love mobile development if you:
 
 - **[Flutter official tutorials](https://docs.flutter.dev/get-started/codelab)** — build your first app step by step
 - **[Google Android Basics](https://developer.android.com/courses)** — free official Android course
-- **[MIT App Inventor](https://appinventor.mit.edu/)** — build real Android apps by **dragging blocks**, no typing code (perfect first step!)
+- **[MIT App Inventor](https://appinventor.mit.edu/)** — build working Android apps by **dragging blocks**, no typing code (perfect first step!)
 - **[freeCodeCamp mobile tutorials](https://www.freecodecamp.org/news/tag/mobile/)**
 - **[The Net Ninja on YouTube](https://www.youtube.com/@NetNinja)** — clear Flutter & React Native series
 
@@ -77,7 +77,7 @@ You might love mobile development if you:
 ## Your first steps (do these this week)
 
 - [ ] Try **[MIT App Inventor](https://appinventor.mit.edu/)** and build a "talking" app in 20 minutes
-- [ ] Install the app on a real Android phone and show a friend
+- [ ] Install the app on a physical Android phone and show a friend
 - [ ] Learn what a *variable* and a *button click* are
 - [ ] Watch one beginner Flutter or Android video
 - [ ] Sketch an app idea on paper — what screens would it need?

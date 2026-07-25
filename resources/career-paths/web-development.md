@@ -24,7 +24,7 @@ button that did X"* — this field is for you.
 
 A typical day might include:
 
-- Turning a designer's idea into a real, working web page
+- Turning a designer's idea into a working web page
 - Writing code so a button actually *does* something when clicked
 - Fixing a bug where the login page won't load
 - Making a site work well on phones, not just laptops

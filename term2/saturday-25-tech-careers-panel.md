@@ -4,7 +4,15 @@
 
 **Date:** Saturday, 25 July 2026
 
-**Speakers:** Caren Agalla, Joyce Ochieng, Joy Karani, Sally Mulingwa, and Wambui Ng'ang'a
+**Speakers:**
+
+| Speaker | Professional role |
+|---|---|
+| Caren Agalla | Role not publicly listed |
+| Joyce Ochieng | Data Analyst |
+| Joy Karani | Frontend Developer |
+| Sally Mulingwa | Role not publicly listed |
+| Wambui Ng'ang'a | Junior Product Manager at Crediation |
 
 **Format:** Career-experience panel followed by a facilitated group discussion
 

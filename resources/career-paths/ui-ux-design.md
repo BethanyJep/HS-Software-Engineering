@@ -1,7 +1,7 @@
 # UI/UX Design 🎨
 
 > Deciding how apps and websites *look* and *feel* — making technology beautiful,
-> friendly, and easy for real people to use.
+> friendly, and easy for people to use.
 
 [← Back to all career paths](README.md)
 
@@ -48,7 +48,7 @@ You might love UI/UX design if you:
 2. **Design basics** — colour, spacing, fonts (typography), and visual hierarchy
 3. **A design tool** — **Figma** is free and the industry standard
 4. **Wireframing & prototyping** — sketching screens and linking them together
-5. **User testing** — watching real people use your design
+5. **User testing** — watching people use your design
 6. **A little HTML/CSS** (optional) — helps you work with developers
 
 ---

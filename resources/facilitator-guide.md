@@ -96,7 +96,7 @@ Wherever possible, ask questions rather than giving answers. This builds critica
 ### Managing time
 - Have a co-facilitator track time and signal when 5 minutes remain.
 - It's okay to cut an activity short — say *"We're going to pause there — more on that next time."*
-- Never rush the icebreaker or Q&A — those are often where the real learning happens.
+- Never rush the icebreaker or Q&A — those are often where the deepest learning happens.
 
 ---
 
@@ -108,7 +108,7 @@ Wherever possible, ask questions rather than giving answers. This builds critica
 - Collect speaker bios to introduce them confidently.
 
 ### During the session
-- Set expectations before speakers present: *"This person has agreed to be honest and real with you — please treat their story with respect."*
+- Set expectations before speakers present: *"This person has agreed to be honest and open with you — please treat their story with respect."*
 - Keep time firmly — give a 2-minute warning.
 - Moderate Q&A to ensure everyone gets a chance to ask.
 - If a question is inappropriate or puts a speaker on the spot, step in: *"That's a big question — let me rephrase it."*
@@ -126,7 +126,7 @@ During Term 3, your role shifts from facilitator to **coach and mentor**.
 
 ### What good coaching looks like
 - Ask questions, don't give answers: *"What have you tried? What happened? What might you try next?"*
-- Celebrate small progress: *"You got that button working — that's real progress."*
+- Celebrate small progress: *"You got that button working — that's progress."*
 - Help teams prioritise: *"If you could only finish ONE thing this week, what would it be?"*
 - Be honest about scope: *"This is a great idea for version 2 — let's make version 1 work first."*
 
