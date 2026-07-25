@@ -546,6 +546,46 @@ h2 em {
   margin-top: 9px;
 }
 
+.path-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.path-card {
+  background: #fffdf8;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  color: var(--navy);
+  min-height: 105px;
+  padding: 18px;
+  text-decoration: none;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.path-card:hover,
+.path-card:focus-visible {
+  border-color: var(--blue);
+  transform: translateY(-2px);
+}
+
+.path-card strong,
+.path-card span {
+  display: block;
+}
+
+.path-card strong {
+  font-size: 15px;
+  letter-spacing: -0.025em;
+  margin-bottom: 8px;
+}
+
+.path-card span {
+  color: #676d7b;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
 .steps {
   display: grid;
   gap: 18px;
@@ -1142,6 +1182,7 @@ h2 em {
 
   .agenda,
   .feature-grid,
+  .path-grid,
   .example-row {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1225,6 +1266,7 @@ h2 em {
 
   .agenda,
   .feature-grid,
+  .path-grid,
   .steps,
   .canvas,
   .share-list,
