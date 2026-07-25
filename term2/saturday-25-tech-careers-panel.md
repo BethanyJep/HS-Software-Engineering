@@ -6,13 +6,13 @@
 
 **Speakers:**
 
-| Speaker | Professional role |
+| Speaker | Role |
 |---|---|
-| Caren Agalla | Role not publicly listed |
-| Joyce Ochieng | Data Analyst |
-| Joy Karani | Frontend Developer |
-| Sally Mulingwa | Role not publicly listed |
-| Wambui Ng'ang'a | Junior Product Manager at Crediation |
+| Caren Agalla | Panelist |
+| Joyce Ochieng | Panelist |
+| Joy Karani | Panelist |
+| Sally Mulingwa | Panelist |
+| Wambui Ng'ang'a | Panelist |
 
 **Format:** Career-experience panel followed by a facilitated group discussion
 
