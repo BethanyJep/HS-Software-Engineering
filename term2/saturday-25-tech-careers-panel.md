@@ -1,8 +1,10 @@
 # Tech Careers Panel and Group Discussion
 
+**Slides:** [Open the Panel and Discussion presentation](tech-careers-panel-slides.html)
+
 **Date:** Saturday, 25 July 2026
 
-**Speakers:** Four professionals from a mix of technology roles, such as software engineering and data analysis
+**Speakers:** Caren Agalla, Joyce Ochieng, Joy Karani, Sally Mulingwa, and Wambui Ng'ang'a
 
 **Format:** Career-experience panel followed by a facilitated group discussion
 

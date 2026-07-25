@@ -1,5 +1,7 @@
 # Session 3 – Resource Session
 
+**Slides:** [Open the Resource Session presentation](session-3-resources-slides.html)
+
 **Term:** 2  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait for Sally Mulingwa</title>
+  <desc id="desc">A gold and pink abstract speaker portrait with the initials SM.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#d49a28"/><stop offset="1" stop-color="#f5c95f"/></linearGradient></defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <circle cx="430" cy="90" r="145" fill="#ed6a9a" opacity=".83"/>
+  <path d="M0 365c110-96 190-53 278-132 66-59 126-58 202-101v428H0Z" fill="#315ee7" opacity=".88"/>
+  <circle cx="240" cy="218" r="100" fill="#f8f4ea"/>
+  <path d="M137 228c-5-93 37-151 103-151s108 58 103 151c-24-31-56-53-95-69-31 30-68 53-111 69Z" fill="#11172d"/>
+  <path d="M117 560c11-128 56-199 123-199s112 71 123 199Z" fill="#ed6a9a"/>
+  <text x="240" y="526" fill="#11172d" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">SM</text>
+</svg>

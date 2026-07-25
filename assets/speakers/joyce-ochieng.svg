@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait for Joyce Ochieng</title>
+  <desc id="desc">A pink and navy abstract speaker portrait with the initials JO.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="1" x2="1" y2="0"><stop stop-color="#b8366a"/><stop offset="1" stop-color="#ed6a9a"/></linearGradient></defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <path d="M0 90 480 0v135L0 240Z" fill="#f5c95f" opacity=".88"/>
+  <circle cx="420" cy="470" r="155" fill="#315ee7" opacity=".75"/>
+  <circle cx="240" cy="217" r="99" fill="#f8f4ea"/>
+  <path d="M139 226c-8-98 35-151 101-151 69 0 111 55 101 159-26-27-57-48-94-61-32 26-68 43-108 53Z" fill="#11172d"/>
+  <circle cx="153" cy="167" r="34" fill="#11172d"/><circle cx="327" cy="167" r="34" fill="#11172d"/>
+  <path d="M115 560c13-129 57-199 125-199s112 70 125 199Z" fill="#315ee7"/>
+  <text x="240" y="526" fill="#fff" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">JO</text>
+</svg>

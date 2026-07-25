@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait for Wambui Ng'ang'a</title>
+  <desc id="desc">A navy and green abstract speaker portrait with the initials WN.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11172d"/><stop offset="1" stop-color="#283251"/></linearGradient></defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <circle cx="62" cy="88" r="140" fill="#72c4a7" opacity=".9"/>
+  <circle cx="430" cy="455" r="165" fill="#ed6a9a" opacity=".78"/>
+  <path d="M235 0h245v195C383 158 312 104 235 0Z" fill="#315ee7" opacity=".82"/>
+  <circle cx="240" cy="216" r="99" fill="#f8f4ea"/>
+  <path d="M139 224c-3-94 40-150 101-150s104 56 101 150c-25-29-58-51-97-67-29 29-64 51-105 67Z" fill="#11172d"/>
+  <path d="M114 560c16-128 59-199 126-199s110 71 126 199Z" fill="#72c4a7"/>
+  <text x="240" y="526" fill="#11172d" font-family="Arial, sans-serif" font-size="42" font-weight="700" text-anchor="middle">WN</text>
+</svg>

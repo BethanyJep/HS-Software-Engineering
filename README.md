@@ -15,7 +15,8 @@
 | **Term 2 – Foundation Sessions** | |
 | [Session 1 – Introduction to Software Engineering](term2/session-1-intro-to-software-engineering.md) | What is SE? How does software get built? |
 | [Session 2 – Career Conversations](term2/session-2-career-conversations.md) | Roles in tech, alumni stories, pathways |
-| [Session 3 – Resource Session](term2/session-3-resource-session.md) | Tools, platforms, and getting started online |
+| [Session 3 – Resource Session](term2/session-3-resource-session.md) · [Slides](term2/session-3-resources-slides.html) | Tools, platforms, and getting started online |
+| [Tech Careers Panel & Discussion](term2/saturday-25-tech-careers-panel.md) · [Slides](term2/tech-careers-panel-slides.html) | Speaker stories, panel questions, and group discussion |
 | **Term 3 – Project Sprint** | |
 | [Project Guidelines](term3/project-guidelines.md) | How to ideate, plan, build, and present |
 | [Project Ideas](term3/project-ideas.md) | Inspiration & example problem areas |
