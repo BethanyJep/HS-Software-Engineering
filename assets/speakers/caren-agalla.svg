@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait for Caren Agalla</title>
+  <desc id="desc">A warm blue and gold abstract speaker portrait with the initials CA.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#315ee7"/><stop offset="1" stop-color="#78a1ff"/></linearGradient></defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <circle cx="405" cy="80" r="120" fill="#f5c95f" opacity=".85"/>
+  <circle cx="75" cy="490" r="145" fill="#ed6a9a" opacity=".8"/>
+  <path d="M0 355C100 290 177 330 251 277c88-64 154-35 229-83v366H0Z" fill="#11172d" opacity=".92"/>
+  <circle cx="240" cy="218" r="100" fill="#f8f4ea"/>
+  <path d="M144 217c4-82 47-129 101-129 64 0 103 54 96 140-21-31-48-52-82-61-32 31-69 49-115 50Z" fill="#11172d"/>
+  <path d="M124 560c8-127 54-199 116-199s108 72 116 199Z" fill="#f5c95f"/>
+  <text x="240" y="526" fill="#11172d" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">CA</text>
+</svg>

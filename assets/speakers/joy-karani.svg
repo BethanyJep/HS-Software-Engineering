@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 560" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrated portrait for Joy Karani</title>
+  <desc id="desc">A green and blue abstract speaker portrait with the initials JK.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4c9c84"/><stop offset="1" stop-color="#72c4a7"/></linearGradient></defs>
+  <rect width="480" height="560" fill="url(#bg)"/>
+  <circle cx="56" cy="80" r="130" fill="#315ee7" opacity=".82"/>
+  <path d="m330 0 150 130v205L260 0Z" fill="#f5c95f" opacity=".78"/>
+  <circle cx="240" cy="216" r="99" fill="#f8f4ea"/>
+  <path d="M140 219c3-90 42-140 100-140 61 0 101 52 101 140-26-28-59-50-97-65-29 28-64 49-104 65Z" fill="#11172d"/>
+  <path d="M116 560c14-128 57-199 124-199s110 71 124 199Z" fill="#11172d"/>
+  <path d="m190 365 50 65 50-65" fill="#f5c95f"/>
+  <text x="240" y="526" fill="#f8f4ea" font-family="Arial, sans-serif" font-size="44" font-weight="700" text-anchor="middle">JK</text>
+</svg>
