@@ -25,6 +25,7 @@
 | [Cool Demos](resources/demos.md) | Live demos to spark curiosity in sessions |
 | [Facilitator Guide](resources/facilitator-guide.md) | Tips, logistics, and facilitation notes |
 | [Career Paths in Tech](resources/career-paths/README.md) | Beginner guides to fields like AI, security & data — resources, projects & how to start |
+| [Holiday Build Challenge](resources/career-paths/holiday-build-challenge.md) | Build one beginner project in a tech field before the holidays end |
 
 ---
 

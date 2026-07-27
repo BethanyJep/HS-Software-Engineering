@@ -22,6 +22,12 @@ so you can compare them easily:
 - **Starter projects** — things you can build *this term*
 - **Your first steps** — a checklist to begin today
 
+## Build something during the holidays 🚀
+
+Students who want a practical challenge can use the [Holiday Build Challenge](holiday-build-challenge.md).
+It includes one small, achievable project for each of the seven fields most requested by students,
+with beginner tools, step-by-step instructions, and a showcase checklist.
+
 ---
 
 ## Choose a path to explore
