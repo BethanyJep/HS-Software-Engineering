@@ -20,7 +20,7 @@ By the end of this lesson, students will be able to:
 
 - [ ] One computer per student or pair
 - [ ] Projector and facilitator example
-- [ ] Capstone option selected from [Project Ideas](../project-ideas.md)
+- [ ] Capstone option selected from [Capstone Project Options](../project-ideas.md)
 - [ ] Offline text editor as a backup
 
 ---
@@ -108,4 +108,3 @@ Invite two teams to show their page. Students submit:
 - Focus on meaningful structure rather than memorising every tag.
 - Use only images students created or have permission to reuse.
 - If internet access fails, students can write the same HTML in a text editor and open it locally.
-

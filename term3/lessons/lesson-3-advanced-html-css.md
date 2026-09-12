@@ -13,7 +13,7 @@ Students will be able to:
 
 1. Build layouts with Flexbox and Grid.
 2. Make a page adapt to small and large screens.
-3. create accessible forms with labels and helpful input types.
+3. Create accessible forms with labels and helpful input types.
 4. Use browser developer tools to inspect and debug a layout.
 
 ## Lesson Plan
@@ -97,4 +97,3 @@ Students record one responsive change, one accessibility improvement, and one re
 - Treat accessibility as part of building correctly, not an optional polish step.
 - Avoid fixed widths for main content and never disable browser zoom.
 - Let students diagnose layout problems before showing the fix.
-
