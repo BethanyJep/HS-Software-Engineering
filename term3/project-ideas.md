@@ -1,132 +1,192 @@
-# Term 3 – Project Ideas & Inspiration
+# Term 3 – Capstone Project Options
 
-This document is a **springboard for brainstorming**. Teams don't have to pick from this list — you're encouraged to find your own problem. But if you're stuck, these are great starting points.
-
-Good software projects solve **problems that matter** for **the people around you**. The best ideas often come from your own life: problems you've faced at school, at home, or in your community.
-
----
-
-## How to Find a Good Idea
-
-Ask yourself:
-- What is something that wastes my time or is frustrating?
-- What do people around me struggle with?
-- What information is hard to find or access?
-- How could communication be improved somewhere I've seen it fail?
-- Who in my community is underserved by existing technology?
-
-> 💡 **The best problem to solve is one you actually care about.**
+**Audience:** Grade 10 students, Alliance Girls High School  
+**Format:** Teams of 3–5 students choose one of the three projects below  
+**Cost:** Each option can be completed with free tools
 
 ---
 
-## Category 1 – School & Student Life
+## Choose One Capstone
 
-| Idea | Problem it solves | Type |
+Instead of inventing a project idea, each team selects one of these three shared briefs. Teams can
+choose their own name, content, colours, and features, but they should solve the stated problem and
+complete the common requirements.
+
+| Option | Main career paths | Suggested free tools |
 |---|---|---|
-| **Library Book Tracker** | Students don't know which books are available without going to the library | Website / App |
-| **Study Group Finder** | Students struggle to find others studying the same subject | App |
-| **School Event Calendar** | Students miss events because communication is scattered | Website |
-| **Homework Reminder App** | Students forget assignment deadlines | Mobile App |
-| **Peer Tutoring Match** | Strong students and those who need help can't find each other easily | App |
-| **Anonymous Feedback Tool** | Students want to give feedback to teachers but feel uncomfortable doing so openly | Website |
-| **Lost and Found Board** | School has no efficient way to reunite students with lost items | Website |
-| **Canteen Pre-Order System** | Long queues at lunch waste students' break time | App |
+| [1. School Opportunities Hub](#option-1--school-opportunities-hub) | Web Development, UI/UX Design, Quality Assurance | CodePen, Figma or paper, GitHub Pages |
+| [2. Kenya Climate & Water Dashboard](#option-2--kenya-climate--water-dashboard) | Data Analysis, Web Development, Cloud & DevOps | CodePen, Open-Meteo, GitHub Pages |
+| [3. CyberSmart Quest](#option-3--cybersmart-quest) | Cybersecurity, Game Development, Quality Assurance | CodePen, MDN, GitHub Pages |
+
+> Every project needs developers, designers, testers, and presenters. Rotate roles so each team member
+> tries more than one career skill.
+
+## Requirements for Every Project
+
+By the showcase, every capstone must include:
+
+- [ ] A semantic HTML landing page with clear headings, navigation, and a footer
+- [ ] Consistent CSS and a layout that works on phones and computers
+- [ ] Readable colour contrast, image alternative text, labelled controls, and keyboard access
+- [ ] JavaScript data, at least one reusable function, a condition, and a loop
+- [ ] One meaningful interaction with clear user feedback
+- [ ] Data loaded with `fetch`, from a suitable public API or a team-created JSON file
+- [ ] Loading, empty, and error states for fetched data
+- [ ] A GitHub repository with clear commits from the team
+- [ ] A tested GitHub Pages deployment, or a local demonstration if school policy prevents publishing
+- [ ] A short `README` crediting data, learning resources, and permitted images
 
 ---
 
-## Category 2 – Health & Wellness
+## Option 1 – School Opportunities Hub
 
-| Idea | Problem it solves | Type |
-|---|---|---|
-| **Mental Health Check-In App** | Teenagers have no simple, private way to track and reflect on their mood | App |
-| **Menstrual Health Tracker** | Many girls lack tools to track cycles and understand their health | Mobile App |
-| **First Aid Guide App** | People in emergencies don't know what to do while waiting for help | App |
-| **Water Access Mapper** | Communities don't have an easy way to find clean water sources | Website / Map |
-| **Medicine Reminder** | Patients (especially elderly) forget to take medication | App |
-| **Nutrition Info for Local Foods** | No easy resource for nutritional content of African/local foods | App / Website |
+### The Brief
 
----
+Students often hear about clubs, competitions, scholarships, events, and study opportunities too
+late or through scattered messages. Build one accessible place where a student can discover and
+filter useful opportunities.
 
-## Category 3 – Community & Environment
+### Target User
 
-| Idea | Problem it solves | Type |
-|---|---|---|
-| **Community Notice Board** | Local notices (meetings, alerts, lost animals) are posted on physical boards that most people miss | Website |
-| **Waste Sorting Guide** | People don't know how to sort recyclables correctly | App |
-| **Local Business Directory** | Small businesses (especially women-owned) have no online presence | Website |
-| **Rain / Flood Alert System** | Farmers and residents in flood-prone areas lack early warnings | App |
-| **Tree Planting Tracker** | Groups doing environmental work have no easy way to record and share progress | App |
-| **Market Price Checker** | Farmers don't know current market prices before travelling to sell produce | App |
+A secondary-school student who wants to find a relevant opportunity quickly on a phone or shared
+computer.
 
----
+### Minimum Viable Product
 
-## Category 4 – Education & Learning
+- A welcoming landing section explaining the hub
+- At least eight fictional or facilitator-approved opportunity cards
+- A category filter or keyword search
+- A details view or show/hide section for each opportunity
+- A clear empty state when no opportunities match
+- Opportunity data fetched from a team-created `opportunities.json` file
 
-| Idea | Problem it solves | Type |
-|---|---|---|
-| **Kiswahili Learning Game** | Young children struggle with Kiswahili vocabulary; few fun apps exist | Game (Scratch or App) |
-| **KCSE Subject Revision App** | Students need quick, focused practice by topic, not full textbooks | App |
-| **Sign Language Translator** | Deaf and hearing communities lack tools to communicate easily | App |
-| **Digital Storybook Creator** | Children in rural schools have limited access to storybooks | Website / App |
-| **Career Exploration Quiz** | Secondary students have no interactive tool to explore career options | Website |
+### Career Connections
 
----
+- **Web Developer:** builds the page, data rendering, and filters
+- **UI/UX Designer:** organises information and tests whether students can find an opportunity
+- **QA Tester:** checks links, filters, keyboard use, and different screen sizes
 
-## Category 5 – Safety & Civic Engagement
+### Safe Data Rules
 
-| Idea | Problem it solves | Type |
-|---|---|---|
-| **Safe Route Planner** | Students/women walking at night don't have a way to find the safest paths | App |
-| **Incident Reporting Tool** | Community members have no anonymous channel to report safety concerns | Website |
-| **Voter Information Guide** | First-time voters don't know how elections work or where to go | Website |
-| **Bursary Finder** | Students from low-income families miss bursary opportunities due to lack of information | Website |
+Use fictional entries or public information approved by a facilitator. Do not publish student names,
+phone numbers, personal email addresses, private schedules, or application details without permission.
+
+### Stretch Goals
+
+- Add bookmarks stored only in the user's browser
+- Sort by date or category
+- Add a "closing soon" label
+- Include a print-friendly view
+
+### Success Looks Like
+
+A first-time visitor can find one relevant opportunity, understand its next step, and use the page
+on a phone without asking the team for help.
 
 ---
 
-## Category 6 – Fun & Games (with Purpose)
+## Option 2 – Kenya Climate & Water Dashboard
 
-| Idea | Problem it solves | Type |
-|---|---|---|
-| **Kenyan History Trivia Game** | Students find history dry; there are no fun Kenyan history games | Game |
-| **Financial Literacy Game** | Teenagers lack basic money management skills | Game |
-| **Road Safety Quiz** | Young people are unaware of basic road safety rules | Game |
-| **Language Learning Game** | Tribal language preservation — make it fun for young people | Game |
+### The Brief
+
+Weather and climate information can be difficult to interpret. Build a simple dashboard that helps
+students compare current conditions in selected Kenyan locations and explains one practical action,
+such as preparing for heat or conserving water.
+
+### Target User
+
+A student, teacher, or community member who wants a clear summary rather than a page of raw numbers.
+
+### Minimum Viable Product
+
+- A landing section explaining what the dashboard can and cannot tell users
+- A selector with at least three facilitator-approved locations and their coordinates
+- Current temperature fetched from the free, no-key
+  [Open-Meteo API](https://open-meteo.com/en/docs)
+- A clear loading state, last-updated value, and friendly error state
+- A visual comparison using accessible HTML/CSS bars, cards, or a table
+- A short plain-language explanation of the displayed data
+
+### Career Connections
+
+- **Data Analyst:** checks units, compares values, and writes an accurate data story
+- **Web Developer:** fetches and displays the API response
+- **UI/UX Designer:** makes the dashboard understandable and accessible
+- **Cloud/DevOps Engineer:** deploys the site and checks that its live data remains reliable
+
+### Responsible Data Rules
+
+Credit Open-Meteo, show units, and never present a classroom project as an emergency warning service.
+Do not collect a visitor's precise location; use the team's fixed list of approximate city coordinates.
+
+### Stretch Goals
+
+- Show one additional weather measurement
+- Compare today's reading with a short forecast
+- Add Celsius explanations or a simple legend
+- Cache the last successful result as a fallback
+
+### Success Looks Like
+
+A visitor can choose a location, understand the result and its units, and still receives a useful
+message if the API or internet is unavailable.
 
 ---
 
-## Example Completed Projects (for inspiration)
+## Option 3 – CyberSmart Quest
 
-These are examples from similar programs around the world:
+### The Brief
 
-### 🏆 "Duka Yangu" – Small Business Inventory App
-> A simple website where a small kiosk owner can track stock levels and get an alert when something is running low. Built using HTML, CSS, and JavaScript. Demonstrated by a team of 4 students.
+Phishing, weak passwords, and unsafe sharing put students at risk online. Build a short, game-like
+learning experience that lets students practise making safer choices without using any real private
+information.
 
-### 🏆 "SomaBetter" – KCSE Revision Flashcard App
-> A mobile-friendly website with flashcards for common KCSE subjects. Students can flip cards, mark ones they got right/wrong, and see their progress. Built on Thunkable.
+### Target User
 
-### 🏆 "Pumzika" – Student Wellness Check-In
-> A simple app where students record their mood each day and are shown a motivational quote and a breathing exercise if they choose "stressed". Built in Scratch with a web version.
+A secondary-school student learning how to recognise common online risks and respond safely.
+
+### Minimum Viable Product
+
+- A landing section explaining the quest and its safety purpose
+- At least eight original scenario questions stored as structured data
+- Answer buttons with immediate explanations, not only "right" or "wrong"
+- A score or progress indicator created with functions and loops
+- A restart action and a final screen with three practical safety habits
+- Questions fetched from a team-created `questions.json` file
+
+### Career Connections
+
+- **Cybersecurity Specialist:** researches accurate, defensive safety guidance
+- **Game Developer:** creates rules, progress, feedback, and a satisfying finish
+- **Web Developer:** builds the interface and JavaScript logic
+- **QA Tester:** tries unexpected actions and checks scoring, accessibility, and explanations
+
+### Safety Rules
+
+Use invented examples and placeholder passwords only. Never collect real passwords, private messages,
+account details, or names. Do not test attacks on any account, device, website, or network.
+
+### Stretch Goals
+
+- Add difficulty levels or topic categories
+- Let the player review missed questions
+- Save only a high score in the browser
+- Add a timer that can be paused or disabled
+
+### Success Looks Like
+
+A player can finish the quest, understand why each answer is safe or unsafe, and name three actions
+they can take to protect an account.
 
 ---
 
-## Tips for Choosing Your Project
+## Team Selection Activity
 
-1. **Pick something you can actually build in 8 weeks** — a working simple version is better than an unfinished ambitious one.
-2. **Talk to your users** — don't assume you know what they need. Ask them!
-3. **Start with paper** — sketch your screens on paper before writing any code.
-4. **Think about your MVP** — what is the *one thing* your software must do to be useful?
-5. **Don't copy an existing app** — be inspired by them, but make something your own.
+1. Read all three briefs.
+2. Each team member privately ranks the options from 1 to 3.
+3. Discuss the rankings and select one option the whole team can support.
+4. Write one sentence explaining why that option matters to your target user.
+5. Complete the [Project Kickoff Form](project-guidelines.md#appendix-a--project-kickoff-form).
 
----
+Do not add stretch goals until the minimum viable product works.
 
-## Getting Unstuck
-
-If your team is really stuck on an idea, try this activity:
-
-**"How Might We…?" Brainstorm**
-1. Each team member writes 5 "How Might We…?" questions on separate sticky notes.
-   - Example: *"How might we help students find a study partner?"*
-   - Example: *"How might we make it easier to report potholes in our town?"*
-2. Stick them all on the table and group similar ideas.
-3. Vote for your favourite problem to solve (each person gets 3 votes).
-4. Pick the one with the most votes.
