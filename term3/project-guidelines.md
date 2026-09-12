@@ -2,39 +2,42 @@
 
 **Term:** 3  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Format:** Team project sprint (groups of 3–5 students)  
+**Format:** Eight guided lessons and a team capstone (groups of 3–5 students)  
 **Culmination:** Showcase & Prize Ceremony at end of Term 3
 
 ---
 
 ## Overview
 
-In Term 3, you and your team will design and build a **software solution to a problem you care about**. This is your chance to take everything you learned in Term 2 and make something that works.
+In Term 3, you and your team will choose one of the [three capstone
+options](project-ideas.md) and build it as a web application. The
+[eight lessons](lessons/README.md) take you from your first HTML page to a deployed project.
 
 You don't need to be an expert. You need curiosity, teamwork, and willingness to try — and fail — and try again. That's software engineering.
 
 ---
 
-## Project Phases
+## Lessons and Project Phases
 
-### Phase 1 – Kickoff (Week 1)
+### Phase 1 – Choose and Plan (Week 1)
 
-**Goal:** Lock in your team, problem, and plan.
+**Goal:** Lock in your team, capstone option, and plan.
 
 - [ ] Confirm your team members and choose a **Team Name**.
-- [ ] Finalize your problem statement (one sentence: *"[User] needs a way to [solve problem] because [reason]."*)
-- [ ] Decide on what type of software you'll build (app, website, game, tool).
-- [ ] Choose your main tool (Scratch, Thunkable, CodePen, Figma, etc.).
+- [ ] Read all three capstone briefs and select one as a team.
+- [ ] Explain why that capstone's stated problem matters to its target user.
+- [ ] Assign initial roles; plan to rotate them so everyone learns more than one career skill.
+- [ ] Open CodePen and decide where the team will save shared work between lessons.
 - [ ] Fill in and submit the **Project Kickoff Form** (see Appendix A).
 
 ---
 
-### Phase 2 – Ideation & Research (Weeks 1–2)
+### Phase 2 – Understand and Design (Weeks 1–2)
 
-**Goal:** Deeply understand the problem and sketch your solution.
+**Goal:** Understand the assigned problem and sketch your team's version of the solution.
 
-- [ ] Interview or survey at least **3 people** who experience the problem.
-- [ ] Research existing solutions — what's already out there? How is yours different?
+- [ ] Ask at least **3 potential users** what information or task matters most to them.
+- [ ] Research existing solutions to learn what is clear, confusing, or missing.
 - [ ] Sketch your solution on paper first (**wireframe / prototype sketch**).
 - [ ] Define what your **MVP (Minimum Viable Product)** is — the smallest useful version.
 - [ ] Write a short **user story**: *"As a [user], I want to [do something] so that [benefit]."*
@@ -43,7 +46,7 @@ You don't need to be an expert. You need curiosity, teamwork, and willingness to
 
 ---
 
-### Phase 3 – Build (Weeks 3–8)
+### Phase 3 – Learn and Build (Weeks 1–8)
 
 **Goal:** Build your MVP.
 
@@ -52,6 +55,19 @@ You don't need to be an expert. You need curiosity, teamwork, and willingness to
 - [ ] Meet weekly — in person or online — to share progress and solve blockers.
 - [ ] Keep notes on what you tried, what worked, and what didn't.
 - [ ] Ask for help from facilitators when you're stuck for more than 30 minutes.
+
+Use each lesson to complete one part of the capstone:
+
+| Lesson | Team output |
+|---|---|
+| 1. HTML landing page | Semantic page structure and project content |
+| 2. CSS styling | Shared visual design |
+| 3. Advanced HTML/CSS | Responsive, accessible layout |
+| 4. JavaScript fundamentals | Structured project data and reusable logic |
+| 5. Website interactivity | Working core interaction |
+| 6. APIs and fetch | Fetched data with loading and error states |
+| 7. Git and GitHub | Shared repository and meaningful commits |
+| 8. Deployment | Tested GitHub Pages release |
 
 #### Weekly Check-In Template
 Each week, your team should be able to answer:
@@ -122,19 +138,22 @@ Your presentation should cover:
 
 ---
 
-## Allowed Tools & Technologies
+## Free Tools & Technologies
 
-Teams may use any of the following (choose what suits your skill level):
+The core project must use the same approachable web stack taught in the lessons:
 
-| Level | Tools |
+| Purpose | Free option |
 |---|---|
-| Beginner | Scratch, Thunkable, Google Sites |
-| Intermediate | HTML/CSS/JavaScript (CodePen), Glide Apps, Bubble.io |
-| Advanced | Python (Flask/Django), React, Android Studio |
-| Design-first | Figma (prototypes are accepted if software is not fully functional) |
+| Plan and sketch | Paper or Figma Starter |
+| Build in the browser | CodePen |
+| Build in files | Any installed text editor |
+| Version control | Git and GitHub Free |
+| Public data | Open-Meteo or a team-created JSON file |
+| Deployment | GitHub Pages |
 
 > ✅ You are encouraged to use tutorials, documentation, and online resources.  
 > ❌ You may NOT submit work built entirely by an AI tool without significant team contribution.
+> ❌ No lesson requires a credit card, paid plan, or secret API key.
 
 ---
 
@@ -155,7 +174,7 @@ Teams may use any of the following (choose what suits your skill level):
 ## Rules
 
 1. All work must be the team's own (use of AI assistants for learning is fine; having AI do everything for you is not).
-2. Projects must address a **genuine problem** — no games for the sake of games (games that solve a problem are allowed).
+2. Projects must follow one of the three capstone briefs. Teams may personalise the design and content without changing the core problem.
 3. All team members must be able to explain the project and answer questions about it.
 4. Teams must submit the **Kickoff Form** by Week 1 and show progress at mid-term check-in.
 5. Be kind, support each other, and have fun.
@@ -182,19 +201,16 @@ Teams may use any of the following (choose what suits your skill level):
 │  Class / Stream: ____________________________________________      │
 │  Facilitator Contact: _______________________________________      │
 │                                                                   │
-│  PROBLEM STATEMENT (one sentence):                                │
+│  CAPSTONE (tick one):                                             │
+│  ☐ School Opportunities Hub                                      │
+│  ☐ Kenya Weather Dashboard                                       │
+│  ☐ CyberSmart Quest                                              │
+│                                                                   │
+│  WHY DOES THIS PROBLEM MATTER TO ITS TARGET USER?                 │
 │  ___________________________________________________________       │
 │                                                                   │
-│  TARGET USERS (who will use this?):                               │
+│  OUR TEAM'S NAME / THEME / CONTENT CHOICES:                       │
 │  ___________________________________________________________       │
-│                                                                   │
-│  PROPOSED SOLUTION:                                               │
-│  ___________________________________________________________       │
-│  ___________________________________________________________       │
-│                                                                   │
-│  TYPE OF SOFTWARE: ☐ App  ☐ Website  ☐ Game  ☐ Tool  ☐ Other    │
-│                                                                   │
-│  MAIN TOOL / LANGUAGE:                                            │
 │  ___________________________________________________________       │
 │                                                                   │
 │  MVP FEATURE (the ONE most important thing your software does):   │

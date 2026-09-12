@@ -17,12 +17,12 @@
 | [Session 2 – Career Conversations](term2/session-2-career-conversations.md) | Roles in tech, alumni stories, pathways |
 | [Session 3 – Resource Session](term2/session-3-resource-session.md) · [Slides](term2/session-3-resources-slides.html) | Tools, platforms, and getting started online |
 | [Tech Careers Panel & Discussion](term2/saturday-25-tech-careers-panel.md) · [Slides](term2/tech-careers-panel-slides.html) | Speaker stories, panel questions, and group discussion |
-| **Term 3 – Project Sprint** | |
-| [Project Guidelines](term3/project-guidelines.md) | How to ideate, plan, build, and present |
-| [Project Ideas](term3/project-ideas.md) | Inspiration & example problem areas |
+| **Term 3 – Lessons & Capstone** | |
+| [Eight Web Development Lessons](term3/lessons/README.md) | HTML, CSS, JavaScript, APIs, Git/GitHub, and deployment |
+| [Project Guidelines](term3/project-guidelines.md) | How to select, plan, build, test, and present |
+| [Three Capstone Options](term3/project-ideas.md) | Career-linked projects designed for free tools |
 | **Facilitator Resources** | |
 | [Icebreakers](resources/icebreakers.md) | Energisers and team-building activities |
-| [Cool Demos](resources/demos.md) | Live demos to spark curiosity in sessions |
 | [Facilitator Guide](resources/facilitator-guide.md) | Tips, logistics, and facilitation notes |
 | [Career Paths in Tech](resources/career-paths/README.md) | Beginner guides to fields like AI, security & data — resources, projects & how to start |
 | [Holiday Build Challenge](resources/career-paths/holiday-build-challenge.md) | Build one beginner project in a tech field before the holidays end |
@@ -33,12 +33,12 @@
 
 ```
 Term 2  ──►  3 Sessions (Intro · Careers · Resources)
-Term 3  ──►  Group Project Sprint  ──►  Showcase & Prize Ceremony
+Term 3  ──►  8 Lessons  ──►  Team Capstone  ──►  Showcase & Prize Ceremony
 ```
 
 ### Goals
 1. Introduce students to software engineering as a discipline and career.
-2. Build confidence through hands-on demos and peer discussion.
+2. Build confidence through hands-on lessons and peer discussion.
 3. Support students in designing and building a working software solution.
 4. Award and celebrate the winning team to inspire future cohorts.
 
