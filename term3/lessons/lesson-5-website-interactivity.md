@@ -34,6 +34,11 @@ Explain that interfaces listen for events, do work, and show the result.
 ```
 
 ```javascript
+const resources = [
+  { title: "Revision group" },
+  { title: "Science fair" },
+  { title: "Coding club" }
+];
 const searchInput = document.querySelector("#search");
 const searchButton = document.querySelector("#search-button");
 const status = document.querySelector("#status");
@@ -93,4 +98,3 @@ Students identify the event, action, and feedback in their capstone feature.
 - Keep JavaScript in the JavaScript panel or a separate file rather than inline `onclick` attributes.
 - Prefer `textContent` and DOM methods for displaying user or API data.
 - A smaller interaction that is clear and reliable is better than many unfinished controls.
-

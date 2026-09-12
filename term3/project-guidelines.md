@@ -203,7 +203,7 @@ The core project must use the same approachable web stack taught in the lessons:
 │                                                                   │
 │  CAPSTONE (tick one):                                             │
 │  ☐ School Opportunities Hub                                      │
-│  ☐ Kenya Climate & Water Dashboard                               │
+│  ☐ Kenya Weather Dashboard                                       │
 │  ☐ CyberSmart Quest                                              │
 │                                                                   │
 │  WHY DOES THIS PROBLEM MATTER TO ITS TARGET USER?                 │

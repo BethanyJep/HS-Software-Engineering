@@ -20,7 +20,8 @@ Students will be able to:
 
 - [ ] Team HTML, CSS, and JavaScript files downloaded from CodePen
 - [ ] Git installed, or access to GitHub's browser file editor
-- [ ] One GitHub account per team or student, following school policy
+- [ ] An individual GitHub account for each student, if school policy permits
+- [ ] A facilitator-owned repository as an alternative when students cannot create accounts
 
 ---
 
@@ -72,6 +73,7 @@ Agree on these beginner rules:
 4. Make small commits with clear messages.
 5. Never commit passwords, private data, or API keys.
 6. Ask before resolving a teammate's merge conflict.
+7. Add teammates as repository collaborators; never share an account or password.
 
 ### ⏱ 65–80 min | Capstone Checkpoint
 
@@ -99,4 +101,3 @@ GitHub's editor for one small change. Show the commit history and compare two ve
 - Use GitHub organisations or classroom tooling only if the school has approved them.
 - Keep repository visibility aligned with school policy and remove personal student data before
   making a project public.
-

@@ -179,7 +179,7 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 │                                                                    │
 │  OUR CAPSTONE (tick one)                                           │
 │  ☐ School Opportunities Hub                                       │
-│  ☐ Kenya Climate & Water Dashboard                                │
+│  ☐ Kenya Weather Dashboard                                        │
 │  ☐ CyberSmart Quest                                               │
 │                                                                    │
 │  Who will use this?                                                │

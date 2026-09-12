@@ -15,7 +15,7 @@ complete the common requirements.
 | Option | Main career paths | Suggested free tools |
 |---|---|---|
 | [1. School Opportunities Hub](#option-1--school-opportunities-hub) | Web Development, UI/UX Design, Quality Assurance | CodePen, Figma or paper, GitHub Pages |
-| [2. Kenya Climate & Water Dashboard](#option-2--kenya-climate--water-dashboard) | Data Analysis, Web Development, Cloud & DevOps | CodePen, Open-Meteo, GitHub Pages |
+| [2. Kenya Weather Dashboard](#option-2--kenya-weather-dashboard) | Data Analysis, Web Development, Cloud & DevOps | CodePen, Open-Meteo, GitHub Pages |
 | [3. CyberSmart Quest](#option-3--cybersmart-quest) | Cybersecurity, Game Development, Quality Assurance | CodePen, MDN, GitHub Pages |
 
 > Every project needs developers, designers, testers, and presenters. Rotate roles so each team member
@@ -85,13 +85,13 @@ on a phone without asking the team for help.
 
 ---
 
-## Option 2 – Kenya Climate & Water Dashboard
+## Option 2 – Kenya Weather Dashboard
 
 ### The Brief
 
-Weather and climate information can be difficult to interpret. Build a simple dashboard that helps
-students compare current conditions in selected Kenyan locations and explains one practical action,
-such as preparing for heat or conserving water.
+Weather information can be difficult to interpret. Build a simple dashboard that helps students
+compare current conditions in selected Kenyan locations and explains one practical action, such as
+preparing for heat or rain.
 
 ### Target User
 
@@ -189,4 +189,3 @@ they can take to protect an account.
 5. Complete the [Project Kickoff Form](project-guidelines.md#appendix-a--project-kickoff-form).
 
 Do not add stretch goals until the minimum viable product works.
-
