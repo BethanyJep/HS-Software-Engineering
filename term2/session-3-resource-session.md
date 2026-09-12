@@ -16,7 +16,7 @@ By the end of this session, students will be able to:
 
 1. Access at least two free online learning platforms.
 2. Access and navigate a beginner coding environment without creating an account.
-3. Describe their Term 3 project idea at a high level.
+3. Compare the three Term 3 capstone options.
 4. Know their project group and feel ready to begin.
 
 ---
@@ -28,7 +28,7 @@ By the end of this session, students will be able to:
 - [ ] Projector / display screen
 - [ ] Facilitator laptop (demos tested beforehand)
 - [ ] "My Starter Kit" handout — one per student (see Appendix A)
-- [ ] "Project Idea Canvas" — one per group (see Appendix B)
+- [ ] "Capstone Selection Canvas" — one per group (see Appendix B)
 - [ ] Whiteboard / flip chart for idea collection
 - [ ] List of students to guide group formation
 
@@ -85,8 +85,8 @@ Have students open and bookmark (or save in a shared doc):
 
 **Purpose:** Give students a taste of what "building" actually feels like.
 
-> 💡 See [Cool Demos](../resources/demos.md). **Recommended for this session:**
-> - **Demo: Build a personal "About Me" webpage** (HTML + CSS, ~15 min)
+> 💡 Preview [Term 3 Lesson 1](../term3/lessons/lesson-1-html-landing-page.md):
+> - **Build a personal "About Me" webpage** (HTML + CSS, ~15 min)
 >   - Students follow along on their own devices
 >   - End result: a webpage with their name, a colour they chose, and one sentence about them
 
@@ -97,40 +97,29 @@ Have students open and bookmark (or save in a shared doc):
 
 ---
 
-### ⏱ 50–65 min | Forming Project Groups & Brainstorming
+### ⏱ 50–65 min | Forming Groups & Choosing a Capstone
 
-**Purpose:** Set up Term 3 teams and start ideating.
+**Purpose:** Set up Term 3 teams and select one shared project brief.
 
 **Step 1 – Group Formation (5 min)**
 - Facilitators announce groups (pre-determined, mixing skills/interests, 3–5 students per group)
 - Groups find their seats together
 
-**Step 2 – Problem Brainstorm (10 min)**
-Each group discusses:
-> *"What is a problem that YOU, your school, or your community faces that technology could help solve?"*
+**Step 2 – Compare the Capstones (10 min)**
+Read the [three capstone options](../term3/project-ideas.md). Each student ranks them privately,
+then the group discusses which problem and career paths interest them most.
 
-Write ideas on the whiteboard as groups share — big and small, realistic and ambitious.
-
-Examples to prompt thinking if groups are stuck:
-- "How do students know which library books are available?"
-- "How do patients in rural areas access medical advice?"
-- "How do small-scale farmers get weather information?"
-- "How do students organise study groups?"
-- "How can the school manage lost and found items?"
-
-**Step 3 – Complete the Project Idea Canvas (15 min)**
-Each group fills in the canvas (Appendix B) together.
-
-> 💡 See [Project Ideas](../term3/project-ideas.md) for a full list of inspiration and example projects.
+**Step 3 – Complete the Capstone Selection Canvas (15 min)**
+Each group selects one brief and fills in the canvas (Appendix B) together.
 
 ---
 
 ### ⏱ 65–80 min | Groups Share Their Ideas
 
 Each group takes 2 minutes to share:
-1. The problem they want to solve
+1. The capstone they selected
 2. Who the solution is for
-3. What type of software they're imagining (app, website, game, etc.)
+3. Which career roles each member wants to try first
 
 Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (question or suggestion) for each group.
 
@@ -167,7 +156,7 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 │  My Term 3 project group: ________________________________         │
 │  Group members: __________________________________________         │
 │                                                                    │
-│  Our project idea (one line): _____________________________        │
+│  Our selected capstone: __________________________________        │
 │                                                                    │
 │  ── Resources to explore this holiday ──                           │
 │  ☐ scratch.mit.edu – Complete the "Getting Started" tutorial       │
@@ -179,35 +168,31 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 
 ---
 
-## Appendix B – Project Idea Canvas
+## Appendix B – Capstone Selection Canvas
 
 ```
 ┌────────────────────────────────────────────────────────────────────┐
-│  Project Idea Canvas – Term 2, Session 3                           │
+│  Capstone Selection Canvas – Term 2, Session 3                    │
 │                                                                    │
 │  Group Name / Number: _______________________________________       │
 │  Team Members: ______________________________________________       │
 │                                                                    │
-│  THE PROBLEM                                                       │
-│  What problem are we trying to solve?                              │
+│  OUR CAPSTONE (tick one)                                           │
+│  ☐ School Opportunities Hub                                       │
+│  ☐ Kenya Climate & Water Dashboard                                │
+│  ☐ CyberSmart Quest                                               │
+│                                                                    │
+│  Who will use this?                                                │
 │  ____________________________________________________________       │
 │                                                                    │
-│  Who experiences this problem? (our "user")                        │
+│  Why does this problem matter to them?                             │
 │  ____________________________________________________________       │
 │                                                                    │
-│  How do people currently deal with this problem?                   │
+│  Which career roles do we want to try?                             │
 │  ____________________________________________________________       │
 │                                                                    │
-│  OUR SOLUTION IDEA                                                 │
-│  What type of software? (app / website / game / tool / other)      │
+│  What name, theme, or content will make this version ours?         │
 │  ____________________________________________________________       │
-│                                                                    │
-│  How would it work? (describe in 2–3 sentences)                    │
-│  ____________________________________________________________       │
-│  ____________________________________________________________       │
-│                                                                    │
-│  WHY US?                                                           │
-│  Why does our group care about this problem?                       │
 │  ____________________________________________________________       │
 └────────────────────────────────────────────────────────────────────┘
 ```
@@ -220,6 +205,6 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 - Test all URLs from the school's network before the session — some may be blocked.
 - Have an offline backup plan (e.g., Scratch offline editor) in case of poor internet.
 - Group formation should be deliberate — consider mixing confidence levels and interests.
-- Don't rush the project ideation; this is the foundation for Term 3.
-- Collect Project Idea Canvases and share them with all facilitators before Term 3 starts.
+- Don't rush capstone selection; every student should understand the chosen brief.
+- Collect Capstone Selection Canvases and share them with all facilitators before Term 3 starts.
 - If students don't finish their canvas, they can complete it at the start of Term 3.

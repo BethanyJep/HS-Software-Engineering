@@ -21,10 +21,10 @@ Please read (or at least skim) all three session plans before your first session
 | [Session 1 – Intro to SE](../term2/session-1-intro-to-software-engineering.md) | First impressions — high energy, visual, inspiring |
 | [Session 2 – Career Conversations](../term2/session-2-career-conversations.md) | Emotional and relational — requires speaker management |
 | [Session 3 – Resource Session](../term2/session-3-resource-session.md) | Practical and hands-on — needs computer lab prep |
-| [Term 3 Project Guidelines](../term3/project-guidelines.md) | Understand what students are working toward |
-| [Project Ideas](../term3/project-ideas.md) | Familiarise yourself so you can coach teams |
+| [Term 3 Lessons](../term3/lessons/README.md) | Prepare the eight guided build sessions |
+| [Term 3 Project Guidelines](../term3/project-guidelines.md) | Understand the capstone process and expectations |
+| [Capstone Options](../term3/project-ideas.md) | Familiarise yourself with all three briefs |
 | [Icebreakers](icebreakers.md) | Know 2–3 options for each session |
-| [Cool Demos](demos.md) | Run through each demo you plan to use |
 | [Career Paths in Tech](career-paths/README.md) | Point students to a field they're curious about |
 
 ---
@@ -55,7 +55,7 @@ Wherever possible, ask questions rather than giving answers. This builds critica
 - [ ] Confirm room booking (computer lab for Session 3)
 - [ ] Confirm attending facilitators (minimum 2 recommended)
 - [ ] For Session 2: confirm guest speakers, share briefing notes
-- [ ] Test all demos (see [Cool Demos](demos.md)) from the school's network
+- [ ] Test the lesson's code, links, and free tools from the school's network
 - [ ] Print any required handouts (bingo cards, worksheets, exit tickets)
 - [ ] Share session plan with all co-facilitators
 
@@ -123,6 +123,10 @@ Wherever possible, ask questions rather than giving answers. This builds critica
 ## Supporting Term 3 Project Teams
 
 During Term 3, your role shifts from facilitator to **coach and mentor**.
+
+Students are not expected to invent a project. Help each team choose one of the
+[three capstone options](../term3/project-ideas.md), then use the checkpoint in every
+[lesson](../term3/lessons/README.md) to keep the build moving.
 
 ### What good coaching looks like
 - Ask questions, don't give answers: *"What have you tried? What happened? What might you try next?"*

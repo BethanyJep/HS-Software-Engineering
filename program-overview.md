@@ -7,7 +7,7 @@ This program is a collaboration between **TOFA** and **Alliance Girls Alumni**, 
 The program runs across two school terms:
 
 - **Term 2** – Foundation & Inspiration (2–3 facilitated sessions)
-- **Term 3** – Project Sprint & Showcase
+- **Term 3** – Guided Web Development Lessons, Capstone & Showcase
 
 At the end of Term 3, student teams present their solutions and a **prize is awarded to the winning team**.
 
@@ -25,13 +25,14 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 | 2 | Career Conversations | 90 min | Hear from alumni; explore roles in tech; visualise pathways |
 | 3 | Resource Session | 90 min | Know where to learn; set up tools; form project groups |
 
-### Term 3 – Project Sprint
+### Term 3 – Lessons and Capstone
 
 | Phase | Timing | Activity |
 |---|---|---|
-| Kickoff | Week 1 | Teams finalized; problem statements submitted |
-| Ideation | Weeks 1–2 | Research, brainstorm, define solution |
-| Build | Weeks 3–8 | Design UI, write code, test, iterate |
+| Choose | Week 1 | Teams select one of three capstone briefs |
+| Lessons 1–3 | Weeks 1–3 | Build and style an accessible, responsive landing page |
+| Lessons 4–6 | Weeks 4–6 | Add JavaScript, interactivity, and fetched data |
+| Lessons 7–8 | Weeks 7–8 | Use Git/GitHub and deploy with GitHub Pages |
 | Polish | Weeks 9–10 | Refine MVP, prepare presentation |
 | Showcase | End of Term | Teams present to panel of judges |
 | Prize Ceremony | Showcase Day | Winning team announced and awarded |
@@ -61,10 +62,11 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 ### Tools & Platforms
 | Purpose | Suggested Tool | Notes |
 |---|---|---|
-| Coding | Scratch, Thunkable, or CodePen (HTML/CSS/JavaScript) | Match to skill level |
-| Design | Figma (free for students) | Good for prototyping |
+| Coding | CodePen or an installed text editor (HTML/CSS/JavaScript) | Free; CodePen works in a browser |
+| Design | Paper or Figma Starter | No paid plan required |
 | Collaboration | Google Docs / Slides | Already available at school |
-| Version control (advanced) | GitHub | Introduce in Session 3 |
+| Version control | Git and GitHub Free | Taught in Term 3 Lesson 7 |
+| Deployment | GitHub Pages | Free static-site hosting taught in Lesson 8 |
 | Communication | WhatsApp group or Google Classroom | Coordinate between sessions |
 
 ---
