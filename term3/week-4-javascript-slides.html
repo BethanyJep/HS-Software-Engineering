@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3, July 27: practise JavaScript functions, loops, interaction and debugging on your community website.">
+    <title>Term 3 · Week 4 · Introduction to Programming I</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> WEEK 04</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">JULY 27 · MODULE 4</p><p class="deck-title">Introduction to Programming I</p></div>
+        <section class="slide-viewport" aria-label="Week 4 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Make it respond">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">WEEK 4 · JULY 27 · JAVASCRIPT</p><h1>Click something.<br><em>Make it respond.</em></h1>
+              <p class="lead">Build an activity finder. Then adapt the interaction for your team website.</p>
+              <p class="checkpoint">One partner drives the keyboard. One checks. Swap every two slides.</p>
+              <div class="hero-meta"><span>TOFA × Alliance Girls Alumni</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Connect JavaScript">
+            <div class="slide-content">
+              <p class="eyebrow">SET UP · 5 MIN</p><h2>Give JavaScript<br><em>a place to work.</em></h2>
+              <pre class="workshop-code"><code>&lt;button id="show" type="button"&gt;Show activities&lt;/button&gt;
+&lt;ul id="activities"&gt;&lt;/ul&gt;
+&lt;p id="status" role="status"&gt;&lt;/p&gt;
+&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
+              <p class="checkpoint">Add this inside body. Create app.js beside index.html. In CodePen, omit the script tag and use the JS panel.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Store data and select elements">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD ALONG · APP.JS · 5 MIN</p><h2>Data + elements.<br><em>Meet your ingredients.</em></h2>
+              <pre class="workshop-code"><code>const activities = ["Coding club", "Design challenge"];
+const list = document.querySelector("#activities");
+const status = document.querySelector("#status");
+const button = document.querySelector("#show");
+console.log(activities.length);</code></pre>
+              <p class="checkpoint">const names a value; an array stores a list. Open DevTools → Console. Expect 2. Add an activity—what changes?</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Write a reusable function">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · APPEND TO APP.JS · 7 MIN</p><h2>A function is<br><em>a reusable recipe.</em></h2>
+              <pre class="workshop-code"><code>function addActivity(name) {
+  const item = document.createElement("li");
+  item.textContent = name;
+  list.append(item);
+}
+addActivity("Try a new skill");</code></pre>
+              <p class="checkpoint">The parameter name receives your text. See one list item? Remove just the last test call before continuing.</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Repeat with a loop">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD ALONG · APPEND TO APP.JS · 7 MIN</p><h2>One instruction.<br><em>Every activity.</em></h2>
+              <pre class="workshop-code"><code>function showActivities() {
+  list.replaceChildren();
+  for (const activity of activities) {
+    addActivity(activity);
+  }
+}
+showActivities();</code></pre>
+              <p class="checkpoint">The loop visits each item. Why clear the list first? Run it twice, then remove the last test call.</p>
+            </div><span class="slide-number slide-number--light">05</span>
+          </article>
+          <article class="slide slide--cream" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Make a decision">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · INSIDE SHOWACTIVITIES · 7 MIN</p><h2>If this happens,<br><em>say that.</em></h2>
+              <pre class="workshop-code"><code>if (activities.length === 0) {
+  status.textContent = "No activities yet.";
+} else {
+  status.textContent = "Choose an activity to explore.";
+}</code></pre>
+              <p class="checkpoint">Insert after the loop, before the function’s final }. The condition chooses feedback for an empty or full list.</p>
+            </div><span class="slide-number">06</span>
+          </article>
+          <article class="slide slide--gold" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Listen for a click">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · BOTTOM OF APP.JS · 5 MIN</p><h2>Now connect<br><em>the click.</em></h2>
+              <pre class="workshop-code"><code>button.addEventListener("click", showActivities);</code></pre>
+              <ul class="activity">
+                <li><strong>Click</strong>Your list should appear.</li>
+                <li><strong>Repeat</strong>Click again. No duplicate items.</li>
+                <li><strong>Keyboard</strong>Tab to the button. Press Enter.</li>
+              </ul>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--pink" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Debug a broken selector">
+            <div class="slide-content">
+              <p class="eyebrow">BUG HUNT · DELIBERATELY BROKEN · 5 MIN</p><h2>The button<br><em>does nothing.</em></h2>
+              <pre class="workshop-code"><code>const button = document.querySelector("#Show");
+button.addEventListener("click", showActivities);</code></pre>
+              <p class="lead">Compare the selector with your HTML id. What does the Console tell you?</p>
+              <p class="checkpoint">Read the error → find the line → check your assumption → fix → retest. Keep only one button declaration.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Debug a function call">
+            <div class="slide-content">
+              <p class="eyebrow">BUG HUNT · DELIBERATELY BROKEN · 5 MIN</p><h2>It runs now.<br><em>Not on click.</em></h2>
+              <pre class="workshop-code"><code>button.addEventListener("click", showActivities());</code></pre>
+              <p class="lead">Which two characters run the function immediately?</p>
+              <p class="checkpoint">Pass the function, don’t call it. Compare with slide 7, fix the listener and reload.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--green" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Test the edge cases">
+            <div class="slide-content">
+              <p class="eyebrow">PAIR TEST · 8 MIN</p><h2>Try to<br><em>break it kindly.</em></h2>
+              <ul class="activity">
+                <li><strong>Empty</strong>Set activities to []. Check the empty message.</li>
+                <li><strong>Many</strong>Add five activities. Does every one appear?</li>
+                <li><strong>Repeat</strong>Click three times. Check for duplicates and Console errors.</li>
+              </ul>
+              <p class="checkpoint">Restore your useful data. Record expected result → actual result → fix.</p>
+            </div><span class="slide-number">10</span>
+          </article>
+          <article class="slide slide--blue" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Build a project interaction">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">TEAM SPRINT · 15 MIN</p><h2>Make it useful<br><em>for your users.</em></h2>
+              <ul class="activity">
+                <li><strong>Opportunities</strong>Show activities for a chosen interest.</li>
+                <li><strong>Weather</strong>Choose a town and show a sample forecast.</li>
+                <li><strong>CyberSmart</strong>Check a quiz answer and explain the safer choice.</li>
+              </ul>
+              <p class="checkpoint">Choose one interaction. Use labelled controls and visible feedback. No personal-data collection.</p>
+            </div><span class="slide-number slide-number--light">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Weekly interaction and debugging task">
+            <div class="slide-content">
+              <p class="eyebrow">THIS WEEK · SHOW IT WORKING</p><h2>Not just a page.<br><em>An experience.</em></h2>
+              <ul class="activity">
+                <li><strong>Build</strong>Add one interactive feature to the team website.</li>
+                <li><strong>Explain</strong>Point to a function, loop and condition.</li>
+                <li><strong>Debug</strong>Save two bug/fix notes and your test results.</li>
+              </ul>
+              <p class="checkpoint">Next: <a href="week-5-apis-slides.html">fetch data from the internet →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

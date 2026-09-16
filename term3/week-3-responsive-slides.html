@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3, July 20: responsive HTML/CSS, a Tech Journey conversation and a team website sprint.">
+    <title>Term 3 · Week 3 · Responsive Websites</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> WEEK 03</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">JULY 20 · MODULE 3</p><p class="deck-title">Welcome to the Web · Responsive Design</p></div>
+        <section class="slide-viewport" aria-label="Week 3 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 10: Small screen, same mission">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">WEEK 3 · JULY 20 · ADVANCED HTML + CSS</p><h1>Small screen.<br><em>Same mission.</em></h1>
+              <p class="lead">Make your page responsive. Meet a builder. Start your team website.</p>
+              <p class="checkpoint">Open last week’s index.html and style.css.</p>
+              <div class="hero-meta"><span>TOFA × Alliance Girls Alumni</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--gold" id="slide-2" aria-roledescription="slide" aria-label="2 of 10: Find the squeeze">
+            <div class="slide-content">
+              <p class="eyebrow">TEST FIRST · 5 MIN</p><h2>Shrink the window.<br><em>What breaks?</em></h2>
+              <ul class="activity">
+                <li><strong>Phone</strong>Use DevTools’ device toolbar at 375px.</li>
+                <li><strong>Tablet</strong>Try 768px.</li>
+                <li><strong>Desktop</strong>Try 1280px.</li>
+              </ul>
+              <p class="checkpoint">Record one overflow, tiny target or awkward line break. No DevTools? Resize the browser by hand.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--cream" id="slide-3" aria-roledescription="slide" aria-label="3 of 10: Use semantic landmarks">
+            <div class="slide-content">
+              <p class="eyebrow">HTML UPGRADE · 7 MIN</p><h2>Give every part<br><em>a purpose.</em></h2>
+              <pre class="workshop-code"><code>&lt;header&gt;&lt;p&gt;Opportunities Club&lt;/p&gt;&lt;/header&gt;
+&lt;nav aria-label="Main"&gt;
+  &lt;a href="#join"&gt;Join us&lt;/a&gt;
+&lt;/nav&gt;
+&lt;main&gt;…your existing content…&lt;/main&gt;
+&lt;footer&gt;A student community project&lt;/footer&gt;</code></pre>
+              <p class="checkpoint">Reorganise your body; keep just one main. Replace the placeholder with your content, including the join section.</p>
+            </div><span class="slide-number">03</span>
+          </article>
+          <article class="slide slide--dark" id="slide-4" aria-roledescription="slide" aria-label="4 of 10: Group related content">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD ALONG · INSIDE MAIN · 5 MIN</p><h2>Two opportunities.<br><em>One reusable layout.</em></h2>
+              <pre class="workshop-code"><code>&lt;div class="cards"&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Coding club&lt;/h2&gt;
+    &lt;p&gt;Build something with a friend.&lt;/p&gt;
+  &lt;/article&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Design challenge&lt;/h2&gt;
+    &lt;p&gt;Sketch a better school experience.&lt;/p&gt;
+  &lt;/article&gt;
+&lt;/div&gt;</code></pre>
+              <p class="checkpoint">Use content for your capstone. The class lets one CSS rule style the group.</p>
+            </div><span class="slide-number slide-number--light">04</span>
+          </article>
+          <article class="slide slide--cream" id="slide-5" aria-roledescription="slide" aria-label="5 of 10: Build a mobile-first grid">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · STYLE.CSS · 10 MIN</p><h2>Start narrow.<br><em>Grow when it fits.</em></h2>
+              <pre class="workshop-code"><code>* { box-sizing: border-box; }
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 48rem) {
+  .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}</code></pre>
+              <p class="checkpoint">A media query applies rules at a chosen width. Resize: one column should become two.</p>
+            </div><span class="slide-number">05</span>
+          </article>
+          <article class="slide slide--blue" id="slide-6" aria-roledescription="slide" aria-label="6 of 10: Keep images flexible">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">LAYOUT LAB · 5 MIN</p><h2>Let images fit.<br><em>Not overflow.</em></h2>
+              <pre class="workshop-code"><code>img {
+  max-width: 100%;
+  height: auto;
+}
+a { overflow-wrap: anywhere; }</code></pre>
+              <p class="lead">Add these CSS rules. Test with an image you have permission to use and meaningful alt text.</p>
+              <p class="checkpoint">Check that head still includes the viewport meta tag from Week 2.</p>
+            </div><span class="slide-number slide-number--light">06</span>
+          </article>
+          <article class="slide slide--green" id="slide-7" aria-roledescription="slide" aria-label="7 of 10: Test beyond your mouse">
+            <div class="slide-content">
+              <p class="eyebrow">PAIR TEST · 8 MIN</p><h2>Different users.<br><em>Same welcome.</em></h2>
+              <ul class="activity">
+                <li><strong>Keyboard</strong>Tab through links. Can you see focus?</li>
+                <li><strong>Zoom</strong>Try 200%. Is every word and action reachable?</li>
+                <li><strong>Resize</strong>Check all three widths again. Fix one issue.</li>
+              </ul>
+              <p class="checkpoint">Your partner tests; you note the result. Then swap.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--pink" id="slide-8" aria-roledescription="slide" aria-label="8 of 10: Tech Journey speaker">
+            <div class="slide-content">
+              <p class="eyebrow">TECH JOURNEY · SPEAKER + Q&amp;A · 15 MIN</p><h2>Every builder<br><em>started somewhere.</em></h2>
+              <ul class="activity">
+                <li><strong>Ask</strong>“What was your first website?”</li>
+                <li><strong>Listen</strong>“When did user feedback change your design?”</li>
+                <li><strong>Apply</strong>Choose one tip to try on your page today.</li>
+              </ul>
+              <p class="checkpoint">No guest today? Interview your facilitator about a project and a mistake they learned from.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 10: Start the team website">
+            <div class="slide-content">
+              <p class="eyebrow">TEAM SPRINT · 15 MIN</p><h2>From my page<br><em>to our project.</em></h2>
+              <ul class="activity">
+                <li><strong>Agree</strong>Confirm a <a href="project-ideas.md">capstone brief</a> and a local audience.</li>
+                <li><strong>Combine</strong>Choose a landing page as your base; add each member’s best idea.</li>
+                <li><strong>Build</strong>Save a team folder with a responsive home page and three next tasks.</li>
+              </ul>
+              <p class="checkpoint">Rotate builder, designer, tester and presenter roles. Pair up where needed.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--gold" id="slide-10" aria-roledescription="slide" aria-label="10 of 10: Weekly responsive website task">
+            <div class="slide-content">
+              <p class="eyebrow">THIS WEEK · SHOW THE DIFFERENCE</p><h2>Works small.<br><em>Built together.</em></h2>
+              <ul class="activity">
+                <li><strong>Responsive page</strong>Capture phone and desktop screenshots.</li>
+                <li><strong>Team start</strong>Share your local-initiative website folder and task owners.</li>
+                <li><strong>Reflection</strong>Record one speaker tip and one accessibility fix.</li>
+              </ul>
+              <p class="checkpoint">Next: <a href="week-4-javascript-slides.html">make your website respond with JavaScript →</a></p>
+            </div><span class="slide-number">10</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>10</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 10</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

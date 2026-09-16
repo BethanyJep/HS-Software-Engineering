@@ -1,0 +1,107 @@
+@import url('../term2/session-slides.css');
+
+.workshop .slide-content {
+  max-width: 1060px;
+}
+
+.workshop .lead {
+  font-size: clamp(20px, 2.3vw, 30px);
+  line-height: 1.5;
+  max-width: 850px;
+}
+
+.workshop .activity {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  list-style: none;
+  margin: 45px 0;
+  padding: 0;
+}
+
+.workshop .activity li {
+  border-top: 2px solid currentColor;
+  font-size: clamp(17px, 1.7vw, 23px);
+  line-height: 1.5;
+  padding-top: 20px;
+}
+
+.workshop .activity strong {
+  display: block;
+  font-size: 1.15em;
+  margin-bottom: 12px;
+}
+
+.workshop .checkpoint {
+  border-left: 4px solid var(--pink);
+  font-size: clamp(16px, 1.6vw, 21px);
+  line-height: 1.5;
+  margin: 32px 0 0;
+  padding-left: 18px;
+}
+
+.workshop .workshop-code {
+  background: var(--navy);
+  border: 1px solid #414963;
+  border-radius: 12px;
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: clamp(14px, 1.5vw, 20px);
+  line-height: 1.5;
+  margin: 24px 0;
+  overflow-wrap: anywhere;
+  padding: 24px;
+  white-space: pre-wrap;
+}
+
+.workshop code {
+  font-family: var(--mono);
+}
+
+.workshop .slide a {
+  color: inherit;
+  text-underline-offset: 4px;
+}
+
+.workshop .slide a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 5px;
+}
+
+.workshop .slide--green h2 em {
+  color: var(--ink);
+}
+
+.workshop .slide--pink .eyebrow,
+.workshop .slide--pink h1 em,
+.workshop .slide--pink h2 em {
+  color: var(--navy);
+}
+
+.workshop .slide--pink {
+  color: var(--navy);
+}
+
+.workshop .slide--pink .checkpoint {
+  border-color: var(--navy);
+}
+
+@media (max-width: 640px) {
+  .workshop .activity {
+    gap: 18px;
+    grid-template-columns: 1fr;
+    margin: 28px 0;
+  }
+
+  .workshop .activity li {
+    padding-top: 12px;
+  }
+
+  .workshop .activity strong {
+    margin-bottom: 5px;
+  }
+
+  .workshop .workshop-code {
+    padding: 16px;
+  }
+}
