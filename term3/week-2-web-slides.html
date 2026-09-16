@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3, July 13: build, style and peer-review a community landing page with HTML and CSS.">
+    <title>Term 3 · Week 2 · Welcome to the Web</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> WEEK 02</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">JULY 13 · MODULE 2</p><p class="deck-title">Welcome to the Web · HTML + CSS</p></div>
+        <section class="slide-viewport" aria-label="Week 2 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Your first landing page">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">WEEK 2 · JULY 13 · WELCOME TO THE WEB</p><h1>Your idea.<br><em>Now on a page.</em></h1>
+              <p class="lead">Build a landing page for the community project you sketched.</p>
+              <p class="checkpoint">HTML gives it structure. CSS gives it style.</p>
+              <div class="hero-meta"><span>TOFA × Alliance Girls Alumni</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--gold" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Pick your message">
+            <div class="slide-content">
+              <p class="eyebrow">SKETCH → CONTENT · 5 MIN</p><h2>One page.<br><em>One clear purpose.</em></h2>
+              <ul class="activity">
+                <li><strong>Who?</strong>Name your audience.</li>
+                <li><strong>Why?</strong>Write a helpful headline.</li>
+                <li><strong>What next?</strong>Choose one action for a visitor.</li>
+              </ul>
+              <p class="checkpoint">Our example: a school opportunities club. Replace its words with yours.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--cream" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Set up your workspace">
+            <div class="slide-content">
+              <p class="eyebrow">SET UP · 5 MIN</p><h2>Editor on one side.<br><em>Browser on the other.</em></h2>
+              <ul class="activity">
+                <li><strong>Create</strong>Make a project folder with index.html and style.css.</li>
+                <li><strong>Open</strong>Use a plain-text editor, such as VS Code. Open index.html in a browser.</li>
+                <li><strong>Repeat</strong>Edit → save → refresh. Keep both files together.</li>
+              </ul>
+              <p class="checkpoint">Browser-only? Use <a href="https://codepen.io/pen/" target="_blank" rel="noopener noreferrer">CodePen</a>: body content in HTML, styles in CSS. Copy your work to local files before leaving.</p>
+            </div><span class="slide-number">03</span>
+          </article>
+          <article class="slide slide--dark" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Build the HTML document">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD ALONG · INDEX.HTML · 5 MIN</p><h2>Start with<br><em>the structure.</em></h2>
+              <pre class="workshop-code"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Opportunities Club&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;Hello, community!&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              <p class="checkpoint">Save and refresh. See “Hello, community!”? You have a webpage.</p>
+            </div><span class="slide-number slide-number--light">04</span>
+          </article>
+          <article class="slide slide--cream" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Add meaningful content">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · 7 MIN</p><h2>Make the message<br><em>yours.</em></h2>
+              <pre class="workshop-code"><code>&lt;main&gt;
+  &lt;h1&gt;Find your next opportunity&lt;/h1&gt;
+  &lt;p&gt;Free clubs and challenges for our school.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+              <p class="checkpoint">Replace “Hello, community!” inside body with this. Change the heading and paragraph for your project.</p>
+            </div><span class="slide-number">05</span>
+          </article>
+          <article class="slide slide--blue" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Add a working link">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD ALONG · INSIDE MAIN · 5 MIN</p><h2>Give visitors<br><em>a next step.</em></h2>
+              <pre class="workshop-code"><code>&lt;a href="#join"&gt;How to join&lt;/a&gt;
+&lt;section id="join"&gt;
+  &lt;h2&gt;Join the club&lt;/h2&gt;
+  &lt;p&gt;Ask the club patron at the next school meeting.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+              <p class="checkpoint">Click the link. Does the URL end in #join? A link navigates; a button performs an action.</p>
+            </div><span class="slide-number slide-number--light">06</span>
+          </article>
+          <article class="slide slide--cream" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Style the page with CSS">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · STYLE.CSS · 7 MIN</p><h2>Same content.<br><em>A new feeling.</em></h2>
+              <pre class="workshop-code"><code>body {
+  font-family: sans-serif;
+  background: #f8f4ea;
+  color: #11172d;
+  line-height: 1.6;
+}
+h1 { color: #315ee7; }</code></pre>
+              <p class="checkpoint">body is the selector; color is a property. Change one value, save and refresh.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--gold" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Give content room">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD ALONG · STYLE.CSS · 5 MIN</p><h2>A little space.<br><em>A big difference.</em></h2>
+              <pre class="workshop-code"><code>main {
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border: 2px solid #315ee7;
+  border-radius: 1rem;
+}</code></pre>
+              <p class="checkpoint">Padding = space inside the border. Margin = space outside. Try doubling each, one at a time.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Make it usable">
+            <div class="slide-content">
+              <p class="eyebrow">DESIGN CHECK · 7 MIN</p><h2>Beautiful means<br><em>usable, too.</em></h2>
+              <ul class="activity">
+                <li><strong>Read</strong>Use clear headings and short paragraphs.</li>
+                <li><strong>See</strong>Check text colours with the <a href="https://webaim.org/resources/contrastchecker/" target="_blank" rel="noopener noreferrer">contrast checker</a>. Aim for 4.5:1.</li>
+                <li><strong>Navigate</strong>Press Tab, then Enter. Keep the focus outline visible.</li>
+              </ul>
+              <p class="checkpoint">If you add an image, describe its purpose with alt text. Use only images you have permission to share.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--pink" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Swap and review">
+            <div class="slide-content">
+              <p class="eyebrow">PEER REVIEW · 8 MIN</p><h2>Swap screens.<br><em>Say less. Watch more.</em></h2>
+              <ul class="activity">
+                <li><strong>Ask</strong>“What is this page for?”</li>
+                <li><strong>Observe</strong>Can your partner find and use the link?</li>
+                <li><strong>Feedback</strong>Give one strength and one specific improvement.</li>
+              </ul>
+              <p class="checkpoint">Review the page, not the person. Swap roles halfway.</p>
+            </div><span class="slide-number">10</span>
+          </article>
+          <article class="slide slide--green" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Fix and save">
+            <div class="slide-content">
+              <p class="eyebrow">IMPROVE · 8 MIN</p><h2>One change.<br><em>Test it again.</em></h2>
+              <ul class="activity">
+                <li><strong>Choose</strong>Act on one piece of feedback.</li>
+                <li><strong>Debug</strong>No styles? Check style.css spelling and the link in head.</li>
+                <li><strong>Save</strong>Keep your folder and a screenshot for next week.</li>
+              </ul>
+              <p class="checkpoint">Explain what improved for the visitor—not just what changed in the code.</p>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Weekly landing page task">
+            <div class="slide-content">
+              <p class="eyebrow">THIS WEEK · YOUR DELIVERABLE</p><h2>A landing page.<br><em>Made by you.</em></h2>
+              <ul class="activity">
+                <li><strong>Build</strong>HTML with a heading, useful information and a working link.</li>
+                <li><strong>Style</strong>CSS with readable colours, spacing and type.</li>
+                <li><strong>Review</strong>Keep peer feedback and a before/after screenshot.</li>
+              </ul>
+              <p class="checkpoint">Next: <a href="week-3-responsive-slides.html">make it work on phones and start the team website →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>
