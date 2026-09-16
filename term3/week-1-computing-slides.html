@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#0b1022">
-    <meta name="description" content="Term 3, July 6: explore ICT, design thinking and AI through a hands-on community ideas workshop.">
-    <title>Term 3 · Week 1 · Introduction to Computing</title>
+    <meta name="description" content="Term 3, Lesson 1: build a semantic HTML landing page in a 90-minute workshop and start one of three free-tool capstones.">
+    <title>Term 3 · Lesson 1 · HTML Landing Page</title>
     <link rel="stylesheet" href="session-slides.css">
   </head>
   <body class="workshop">
@@ -15,118 +15,136 @@
           <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
           <span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span>
         </a>
-        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> WEEK 01</div>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 01</div>
         <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen">
           <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg>
         </button>
       </header>
       <main class="deck-shell">
-        <div class="deck-heading"><p class="eyebrow">JULY 6 · MODULE 1</p><p class="deck-title">Introduction to Computing</p></div>
-        <section class="slide-viewport" aria-label="Week 1 presentation slides">
-          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 10: Small ideas, real change">
+        <div class="deck-heading"><p class="eyebrow">LESSON 01 OF 08 · 90 MIN</p><p class="deck-title">HTML Landing Page</p><a class="lesson-notes-link" href="lessons/lesson-1-html-landing-page.md">Lesson notes ↗</a></div>
+        <section class="slide-viewport" aria-label="Lesson 1 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 10: Your first landing page">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">WEEK 1 · JULY 6 · INTRODUCTION TO COMPUTING</p>
-              <h1>Small ideas.<br><em>Real change.</em></h1>
-              <p class="lead">Today: spot a community need and sketch a solution.</p>
-              <p class="checkpoint">Bring paper, a pen and a curious teammate.</p>
+              <p class="eyebrow eyebrow--light">LESSON 01 · HTML · 90 MIN</p>
+              <h1>Your idea.<br><em>Now on a page.</em></h1>
+              <p class="lead">Use headings, sections, links, lists and images to build a useful landing page.</p>
+              <p class="checkpoint">Our eight-lesson journey: HTML → CSS → responsive design → JavaScript → interaction → data → Git → deployment.</p>
               <div class="hero-meta"><span>TOFA × Alliance Girls Alumni</span><span>Grade 10 · Term 3</span></div>
             </div>
             <span class="slide-number slide-number--light">01</span>
           </article>
-          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 10: Demystifying ICT">
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 10: Notice a landing page and set up">
             <div class="slide-content">
-              <p class="eyebrow">PAIR TASK · 5 MIN</p><h2>ICT is already<br><em>in your day.</em></h2>
-              <p class="lead">Information and Communication Technology helps us store, process and share information.</p>
+              <p class="eyebrow">CONNECT + SET UP · 0–10 MIN</p><h2>One page.<br><em>One clear purpose.</em></h2>
               <ul class="activity">
-                <li><strong>Hardware</strong>Point to something you can touch.</li>
-                <li><strong>Software</strong>Name the instructions it runs.</li>
-                <li><strong>Connection</strong>How does a message reach a friend?</li>
+                <li><strong>Notice</strong>Open a familiar site. Find its title, navigation, message and next action.</li>
+                <li><strong>Create</strong>Make a project folder and index.html in a plain-text editor. Open it in a browser.</li>
+                <li><strong>Repeat</strong>Edit → save → refresh. Partners rotate builder and checker.</li>
               </ul>
+              <p class="checkpoint">Browser-only? Use free <a href="https://codepen.io/pen/" target="_blank" rel="noopener noreferrer">CodePen</a>. Put only body content in its HTML panel; keep a local copy before leaving.</p>
             </div><span class="slide-number">02</span>
           </article>
-          <article class="slide slide--gold" id="slide-3" aria-roledescription="slide" aria-label="3 of 10: Notice a community need">
+          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 10: Build the HTML document">
             <div class="slide-content">
-              <p class="eyebrow">NOTICE · 5 MIN</p><h2>What could<br><em>work better?</em></h2>
-              <p class="lead">Think about school, your neighbourhood or a local club.</p>
-              <ul class="activity">
-                <li><strong>Notice</strong>Write one everyday frustration.</li>
-                <li><strong>Share</strong>Who experiences it?</li>
-                <li><strong>Choose</strong>Pick one need your group can explore.</li>
-              </ul>
-            </div><span class="slide-number">03</span>
+              <p class="eyebrow eyebrow--light">LEARN · INDEX.HTML · 10–17 MIN</p><h2>Start with<br><em>the structure.</em></h2>
+              <pre class="workshop-code"><code>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+  &lt;title&gt;Opportunities Club&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;Hello, community!&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+              <p class="checkpoint">Save and refresh. HTML describes meaning; head holds page information and body holds visible content. In CodePen, start with “Hello, community!” only.</p>
+            </div><span class="slide-number slide-number--light">03</span>
           </article>
-          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 10: Design thinking starts with listening">
+          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 10: Give content meaning">
             <div class="slide-content">
-              <p class="eyebrow">EMPATHISE + DEFINE · 8 MIN</p><h2>Listen before<br><em>you build.</em></h2>
-              <ul class="activity">
-                <li><strong>Interview</strong>“Tell me about the last time this happened.”</li>
-                <li><strong>Listen</strong>Write the need, not your solution.</li>
-                <li><strong>Define</strong>“Our user needs ___ because ___.”</li>
-              </ul>
-              <p class="checkpoint">Swap interviewer and storyteller. Use no private details.</p>
+              <p class="eyebrow">LEARN · REPLACE BODY CONTENT · 17–25 MIN</p><h2>Give every part<br><em>a purpose.</em></h2>
+              <pre class="workshop-code"><code>&lt;header&gt;
+  &lt;h1&gt;Opportunities Club&lt;/h1&gt;
+  &lt;p&gt;Discover free ways to learn together.&lt;/p&gt;
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;section id="about"&gt;
+    &lt;h2&gt;About our club&lt;/h2&gt;
+    &lt;p&gt;Practise new skills with a teammate.&lt;/p&gt;
+  &lt;/section&gt;
+&lt;/main&gt;
+&lt;footer&gt;A student community project&lt;/footer&gt;</code></pre>
+              <p class="checkpoint">Keep the body tags in your local file. Use one clear h1, then h2 section headings. Indent nested elements and match each closing tag.</p>
             </div><span class="slide-number">04</span>
           </article>
-          <article class="slide slide--dark" id="slide-5" aria-roledescription="slide" aria-label="5 of 10: Brainstorm with AI">
+          <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 10: Add navigation and a list">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">IDEATE · 8 MIN</p><h2>AI can suggest.<br><em>You decide.</em></h2>
-              <p class="lead">AI learns patterns from examples; its answers can be wrong.</p>
-              <p class="workshop-code">Suggest 3 simple website ideas to help a school club share opportunities. Use free tools. For each idea, name one limitation.</p>
-              <p class="checkpoint">Try this in a school-approved AI tool with your facilitator. No access? Brainstorm as the “human idea engine”.</p>
+              <p class="eyebrow eyebrow--light">BUILD · INSIDE MAIN, AFTER ABOUT · 25–40 MIN</p><h2>Give visitors<br><em>a next step.</em></h2>
+              <pre class="workshop-code"><code>&lt;nav aria-label="Main"&gt;
+  &lt;a href="#about"&gt;About&lt;/a&gt;
+  &lt;a href="#activities"&gt;Activities&lt;/a&gt;
+&lt;/nav&gt;
+&lt;section id="activities"&gt;
+  &lt;h2&gt;Try an activity&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Coding club: build with a friend.&lt;/li&gt;
+    &lt;li&gt;Design challenge: sketch a helpful page.&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;a href="#about"&gt;Learn about our club&lt;/a&gt;
+&lt;/section&gt;</code></pre>
+              <p class="checkpoint">Click both navigation links. Each #target must match an id. A link navigates; a button performs an action. Move nav before the about section once it works.</p>
             </div><span class="slide-number slide-number--light">05</span>
           </article>
-          <article class="slide slide--pink" id="slide-6" aria-roledescription="slide" aria-label="6 of 10: Challenge the ideas">
+          <article class="slide slide--gold" id="slide-6" aria-roledescription="slide" aria-label="6 of 10: Add an image with useful alternative text">
             <div class="slide-content">
-              <p class="eyebrow">CRITIQUE · 6 MIN</p><h2>Useful?<br><em>Fair? Possible?</em></h2>
-              <ul class="activity">
-                <li><strong>Check</strong>Which claim needs a trusted source?</li>
-                <li><strong>Include</strong>Who might this idea leave out?</li>
-                <li><strong>Protect</strong>Never enter names, passwords or private stories.</li>
-              </ul>
-              <p class="checkpoint">Keep one idea. Improve one. Reject one and explain why.</p>
+              <p class="eyebrow">BUILD · IMAGE INSIDE ABOUT · 40–50 MIN</p><h2>Show the idea.<br><em>Describe its meaning.</em></h2>
+              <p class="lead">Create a club sketch and save it as club-sketch.png beside index.html. No names, faces or private details.</p>
+              <pre class="workshop-code"><code>&lt;img src="club-sketch.png" width="280"
+  alt="Sketch of a club page with coding and design activities"&gt;</code></pre>
+              <p class="checkpoint">Change alt to describe your actual image. CodePen needs a facilitator-approved public image URL instead of this local path. Use only your own or permitted images; credit the source.</p>
             </div><span class="slide-number">06</span>
           </article>
-          <article class="slide slide--cream" id="slide-7" aria-roledescription="slide" aria-label="7 of 10: Choose a capstone direction">
+          <article class="slide slide--green" id="slide-7" aria-roledescription="slide" aria-label="7 of 10: Test and improve the page">
             <div class="slide-content">
-              <p class="eyebrow">CONNECT TO YOUR CAPSTONE · 5 MIN</p><h2>One community.<br><em>Three starting points.</em></h2>
+              <p class="eyebrow">PEER REVIEW · 50–60 MIN</p><h2>Let someone<br><em>try it.</em></h2>
               <ul class="activity">
-                <li><strong>Opportunities Hub</strong>Help students find their next step. Web + design.</li>
-                <li><strong>Weather Dashboard</strong>Help a club plan activities. Data + cloud.</li>
-                <li><strong>CyberSmart Quest</strong>Help peers practise safer choices. Security + games.</li>
+                <li><strong>Read</strong>Can your partner explain the page’s purpose in five seconds?</li>
+                <li><strong>Check</strong>Follow heading order, inspect alt text and test every link with Tab and Enter.</li>
+                <li><strong>Improve</strong>Fix a missing closing tag, unclear heading or broken image path. Retest.</li>
               </ul>
-              <p class="checkpoint">Choose a direction from the <a href="project-ideas.md">three capstone briefs</a>. Make its local audience yours.</p>
+              <p class="checkpoint">Career lens: web developers structure content; QA testers check what actually works. Swap roles and record one improvement.</p>
             </div><span class="slide-number">07</span>
           </article>
-          <article class="slide slide--blue" id="slide-8" aria-roledescription="slide" aria-label="8 of 10: Make a paper prototype">
+          <article class="slide slide--cream" id="slide-8" aria-roledescription="slide" aria-label="8 of 10: Choose one of three capstones">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">PROTOTYPE · 10 MIN</p><h2>Draw it.<br><em>Make it tangible.</em></h2>
+              <p class="eyebrow">CAPSTONE CHOICE · 60–65 MIN</p><h2>One community.<br><em>Three starting points.</em></h2>
               <ul class="activity">
-                <li><strong>A headline</strong>Who does your page help?</li>
-                <li><strong>One useful thing</strong>What information do they need?</li>
-                <li><strong>One action</strong>What should they click next?</li>
+                <li><strong>School Opportunities Hub</strong>Find and filter opportunities. Web development + UI/UX + QA.</li>
+                <li><strong>Kenya Weather Dashboard</strong>Compare city weather clearly. Data + web + cloud/DevOps.</li>
+                <li><strong>CyberSmart Quest</strong>Practise safer online choices. Cybersecurity + games + QA.</li>
               </ul>
-              <p class="checkpoint">One sheet. Three parts. No code yet.</p>
-            </div><span class="slide-number slide-number--light">08</span>
+              <p class="checkpoint">Choose one of the <a href="project-ideas.md">three free-tool briefs</a>, not a fourth project. Use fictional or facilitator-approved public content, never personal data.</p>
+            </div><span class="slide-number">08</span>
           </article>
-          <article class="slide slide--green" id="slide-9" aria-roledescription="slide" aria-label="9 of 10: Test and improve">
+          <article class="slide slide--blue" id="slide-9" aria-roledescription="slide" aria-label="9 of 10: Build the capstone landing page">
             <div class="slide-content">
-              <p class="eyebrow">TEST + ITERATE · 8 MIN</p><h2>Let someone<br><em>try it.</em></h2>
+              <p class="eyebrow eyebrow--light">CAPSTONE BUILD · 65–80 MIN</p><h2>From practice<br><em>to your project.</em></h2>
               <ul class="activity">
-                <li><strong>Hand it over</strong>Ask a peer to find the next action.</li>
-                <li><strong>Stay quiet</strong>Watch where they hesitate.</li>
-                <li><strong>Redraw</strong>Change one confusing part.</li>
+                <li><strong>Adapt</strong>Replace club content with your chosen capstone’s title, audience and benefit.</li>
+                <li><strong>Build</strong>Keep a header, navigation and footer. Add at least three meaningful sections.</li>
+                <li><strong>Test</strong>Give each section a unique id. Link to it and check the visitor’s next step.</li>
               </ul>
-              <p class="checkpoint">Design thinking: listen → define → ideate → prototype → test → repeat.</p>
-            </div><span class="slide-number">09</span>
+              <p class="checkpoint">Example sections: purpose, what visitors can explore, how to use the project. HTML first; styling comes in Lesson 2.</p>
+            </div><span class="slide-number slide-number--light">09</span>
           </article>
-          <article class="slide slide--gold" id="slide-10" aria-roledescription="slide" aria-label="10 of 10: Weekly task and reflection">
+          <article class="slide slide--gold" id="slide-10" aria-roledescription="slide" aria-label="10 of 10: Save, share and exit ticket">
             <div class="slide-content">
-              <p class="eyebrow">THIS WEEK · SHOW YOUR THINKING</p><h2>Leave with<br><em>an idea worth testing.</em></h2>
+              <p class="eyebrow">SAVE + EXIT TICKET · 80–90 MIN</p><h2>A landing page.<br><em>Made by you.</em></h2>
               <ul class="activity">
-                <li><strong>Group evidence</strong>Three ideas from your AI or offline brainstorm.</li>
-                <li><strong>A prototype</strong>Your chosen idea and one peer-led improvement.</li>
-                <li><strong>Your reflection</strong>How did design thinking and technology improve your idea?</li>
+                <li><strong>Save</strong>Keep index.html and permitted image files together. From CodePen, copy HTML into the body of slide 3’s shell.</li>
+                <li><strong>Show</strong>Reopen the saved page, test its links and capture a screenshot.</li>
+                <li><strong>Reflect</strong>Explain one HTML element, one peer-led improvement and one question for next lesson.</li>
               </ul>
-              <p class="checkpoint">Next: <a href="week-2-web-slides.html">turn the sketch into an HTML + CSS landing page →</a></p>
+              <p class="checkpoint">Next: <a href="week-2-web-slides.html">use CSS to style your existing landing page →</a></p>
             </div><span class="slide-number">10</span>
           </article>
         </section>
