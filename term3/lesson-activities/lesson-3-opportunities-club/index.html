@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <!-- Without this line, phones pretend to be wide desktops and shrink your page. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opportunities Club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <!-- Lets keyboard users jump past the menu. It only appears when it receives focus (press Tab once). -->
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <!-- LANDMARK 1: header. Only one "banner" per page. -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <p class="logo">Opportunities Club</p>
+
+        <nav class="site-nav" aria-label="Main">
+          <ul>
+            <li><a href="#finder">Find</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#join">Join us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- LANDMARK 3: main. Exactly ONE per page. -->
+    <main id="main">
+      <div class="hero">
+        <div class="container">
+          <h1>Find something new to try this term</h1>
+          <p class="lead">Clubs, workshops and events run by students, for students. Choose a topic and see what is on.</p>
+        </div>
+      </div>
+
+      <section id="finder" class="section" aria-labelledby="finder-title">
+        <div class="container">
+          <h2 id="finder-title">Opportunity finder</h2>
+
+          <!-- Every control needs a <label>. The label's "for" must match the control's "id". -->
+          <form id="filter-form" class="filter-form">
+            <div class="field">
+              <label for="topic">Choose a topic</label>
+
+              <select id="topic" name="topic">
+                <option value="all">All topics</option>
+                <option value="study">Study</option>
+                <option value="event">Events</option>
+                <option value="tech">Tech</option>
+                <option value="creative">Creative</option>
+                <!-- No card uses this one yet, so it shows the "no results" message. 
+                Challenge: add a card with data-category="volunteer" so it works. -->
+                <option value="volunteer">Volunteering</option>
+              </select>
+            </div>
+            <button class="button" type="submit">Show results</button>
+          </form>
+
+          <!-- role="status" makes screen readers announce changes to this text politely. -->
+          <p id="results-message" class="status" role="status"></p>
+
+          <!-- The cards are plain HTML, so they show even if JavaScript fails.
+              app.js only shows or hides them when you choose a topic.
+              "card-grid" is the Grid container: its children become the grid items. -->
+          <div id="cards" class="card-grid">
+          <!-- ONE CARD. Copy this whole <article> to add another opportunity.
+              • data-category must match an <option value="..."> in the dropdown above.
+              • Every <img> needs alt text that describes the picture, plus width and
+                height so the browser can save space for it before it loads. -->
+          <article class="card" data-category="study">
+            <img src="images/revision-group.svg" alt="Three students sitting around a table with books, revising together" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Study</span>
+              </div>
+              <h3>Revision group</h3>
+              <p>Small groups pick one subject, revise together and quiz each other.</p>
+              <p class="card-when">Tuesdays, after lunch</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="event">
+            <img src="images/science-fair.svg" alt="A student beside a display board with a bar chart, next to a science flask" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Event</span>
+              </div>
+              <h3>Science fair</h3>
+              <p>Show an experiment you designed and explain what you found out.</p>
+              <p class="card-when">End of term, main hall</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="tech">
+            <img src="images/coding-club.svg" alt="Two students beside a laptop showing lines of code" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Tech</span>
+              </div>
+              <h3>Coding club</h3>
+              <p>Build small programs and websites with a friend.</p>
+              <p class="card-when">Thursdays, after classes</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="creative">
+            <img src="images/design-challenge.svg" alt="A paper sketch of a website layout, a pencil and a lightbulb" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Creative</span>
+              </div>
+              <h3>Design challenge</h3>
+              <p>Sketch a better way to do something at school, then pitch your idea.</p>
+              <p class="card-when">Every second Friday</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="study">
+            <img src="images/study-skills-workshop.svg" alt="An open notebook with sticky notes, a pen and a clock" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Study</span>
+              </div>
+              <h3>Study skills workshop</h3>
+              <p>Learn note-taking, memory and planning tricks you can use before exams.</p>
+              <p class="card-when">One Saturday each month</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="event">
+            <img src="images/career-talk-evening.svg" alt="A speaker at a podium in front of a seated audience in the evening" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Event</span>
+              </div>
+              <h3>Career talk evening</h3>
+              <p>Ask visitors about their jobs and how they got started.</p>
+              <p class="card-when">Once a term, in the evening</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="tech">
+            <img src="images/website-builders-lab.svg" alt="A browser window showing a web page with three boxes" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Tech</span>
+              </div>
+              <h3>Website builders&rsquo; lab</h3>
+              <p>Practise HTML and CSS with help from older students.</p>
+              <p class="card-when">Wednesdays, lunch break</p>
+            </div>
+          </article>
+
+          <article class="card" data-category="creative">
+            <img src="images/poetry-storytelling-circle.svg" alt="Two people sitting either side of an open book, surrounded by stars" width="400" height="240">
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="chip">Creative</span>
+              </div>
+              <h3>Poetry and storytelling circle</h3>
+              <p>Share poems and short stories, or just come and listen.</p>
+              <p class="card-when">Fridays, after prep</p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="container two-col section">
+        <section id="about" aria-labelledby="about-title">
+          <h2 id="about-title">About the club</h2>
+          <p>We are students who share what we know. Some sessions are for exams, some are for fun, and all of them are open to anyone in Grade 10.</p>
+          <p>Everything on this page is example content made for a class project.</p>
+        </section>
+
+        <section id="join" class="join-box" aria-labelledby="join-title">
+          <h2 id="join-title">How to join</h2>
+          <ol class="steps">
+            <li>Pick an opportunity above.</li>
+            <li>Tell your club facilitator you would like to come.</li>
+            <li>Bring a friend along.</li>
+          </ol>
+        </section>
+      </div>
+    </main>
+
+    <!-- LANDMARK 4: footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <p>A student community project</p>
+      </div>
+    </footer>
+
+    <!-- "defer" means: wait until the HTML is loaded, THEN run the script. -->
+    <script src="app.js" defer></script>
+  </body>
+</html>
