@@ -1,0 +1,422 @@
+/* 
+   Opportunities Finder – style.css  (Lesson 3: Advanced HTML + CSS)
+   The approach is MOBILE-FIRST: write the small-screen layout first,
+   then use @media (min-width: ...) to add rules as the screen grows.
+
+   Sections:
+     0. Fonts                   (Google Fonts link in the HTML)
+     1. Design tokens (custom properties)
+     2. Base styles
+     3. Accessibility helpers (skip link, focus)
+     4. Layout helpers (container, sections)
+     5. Header + nav            (Flexbox)
+     6. Hero
+     7. Finder form             (Flexbox with wrapping)
+     8. Cards + images          (Grid with auto-fit)
+     9. About / Join            (Grid that grows to two columns)
+    10. Footer
+    11. Motion preferences
+    */
+
+/*  1. Custom properties are variables for CSS. Change a colour here and it changes everywhere. */
+:root {
+  --ink: black; /* text and header */
+  --paper: white; /* page background */
+  --surface: white; /* cards and panels */
+  --line: lightgray; /* soft borders */
+  --field-border: gray; /* form borders (needs 3:1 contrast to be seen) */
+  --muted: #3d4670; /* secondary text, still readable */
+  --focus: navy; /* keyboard focus ring */
+
+  --study: lightblue;
+  --study-tint: #e4ebff;
+  --event: darkorange;
+  --event-tint: lightyellow;
+  --tech: forestgreen;
+  --tech-tint: lightgreen;
+  --creative: pink;
+  --creative-tint: lightpink;
+}
+
+/*  2. BASE STYLES  */
+
+/* Make padding and borders count INSIDE an element's width.
+   Without this, "width: 100%" plus padding overflows the screen. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  /* Our font first. If it fails to load, the browser tries the next one, and so on. */
+  font-family: "Josefin Slab", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.0625rem; /* rem = relative to the user's own font setting */
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+/* Images shrink to fit small screens but are never stretched bigger. */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* The "hidden" attribute hides an element, but rules like ".card { display: flex }"
+   would override it. This line makes "hidden" win, so JavaScript can hide cards. */
+[hidden] {
+  display: none !important;
+}
+
+/* Long links or words must wrap instead of pushing the page sideways. */
+a {
+  overflow-wrap: anywhere;
+}
+
+main a {
+  color: var(--focus);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+}
+
+/*  3. ACCESSIBILITY HELPERS  */
+
+/* Skip link: parked off-screen until a keyboard user tabs to it. */
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 10;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  color: var(--ink);
+  border-radius: 0.5rem;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* :focus-visible shows the ring for keyboard users, not for mouse clicks.
+   NEVER write "outline: none" without giving something back. */
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.site-header :focus-visible {
+  outline-color: #ffd166; /* the blue ring would vanish on navy */
+}
+
+/*  4. LAYOUT HELPERS  */
+
+/* min() picks the smaller value: 100% of the screen minus 2rem of breathing
+   room, but never wider than 70rem. One line replaces a media query. */
+.container {
+  width: min(100% - 2rem, 70rem);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(2rem, 5vw, 3.5rem); /* clamp(smallest, ideal, biggest) */
+}
+
+.section h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(1.5rem, 1.1rem + 2vw, 2.25rem);
+}
+
+/*  5. HEADER + NAV (Flexbox)  */
+
+.site-header {
+  background: darkblue;
+  color: #fff;
+  padding-block: 1rem;
+}
+
+/* Small screens: stack the logo above the menu, centred. */
+.header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem 2rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.site-nav ul {
+  display: flex;
+  flex-wrap: wrap; /* links drop to a new line if they run out of room */
+  justify-content: center;
+  gap: 0.25rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav a {
+  display: inline-block;
+  padding: 0.6rem 0.25rem; /* makes the tap target big enough for a thumb */
+  color: #fff;
+  text-underline-offset: 0.25em;
+}
+
+/* Wider screens: logo left, menu right, side by side. */
+@media (min-width: 40rem) {
+  .header-inner {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+/*  6. HERO  */
+
+.hero {
+  padding-block: clamp(2rem, 6vw, 4rem);
+}
+
+.hero h1 {
+  max-width: 18ch; /* ch = width of the "0" character; keeps lines short */
+  margin: 0 0 1rem;
+  font-size: clamp(
+    2rem,
+    1.2rem + 4vw,
+    3.5rem
+  ); /* fluid: grows smoothly with the screen */
+}
+
+.lead {
+  max-width: 38rem;
+  margin: 0;
+  font-size: clamp(1.0625rem, 1rem + 0.5vw, 1.25rem);
+}
+
+/*  7. FINDER FORM (Flexbox with wrapping)  */
+
+.filter-form {
+  display: flex;
+  flex-wrap: wrap; /* fields sit in a row when there is room, stack when not */
+  align-items: flex-end;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  flex: 1 1 14rem; /* grow | shrink | ideal width before wrapping */
+}
+
+label,
+legend {
+  font-weight: 700;
+}
+
+select,
+input[type="search"] {
+  width: 100%;
+  min-height: 2.75rem;
+  padding: 0.6rem 0.75rem;
+  font: inherit; /* form controls ignore your font unless you say so */
+  color: var(--ink);
+  background: var(--surface);
+  border: 2px solid var(--field-border);
+  border-radius: 0.5rem;
+}
+
+.button {
+  min-height: 2.75rem;
+  padding: 0.6rem 1.25rem;
+  font: inherit;
+  font-weight: 700;
+  color: #fff;
+  background: darkblue;
+  border: 2px solid darkblue;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: #2c3a6b;
+  border-color: #2c3a6b;
+}
+
+.button--quiet {
+  color: var(--ink);
+  background: transparent;
+}
+
+.button--quiet:hover {
+  color: var(--ink);
+  background: var(--study-tint);
+  border-color: var(--ink);
+}
+
+.status {
+  min-height: 1.6em; /* stops the page jumping when the text changes */
+  margin: 1rem 0;
+  font-weight: 600;
+}
+
+/*  8. CARDS + IMAGES (Grid with auto-fit)  */
+
+/* Read this as: "make as many columns as fit, each at least 14rem wide,
+   and share the leftover space equally." No media query needed.
+   min(100%, 14rem) stops a card overflowing on a very narrow phone. */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+}
+
+.card {
+  --accent: var(--line);
+  --accent-tint: var(--paper);
+
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  overflow: hidden; /* clips the picture to the rounded corners */
+  overflow-wrap: anywhere;
+}
+
+/* The picture fills the width of the card and keeps its shape.
+   width and height attributes in the HTML tell the browser how much room to
+   reserve, so the page does not jump around while images load. */
+.card img {
+  width: 100%;
+  height: auto;
+  background: var(--accent-tint);
+}
+
+/* All the text sits in .card-body, so the picture can touch the card's edges
+   while the words still have padding. flex: 1 lets the body fill the card, so
+   every card in a row is the same height. */
+.card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.25rem;
+}
+
+/* app.js sets data-category="study" etc. This attribute selector picks the colours. */
+.card[data-category="study"] {
+  --accent: var(--study);
+  --accent-tint: var(--study-tint);
+}
+
+.card[data-category="event"] {
+  --accent: var(--event);
+  --accent-tint: var(--event-tint);
+}
+
+.card[data-category="tech"] {
+  --accent: var(--tech);
+  --accent-tint: var(--tech-tint);
+}
+
+.card[data-category="creative"] {
+  --accent: var(--creative);
+  --accent-tint: var(--creative-tint);
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.1rem 0.65rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  background: var(--accent-tint);
+  border-radius: 999px;
+}
+
+.chip--featured {
+  color: #fff;
+  background: var(--ink);
+}
+
+.card-when {
+  margin-top: auto; /* pushes this line to the bottom so cards line up */
+  padding-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.9375rem;
+  border-top: 1px dashed var(--line);
+}
+
+/*  9. ABOUT / JOIN  */
+
+.two-col {
+  display: grid;
+  gap: 2rem; /* one column on phones */
+}
+
+@media (min-width: 600px) {
+  .two-col {
+    grid-template-columns: 1fr 1fr; /* two equal columns on tablets and up */
+  }
+}
+
+.join-box {
+  padding: 1.5rem;
+  background: var(--study-tint);
+  border-radius: 0.75rem;
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.steps li + li {
+  margin-top: 0.5rem;
+}
+
+/*  10. FOOTER  */
+
+.site-footer {
+  padding-block: 1.5rem;
+  text-align: center;
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Only smooth-scroll for people who have not asked their device to reduce motion. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
