@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --ink: #11172d;
+  --navy: #0b1022;
+  --blue: #315ee7;
+  --cream: #f8f4ea;
+  --pink: #ed6a9a;
+  --gold: #f5c95f;
+  --green: #72c4a7;
+  --muted: #4d5366;
+  --line: rgba(17, 23, 45, 0.14);
+  --mono: 'DM Mono', 'Courier New', monospace;
+  --sans: 'Manrope', 'Avenir Next', Avenir, 'Segoe UI', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.explainer-topbar {
+  align-items: center;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+  justify-content: space-between;
+  padding: 18px max(1rem, calc((100% - 60rem) / 2));
+}
+
+.explainer-topbar a {
+  color: #fff;
+  font-weight: 700;
+  text-underline-offset: 4px;
+}
+
+.explainer-topbar .label {
+  color: #bbc6ff;
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+}
+
+.explainer {
+  margin-inline: auto;
+  padding: 3rem 0 4rem;
+  width: min(100% - 2rem, 52rem);
+}
+
+.eyebrow {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.13em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 1.5rem + 3vw, 3.5rem);
+  margin: 0 0 1rem;
+}
+
+h1 em {
+  color: var(--blue);
+  font-style: normal;
+}
+
+h2 {
+  border-top: 2px solid var(--ink);
+  font-size: clamp(1.6rem, 1.2rem + 1.5vw, 2.2rem);
+  margin: 3.5rem 0 1rem;
+  padding-top: 1.25rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin: 2rem 0 0.5rem;
+}
+
+.intro {
+  font-size: 1.2rem;
+  max-width: 44rem;
+}
+
+a {
+  color: var(--blue);
+  overflow-wrap: anywhere;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 3px;
+}
+
+.explainer-topbar a:focus-visible {
+  outline-color: var(--gold);
+}
+
+code {
+  background: rgba(49, 94, 231, 0.1);
+  border-radius: 4px;
+  font-family: var(--mono);
+  font-size: 0.9em;
+  padding: 0.05em 0.3em;
+}
+
+pre {
+  background: var(--navy);
+  border-radius: 12px;
+  color: var(--cream);
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  overflow-x: auto;
+  padding: 1.25rem;
+}
+
+pre code {
+  background: none;
+  color: inherit;
+  padding: 0;
+}
+
+.toc {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  margin: 2rem 0;
+  padding: 1.25rem 1.5rem;
+}
+
+.toc h2 {
+  border: 0;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+}
+
+.toc ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.note {
+  background: #fff;
+  border-left: 4px solid var(--pink);
+  border-radius: 0 12px 12px 0;
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+}
+
+.note p {
+  margin: 0;
+}
+
+.note p + p {
+  margin-top: 0.5rem;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  background: #fff;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  min-width: 32rem;
+  width: 100%;
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--navy);
+  color: #fff;
+}
+
+dl dt {
+  font-weight: 800;
+  margin-top: 1rem;
+}
+
+dl dd {
+  margin: 0.25rem 0 0;
+}
+
+.explainer-footer {
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+}
