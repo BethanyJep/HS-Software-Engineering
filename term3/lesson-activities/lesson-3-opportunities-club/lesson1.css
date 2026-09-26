@@ -1,0 +1,21 @@
+body{
+  background-color: white; 
+  font-family: 'Roboto', Courier, monospace;
+}
+nav{
+  background-color: blue;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  display:flex;
+  gap: 20px;
+}
+li{
+  list-style: none;
+}
+a {
+  color: white;
+}
