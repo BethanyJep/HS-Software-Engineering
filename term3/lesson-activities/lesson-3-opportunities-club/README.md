@@ -19,6 +19,8 @@ leson-3-opportunities-club/
     └── fonts/
 ```
 
+**Teaching materials:** [component tour slides](../../opportunities-club-slides.html) and a full [explainer](../../opportunities-club-explainer.html) covering every file, component, CSS section and JavaScript step.
+
 Open `index.html` in a browser to run either version (internet needed for the font). Keep the `images` folder next to it. CodePen can't see local image files, so run the project from a folder; the Google Font link would work in CodePen as is.
 
 ## What changed from the first draft

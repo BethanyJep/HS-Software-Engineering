@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3, Lessons 3 and 4 activity: a component-by-component tour of the Opportunities Club website, from landmarks and layout to the JavaScript finder.">
+    <title>Term 3 · Opportunities Club · Component Tour</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> ACTIVITY</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">LESSONS 3 + 4 · SAMPLE PROJECT</p><p class="deck-title">Opportunities Club · Component Tour</p></div>
+        <section class="slide-viewport" aria-label="Opportunities Club component tour slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 16: One page, many components">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">LESSON ACTIVITY · OPPORTUNITIES CLUB</p><h1>One page.<br><em>Many small parts.</em></h1>
+              <p class="lead">Take the Opportunities Club website apart, one component at a time, and see how HTML, CSS and JavaScript each do one job.</p>
+              <p class="checkpoint">Open <a href="lesson-activities/lesson-3-opportunities-club/index.html">the finished page</a> in a browser. Keep the <a href="opportunities-club-explainer.html">explainer</a> open for the details.</p>
+              <div class="hero-meta"><span>Lesson 3: layout + accessibility</span><span>Lesson 4: JavaScript</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--gold" id="slide-2" aria-roledescription="slide" aria-label="2 of 16: Three files, three jobs">
+            <div class="slide-content">
+              <p class="eyebrow">THE FOLDER · 3 MIN</p><h2>Three files.<br><em>Three jobs.</em></h2>
+              <ul class="activity">
+                <li><strong>index.html</strong>Structure and content: landmarks, the form and eight cards.</li>
+                <li><strong>style.css</strong>Look and layout: colours, Flexbox, Grid and media queries.</li>
+                <li><strong>app.js</strong>Behaviour: show or hide cards when a topic is chosen.</li>
+              </ul>
+              <p class="checkpoint">lesson1.html and lesson1.css are the starting draft from Lessons 1–2. Compare them with index.html to see how far the page grows.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--cream" id="slide-3" aria-roledescription="slide" aria-label="3 of 16: The page skeleton">
+            <div class="slide-content">
+              <p class="eyebrow">PAGE ANATOMY · 5 MIN</p><h2>Every part<br><em>has a landmark.</em></h2>
+              <pre class="workshop-code"><code>&lt;a class="skip-link" href="#main"&gt;Skip to main content&lt;/a&gt;
+&lt;header class="site-header"&gt; logo + &lt;nav&gt; &lt;/header&gt;
+&lt;main id="main"&gt;
+  &lt;div class="hero"&gt; … &lt;/div&gt;
+  &lt;section id="finder"&gt; form + status + cards &lt;/section&gt;
+  &lt;div class="two-col"&gt; #about + #join &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer class="site-footer"&gt; … &lt;/footer&gt;
+&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
+              <p class="checkpoint">One header, one main, one footer. defer runs app.js after the HTML has loaded.</p>
+            </div><span class="slide-number">03</span>
+          </article>
+          <article class="slide slide--dark" id="slide-4" aria-roledescription="slide" aria-label="4 of 16: Component 1, the skip link">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">COMPONENT 1 · SKIP LINK</p><h2>Hidden until<br><em>you need it.</em></h2>
+              <pre class="workshop-code"><code>.skip-link { position: absolute; top: -4rem; }
+.skip-link:focus { top: 1rem; }</code></pre>
+              <ul class="activity">
+                <li><strong>Who</strong>Keyboard and screen-reader users.</li>
+                <li><strong>What</strong>Jumps past the menu straight to #main.</li>
+                <li><strong>Test</strong>Reload, press Tab once, then Enter.</li>
+              </ul>
+            </div><span class="slide-number slide-number--light">04</span>
+          </article>
+          <article class="slide slide--cream" id="slide-5" aria-roledescription="slide" aria-label="5 of 16: Component 2, header and navigation">
+            <div class="slide-content">
+              <p class="eyebrow">COMPONENT 2 · HEADER + NAV · FLEXBOX</p><h2>Stacked on phones.<br><em>Side by side on laptops.</em></h2>
+              <pre class="workshop-code"><code>.header-inner { display: flex; flex-direction: column; align-items: center; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 0.25rem 1.25rem; }
+
+@media (min-width: 40rem) {
+  .header-inner { flex-direction: row; justify-content: space-between; }
+}</code></pre>
+              <p class="checkpoint">Mobile-first: the small-screen rule comes first; the media query adds the wide layout. aria-label="Main" names the nav for screen readers.</p>
+            </div><span class="slide-number">05</span>
+          </article>
+          <article class="slide slide--blue" id="slide-6" aria-roledescription="slide" aria-label="6 of 16: Component 3, the hero">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">COMPONENT 3 · HERO</p><h2>Text that grows<br><em>with the screen.</em></h2>
+              <pre class="workshop-code"><code>.hero h1 {
+  max-width: 18ch;                          /* short, readable lines */
+  font-size: clamp(2rem, 1.2rem + 4vw, 3.5rem); /* min, ideal, max */
+}</code></pre>
+              <p class="lead">clamp() gives fluid type without a media query. ch measures text width in characters.</p>
+            </div><span class="slide-number slide-number--light">06</span>
+          </article>
+          <article class="slide slide--cream" id="slide-7" aria-roledescription="slide" aria-label="7 of 16: Component 4, the finder form">
+            <div class="slide-content">
+              <p class="eyebrow">COMPONENT 4 · FINDER FORM</p><h2>Every control<br><em>gets a label.</em></h2>
+              <pre class="workshop-code"><code>&lt;form id="filter-form" class="filter-form"&gt;
+  &lt;div class="field"&gt;
+    &lt;label for="topic"&gt;Choose a topic&lt;/label&gt;
+    &lt;select id="topic" name="topic"&gt;
+      &lt;option value="all"&gt;All topics&lt;/option&gt;
+      &lt;option value="study"&gt;Study&lt;/option&gt; …
+    &lt;/select&gt;
+  &lt;/div&gt;
+  &lt;button class="button" type="submit"&gt;Show results&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+              <p class="checkpoint">for matches id. CSS: .filter-form uses flex-wrap and .field uses flex: 1 1 14rem, so the button drops below on narrow screens.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 16: Component 5, the status message">
+            <div class="slide-content">
+              <p class="eyebrow">COMPONENT 5 · STATUS MESSAGE</p><h2>Say what<br><em>just happened.</em></h2>
+              <pre class="workshop-code"><code>&lt;p id="results-message" class="status" role="status"&gt;&lt;/p&gt;
+
+.status { min-height: 1.6em; } /* no jump when text changes */</code></pre>
+              <ul class="activity">
+                <li><strong>Empty in HTML</strong>app.js fills it in.</li>
+                <li><strong>role="status"</strong>Screen readers announce the new text politely.</li>
+                <li><strong>Example</strong>“Showing 2 of 8 opportunities.”</li>
+              </ul>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--dark" id="slide-9" aria-roledescription="slide" aria-label="9 of 16: Component 6, the card grid">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">COMPONENT 6 · CARD GRID · CSS GRID</p><h2>As many columns<br><em>as will fit.</em></h2>
+              <pre class="workshop-code"><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+}</code></pre>
+              <p class="lead">Each column is at least 20rem and shares leftover space. min(100%, 20rem) stops overflow on tiny phones. No media query needed.</p>
+              <p class="checkpoint">DevTools: select .card-grid, open the Grid overlay, then resize from 320px to full width.</p>
+            </div><span class="slide-number slide-number--light">09</span>
+          </article>
+          <article class="slide slide--cream" id="slide-10" aria-roledescription="slide" aria-label="10 of 16: Component 7, the card">
+            <div class="slide-content">
+              <p class="eyebrow">COMPONENT 7 · CARD · THE REUSABLE PART</p><h2>Copy one.<br><em>Get a new opportunity.</em></h2>
+              <pre class="workshop-code"><code>&lt;article class="card" data-category="tech"&gt;
+  &lt;img src="images/coding-club.svg" alt="Two students beside a laptop showing lines of code" width="400" height="240"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="card-meta"&gt;&lt;span class="chip"&gt;Tech&lt;/span&gt;&lt;/div&gt;
+    &lt;h3&gt;Coding club&lt;/h3&gt;
+    &lt;p&gt;Build small programs and websites with a friend.&lt;/p&gt;
+    &lt;p class="card-when"&gt;Thursdays, after classes&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+              <p class="checkpoint">data-category picks the colour in CSS and the filter in JavaScript. .card-when uses margin-top: auto, so every card’s last line sits at the bottom.</p>
+            </div><span class="slide-number">10</span>
+          </article>
+          <article class="slide slide--pink" id="slide-11" aria-roledescription="slide" aria-label="11 of 16: Components 8 and 9, about, join and footer">
+            <div class="slide-content">
+              <p class="eyebrow">COMPONENTS 8 + 9 · ABOUT, JOIN, FOOTER</p><h2>One column.<br><em>Then two.</em></h2>
+              <pre class="workshop-code"><code>.two-col { display: grid; gap: 2rem; }
+@media (min-width: 600px) {
+  .two-col { grid-template-columns: 1fr 1fr; }
+}</code></pre>
+              <ul class="activity">
+                <li><strong>About</strong>A section named by its heading with aria-labelledby.</li>
+                <li><strong>Join</strong>An ordered list, because the steps happen in order.</li>
+                <li><strong>Footer</strong>Closes the page with a thin top border.</li>
+              </ul>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 16: Design tokens and base rules">
+            <div class="slide-content">
+              <p class="eyebrow">BEHIND EVERY COMPONENT · STYLE.CSS</p><h2>Set it once.<br><em>Use it everywhere.</em></h2>
+              <pre class="workshop-code"><code>:root { --focus: navy; --tech: forestgreen; --tech-tint: lightgreen; }
+*, *::before, *::after { box-sizing: border-box; }
+img { max-width: 100%; height: auto; display: block; }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; }</code></pre>
+              <p class="checkpoint">Custom properties are CSS variables. [hidden] must win so JavaScript can hide cards that use display: flex.</p>
+            </div><span class="slide-number">12</span>
+          </article>
+          <article class="slide slide--dark" id="slide-13" aria-roledescription="slide" aria-label="13 of 16: app.js steps 1 and 2">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">APP.JS · STEPS 1–2 · VARIABLES + A FUNCTION</p><h2>Find it.<br><em>Then ask a question.</em></h2>
+              <pre class="workshop-code"><code>const form = document.querySelector("#filter-form");
+const topicSelect = document.querySelector("#topic");
+const message = document.querySelector("#results-message");
+const cards = document.querySelectorAll(".card");
+
+function cardMatches(card, topic) {
+  if (topic === "all") {
+    return true;
+  }
+  return card.dataset.category === topic;
+}</code></pre>
+              <p class="checkpoint">Inputs: a card and a topic. Output: true or false. data-category in HTML becomes dataset.category in JavaScript.</p>
+            </div><span class="slide-number slide-number--light">13</span>
+          </article>
+          <article class="slide slide--blue" id="slide-14" aria-roledescription="slide" aria-label="14 of 16: app.js steps 3 to 5">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">APP.JS · STEPS 3–5 · LOOP, EVENT, START</p><h2>Check every card.<br><em>React to the form.</em></h2>
+              <pre class="workshop-code"><code>function showTopic(topic) {
+  let visibleCount = 0;
+  for (const card of cards) {
+    if (cardMatches(card, topic)) { card.hidden = false; visibleCount = visibleCount + 1; }
+    else { card.hidden = true; }
+  }
+  // then write "Showing X of 8" or "No opportunities…" into message
+}
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  showTopic(topicSelect.value);
+});
+showTopic("all");</code></pre>
+            </div><span class="slide-number slide-number--light">14</span>
+          </article>
+          <article class="slide slide--green" id="slide-15" aria-roledescription="slide" aria-label="15 of 16: Try it yourself">
+            <div class="slide-content">
+              <p class="eyebrow">PAIR PRACTICE · 10 MIN</p><h2>Change one thing.<br><em>Predict, then test.</em></h2>
+              <ul class="activity">
+                <li><strong>Add a card</strong>Copy one article, change the words. Does the message say 9 of 9?</li>
+                <li><strong>Volunteering</strong>Give your card data-category="volunteer". What happens to the empty message?</li>
+                <li><strong>Capitals</strong>Change "tech" to "Tech" on one card. Why does it vanish from the filter?</li>
+              </ul>
+              <p class="checkpoint">Console: try cards.length, then cardMatches(cards[0], "study").</p>
+            </div><span class="slide-number">15</span>
+          </article>
+          <article class="slide slide--gold" id="slide-16" aria-roledescription="slide" aria-label="16 of 16: Make it your capstone">
+            <div class="slide-content">
+              <p class="eyebrow">CAPSTONE CHECKPOINT · MAKE IT YOURS</p><h2>Same components.<br><em>Your content.</em></h2>
+              <ul class="activity">
+                <li><strong>Cards</strong>Swap in your own opportunities, towns or quiz questions.</li>
+                <li><strong>Topics</strong>Add a matching option and a .card[data-category] colour rule.</li>
+                <li><strong>Check</strong>Keyboard only, 200% zoom and 320px wide.</li>
+              </ul>
+              <p class="checkpoint">Read the full <a href="opportunities-club-explainer.html">Opportunities Club explainer →</a></p>
+            </div><span class="slide-number">16</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>16</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button><button class="dot" type="button" aria-label="Go to slide 13"></button><button class="dot" type="button" aria-label="Go to slide 14"></button><button class="dot" type="button" aria-label="Go to slide 15"></button><button class="dot" type="button" aria-label="Go to slide 16"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 16</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

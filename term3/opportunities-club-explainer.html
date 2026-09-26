@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="A plain-language explainer for the Opportunities Club sample project: every file, HTML component, CSS section and line of JavaScript, plus capstone and facilitator notes.">
+    <title>Term 3 · Opportunities Club · Explainer</title>
+    <link rel="stylesheet" href="explainer.css">
+  </head>
+  <body>
+    <header class="explainer-topbar">
+      <a href="../index.html#term-3">← All Term 3 slide decks</a>
+      <span class="label">TERM 3 · LESSONS 3 + 4 · EXPLAINER</span>
+      <a href="opportunities-club-slides.html">Component tour slides ↗</a>
+    </header>
+
+    <main class="explainer">
+      <p class="eyebrow">Sample project explainer</p>
+      <h1>How the Opportunities Club<br><em>website works.</em></h1>
+      <p class="intro">The Opportunities Club is a one-page website where students choose a topic (Study, Events, Tech, Creative or Volunteering) and see the matching clubs and events. This explainer walks through every file and every component, so you can read the code, change it with confidence, and reuse it in your capstone.</p>
+
+      <nav class="toc" aria-labelledby="toc-title">
+        <h2 id="toc-title">On this page</h2>
+        <ol>
+          <li><a href="#files">The files and what each one does</a></li>
+          <li><a href="#run">How to open and run it</a></li>
+          <li><a href="#draft">From first draft to finished page</a></li>
+          <li><a href="#skeleton">The page skeleton</a></li>
+          <li><a href="#components">The components, one by one</a></li>
+          <li><a href="#css">style.css, section by section</a></li>
+          <li><a href="#js">app.js, step by step</a></li>
+          <li><a href="#flow">What happens when you press “Show results”</a></li>
+          <li><a href="#a11y">Accessibility checklist</a></li>
+          <li><a href="#capstone">Adapting it for your capstone</a></li>
+          <li><a href="#bugs">Common mistakes and how to fix them</a></li>
+          <li><a href="#facilitators">Facilitator notes</a></li>
+          <li><a href="#glossary">Glossary</a></li>
+        </ol>
+      </nav>
+
+      <section aria-labelledby="files">
+        <h2 id="files">1. The files and what each one does</h2>
+        <p>All of the code lives in <a href="lesson-activities/lesson-3-opportunities-club/"><code>term3/lesson-activities/lesson-3-opportunities-club/</code></a>.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">File</th><th scope="col">Job</th><th scope="col">Lesson</th></tr></thead>
+            <tbody>
+              <tr><td><code>lesson1.html</code></td><td>The starting draft: a header with a nav, a heading and a short paragraph. No CSS file linked yet.</td><td>1</td></tr>
+              <tr><td><code>lesson1.css</code></td><td>First styles for the draft: a blue nav bar, Flexbox for the menu and the Roboto font.</td><td>2</td></tr>
+              <tr><td><code>index.html</code></td><td>The finished page: landmarks, the finder form, eight opportunity cards, About and Join sections.</td><td>3</td></tr>
+              <tr><td><code>style.css</code></td><td>All the design and layout for <code>index.html</code>, written mobile-first in numbered sections.</td><td>3</td></tr>
+              <tr><td><code>app.js</code></td><td>Shows or hides cards when a topic is chosen and writes a results message.</td><td>4</td></tr>
+              <tr><td><code>README.md</code></td><td>Facilitator guide: which file fits which lesson block, extensions and the debug challenge answer key.</td><td>All</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <p><strong>Heads up:</strong> the cards point to pictures in an <code>images/</code> folder (for example <code>images/coding-club.svg</code>). That folder is not in the repository yet, so the browser shows each picture’s alt text instead. The layout still works. Add your own images with the same file names, or change each <code>src</code>.</p>
+          <p>The README also mentions a <code>debug-challenge.js</code> handout and a <code>v2-extended</code> version; these are planned extras and are not in this folder yet.</p>
+        </div>
+      </section>
+
+      <section aria-labelledby="run">
+        <h2 id="run">2. How to open and run it</h2>
+        <ol>
+          <li>Download or clone the repository, then open <code>index.html</code> in any browser. There is nothing to install.</li>
+          <li>The Josefin Slab font loads from Google Fonts, so you need internet for it. Without internet the page falls back to <code>"Segoe UI"</code>, <code>system-ui</code> or <code>sans-serif</code>.</li>
+          <li>Open DevTools (F12 or right-click → Inspect) to use the Console, the Elements panel and the device toolbar.</li>
+          <li>In CodePen: paste <code>index.html</code> (only what is inside <code>&lt;body&gt;</code>), <code>style.css</code> and <code>app.js</code> into the three panels. Local images will not load there.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="draft">
+        <h2 id="draft">3. From first draft to finished page</h2>
+        <p><code>lesson1.html</code> is what a page might look like after Lesson 1. Comparing it with <code>index.html</code> shows the upgrades Lesson 3 teaches:</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Draft (<code>lesson1.html</code>)</th><th scope="col">Finished (<code>index.html</code>)</th><th scope="col">Why it is better</th></tr></thead>
+            <tbody>
+              <tr><td>No <code>lang</code>, no <code>charset</code>, no viewport tag</td><td><code>&lt;html lang="en"&gt;</code>, <code>&lt;meta charset&gt;</code>, <code>&lt;meta name="viewport"&gt;</code></td><td>Correct pronunciation for screen readers, correct characters, and phones stop pretending to be desktops.</td></tr>
+              <tr><td>Heading inside <code>&lt;header&gt;</code>; no <code>&lt;main&gt;</code></td><td>Header holds only the logo and nav; content sits in one <code>&lt;main&gt;</code></td><td>Landmarks let assistive technology jump straight to the content.</td></tr>
+              <tr><td>Links with empty <code>href=""</code></td><td>Links to <code>#finder</code>, <code>#about</code>, <code>#join</code></td><td>Each link now goes somewhere real on the page.</td></tr>
+              <tr><td>Fixed <code>padding: 20px</code>, colours typed each time</td><td>Custom properties, <code>rem</code>, <code>clamp()</code> and <code>min()</code></td><td>One change updates the whole site, and sizes adapt to the screen and the user’s font setting.</td></tr>
+              <tr><td>No skip link, no focus styles</td><td>Skip link and <code>:focus-visible</code> ring</td><td>Keyboard users can see where they are and skip the menu.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="skeleton">
+        <h2 id="skeleton">4. The page skeleton</h2>
+        <p>Before looking at any single part, look at the outline. Every visible area is inside a <em>landmark</em>: an element that tells the browser what that area is for.</p>
+<pre><code>&lt;body&gt;
+  &lt;a class="skip-link" href="#main"&gt;Skip to main content&lt;/a&gt;   ← component 1
+  &lt;header class="site-header"&gt; logo + &lt;nav&gt; &lt;/header&gt;       ← component 2
+  &lt;main id="main"&gt;
+    &lt;div class="hero"&gt; h1 + lead &lt;/div&gt;                    ← component 3
+    &lt;section id="finder"&gt;
+      &lt;form id="filter-form"&gt; … &lt;/form&gt;                     ← component 4
+      &lt;p id="results-message" role="status"&gt;&lt;/p&gt;           ← component 5
+      &lt;div id="cards" class="card-grid"&gt;                   ← component 6
+        &lt;article class="card"&gt; … &lt;/article&gt; × 8           ← component 7
+      &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;div class="container two-col section"&gt; #about + #join &lt;/div&gt;  ← component 8
+  &lt;/main&gt;
+  &lt;footer class="site-footer"&gt; … &lt;/footer&gt;                 ← component 9
+  &lt;script src="app.js" defer&gt;&lt;/script&gt;
+&lt;/body&gt;</code></pre>
+        <p>Two layout helpers appear all over the page:</p>
+        <ul>
+          <li><code>.container</code> sets <code>width: min(100% - 2rem, 70rem)</code> and centres itself with <code>margin-inline: auto</code>. On a phone it is the full width minus a 1rem gap on each side; on a big screen it stops at 70rem.</li>
+          <li><code>.section</code> adds vertical padding with <code>clamp(2rem, 5vw, 3.5rem)</code>, so sections breathe more on bigger screens.</li>
+        </ul>
+        <p>The <code>&lt;script&gt;</code> tag uses <code>defer</code>, which means “download now, but run after the HTML has been read”. That guarantees the form and cards exist when <code>app.js</code> looks for them.</p>
+      </section>
+
+      <section aria-labelledby="components">
+        <h2 id="components">5. The components, one by one</h2>
+
+        <h3 id="c-skip">Component 1: Skip link</h3>
+        <p><strong>What it is:</strong> the very first link on the page, “Skip to main content”. <strong>Why:</strong> keyboard users would otherwise have to Tab through every menu link on every page.</p>
+<pre><code>.skip-link { position: absolute; left: 1rem; top: -4rem; z-index: 10; … }
+.skip-link:focus { top: 1rem; }</code></pre>
+        <p>It is parked above the top of the screen (<code>top: -4rem</code>). When it receives focus, it slides into view. Its <code>href="#main"</code> matches <code>&lt;main id="main"&gt;</code>. <strong>Try it:</strong> reload the page and press Tab once.</p>
+
+        <h3 id="c-header">Component 2: Header and navigation</h3>
+        <p><strong>HTML:</strong> a <code>&lt;header&gt;</code> containing the logo text and a <code>&lt;nav aria-label="Main"&gt;</code> with a list of three links. A list is used because a menu <em>is</em> a list of choices, and screen readers announce “list, 3 items”.</p>
+        <p><strong>CSS (Flexbox):</strong></p>
+<pre><code>.header-inner { display: flex; flex-direction: column; align-items: center; gap: 0.5rem 2rem; }
+.site-nav ul  { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.25rem 1.25rem; list-style: none; }
+.site-nav a   { display: inline-block; padding: 0.6rem 0.25rem; }  /* bigger tap target */
+
+@media (min-width: 40rem) {
+  .header-inner { flex-direction: row; justify-content: space-between; }
+}</code></pre>
+        <p>On phones the logo sits above the menu. Once the screen is at least 40rem wide, the media query switches to a row: logo on the left, menu on the right. Because the header is dark blue, <code>.site-header :focus-visible</code> changes the focus ring to yellow so it stays visible.</p>
+
+        <h3 id="c-hero">Component 3: Hero</h3>
+        <p><strong>HTML:</strong> the page’s only <code>&lt;h1&gt;</code> and a lead paragraph that says what the site is for.</p>
+<pre><code>.hero h1 { max-width: 18ch; font-size: clamp(2rem, 1.2rem + 4vw, 3.5rem); }
+.lead    { max-width: 38rem; font-size: clamp(1.0625rem, 1rem + 0.5vw, 1.25rem); }</code></pre>
+        <p><code>clamp(min, ideal, max)</code> makes the heading grow smoothly with the screen but never smaller than 2rem or larger than 3.5rem. <code>18ch</code> is about 18 characters wide, which keeps the big heading to a few short lines.</p>
+
+        <h3 id="c-form">Component 4: Finder form</h3>
+        <p><strong>HTML:</strong> a <code>&lt;form&gt;</code> with one labelled <code>&lt;select&gt;</code> and a submit <code>&lt;button&gt;</code>.</p>
+        <ul>
+          <li><code>&lt;label for="topic"&gt;</code> matches <code>&lt;select id="topic"&gt;</code>. Clicking the label focuses the dropdown, and screen readers read the label aloud.</li>
+          <li>Each <code>&lt;option value="…"&gt;</code> is a topic. The <code>value</code> (for example <code>tech</code>) is what JavaScript reads; the text (“Tech”) is what people see.</li>
+          <li>The “Volunteering” option has no cards on purpose, so you can see the empty-results message.</li>
+          <li><code>type="submit"</code> means both clicking the button and pressing Enter submit the form.</li>
+        </ul>
+        <p><strong>CSS (Flexbox with wrapping):</strong></p>
+<pre><code>.filter-form { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 1rem; }
+.field       { display: flex; flex-direction: column; flex: 1 1 14rem; }
+select       { min-height: 2.75rem; font: inherit; border: 2px solid var(--field-border); }</code></pre>
+        <p><code>flex: 1 1 14rem</code> reads as “grow, shrink, and aim for 14rem”. When there is room the dropdown and button share a row; when there is not, the button wraps underneath. <code>font: inherit</code> is needed because form controls ignore the page font by default. <code>min-height: 2.75rem</code> (about 44px) gives a comfortable touch target.</p>
+
+        <h3 id="c-status">Component 5: Status message</h3>
+<pre><code>&lt;p id="results-message" class="status" role="status"&gt;&lt;/p&gt;</code></pre>
+        <p>It starts empty; <code>app.js</code> writes text into it, such as “Showing 2 of 8 opportunities.” <code>role="status"</code> tells screen readers to announce the change politely, without interrupting. In CSS, <code>min-height: 1.6em</code> keeps a line of space reserved so the cards below do not jump when the text appears.</p>
+
+        <h3 id="c-grid">Component 6: Card grid</h3>
+<pre><code>.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+}</code></pre>
+        <p>Read it from the inside out:</p>
+        <ul>
+          <li><code>min(100%, 20rem)</code>: the smallest a column may be is 20rem, unless the screen is narrower than that, in which case it is 100%.</li>
+          <li><code>minmax(…, 1fr)</code>: a column can be anywhere from that minimum up to one equal share of the space.</li>
+          <li><code>repeat(auto-fit, …)</code>: make as many columns as will fit.</li>
+        </ul>
+        <p>Result: one column on a phone, two on a tablet, three or more on a laptop, with no media query at all.</p>
+
+        <h3 id="c-card">Component 7: Card (the reusable part)</h3>
+<pre><code>&lt;article class="card" data-category="tech"&gt;
+  &lt;img src="images/coding-club.svg" alt="Two students beside a laptop showing lines of code" width="400" height="240"&gt;
+  &lt;div class="card-body"&gt;
+    &lt;div class="card-meta"&gt;&lt;span class="chip"&gt;Tech&lt;/span&gt;&lt;/div&gt;
+    &lt;h3&gt;Coding club&lt;/h3&gt;
+    &lt;p&gt;Build small programs and websites with a friend.&lt;/p&gt;
+    &lt;p class="card-when"&gt;Thursdays, after classes&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+        <dl>
+          <dt><code>&lt;article&gt;</code></dt>
+          <dd>Each card makes sense on its own, which is exactly what <code>article</code> means.</dd>
+          <dt><code>data-category="tech"</code></dt>
+          <dd>A custom data attribute. CSS uses it to pick the card’s colours, and JavaScript uses it to decide whether to show the card. It must match an <code>&lt;option value&gt;</code> exactly, including lowercase letters.</dd>
+          <dt><code>&lt;img alt width height&gt;</code></dt>
+          <dd>The alt text describes the picture for anyone who cannot see it. <code>width</code> and <code>height</code> let the browser reserve space before the image loads, so the page does not jump.</dd>
+          <dt><code>.card-body</code></dt>
+          <dd>Holds all the text, so the picture can reach the card’s edges while the words keep their padding.</dd>
+          <dt><code>.chip</code></dt>
+          <dd>The small rounded topic label. <code>border-radius: 999px</code> makes a pill shape.</dd>
+          <dt><code>&lt;h3&gt;</code></dt>
+          <dd>Headings stay in order: h1 (page) → h2 (Opportunity finder) → h3 (each card).</dd>
+          <dt><code>.card-when</code></dt>
+          <dd><code>margin-top: auto</code> pushes the “when” line to the bottom of the card, so every card in a row lines up.</dd>
+        </dl>
+        <p><strong>CSS highlights:</strong></p>
+<pre><code>.card { --accent: var(--line); --accent-tint: var(--paper);
+        display: flex; flex-direction: column; border-radius: 0.75rem; overflow: hidden; }
+.card-body { display: flex; flex: 1; flex-direction: column; gap: 0.5rem; padding: 1.25rem; }
+.card[data-category="tech"] { --accent: var(--tech); --accent-tint: var(--tech-tint); }
+.chip { background: var(--accent-tint); border-radius: 999px; }</code></pre>
+        <p>Each card sets its own local custom properties. The attribute selector <code>.card[data-category="tech"]</code> swaps in the Tech colours, and the chip and image background use them automatically. <code>overflow: hidden</code> clips the picture to the rounded corners.</p>
+
+        <h3 id="c-about">Component 8: About and Join</h3>
+        <p>Two <code>&lt;section&gt;</code> elements inside a <code>.two-col</code> wrapper. Each section uses <code>aria-labelledby</code> pointing at its own <code>&lt;h2&gt;</code>, which gives the region a name. The joining steps are an <code>&lt;ol&gt;</code> because they happen in order.</p>
+<pre><code>.two-col { display: grid; gap: 2rem; }                 /* one column on phones */
+@media (min-width: 600px) {
+  .two-col { grid-template-columns: 1fr 1fr; }        /* two equal columns */
+}
+.join-box { padding: 1.5rem; background: var(--study-tint); border-radius: 0.75rem; }</code></pre>
+
+        <h3 id="c-footer">Component 9: Footer</h3>
+        <p>A <code>&lt;footer&gt;</code> landmark with one line of text, centred, with a light top border. Simple on purpose: this is where contact links or credits would go on a real site.</p>
+      </section>
+
+      <section aria-labelledby="css">
+        <h2 id="css">6. style.css, section by section</h2>
+        <p>The file is <strong>mobile-first</strong>: the normal rules describe the phone layout, and <code>@media (min-width: …)</code> blocks add changes for bigger screens. The numbered comments in the file match this list.</p>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">#</th><th scope="col">Section</th><th scope="col">Key ideas</th></tr></thead>
+            <tbody>
+              <tr><td>0</td><td>Fonts</td><td>Josefin Slab is loaded by <code>&lt;link&gt;</code> tags in the HTML head, with fallbacks listed in <code>font-family</code>.</td></tr>
+              <tr><td>1</td><td>Design tokens</td><td><code>:root</code> custom properties such as <code>--ink</code>, <code>--focus</code>, and a colour plus tint for each category. Change one here and it changes everywhere.</td></tr>
+              <tr><td>2</td><td>Base styles</td><td><code>box-sizing: border-box</code>; body font in <code>rem</code>; <code>img { max-width: 100%; height: auto }</code>; <code>[hidden] { display: none !important }</code>; long links wrap with <code>overflow-wrap: anywhere</code>.</td></tr>
+              <tr><td>3</td><td>Accessibility helpers</td><td>The skip link and a <code>:focus-visible</code> outline. Never remove outlines without replacing them.</td></tr>
+              <tr><td>4</td><td>Layout helpers</td><td><code>.container</code> with <code>min()</code>, <code>.section</code> with <code>clamp()</code>.</td></tr>
+              <tr><td>5</td><td>Header + nav</td><td>Flexbox column that becomes a row at 40rem.</td></tr>
+              <tr><td>6</td><td>Hero</td><td>Fluid heading with <code>clamp()</code> and a <code>ch</code> line length.</td></tr>
+              <tr><td>7</td><td>Finder form</td><td>Wrapping Flexbox, labelled fields, a 2.75rem tall button, and the <code>.status</code> line.</td></tr>
+              <tr><td>8</td><td>Cards + images</td><td><code>auto-fit</code> Grid, flex-column cards, attribute selectors for category colours, chips.</td></tr>
+              <tr><td>9</td><td>About / Join</td><td>Grid that becomes two columns at 600px.</td></tr>
+              <tr><td>10</td><td>Footer</td><td>Centred text with a top border.</td></tr>
+              <tr><td>11</td><td>Motion preferences</td><td>Smooth scrolling only inside <code>@media (prefers-reduced-motion: no-preference)</code>, so people who turn off animations are respected.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <p><strong>Why <code>[hidden]</code> needs <code>!important</code>:</strong> the browser hides <code>hidden</code> elements with <code>display: none</code>, but <code>.card { display: flex }</code> is more specific and would win, so hidden cards would still show. The <code>!important</code> rule makes “hidden” always mean hidden, which is what <code>app.js</code> relies on.</p>
+        </div>
+        <p>A few classes, such as <code>.button--quiet</code>, <code>.chip--featured</code> and <code>input[type="search"]</code>, are styled but not used on this page yet. They are ready for extensions like a search box or a “Featured” label.</p>
+      </section>
+
+      <section aria-labelledby="js">
+        <h2 id="js">7. app.js, step by step</h2>
+        <p>The cards are already written in HTML, so the page still works if JavaScript fails. The script has one job: <strong>show or hide cards</strong> when someone picks a topic.</p>
+
+        <h3>Step 1: Find the elements (variables)</h3>
+<pre><code>const form = document.querySelector("#filter-form");
+const topicSelect = document.querySelector("#topic");
+const message = document.querySelector("#results-message");
+const cards = document.querySelectorAll(".card");</code></pre>
+        <p><code>querySelector</code> finds the <em>first</em> element that matches a CSS selector; <code>querySelectorAll</code> finds <em>all</em> of them and returns a list. <code>const</code> is used because these references never change.</p>
+
+        <h3>Step 2: A function with parameters and a return value</h3>
+<pre><code>function cardMatches(card, topic) {
+  if (topic === "all") {
+    return true;
+  }
+  return card.dataset.category === topic;
+}</code></pre>
+        <p>Inputs: one card and a topic. Output: <code>true</code> (show it) or <code>false</code> (hide it). <code>data-category</code> in HTML is read as <code>card.dataset.category</code> in JavaScript. <code>===</code> checks that two values are exactly the same, so <code>"Tech"</code> and <code>"tech"</code> do <em>not</em> match.</p>
+
+        <h3>Step 3: A loop and a decision</h3>
+<pre><code>function showTopic(topic) {
+  let visibleCount = 0;
+  for (const card of cards) {
+    if (cardMatches(card, topic)) {
+      card.hidden = false;
+      visibleCount = visibleCount + 1;
+    } else {
+      card.hidden = true;
+    }
+  }
+  if (visibleCount === 0) {
+    message.textContent = "No opportunities in this topic yet. Try another topic!";
+  } else {
+    message.textContent = "Showing " + visibleCount + " of " + cards.length + " opportunities.";
+  }
+}</code></pre>
+        <p><code>let</code> is used for <code>visibleCount</code> because it changes. <code>for…of</code> runs the block once for each card. Setting <code>card.hidden</code> adds or removes the HTML <code>hidden</code> attribute. <code>textContent</code> writes plain text (safer than <code>innerHTML</code> because nothing is treated as code).</p>
+
+        <h3>Step 4: Listen for the form (event)</h3>
+<pre><code>form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  showTopic(topicSelect.value);
+});</code></pre>
+        <p>A form normally reloads the page when submitted. <code>preventDefault()</code> stops that so the script can update the page instead. <code>topicSelect.value</code> is the <code>value</code> of the chosen option.</p>
+
+        <h3>Step 5: Start</h3>
+<pre><code>showTopic("all");</code></pre>
+        <p>Runs once when the page loads, so every card is visible and the message already says “Showing 8 of 8 opportunities.”</p>
+      </section>
+
+      <section aria-labelledby="flow">
+        <h2 id="flow">8. What happens when you press “Show results”</h2>
+        <ol>
+          <li>You choose “Tech” in the dropdown. Its value is <code>"tech"</code>.</li>
+          <li>You click the button (or press Enter). The form fires a <code>submit</code> event.</li>
+          <li>The listener stops the page reload and calls <code>showTopic("tech")</code>.</li>
+          <li><code>showTopic</code> loops over all 8 cards and asks <code>cardMatches(card, "tech")</code> for each one.</li>
+          <li>The 2 Tech cards get <code>hidden = false</code>; the other 6 get <code>hidden = true</code>. CSS <code>[hidden]</code> removes them from the layout.</li>
+          <li>The grid reflows the remaining cards automatically.</li>
+          <li>The status message becomes “Showing 2 of 8 opportunities.” and screen readers announce it.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="a11y">
+        <h2 id="a11y">9. Accessibility checklist</h2>
+        <p>Every item below is already built into the page. Use it as a checklist for your own project.</p>
+        <ul>
+          <li><strong>Language and viewport:</strong> <code>lang="en"</code> and the viewport meta tag.</li>
+          <li><strong>Landmarks:</strong> one header, one nav with a name, one main, one footer.</li>
+          <li><strong>Skip link</strong> to the main content.</li>
+          <li><strong>Heading order:</strong> h1 → h2 → h3 with no skipped levels.</li>
+          <li><strong>Labels:</strong> every form control has a matching <code>&lt;label&gt;</code>.</li>
+          <li><strong>Alt text</strong> on every image that describes what is shown.</li>
+          <li><strong>Visible focus</strong> with <code>:focus-visible</code>, adjusted for the dark header.</li>
+          <li><strong>Live updates</strong> announced with <code>role="status"</code>.</li>
+          <li><strong>Touch targets</strong> at least 2.75rem tall.</li>
+          <li><strong>Relative units</strong> (<code>rem</code>) so the page respects the user’s font size.</li>
+          <li><strong>Reduced motion</strong> respected for smooth scrolling.</li>
+        </ul>
+        <p><strong>Test it:</strong> use only the keyboard (Tab, Shift+Tab, Enter, arrow keys in the dropdown); zoom to 200%; set the device toolbar to 320px wide.</p>
+      </section>
+
+      <section aria-labelledby="capstone">
+        <h2 id="capstone">10. Adapting it for your capstone</h2>
+        <ol>
+          <li><strong>Change a card:</strong> copy a whole <code>&lt;article class="card"&gt;</code>, then change the heading, text, image, alt text and <code>data-category</code>.</li>
+          <li><strong>Add a topic:</strong> add an <code>&lt;option value="yourtopic"&gt;</code> to the dropdown, then add a <code>.card[data-category="yourtopic"]</code> rule in <code>style.css</code> with two new colour tokens in <code>:root</code>.</li>
+          <li><strong>No JavaScript changes needed:</strong> <code>app.js</code> works with any number of cards and any topic names.</li>
+        </ol>
+        <p>The same pattern fits all three capstones:</p>
+        <ul>
+          <li><strong>School Opportunities Hub:</strong> clubs, competitions and events, filtered by type.</li>
+          <li><strong>Kenya Weather Dashboard:</strong> one card per town, filtered by region.</li>
+          <li><strong>CyberSmart Quest:</strong> one card per scenario, filtered by topic such as passwords or scams.</li>
+        </ul>
+        <p><strong>Stretch goal:</strong> move the card content into a JavaScript array of objects and build the cards from the data. That is the Lesson 4 “turn capstone information into structured data” objective.</p>
+      </section>
+
+      <section aria-labelledby="bugs">
+        <h2 id="bugs">11. Common mistakes and how to fix them</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">What you see</th><th scope="col">Likely cause</th><th scope="col">Fix</th></tr></thead>
+            <tbody>
+              <tr><td>A card never appears for its topic</td><td><code>data-category</code> and <code>&lt;option value&gt;</code> differ (<code>event</code> vs <code>events</code>, or <code>Tech</code> vs <code>tech</code>)</td><td>Make them exactly the same, all lowercase.</td></tr>
+              <tr><td>A new card has no colour</td><td>No <code>.card[data-category="…"]</code> rule for that category</td><td>Add the rule and its colour tokens.</td></tr>
+              <tr><td>Page reloads and the filter resets</td><td><code>event.preventDefault()</code> missing</td><td>Put it back as the first line of the listener.</td></tr>
+              <tr><td>Nothing happens; Console shows <code>Cannot read properties of null</code></td><td>An id in <code>querySelector</code> does not match the HTML, or <code>defer</code> was removed</td><td>Check spelling of ids and keep <code>defer</code> on the script tag.</td></tr>
+              <tr><td>Hidden cards still show</td><td>The <code>[hidden]</code> rule was deleted</td><td>Restore <code>[hidden] { display: none !important; }</code>.</td></tr>
+              <tr><td>Broken image icon</td><td>The file is not in <code>images/</code> or the name is misspelled</td><td>Check the path; the alt text will show until it is fixed.</td></tr>
+              <tr><td>Page scrolls sideways on a phone</td><td>A fixed width or missing <code>box-sizing</code></td><td>Use <code>max-width</code>, <code>min()</code> and keep the box-sizing rule.</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="facilitators">
+        <h2 id="facilitators">12. Facilitator notes</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th scope="col">Lesson block</th><th scope="col">Use</th></tr></thead>
+            <tbody>
+              <tr><td>L3 Connect (0–10)</td><td>Open <code>index.html</code> and resize the window. Ask what moves, wraps or shrinks.</td></tr>
+              <tr><td>L3 Learn (10–30)</td><td><code>style.css</code> sections 5, 7 and 8, and the two <code>@media</code> blocks. Component tour slides 5–11.</td></tr>
+              <tr><td>L3 Guided build (30–50)</td><td>Landmarks, the labelled form and one card with alt text. Slides 3, 7 and 10.</td></tr>
+              <tr><td>L3 DevTools (50–60)</td><td>Grid overlay on <code>.card-grid</code>, inspect <code>.card-body</code> padding, device toolbar at 320px.</td></tr>
+              <tr><td>L4 Learn (10–30)</td><td><code>app.js</code> steps 1–3. Slides 13–14.</td></tr>
+              <tr><td>L4 Guided practice (30–50)</td><td>Step 4 and the “Try it yourself” list at the bottom of <code>app.js</code>. Slide 15.</td></tr>
+              <tr><td>Capstone checkpoint</td><td>Teams copy a card and change the content and category. Slide 16.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul>
+          <li>Ask students to write their own alt text. Test: “If the picture vanished, would this sentence tell you what was there?”</li>
+          <li>All content is fictional and the page collects no personal information.</li>
+          <li>The full lesson mapping and debug challenge answer key are in the <a href="lesson-activities/lesson-3-opportunities-club/README.md">activity README</a>.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="glossary">
+        <h2 id="glossary">13. Glossary</h2>
+        <dl>
+          <dt>Component</dt><dd>A self-contained part of a page, such as the header, a form or a card, with its own HTML and CSS.</dd>
+          <dt>Landmark</dt><dd>An element such as <code>header</code>, <code>nav</code>, <code>main</code> or <code>footer</code> that tells assistive technology what an area is for.</dd>
+          <dt>Mobile-first</dt><dd>Writing the small-screen styles first, then adding <code>min-width</code> media queries for bigger screens.</dd>
+          <dt>Media query</dt><dd>A CSS block, like <code>@media (min-width: 40rem)</code>, whose rules only apply when the condition is true.</dd>
+          <dt>Flexbox</dt><dd>A one-direction layout (a row or a column) for lining items up and spacing them.</dd>
+          <dt>Grid</dt><dd>A two-direction layout of rows and columns.</dd>
+          <dt>Custom property</dt><dd>A CSS variable such as <code>--focus</code>, used with <code>var(--focus)</code>.</dd>
+          <dt><code>rem</code></dt><dd>A size relative to the root font size, which follows the user’s browser setting.</dd>
+          <dt><code>clamp()</code> / <code>min()</code></dt><dd>CSS functions that pick a size within limits, so things resize smoothly.</dd>
+          <dt><code>data-*</code> attribute</dt><dd>Your own named attribute for storing information on an element, read in JavaScript through <code>dataset</code>.</dd>
+          <dt>Event listener</dt><dd>Code that waits for something to happen, such as a form submit, then runs a function.</dd>
+          <dt>Parameter / return value</dt><dd>The inputs a function receives, and the answer it gives back.</dd>
+        </dl>
+      </section>
+
+      <footer class="explainer-footer">
+        <p>Next: present the <a href="opportunities-club-slides.html">component tour slides</a>, or go back to <a href="../index.html#term-3">all Term 3 slide decks</a>.</p>
+      </footer>
+    </main>
+  </body>
+</html>
