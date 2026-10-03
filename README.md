@@ -26,6 +26,7 @@
 | [Facilitator Guide](resources/facilitator-guide.md) | Tips, logistics, and facilitation notes |
 | [Career Paths in Tech](resources/career-paths/README.md) | Beginner guides to fields like AI, security & data — resources, projects & how to start |
 | [Holiday Build Challenge](resources/career-paths/holiday-build-challenge.md) | Build one beginner project in a tech field before the holidays end |
+| [Student Feedback Form (fillable PDF)](resources/feedback/student-feedback-form.pdf) | End-of-program survey covering every session, skills, capstone, and open comments · regenerate with [`generate_feedback_form.py`](resources/feedback/generate_feedback_form.py) |
 
 ---
 
