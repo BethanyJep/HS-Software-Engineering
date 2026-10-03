@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 7 · Git and GitHub">
+    <title>Term 3 · Lesson 7 · Git and GitHub</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 07</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 3</p><p class="deck-title">Git and GitHub</p></div>
+        <section class="slide-viewport" aria-label="Lesson 7 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 14: Put your project on GitHub step by step">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 3 · TUTORIAL</p><h1>Put your project on GitHub.<br><em>Step by step.</em></h1><p class="lead">Move your capstone from NitroIDE into VS Code, save versions with Git, and back them up on GitHub.</p><ul class="activity"><li><strong>Time</strong>About 2–3 hours. Stop after any step and continue later.</li><li><strong>Tools</strong>Visual Studio Code, Git and a free GitHub account.</li><li><strong>Goal</strong>Your own repository with at least three clear commits.</li></ul><p class="checkpoint">Do each numbered step, compare with ✅ Check, then press → for the next slide. No computer install? Use slide 12. Written guide: <a href="lessons/lesson-7-git-and-github.md">Lesson 7</a>.</p>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-2" aria-roledescription="slide" aria-label="2 of 14: Step 1: accounts and installs">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 OF 11 · GET READY</p><h2>Accounts and <em>installs.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>With a parent’s or guardian’s permission, create a free account at <strong>github.com/signup</strong>. Use a strong password and turn on two-factor authentication if you can.</span></li><li><span>Install Visual Studio Code from <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">code.visualstudio.com</a>.</span></li><li><span>Install Git from <a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">git-scm.com/downloads</a>. Keep the default options.</span></li><li><span>Cannot install software? Skip to slide 12 and use the browser.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> you can sign in to GitHub and open VS Code.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark slide--tutorial" id="slide-3" aria-roledescription="slide" aria-label="3 of 14: Step 2: open your project in VS Code">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 2 OF 11 · VS CODE</p><h2>Open your project <em>in VS Code.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>In NitroIDE, open your capstone and click <strong>Prefs → Download ZIP</strong>.</span></li><li><span>Unzip it into a new folder, for example <code>Documents/my-capstone</code>.</span></li><li><span>In VS Code, choose <strong>File → Open Folder</strong> and pick that folder.</span></li><li><span>If asked, click <strong>Yes, I trust the authors</strong>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> the Explorer on the left lists <code>index.html</code>, <code>style.css</code> and <code>script.js</code>.</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-4" aria-roledescription="slide" aria-label="4 of 14: Step 3: fix the page head">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 3 OF 11 · INDEX.HTML</p><h2>Fix the page <em>head.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Open <code>index.html</code>.</span></li><li><span>Add the <code>viewport</code> line so phones show it properly.</span></li><li><span>Change <code>Exported Project</code> to your project name.</span></li><li><span>Check the <code>link</code> and <code>script</code> lines exist. Save with <strong>Ctrl+S</strong>.</span></li><li><span>Double-click <code>index.html</code> in your folder to open it in a browser.</span></li></ol><div class="code-file"><p class="file-tab">index.html</p><pre class="workshop-code"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+  &lt;title&gt;CyberSmart Quest&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  …your page…
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> your page looks and works the way it did in NitroIDE.</p><p class="checkpoint">Images: make an <code>images</code> folder, put permitted images in it and use <code>src="images/name.jpg"</code>.</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--blue slide--tutorial" id="slide-5" aria-roledescription="slide" aria-label="5 of 14: Step 4: tell Git who you are">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 4 OF 11 · TERMINAL · FIRST TIME ONLY</p><h2>Tell Git <em>who you are.</em></h2><div class="tutorial"><ol class="how-to"><li><span>In VS Code, choose <strong>Terminal → New Terminal</strong>.</span></li><li><span>Type the first line with your first name, then press Enter.</span></li><li><span>Type the second line with your GitHub email, then press Enter.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git config --global user.name &quot;Your First Name&quot;
+git config --global user.email &quot;you@example.com&quot;</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> no message appears. That means it worked.</p><p class="checkpoint">To keep your email private, use the “noreply” address from GitHub <strong>Settings → Emails</strong>.</p>
+            </div><span class="slide-number slide-number--light">05</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-6" aria-roledescription="slide" aria-label="6 of 14: Step 5: make your first commit">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 5 OF 11 · TERMINAL</p><h2>Make your first <em>commit.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Run each line in the terminal, one at a time.</span></li><li><span><code>git init</code> starts history in this folder.</span></li><li><span><code>git add .</code> chooses every file in the folder.</span></li><li><span><code>git commit</code> saves a labelled version.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git init
+git add .
+git commit -m &quot;Create capstone website&quot;
+git branch -M main</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> a message like <code>3 files changed</code> after the commit line.</p><p class="checkpoint">Keep only project files in this folder. Never add passwords or private documents.</p>
+            </div><span class="slide-number">06</span>
+          </article>
+          <article class="slide slide--gold slide--tutorial" id="slide-7" aria-roledescription="slide" aria-label="7 of 14: Step 6: create the repository on GitHub">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 6 OF 11 · GITHUB.COM</p><h2>Create the <em>repository.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>On github.com, click <strong>+ → New repository</strong>.</span></li><li><span>Name it after your project, for example <code>cybersmart-quest</code>.</span></li><li><span>Choose <strong>Public</strong> if your school allows it. Free GitHub Pages needs a public repository.</span></li><li><span>Do <strong>not</strong> tick “Add a README”. Leave it empty.</span></li><li><span>Click <strong>Create repository</strong>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> a “Quick setup” page with an address ending in <code>.git</code>.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--dark slide--tutorial" id="slide-8" aria-roledescription="slide" aria-label="8 of 14: Step 7: push your code to GitHub">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 7 OF 11 · TERMINAL</p><h2>Push your code <em>to GitHub.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Copy the <code>.git</code> address from the Quick setup page.</span></li><li><span>Run the first line with <strong>your</strong> address.</span></li><li><span>Run the second line.</span></li><li><span>If a sign-in window opens, choose <strong>Sign in with your browser</strong>.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git remote add origin https://github.com/YOUR-NAME/cybersmart-quest.git
+git push -u origin main</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> refresh the GitHub page. Your three files are there.</p><p class="checkpoint">Never paste a password or token that someone else gives you.</p>
+            </div><span class="slide-number slide-number--light">08</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-9" aria-roledescription="slide" aria-label="9 of 14: Step 8: change, commit, push">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 8 OF 11 · EVERY STUDY SESSION</p><h2>Change, commit, <em>push.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Make one small improvement and save.</span></li><li><span><code>git status</code> shows which files changed.</span></li><li><span><code>git diff</code> shows the exact lines. Press <strong>q</strong> to exit.</span></li><li><span>Commit with a message that says what you finished, then push.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git status
+git diff
+git add .
+git commit -m &quot;Add empty state to search&quot;
+git push</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> on GitHub, the number of commits goes up by one.</p><p class="checkpoint">Good: “Add empty state to search”. Avoid: “update”, “stuff”, “final-final”. You can also use the <strong>Source Control</strong> icon in VS Code.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--green slide--tutorial" id="slide-10" aria-roledescription="slide" aria-label="10 of 14: Step 9: move data into a JSON file">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 9 OF 11 · HUB + CYBERSMART ONLY</p><h2>Move data into <em>a JSON file.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Make a new file: <code>opportunities.json</code> or <code>questions.json</code>.</span></li><li><span>Paste your array. Put every key in double quotes.</span></li><li><span>In your load function, swap <code>const data = opportunities;</code> for the two <code>fetch</code> lines.</span></li><li><span>Commit: <code>Move data into JSON file</code>, then push.</span></li></ol><div class="code-file"><p class="file-tab">two files</p><pre class="workshop-code"><code>// opportunities.json
+[
+  { &quot;title&quot;: &quot;Coding club&quot;, &quot;category&quot;: &quot;tech&quot; },
+  { &quot;title&quot;: &quot;Science fair&quot;, &quot;category&quot;: &quot;science&quot; }
+]
+
+// script.js – inside your load function
+const response = await fetch(&quot;opportunities.json&quot;);
+const data = await response.json();</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> the commit is on GitHub. Weather Dashboard: skip this step.</p><p class="checkpoint">Opened by double-click, the page will show your error message. That is expected: <code>fetch</code> cannot read files from your computer. It works on GitHub Pages in Lesson 8.</p>
+            </div><span class="slide-number">10</span>
+          </article>
+          <article class="slide slide--blue slide--tutorial" id="slide-11" aria-roledescription="slide" aria-label="11 of 14: Step 10: read your history">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 10 OF 11 · HISTORY</p><h2>Read your <em>history.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Run <code>git log --oneline</code>.</span></li><li><span>On GitHub, click <strong>Commits</strong> above your file list.</span></li><li><span>Open one commit. Green lines were added; red lines were removed.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git log --oneline
+
+a1b2c3d Move data into JSON file
+9f8e7d6 Add empty state to search
+4c5b6a7 Create capstone website</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> at least three commits, each with a clear message.</p>
+            </div><span class="slide-number slide-number--light">11</span>
+          </article>
+          <article class="slide slide--gold slide--tutorial" id="slide-12" aria-roledescription="slide" aria-label="12 of 14: Browser path without installs">
+            <div class="slide-content">
+              <p class="eyebrow">NO INSTALL? · BROWSER PATH</p><h2>Do it all <em>in the browser.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>On GitHub, create a <strong>Public</strong> repository. This time, tick “Add a README”.</span></li><li><span>Click <strong>Add file → Upload files</strong>, drag in your unzipped files and click <strong>Commit changes</strong>.</span></li><li><span>On your repository page, press the <strong>.</strong> (full stop) key. VS Code for the Web opens.</span></li><li><span>Edit a file, open <strong>Source Control</strong>, type a message and click <strong>Commit &amp; Push</strong>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> your files and commits are on GitHub, the same as the terminal path.</p>
+            </div><span class="slide-number">12</span>
+          </article>
+          <article class="slide slide--pink slide--tutorial" id="slide-13" aria-roledescription="slide" aria-label="13 of 14: Common fixes">
+            <div class="slide-content">
+              <p class="eyebrow">STUCK? · COMMON FIXES</p><h2>Read the <em>first error line.</em></h2><ul class="fix-list"><li><strong>“git is not recognized”</strong>Install Git, then close and reopen VS Code.</li><li><strong>“Author identity unknown”</strong>Do Step 4, then run the commit again.</li><li><strong>“src refspec main does not match”</strong>You have not committed yet. Do Step 5, then push.</li><li><strong>Push “rejected”</strong>Your GitHub repository is not empty. Create a new empty one (no README) and use its address.</li></ul><p class="checkpoint">Still stuck? Copy the exact error message into the program group and ask a facilitator.</p>
+            </div><span class="slide-number">13</span>
+          </article>
+          <article class="slide slide--green slide--tutorial" id="slide-14" aria-roledescription="slide" aria-label="14 of 14: Step 11: journal">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 11 OF 11 · JOURNAL</p><h2>Save it. <em>Explain it.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Push your latest work.</span></li><li><span>In your journal, explain <em>repository</em>, <em>commit</em> and <em>history</em> in your own words.</span></li><li><span>Write where on GitHub you can see which files changed in a commit.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> your capstone is in your own repository with at least three clear commits.</p><p class="checkpoint"><a href="week-8-deployment-slides.html">Next: Lesson 8 — publish your site →</a></p>
+            </div><span class="slide-number">14</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>14</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button><button class="dot" type="button" aria-label="Go to slide 13"></button><button class="dot" type="button" aria-label="Go to slide 14"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 14</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -9,6 +9,10 @@ and share what you made before the holidays end.
 Every project is designed for a beginner. A simple working project is better than a large
 unfinished one.
 
+> 🏠 **Term 3 students:** your required holiday work is Lessons 5–8 and your individual capstone in
+> the [Holiday Self-Study Pack](../../term3/holiday-self-study.md). Treat this challenge as an optional
+> extra once your capstone MVP works.
+
 ---
 
 ## 🌱 New to coding? Start here first
@@ -58,7 +62,8 @@ school events, revision resources, or career paths.
 
 ### Use
 
-[CodePen](https://codepen.io/) or [GitHub Pages](https://pages.github.com/). You only need
+[NitroIDE](https://nitroide.com/tools/codebox.html) to build, then [Visual Studio Code](https://code.visualstudio.com/) and
+[GitHub Pages](https://pages.github.com/) to publish. You only need
 HTML and CSS to begin. Add JavaScript if you want an interactive feature.
 
 **▶️ Learn the basics first:**

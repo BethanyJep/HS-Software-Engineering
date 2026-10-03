@@ -1,29 +1,37 @@
 # Lesson 5 – Add Interactivity to Your Website
 
-**Term:** 3  
-**Duration:** 90 minutes  
+**Term:** 3 · Holiday self-study (week 1)  
+**Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser and CodePen
+**Tools:** Browser and [NitroIDE](https://nitroide.com/tools/codebox.html)
+
+> 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
+> [Holiday Self-Study Pack](../holiday-self-study.md) first.
+>
+> 🖥️ **Slides:** [Open the Lesson 5 slide deck](../week-5-interactivity-slides.html) to click through the key ideas.
 
 ---
 
 ## Learning Objectives
 
-Students will be able to:
+By the end of this lesson, you will be able to:
 
 1. Select and update HTML elements with the DOM.
 2. Respond to clicks, form submissions, and input changes.
 3. Render an array of data on a page.
 4. Provide clear feedback after a user action.
 
-## Lesson Plan
+## Self-Study Steps
 
-### ⏱ 0–10 min | Connect: Event → Action → Feedback
+### Step 1 | Connect: Event → Action → Feedback
 
-Ask students what feedback a lift button, M-Pesa prompt, or school portal gives after an action.
-Explain that interfaces listen for events, do work, and show the result.
+Think about the feedback a lift button, M-Pesa prompt, or school portal gives after you act. Write
+down one example. Interfaces listen for **events**, do some **work**, and show the **result**.
 
-### ⏱ 10–30 min | Learn: DOM and Events
+### Step 2 | Learn: DOM and Events
+
+Open [NitroIDE](https://nitroide.com/tools/codebox.html) and start a **New Project** for practice, so your capstone stays safe. Paste this
+into `index.html`:
 
 ```html
 <label for="search">Find a resource</label>
@@ -32,6 +40,8 @@ Explain that interfaces listen for events, do work, and show the result.
 <p id="status" aria-live="polite"></p>
 <ul id="results"></ul>
 ```
+
+Paste this into `script.js`:
 
 ```javascript
 const resources = [
@@ -62,31 +72,47 @@ searchButton.addEventListener("click", () => {
 });
 ```
 
-Discuss why `textContent` is safer for ordinary text than inserting untrusted HTML.
+Type a word and click **Search**. Then read the code line by line and find the event, the action,
+and the feedback. Notice that the code uses `textContent`: it is safer for ordinary text than
+inserting HTML that came from a user or another website.
 
-### ⏱ 30–55 min | Guided Build
+### Step 3 | Practise
 
-Students connect Lesson 4's data to their page, then add:
+In the same practice project, add:
 
-- A working search, filter, quiz answer, or reveal button
-- An empty-state message
-- A reset action
-- A visible status message
-- Keyboard testing
+- An empty-state message such as "No resources match your search."
+- A **Reset** button that clears the search box and shows every resource again
+- A fourth resource in the array, to check the loop still works
+- Keyboard testing: use only **Tab**, **Enter**, and **Space** to search and reset
 
-### ⏱ 55–65 min | User Test
+### Step 4 | Capstone Checkpoint
 
-One teammate gives another a task without explaining the interface. The observer records where the
-tester hesitates, succeeds, or expects different feedback.
+Open your own capstone and connect your Lesson 4 data to the page. Build **one** core interaction:
 
-### ⏱ 65–80 min | Capstone Checkpoint
+| Capstone | Suggested interaction |
+|---|---|
+| School Opportunities Hub | A category filter or keyword search |
+| Kenya Weather Dashboard | A location selector |
+| CyberSmart Quest | Answer buttons that show an explanation |
 
-Teams complete one core interaction for their chosen capstone and improve it using the test notes.
-The interaction must work with both mouse and keyboard.
+The interaction must work with both mouse and keyboard, show a visible status message, and handle
+the "nothing found" case.
 
-### ⏱ 80–90 min | Exit Ticket
+### Step 5 | Home User Test
 
-Students identify the event, action, and feedback in their capstone feature.
+Ask a family member or friend to complete one task on your page **without** explaining how. Write
+down where they hesitate, succeed, or expect different feedback. Improve one thing based on what you
+saw.
+
+### Step 6 | Learning Journal
+
+Answer in your journal:
+
+1. What are the event, action, and feedback in your capstone feature?
+2. What did your tester find confusing, and what did you change?
+
+✅ **Done when:** your capstone has one working interaction that gives clear feedback, and your
+journal entry is complete.
 
 ## Free Practice
 
@@ -95,6 +121,7 @@ Students identify the event, action, and feedback in their capstone feature.
 
 ## Facilitator Notes
 
-- Keep JavaScript in the JavaScript panel or a separate file rather than inline `onclick` attributes.
+- Before the holiday, check that each student has a saved copy of their Lessons 1–4 capstone work.
+- Keep JavaScript in `script.js` rather than inline `onclick` attributes.
 - Prefer `textContent` and DOM methods for displaying user or API data.
 - A smaller interaction that is clear and reliable is better than many unfinished controls.

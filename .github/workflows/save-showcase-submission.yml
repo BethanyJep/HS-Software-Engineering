@@ -1,0 +1,89 @@
+name: Save showcase submission
+
+# A facilitator reviews a Capstone Showcase Form issue and adds the
+# "showcase-approved" label. Only people with triage or write access can add
+# labels, so unreviewed submissions are never committed to the repository.
+on:
+  issues:
+    types: [labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: showcase-submissions
+  cancel-in-progress: false
+
+jobs:
+  save:
+    if: github.event.label.name == 'showcase-approved'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the default branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Save the submission and screenshots
+        id: save
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const save = require(`${process.env.GITHUB_WORKSPACE}/.github/scripts/save-showcase-submission.js`);
+            await save({ context, core });
+
+      - name: Commit to the repository
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add showcase
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "Save showcase submission #${ISSUE_NUMBER}"
+          git push origin "HEAD:${DEFAULT_BRANCH}"
+
+      - name: Thank the student and close the form
+        uses: actions/github-script@v7
+        env:
+          FOLDER: ${{ steps.save.outputs.folder }}
+          SAVED: ${{ steps.save.outputs.screenshots }}
+          EXPECTED: ${{ steps.save.outputs.expected_screenshots }}
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const branch = context.payload.repository.default_branch;
+            const url = `https://github.com/${owner}/${repo}/tree/${branch}/${process.env.FOLDER}`;
+            const missing = Number(process.env.EXPECTED) - Number(process.env.SAVED);
+            const note = missing > 0
+              ? `\n\n⚠️ ${missing} screenshot(s) could not be saved. A facilitator can upload them to the folder manually.`
+              : "";
+            await github.rest.issues.createComment({
+              owner, repo, issue_number: context.issue.number,
+              body: `🎉 Your capstone has been saved to the showcase gallery: ${url}${note}`,
+            });
+            await github.rest.issues.update({
+              owner, repo, issue_number: context.issue.number, state: "closed", state_reason: "completed",
+            });
+
+      - name: Explain what needs fixing
+        if: failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            await github.rest.issues.createComment({
+              owner, repo, issue_number: context.issue.number,
+              body: [
+                "⚠️ This submission could not be saved automatically.",
+                "",
+                "Please edit the form and check that every required answer is filled in and that at least two screenshots were uploaded into the **Screenshots** box (drag and drop the image files).",
+                "",
+                `A facilitator can then remove and re-add the \`showcase-approved\` label to try again. Details are in the [workflow run](${context.serverUrl}/${owner}/${repo}/actions/runs/${context.runId}).`,
+              ].join("\n"),
+            });

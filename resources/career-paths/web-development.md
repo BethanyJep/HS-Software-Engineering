@@ -61,7 +61,8 @@ You might love web development if you:
 - **[freeCodeCamp](https://www.freecodecamp.org/)** — free, hands-on, from zero to job-ready
 - **[The Odin Project](https://www.theodinproject.com/)** — a full free web-dev roadmap
 - **[MDN Web Docs](https://developer.mozilla.org/)** — the official reference for HTML/CSS/JS
-- **[CodePen](https://codepen.io/)** — write code in your browser, no setup needed
+- **[NitroIDE](https://nitroide.com/tools/codebox.html)** — write code in your browser, no account or setup needed
+- **[Visual Studio Code](https://code.visualstudio.com/)** — the free editor to move to for bigger projects
 - **[W3Schools](https://www.w3schools.com/)** — simple beginner tutorials
 - **[Scrimba](https://scrimba.com/)** — interactive coding lessons
 
@@ -69,7 +70,7 @@ You might love web development if you:
 
 ## Starter projects 🚀
 
-Start small. Each of these can be built in **CodePen** with no installation.
+Start small. Each of these can be built in **NitroIDE** with no installation.
 
 1. **A personal "About Me" page** — your name, a photo, your dream job.
 2. **A colour-changing button** — click it, the background changes.
@@ -81,7 +82,7 @@ Start small. Each of these can be built in **CodePen** with no installation.
 
 ## Your first steps (do these this week)
 
-- [ ] Open [CodePen](https://codepen.io/pen) and write your first `<h1>Hello!</h1>`
+- [ ] Open [NitroIDE](https://nitroide.com/tools/codebox.html) and write your first `<h1>Hello!</h1>`
 - [ ] Complete the first HTML lesson on freeCodeCamp
 - [ ] Change the colour of some text using CSS
 - [ ] Make a button show a message when clicked (JavaScript)

@@ -3,7 +3,7 @@
 **Term:** 3  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser and CodePen
+**Tools:** Browser and [NitroIDE](https://nitroide.com/tools/codebox.html) (`index.html` + `style.css`)
 
 ---
 
@@ -20,7 +20,7 @@ Students will be able to:
 
 - [ ] Lesson 1 page
 - [ ] Projector and colour-contrast checker
-- [ ] Paper or shared document for a mini style guide
+- [ ] Paper or a document for each student's mini style guide
 
 ---
 
@@ -83,14 +83,14 @@ Students:
 
 ### ⏱ 50–60 min | Design Review
 
-Pairs use the "CRAP" checklist: **Contrast, Repetition, Alignment, Proximity**. Each student gives
+Students swap screens with a neighbour and use the "CRAP" checklist: **Contrast, Repetition, Alignment, Proximity**. Each student gives
 one specific compliment and one suggestion.
 
 ### ⏱ 60–80 min | Capstone Checkpoint
 
-Teams create a mini style guide and apply it consistently to the capstone:
+Each student creates a mini style guide and applies it consistently to their capstone:
 
-| Choice | Team decision |
+| Choice | My decision |
 |---|---|
 | Primary and accent colours | |
 | Heading and body fonts | |

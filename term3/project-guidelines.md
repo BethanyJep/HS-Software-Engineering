@@ -2,18 +2,21 @@
 
 **Term:** 3  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Format:** Eight guided lessons and a team capstone (groups of 3–5 students)  
-**Culmination:** Showcase & Prize Ceremony at end of Term 3
+**Format:** Individual capstone — no teams. Lessons 1–4 in class; Lessons 5–8 as
+[holiday self-study](holiday-self-study.md)  
+**Culmination:** Submit the [Capstone Showcase Form](../showcase/README.md) with screenshots; winners
+are announced when school reopens
 
 ---
 
 ## Overview
 
-In Term 3, you and your team will choose one of the [three capstone
-options](project-ideas.md) and build it as a web application. The
+In Term 3, you will choose one of the [three capstone options](project-ideas.md) and build it
+**on your own** as a web application. You start in class during Lessons 1–4, then work through
+Lessons 5–8 at home over the holiday and finish your capstone. The
 [eight lessons](lessons/README.md) take you from your first HTML page to a deployed project.
 
-You don't need to be an expert. You need curiosity, teamwork, and willingness to try — and fail — and try again. That's software engineering.
+You don't need to be an expert. You need curiosity, persistence, and willingness to try — and fail — and try again. That's software engineering.
 
 ---
 
@@ -21,20 +24,20 @@ You don't need to be an expert. You need curiosity, teamwork, and willingness to
 
 ### Phase 1 – Choose and Plan (Week 1)
 
-**Goal:** Lock in your team, capstone option, and plan.
+**Goal:** Lock in your capstone option and plan.
 
-- [ ] Confirm your team members and choose a **Team Name**.
-- [ ] Read all three capstone briefs and select one as a team.
+- [ ] Read all three capstone briefs and choose one.
 - [ ] Explain why that capstone's stated problem matters to its target user.
-- [ ] Assign initial roles; plan to rotate them so everyone learns more than one career skill.
-- [ ] Open CodePen and decide where the team will save shared work between lessons.
+- [ ] Open NitroIDE and decide where you will keep your **Download ZIP** copy between lessons.
 - [ ] Fill in and submit the **Project Kickoff Form** (see Appendix A).
+- [ ] Before the holiday, complete the
+  [Holiday Capstone Plan](holiday-self-study.md#holiday-capstone-plan).
 
 ---
 
 ### Phase 2 – Understand and Design (Weeks 1–2)
 
-**Goal:** Understand the assigned problem and sketch your team's version of the solution.
+**Goal:** Understand the assigned problem and sketch your version of the solution.
 
 - [ ] Ask at least **3 potential users** what information or task matters most to them.
 - [ ] Research existing solutions to learn what is clear, confusing, or missing.
@@ -46,84 +49,90 @@ You don't need to be an expert. You need curiosity, teamwork, and willingness to
 
 ---
 
-### Phase 3 – Learn and Build (Weeks 1–8)
+### Phase 3 – Learn and Build (Lessons 1–4 in class, Lessons 5–8 over the holiday)
 
 **Goal:** Build your MVP.
 
-- [ ] Divide work among team members (who designs? who codes? who tests? who presents?).
+- [ ] In class, apply each lesson's skill to your own capstone during the checkpoint.
+- [ ] Save a copy of your Lessons 1–4 work before the holiday.
+- [ ] Over the holiday, follow the weekly schedule in the [Holiday Self-Study Pack](holiday-self-study.md).
 - [ ] Set small weekly goals so you don't leave everything to the last week.
-- [ ] Meet weekly — in person or online — to share progress and solve blockers.
-- [ ] Keep notes on what you tried, what worked, and what didn't.
+- [ ] Keep a learning journal: what you tried, what worked, and what didn't.
 - [ ] Ask for help from facilitators when you're stuck for more than 30 minutes.
 
 Use each lesson to complete one part of the capstone:
 
-| Lesson | Team output |
-|---|---|
-| 1. HTML landing page | Semantic page structure and project content |
-| 2. CSS styling | Shared visual design |
-| 3. Advanced HTML/CSS | Responsive, accessible layout |
-| 4. JavaScript fundamentals | Structured project data and reusable logic |
-| 5. Website interactivity | Working core interaction |
-| 6. APIs and fetch | Fetched data with loading and error states |
-| 7. Git and GitHub | Shared repository and meaningful commits |
-| 8. Deployment | Tested GitHub Pages release |
+| Lesson | Where | Output |
+|---|---|---|
+| 1. HTML landing page | Class | Semantic page structure and project content |
+| 2. CSS styling | Class | Consistent visual design |
+| 3. Advanced HTML/CSS | Class | Responsive, accessible layout |
+| 4. JavaScript fundamentals | Class | Structured project data and reusable logic |
+| 5. Website interactivity | 🏠 Holiday | Working core interaction |
+| 6. APIs and fetch | 🏠 Holiday | Fetched data with loading and error states |
+| 7. Git and GitHub | 🏠 Holiday | Personal repository and meaningful commits |
+| 8. Deployment | 🏠 Holiday | Tested GitHub Pages release |
 
 #### Weekly Check-In Template
-Each week, your team should be able to answer:
-1. What did we complete this week?
-2. What are we working on next week?
-3. Are we blocked on anything?
+Each week, you should be able to answer:
+1. What did I complete this week?
+2. What am I working on next week?
+3. Am I blocked on anything?
 
 ---
 
-### Phase 4 – Polish & Test (Weeks 9–10)
+### Phase 4 – Polish & Test (Final weeks of the holiday)
 
 **Goal:** Make sure your solution works and looks good.
 
 - [ ] Test your software — try to "break" it. Fix what breaks.
-- [ ] Get feedback from at least **2 people outside your team** (users, teachers, friends).
+- [ ] Get feedback from at least **2 other people** (family members, friends, or classmates).
 - [ ] Make small improvements based on feedback.
-- [ ] Make sure it works on the device you'll demo from.
-- [ ] Prepare your **presentation** (see Presentation Guidelines below).
+- [ ] Take at least two screenshots: one at phone width and one at computer width.
+- [ ] Gather everything in [What to Bring Back](holiday-self-study.md#what-to-bring-back).
 
 ---
 
-### Phase 5 – Showcase & Prize Ceremony
+### Phase 5 – Showcase Form & Prize Ceremony
 
-**Goal:** Present your work confidently and celebrate what you've built.
+**Goal:** Share what you built and celebrate it.
 
-- [ ] Each team presents for **5–7 minutes** to a panel of judges.
-- [ ] Q&A from judges for **3–5 minutes**.
-- [ ] Judges deliberate and select a winner.
-- [ ] Prize awarded to the winning team.
+- [ ] Submit the **[Capstone Showcase Form](../showcase/README.md)** with your screenshots. There is
+  no live presentation — the form is your showcase.
+- [ ] A facilitator checks the form and saves it to the
+  [showcase gallery](../showcase/README.md#showcase-gallery) in this repository.
+- [ ] Judges review every saved submission using the criteria below and select the winners.
+- [ ] Prizes are awarded to the winning student(s) when school reopens.
 
 ---
 
-## Presentation Guidelines
+## Showcase Form Guidelines
 
-Your presentation should cover:
+The [Capstone Showcase Form](../showcase/README.md) asks you to cover:
 
-1. **The Problem** (~1 min)
+1. **Screenshots**
+   - At least one at phone width and one at computer width.
+   - Optional: your main feature in action (a filter result, weather data, or quiz feedback).
+   - No personal information, passwords, or photos of people.
+
+2. **The Problem**
    - What problem does your solution address?
    - Who does it affect? Why does it matter?
 
-2. **Your Solution** (~1 min)
-   - What did you build?
-   - What makes it unique or valuable?
+3. **Your Solution**
+   - What did you build, and how does someone use the main feature?
+   - Include your live link so judges can try it.
 
-3. **Live Demo** (~2–3 min)
-   - Show the judges how it works — walk through the key features.
-   - If it's not fully working, show your Figma prototype instead.
-
-4. **How You Built It** (~1 min)
+4. **How You Built It**
    - What tools/languages did you use?
    - What was the hardest part? What did you learn?
 
-5. **What's Next** (~30 sec)
+5. **Feedback and What's Next**
+   - What feedback did you get, and what did you change?
    - If you had more time, what would you add or improve?
 
-> 💡 **Tip:** Practice your demo at least 3 times. Know what you'll say if the internet goes down or the app crashes — have a backup (screenshots or a recorded video).
+> 💡 **Tip:** Write in your own words, as if explaining your project to a friend. Check your live
+> link in a private/incognito window before you submit.
 
 ---
 
@@ -134,7 +143,7 @@ Your presentation should cover:
 | **Problem relevance** | 25% | Is the problem genuine and significant? Does the solution fit the users' needs? |
 | **Creativity & Innovation** | 25% | Is the approach original? Does it show creative thinking? |
 | **Technical implementation** | 25% | Does the software work? Is it functional, even if simple? |
-| **Presentation** | 25% | Is the pitch clear, confident, and engaging? Does the team show they understand their solution? |
+| **Communication** | 25% | Are the form answers and screenshots clear? Does the student show they understand their solution? |
 
 ---
 
@@ -145,47 +154,50 @@ The core project must use the same approachable web stack taught in the lessons:
 | Purpose | Free option |
 |---|---|
 | Plan and sketch | Paper or Figma Starter |
-| Build in the browser | CodePen |
-| Build in files | Any installed text editor |
+| Basic coding (Lessons 1–6) | [NitroIDE](https://nitroide.com/tools/codebox.html) in the browser |
+| Advanced work in files (Lessons 7–8) | [Visual Studio Code](https://code.visualstudio.com/) or VS Code for the Web (github.dev) |
 | Version control | Git and GitHub Free |
-| Public data | Open-Meteo or a team-created JSON file |
+| Public data | Open-Meteo or a JSON file you create |
 | Deployment | GitHub Pages |
 
 > ✅ You are encouraged to use tutorials, documentation, and online resources.  
-> ❌ You may NOT submit work built entirely by an AI tool without significant team contribution.
+> ❌ You may NOT submit work built entirely by an AI tool without significant contribution of your own.
 > ❌ No lesson requires a credit card, paid plan, or secret API key.
 
 ---
 
-## Team Roles (Suggestions)
+## Career Roles You Will Practise
 
-| Role | Responsibilities |
+Working alone, you will wear every hat. Ask a family member or friend to act as your tester.
+
+| Role | What you will do |
 |---|---|
-| **Team Lead** | Coordinates meetings, keeps everyone on track, leads the presentation |
-| **Developer(s)** | Writes and builds the core software |
-| **Designer** | Creates the look and feel; builds wireframes/Figma mockups |
-| **Researcher** | Conducts user interviews, documents findings |
-| **Presenter** | Prepares and delivers the pitch (everyone should practice!) |
+| **Project Manager** | Plan your weekly goals and keep yourself on track |
+| **Developer** | Write and build the core software |
+| **Designer** | Create the look and feel; sketch wireframes or Figma mockups |
+| **Researcher** | Talk to potential users and note what they need |
+| **QA Tester** | Try to break your project and fix what you find |
 
-> Teams of 3 will wear multiple hats — that's normal and totally fine!
+> Wearing multiple hats is normal — that's how many real developers work on small projects!
 
 ---
 
 ## Rules
 
-1. All work must be the team's own (use of AI assistants for learning is fine; having AI do everything for you is not).
-2. Projects must follow one of the three capstone briefs. Teams may personalise the design and content without changing the core problem.
-3. All team members must be able to explain the project and answer questions about it.
-4. Teams must submit the **Kickoff Form** by Week 1 and show progress at mid-term check-in.
-5. Be kind, support each other, and have fun.
+1. Your capstone must be your own individual work (use of AI assistants for learning is fine; having AI do everything for you is not).
+2. Projects must follow one of the three capstone briefs. You may personalise the design and content without changing the core problem.
+3. You must be able to explain every part of your project and answer questions about it.
+4. Submit the **Kickoff Form** by Week 1, complete the **Holiday Capstone Plan** before the holiday, and share progress at the mid-holiday check-in.
+5. Submit the **Capstone Showcase Form**, with screenshots, before school reopens.
+6. Be kind, encourage your classmates, and have fun.
 
 ---
 
 ## Support & Check-Ins
 
 - **Facilitators are available** via the program WhatsApp group for questions.
-- A **mid-term check-in** session will be held around Week 5 — come prepared to demo what you have so far.
-- If your team has a major problem (conflict, technical blocker), reach out early — don't wait until Week 10.
+- A **mid-holiday check-in** will be held online after Lesson 6 — share a screenshot or link to what you have so far.
+- If you have a major problem (no device, no internet, a technical blocker), reach out early — don't wait until the end of the holiday.
 
 ---
 
@@ -196,8 +208,7 @@ The core project must use the same approachable web stack taught in the lessons:
 │  Project Kickoff Form – Term 3                                    │
 │  Alliance Girls High School Software Engineering Program          │
 │                                                                   │
-│  Team Name: _________________________________________________      │
-│  Team Members: ______________________________________________      │
+│  Name: ______________________________________________________      │
 │  Class / Stream: ____________________________________________      │
 │  Facilitator Contact: _______________________________________      │
 │                                                                   │
@@ -209,13 +220,13 @@ The core project must use the same approachable web stack taught in the lessons:
 │  WHY DOES THIS PROBLEM MATTER TO ITS TARGET USER?                 │
 │  ___________________________________________________________       │
 │                                                                   │
-│  OUR TEAM'S NAME / THEME / CONTENT CHOICES:                       │
+│  MY PROJECT NAME / THEME / CONTENT CHOICES:                       │
 │  ___________________________________________________________       │
 │  ___________________________________________________________       │
 │                                                                   │
 │  MVP FEATURE (the ONE most important thing your software does):   │
 │  ___________________________________________________________       │
 │                                                                   │
-│  Team Lead signature: _______________________ Date: __________    │
+│  Student signature: _________________________ Date: __________    │
 └───────────────────────────────────────────────────────────────────┘
 ```

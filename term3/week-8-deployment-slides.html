@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 8 · Deployment">
+    <title>Term 3 · Lesson 8 · Deployment</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 08</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 4</p><p class="deck-title">Deployment</p></div>
+        <section class="slide-viewport" aria-label="Lesson 8 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 11: Put your site online step by step">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 4 · TUTORIAL</p><h1>Put your site online.<br><em>Step by step.</em></h1><p class="lead">Publish your capstone with GitHub Pages, test it like a visitor, then submit the showcase form.</p><ul class="activity"><li><strong>Time</strong>About 2–3 hours. Stop after any step and continue later.</li><li><strong>Tools</strong>VS Code (or github.dev), GitHub and GitHub Pages.</li><li><strong>Goal</strong>A live, tested site and a submitted showcase form.</li></ul><p class="checkpoint">Do each numbered step, compare with ✅ Check, then press → for the next slide. Written guide: <a href="lessons/lesson-8-deployment.md">Lesson 8</a> · <a href="../showcase/README.md">Showcase guide</a>.</p>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-2" aria-roledescription="slide" aria-label="2 of 11: Step 1: check before you publish">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 OF 9 · VS CODE</p><h2>Check before <em>you publish.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Your home page is called <code>index.html</code> (all lowercase) and sits in the top folder.</span></li><li><span>Every file name in your code matches the real file exactly. Capital letters matter online.</span></li><li><span>Images use paths like <code>images/club.jpg</code>, not <code>C:\Users\…</code>.</span></li><li><span>Press <strong>Ctrl+Shift+F</strong> and search for <code>password</code>, <code>key</code> and <code>token</code>. Remove anything private.</span></li></ol><div class="code-file"><p class="file-tab">good vs broken</p><pre class="workshop-code"><code>✅ &lt;img src=&quot;images/club.jpg&quot; alt=&quot;Coding club&quot;&gt;
+❌ &lt;img src=&quot;C:\Users\me\Desktop\club.jpg&quot; alt=&quot;&quot;&gt;
+
+✅ fetch(&quot;questions.json&quot;)
+❌ fetch(&quot;Questions.json&quot;)   (the file is questions.json)</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> all names match, and nothing private is in your files.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark slide--tutorial" id="slide-3" aria-roledescription="slide" aria-label="3 of 11: Step 2: push the latest version">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 2 OF 9 · TERMINAL</p><h2>Push the latest <em>version.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Open <strong>Terminal → New Terminal</strong> in VS Code.</span></li><li><span>Run the four lines.</span></li><li><span>Run <code>git status</code> once more.</span></li></ol><div class="code-file"><p class="file-tab">terminal</p><pre class="workshop-code"><code>git status
+git add .
+git commit -m &quot;Prepare site for deployment&quot;
+git push</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> <code>nothing to commit, working tree clean</code>, and GitHub shows your latest commit.</p><p class="checkpoint">Using github.dev? Open <strong>Source Control</strong> and click <strong>Commit &amp; Push</strong>.</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-4" aria-roledescription="slide" aria-label="4 of 11: Step 3: turn on GitHub Pages">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 3 OF 9 · GITHUB.COM</p><h2>Turn on <em>GitHub Pages.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Open your repository on github.com.</span></li><li><span>Click <strong>Settings</strong> (top tabs), then <strong>Pages</strong> (left menu).</span></li><li><span>Under <strong>Build and deployment</strong>, choose <strong>Deploy from a branch</strong>.</span></li><li><span>Choose branch <code>main</code> and folder <code>/ (root)</code>, then click <strong>Save</strong>.</span></li><li><span>Wait 1–5 minutes, then refresh the page.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> “Your site is live at <code>https://your-name.github.io/your-repo/</code>”.</p><p class="checkpoint">Screens look different? Follow the <a href="https://docs.github.com/en/pages/quickstart" target="_blank" rel="noopener noreferrer">GitHub Pages quickstart</a>.</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--blue slide--tutorial" id="slide-5" aria-roledescription="slide" aria-label="5 of 11: Step 4: open it like a visitor">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 4 OF 9 · BROWSER</p><h2>Open it like <em>a visitor.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Click <strong>Visit site</strong> and copy the address.</span></li><li><span>Paste it into a private (incognito) window.</span></li><li><span>Do the main task on your page.</span></li><li><span>Press <strong>F12</strong> and open <strong>Console</strong>. Look for red errors.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> the page loads without signing in, and your JSON data appears. <code>fetch</code> works now.</p>
+            </div><span class="slide-number slide-number--light">05</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-6" aria-roledescription="slide" aria-label="6 of 11: Step 5: test at phone size">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 5 OF 9 · BROWSER</p><h2>Test at <em>phone size.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>With DevTools open, press <strong>Ctrl+Shift+M</strong> for the device toolbar.</span></li><li><span>Choose a phone, such as a width of 375.</span></li><li><span>Do the main task again, then search for something that does not exist.</span></li><li><span>Close DevTools and use only <strong>Tab</strong> and <strong>Enter</strong>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> nothing is cut off, buttons are easy to tap, and status messages appear.</p>
+            </div><span class="slide-number">06</span>
+          </article>
+          <article class="slide slide--pink slide--tutorial" id="slide-7" aria-roledescription="slide" aria-label="7 of 11: Common fixes">
+            <div class="slide-content">
+              <p class="eyebrow">STUCK? · COMMON FIXES</p><h2>Find the <em>first clue.</em></h2><ul class="fix-list"><li><strong>404 “There isn’t a GitHub Pages site here”</strong>Wait 5 minutes. Check Pages uses <code>main</code> and <code>/ (root)</code>, and <code>index.html</code> is in the top folder.</li><li><strong>Page loads but has no styles</strong>Check <code>href="style.css"</code> matches the file name exactly.</li><li><strong>Data does not load</strong>Open DevTools → <strong>Network</strong>. A red 404 means the file name or capital letters are wrong.</li><li><strong>Old version still showing</strong>Commit and push, wait a minute, then press <strong>Ctrl+Shift+R</strong>.</li></ul>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--gold slide--tutorial" id="slide-8" aria-roledescription="slide" aria-label="8 of 11: Step 6: home release test">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 6 OF 9 · HOME TEST</p><h2>Ask someone <em>to try it.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Send your link to a family member or friend.</span></li><li><span>Ask them to do one task on their phone. Do not help.</span></li><li><span>Write down one problem they hit.</span></li><li><span>Fix it in VS Code, then commit and push.</span></li><li><span>Wait a minute and refresh your live site.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> your fix appears on the live site.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream slide--tutorial" id="slide-9" aria-roledescription="slide" aria-label="9 of 11: Step 7: add a README">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 7 OF 9 · README.MD</p><h2>Explain your <em>project.</em></h2><div class="tutorial"><ol class="how-to"><li><span>In VS Code, create a new file called <code>README.md</code>.</span></li><li><span>Copy this outline and replace every line with your own words.</span></li><li><span>Commit <code>Add README</code> and push.</span></li></ol><div class="code-file"><p class="file-tab">README.md</p><pre class="workshop-code"><code># CyberSmart Quest
+
+A quiz that helps students spot online scams.
+
+## How to use
+Open the site, read each question and choose an answer.
+
+## Built with
+HTML, CSS and JavaScript.
+
+## Credits
+Data: Open-Meteo.com. Learning: MDN Web Docs.
+Images: my own photos.</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> GitHub shows your README under the file list.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--green slide--tutorial" id="slide-10" aria-roledescription="slide" aria-label="10 of 11: Step 8: take two screenshots">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 8 OF 9 · SCREENSHOTS</p><h2>Take two <em>screenshots.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span><strong>Computer width:</strong> open your site full screen. Windows: <strong>Win+Shift+S</strong>. Mac: <strong>Cmd+Shift+4</strong>. Chromebook: <strong>Ctrl+Shift+Show windows</strong>.</span></li><li><span><strong>Phone width:</strong> in the device toolbar, open the <strong>⋮</strong> menu and choose <strong>Capture screenshot</strong>. Or screenshot on a real phone.</span></li><li><span>Check that no surname, password or private detail is visible.</span></li><li><span>Name them <code>phone.png</code> and <code>computer.png</code>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> two clear images that show what you built.</p><p class="checkpoint">Not allowed to publish? Run the site from your folder and screenshot that instead.</p>
+            </div><span class="slide-number">10</span>
+          </article>
+          <article class="slide slide--dark slide--tutorial" id="slide-11" aria-roledescription="slide" aria-label="11 of 11: Step 9: submit the showcase form">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 9 OF 9 · SHOWCASE FORM</p><h2>Submit your <em>showcase.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Open the <a href="../showcase/README.md">showcase guide</a> and click the form link. Sign in to GitHub.</span></li><li><span>Use your first name or a nickname only.</span></li><li><span>Paste your live link and your repository link.</span></li><li><span>Drag both screenshots into the Screenshots box. Wait for them to upload.</span></li><li><span>Answer the questions, tick the checks and submit.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> your entry appears with a title starting <code>[Showcase]</code>. A facilitator will review it.</p><p class="checkpoint">No GitHub account? Send your answers and screenshots to your facilitator. In your journal, note one feature you are proud of and one problem you solved.</p>
+            </div><span class="slide-number slide-number--light">11</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>11</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 11</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

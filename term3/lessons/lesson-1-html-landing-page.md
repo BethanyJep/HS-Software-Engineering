@@ -3,7 +3,7 @@
 **Term:** 3  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser and [CodePen](https://codepen.io/pen) (free; no account required)
+**Tools:** Browser and [NitroIDE](https://nitroide.com/tools/codebox.html) (free; no account or install required)
 
 ---
 
@@ -18,10 +18,10 @@ By the end of this lesson, students will be able to:
 
 ## Materials
 
-- [ ] One computer per student or pair
+- [ ] One computer per student where possible (if devices are shared, each student saves their own copy)
 - [ ] Projector and facilitator example
 - [ ] Capstone option selected from [Capstone Project Options](../project-ideas.md)
-- [ ] Offline text editor as a backup
+- [ ] Visual Studio Code or another text editor as an offline backup
 
 ---
 
@@ -55,7 +55,7 @@ Introduce the document structure and semantic elements:
         <p>Describe the project's main benefit.</p>
       </section>
     </main>
-    <footer>Built by Team Name</footer>
+    <footer>Built by Your Name</footer>
   </body>
 </html>
 ```
@@ -73,7 +73,7 @@ Students create a small school club landing page containing:
 - A link or button inviting the visitor to act
 - A footer
 
-Pause after each element so pairs can compare their output and fix missing closing tags.
+Pause after each element so students can compare their output with a neighbour and fix missing closing tags.
 
 ### ⏱ 50–60 min | Check and Improve
 
@@ -86,12 +86,12 @@ Students exchange seats and answer:
 
 ### ⏱ 60–80 min | Capstone Checkpoint
 
-Teams replace the practice content with their capstone content. By the end, each project should
+Each student replaces the practice content with their own capstone content. By the end, each project should
 have a header, navigation, at least three meaningful sections, and a footer.
 
 ### ⏱ 80–90 min | Share and Exit Ticket
 
-Invite two teams to show their page. Students submit:
+Invite two students to show their page. Students submit:
 
 - One HTML element they can now explain
 - One improvement they made after peer feedback
@@ -107,4 +107,7 @@ Invite two teams to show their page. Students submit:
 
 - Focus on meaningful structure rather than memorising every tag.
 - Use only images students created or have permission to reuse.
-- If internet access fails, students can write the same HTML in a text editor and open it locally.
+- In NitroIDE, `index.html` holds only the content inside `<body>`; it adds the head for you.
+  Students should choose **Download ZIP** before leaving so work is not lost if the browser is cleared.
+- If internet access fails, students can write the same HTML in VS Code or another text editor and
+  open it locally.

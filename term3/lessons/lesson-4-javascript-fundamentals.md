@@ -3,7 +3,7 @@
 **Term:** 3  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser, CodePen, and browser console
+**Tools:** Browser, [NitroIDE](https://nitroide.com/tools/codebox.html) (`script.js`), and its built-in console
 
 ---
 
@@ -58,13 +58,13 @@ Students:
 
 ### ⏱ 50–60 min | Debugging Challenge
 
-Give pairs code with a misspelled variable, missing bracket, and incorrect property name. Students
+Give each student code with a misspelled variable, missing bracket, and incorrect property name. Students
 read the console error, find the line, make one change, and rerun.
 
 ### ⏱ 60–80 min | Capstone Checkpoint
 
-Teams create an array of at least six objects for their project. Each object should use the same
-properties. They then write one reusable function that selects, scores, or transforms that data.
+Each student creates an array of at least six objects for their project. Each object should use the
+same properties. They then write one reusable function that selects, scores, or transforms that data.
 
 ### ⏱ 80–90 min | Exit Ticket
 
