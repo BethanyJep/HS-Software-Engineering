@@ -86,6 +86,149 @@
   border-color: var(--navy);
 }
 
+/* Tutorial-style slides (holiday self-study decks) */
+.workshop .slide--tutorial {
+  padding: clamp(28px, 3.6vw, 52px);
+}
+
+.workshop .slide--tutorial h2 {
+  font-size: clamp(30px, 3.4vw, 46px);
+  margin-bottom: 20px;
+}
+
+.workshop .tutorial {
+  align-items: start;
+  display: grid;
+  gap: 30px;
+  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
+}
+
+.workshop .tutorial--single {
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 860px;
+}
+
+.workshop .how-to {
+  counter-reset: step;
+  display: grid;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workshop .how-to li {
+  counter-increment: step;
+  display: grid;
+  font-size: clamp(16px, 1.5vw, 20px);
+  gap: 12px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  line-height: 1.45;
+}
+
+.workshop .how-to li::before {
+  align-items: center;
+  border: 2px solid currentColor;
+  border-radius: 50%;
+  content: counter(step);
+  display: flex;
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  justify-content: center;
+  width: 30px;
+}
+
+.workshop .how-to code,
+.workshop .expect code,
+.workshop .fix-list code {
+  background: rgba(17, 23, 45, 0.08);
+  border-radius: 5px;
+  padding: 1px 6px;
+}
+
+.workshop .slide--blue .how-to code,
+.workshop .slide--dark .how-to code,
+.workshop .slide--blue .expect code,
+.workshop .slide--dark .expect code,
+.workshop .slide--blue .fix-list code,
+.workshop .slide--dark .fix-list code {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.workshop .code-file {
+  margin: 0;
+}
+
+.workshop .file-tab {
+  background: #414963;
+  border-radius: 10px 10px 0 0;
+  color: var(--cream);
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  padding: 6px 14px;
+}
+
+.workshop .code-file .workshop-code {
+  border-top-left-radius: 0;
+  font-size: clamp(13px, 1.1vw, 15px);
+  line-height: 1.4;
+  margin: 0;
+  padding: 16px 20px;
+}
+
+.workshop .expect {
+  background: rgba(255, 255, 255, 0.45);
+  border: 2px solid var(--green);
+  border-radius: 12px;
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.45;
+  margin: 24px 0 0;
+  padding: 12px 18px;
+}
+
+.workshop .slide--blue .expect,
+.workshop .slide--dark .expect {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.workshop .slide--tutorial .checkpoint {
+  font-size: clamp(15px, 1.35vw, 18px);
+  margin-top: 16px;
+}
+
+.workshop .fix-list {
+  display: grid;
+  gap: 16px 28px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.workshop .fix-list li {
+  border-top: 2px solid currentColor;
+  font-size: clamp(15px, 1.4vw, 19px);
+  line-height: 1.45;
+  padding-top: 12px;
+}
+
+.workshop .fix-list strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+@media (max-width: 900px) {
+  .workshop .tutorial,
+  .workshop .fix-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 @media (max-width: 640px) {
   .workshop .activity {
     gap: 18px;

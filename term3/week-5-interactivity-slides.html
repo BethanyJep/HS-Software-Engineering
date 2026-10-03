@@ -18,113 +18,138 @@
       <main class="deck-shell">
         <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 1</p><p class="deck-title">Website Interactivity</p></div>
         <section class="slide-viewport" aria-label="Lesson 5 presentation slides">
-          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Website interactivity at home">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 13: Build a search box step by step">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 1</p><h1>Make your page.<br><em>Respond.</em></h1><p class="lead">Use DOM events to turn your individual capstone into a useful experience.</p><p class="checkpoint">Use this with the written guide <a href="lessons/lesson-5-website-interactivity.md">Lesson 5: Website Interactivity</a> and the <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p><div class="hero-meta"><span>Individual capstone</span><span>Grade 10 · Term 3</span></div>
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 1 · TUTORIAL</p><h1>Build a search box.<br><em>Step by step.</em></h1><p class="lead">Practise in a new NitroIDE project first, then add one interaction to your own capstone.</p><ul class="activity"><li><strong>Time</strong>About 2–3 hours. Stop after any step and continue later.</li><li><strong>Tool</strong><a href="https://nitroide.com/tools/codebox.html" target="_blank" rel="noopener noreferrer">NitroIDE</a> in your browser. No account needed.</li><li><strong>Goal</strong>One working interaction in your capstone.</li></ul><p class="checkpoint">Do each numbered step, compare with ✅ Check, then press → for the next slide. Written guide: <a href="lessons/lesson-5-website-interactivity.md">Lesson 5</a> · <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p>
             </div><span class="slide-number slide-number--light">01</span>
           </article>
-          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Event action feedback">
+          <article class="slide slide--cream slide--tutorial" id="slide-2" aria-roledescription="slide" aria-label="2 of 13: Step 1: back up and start a practice project">
             <div class="slide-content">
-              <p class="eyebrow">STEP 1 · ~15 MIN</p><h2>Event → action →<br><em>feedback.</em></h2><ul class="activity"><li><strong>Event</strong>A click, typing, submit, Enter or Space.</li><li><strong>Action</strong>JavaScript reads data and decides what to show.</li><li><strong>Feedback</strong>The page updates text so the user knows what happened.</li></ul><p class="checkpoint">Journal one example: lift button, M-Pesa prompt, or school portal feedback.</p>
+              <p class="eyebrow">STEP 1 OF 11 · SET UP</p><h2>Back up, then <em>start fresh.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Open <a href="https://nitroide.com/tools/codebox.html" target="_blank" rel="noopener noreferrer">NitroIDE</a> and your capstone project.</span></li><li><span>Click <strong>Prefs → Download ZIP</strong>. Keep the file somewhere safe.</span></li><li><span>Click <strong>Projects → New Project</strong>.</span></li><li><span>Delete the starter code in <code>index.html</code>, <code>style.css</code> and <code>script.js</code>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> three empty files and a blank preview. Your capstone is untouched.</p><p class="checkpoint">You will return to your capstone in Step 8.</p>
             </div><span class="slide-number">02</span>
           </article>
-          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Set up the DOM">
+          <article class="slide slide--dark slide--tutorial" id="slide-3" aria-roledescription="slide" aria-label="3 of 13: Step 2: add the HTML">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">STEP 2 · ~20 MIN</p><h2>Give JavaScript<br><em>targets.</em></h2><pre class="workshop-code"><code>&lt;label for=&quot;search&quot;&gt;Find a resource&lt;/label&gt;
+              <p class="eyebrow eyebrow--light">STEP 2 OF 11 · INDEX.HTML</p><h2>Add the <em>HTML.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Click <code>index.html</code>.</span></li><li><span>Type the code exactly as shown.</span></li><li><span>Look at the preview on the right.</span></li></ol><div class="code-file"><p class="file-tab">index.html</p><pre class="workshop-code"><code>&lt;label for=&quot;search&quot;&gt;Find a resource&lt;/label&gt;
 &lt;input id=&quot;search&quot; type=&quot;search&quot;&gt;
 &lt;button id=&quot;search-button&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
 &lt;button id=&quot;reset&quot; type=&quot;button&quot;&gt;Reset&lt;/button&gt;
 &lt;p id=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
-&lt;ul id=&quot;results&quot;&gt;&lt;/ul&gt;</code></pre><p class="checkpoint">Unique ids let JavaScript find the input, buttons, status and result list.</p>
+&lt;ul id=&quot;results&quot;&gt;&lt;/ul&gt;</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> a label, a search box, a Search button and a Reset button. Clicking does nothing yet.</p><p class="checkpoint">Each <code>id</code> is a name JavaScript will use to find that element.</p>
             </div><span class="slide-number slide-number--light">03</span>
           </article>
-          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Select elements and data">
+          <article class="slide slide--cream slide--tutorial" id="slide-4" aria-roledescription="slide" aria-label="4 of 13: Step 3: store data and find elements">
             <div class="slide-content">
-              <p class="eyebrow">BUILD · SCRIPT.JS IN NITROIDE</p><h2>Choose elements.<br><em>Store data.</em></h2><pre class="workshop-code"><code>const resources = [
+              <p class="eyebrow">STEP 3 OF 11 · SCRIPT.JS</p><h2>Store data. <em>Find elements.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Click <code>script.js</code>.</span></li><li><span>Type the array of resources.</span></li><li><span>Type the five <code>querySelector</code> lines.</span></li><li><span>Open the <strong>Console</strong> tab under the preview.</span></li></ol><div class="code-file"><p class="file-tab">script.js</p><pre class="workshop-code"><code>const resources = [
   { title: &quot;Revision group&quot; },
   { title: &quot;Science fair&quot; },
   { title: &quot;Coding club&quot; }
 ];
+
 const searchInput = document.querySelector(&quot;#search&quot;);
 const searchButton = document.querySelector(&quot;#search-button&quot;);
 const resetButton = document.querySelector(&quot;#reset&quot;);
 const status = document.querySelector(&quot;#status&quot;);
-const results = document.querySelector(&quot;#results&quot;);</code></pre><p class="checkpoint">Read each const aloud: what value or element does it hold?</p>
+const results = document.querySelector(&quot;#results&quot;);</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> the page has not changed and the Console shows no red errors.</p><p class="checkpoint">Each <code>"#name"</code> must match an <code>id</code> in index.html exactly.</p>
             </div><span class="slide-number">04</span>
           </article>
-          <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Render results safely">
+          <article class="slide slide--blue slide--tutorial" id="slide-5" aria-roledescription="slide" aria-label="5 of 13: Step 4: show the results">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">BUILD · SAFE OUTPUT</p><h2>Show results.<br><em>Safely.</em></h2><pre class="workshop-code"><code>function showResults(items) {
+              <p class="eyebrow eyebrow--light">STEP 4 OF 11 · SCRIPT.JS · ADD BELOW</p><h2>Show the <em>results.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add this function below your Step 3 code.</span></li><li><span>The last line runs it once with every resource.</span></li><li><span>Watch the preview.</span></li></ol><div class="code-file"><p class="file-tab">script.js · add at the bottom</p><pre class="workshop-code"><code>function showResults(items) {
   results.replaceChildren();
   for (const item of items) {
     const listItem = document.createElement(&quot;li&quot;);
     listItem.textContent = item.title;
     results.append(listItem);
   }
-  status.textContent = `${items.length} result(s) found.`;
-}</code></pre><p class="checkpoint">Use textContent for ordinary text. Do not put user or API text into innerHTML.</p>
+  if (items.length === 0) {
+    status.textContent = &quot;No resources match your search.&quot;;
+  } else {
+    status.textContent = `${items.length} result(s) found.`;
+  }
+}
+
+showResults(resources);</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> three resources in a list and <code>3 result(s) found.</code></p><p class="checkpoint"><code>textContent</code> shows text safely. Never put user text into <code>innerHTML</code>.</p>
             </div><span class="slide-number slide-number--light">05</span>
           </article>
-          <article class="slide slide--gold" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Search and filter">
+          <article class="slide slide--cream slide--tutorial" id="slide-6" aria-roledescription="slide" aria-label="6 of 13: Step 5: make search work">
             <div class="slide-content">
-              <p class="eyebrow">BUILD · USER ACTION</p><h2>Filter what<br><em>matches.</em></h2><pre class="workshop-code"><code>function searchResources() {
+              <p class="eyebrow">STEP 5 OF 11 · SCRIPT.JS · ADD BELOW</p><h2>Make Search <em>work.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add this code at the bottom.</span></li><li><span>Type <code>club</code> in the search box.</span></li><li><span>Click <strong>Search</strong>.</span></li></ol><div class="code-file"><p class="file-tab">script.js · add at the bottom</p><pre class="workshop-code"><code>function searchResources() {
   const query = searchInput.value.trim().toLowerCase();
   const matches = resources.filter((item) =&gt;
     item.title.toLowerCase().includes(query)
   );
   showResults(matches);
 }
-searchButton.addEventListener(&quot;click&quot;, searchResources);</code></pre><p class="checkpoint">The event is click. The action is filter. The feedback is the result list and status.</p>
+
+searchButton.addEventListener(&quot;click&quot;, searchResources);</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> only “Coding club” is listed and the status says <code>1 result(s) found.</code></p><p class="checkpoint">Event = click. Action = filter the array. Feedback = the new list and status message.</p>
             </div><span class="slide-number">06</span>
           </article>
-          <article class="slide slide--pink" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Empty state and reset">
+          <article class="slide slide--gold slide--tutorial" id="slide-7" aria-roledescription="slide" aria-label="7 of 13: Step 6: add Enter key and Reset">
             <div class="slide-content">
-              <p class="eyebrow">PRACTISE · ~25 MIN</p><h2>Plan for<br><em>nothing found.</em></h2><pre class="workshop-code"><code>if (items.length === 0) {
-  status.textContent = &quot;No resources match your search.&quot;;
-}
+              <p class="eyebrow">STEP 6 OF 11 · SCRIPT.JS · ADD BELOW</p><h2>Add Enter <em>and Reset.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add this code at the bottom.</span></li><li><span>Type <code>xyz</code> and press <strong>Enter</strong>.</span></li><li><span>Click <strong>Reset</strong>.</span></li></ol><div class="code-file"><p class="file-tab">script.js · add at the bottom</p><pre class="workshop-code"><code>searchInput.addEventListener(&quot;keydown&quot;, (event) =&gt; {
+  if (event.key === &quot;Enter&quot;) {
+    searchResources();
+  }
+});
 
 resetButton.addEventListener(&quot;click&quot;, () =&gt; {
   searchInput.value = &quot;&quot;;
   showResults(resources);
-});</code></pre><p class="checkpoint">Add a fourth resource, test a search with no match, then reset to all resources.</p>
+  searchInput.focus();
+});</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> “No resources match your search.” appears, then Reset brings back all three resources.</p>
             </div><span class="slide-number">07</span>
           </article>
-          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Keyboard test">
+          <article class="slide slide--green slide--tutorial" id="slide-8" aria-roledescription="slide" aria-label="8 of 13: Step 7: add data and test with a keyboard">
             <div class="slide-content">
-              <p class="eyebrow">TEST · ~15 MIN</p><h2>No mouse?<br><em>Still works.</em></h2><ul class="activity"><li><strong>Tab</strong>Move to search, Search button and Reset button.</li><li><strong>Enter</strong>Activate each button from the keyboard.</li><li><strong>Space</strong>Try Space on buttons and check visible feedback.</li></ul><p class="checkpoint">If a control cannot be reached or understood, fix labels, button types and status text.</p>
+              <p class="eyebrow">STEP 7 OF 11 · TEST</p><h2>Add data. <em>Test with a keyboard.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Add <code>{ title: "Debate club" }</code> to the array. Put a comma after the item before it.</span></li><li><span>Search for <code>club</code>.</span></li><li><span>Click inside the preview. Use only <strong>Tab</strong>, <strong>Enter</strong> and <strong>Space</strong> to search and reset.</span></li><li><span>Click <strong>Prefs → Download ZIP</strong> to save your practice.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> <code>2 result(s) found.</code> and everything works without a mouse.</p>
             </div><span class="slide-number">08</span>
           </article>
-          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Capstone checkpoint">
+          <article class="slide slide--pink slide--tutorial" id="slide-9" aria-roledescription="slide" aria-label="9 of 13: Common fixes">
             <div class="slide-content">
-              <p class="eyebrow">STEP 4 · ~45 MIN</p><h2>Apply one<br><em>core interaction.</em></h2><ul class="activity"><li><strong>Opportunities</strong>School Opportunities Hub: filter or search opportunities.json.</li><li><strong>Weather</strong>Kenya Weather Dashboard: choose a location.</li><li><strong>CyberSmart</strong>CyberSmart Quest: answer buttons show explanations.</li></ul><p class="checkpoint">It must work with mouse and keyboard, show status, and handle no results.</p>
+              <p class="eyebrow">STUCK? · COMMON FIXES</p><h2>Read the <em>red error.</em></h2><ul class="fix-list"><li><strong>Nothing happens on click</strong>Check the <code>id</code> in index.html matches the <code>"#name"</code> in script.js exactly.</li><li><strong>“… is not defined”</strong>A name is spelled differently. Capital letters matter: <code>searchInput</code> ≠ <code>searchinput</code>.</li><li><strong>“Cannot read properties of null”</strong><code>querySelector</code> found nothing. Fix the id spelling.</li><li><strong>“Unexpected token”</strong>A bracket, quote or comma is missing. Compare line by line with the slide.</li></ul><p class="checkpoint">The Console shows the line number of the first error. Fix that one first.</p>
             </div><span class="slide-number">09</span>
           </article>
-          <article class="slide slide--dark" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Home user test">
+          <article class="slide slide--cream slide--tutorial" id="slide-10" aria-roledescription="slide" aria-label="10 of 13: Step 8: plan your capstone interaction">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">STEP 5 · ~20 MIN</p><h2>Watch a real<br><em>first try.</em></h2><ul class="activity"><li><strong>Ask</strong>Give a family member or friend one task.</li><li><strong>Observe</strong>Do not explain. Note hesitation, success and surprises.</li><li><strong>Improve</strong>Fix one thing based on what you saw.</li></ul><p class="checkpoint">A small reliable interaction is better than many unfinished controls.</p>
-            </div><span class="slide-number slide-number--light">10</span>
+              <p class="eyebrow">STEP 8 OF 11 · YOUR CAPSTONE</p><h2>Plan your <em>interaction.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Click <strong>Projects</strong> and open your capstone. Click <strong>Download ZIP</strong> first as a backup.</span></li><li><span><strong>Opportunities Hub:</strong> add a search box or category buttons. Reuse Steps 2–6 with your opportunities array.</span></li><li><span><strong>Weather Dashboard:</strong> add one button per town. On click, show that town’s name in a status message.</span></li><li><span><strong>CyberSmart Quest:</strong> add one button per answer. On click, show “Correct!” or “Try again” and an explanation.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> you know which elements to add and what the feedback message will say.</p>
+            </div><span class="slide-number">10</span>
           </article>
-          <article class="slide slide--cream" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Learning journal">
+          <article class="slide slide--dark slide--tutorial" id="slide-11" aria-roledescription="slide" aria-label="11 of 13: Step 9: build it in your capstone">
             <div class="slide-content">
-              <p class="eyebrow">STEP 6 · ~15 MIN</p><h2>Write what<br><em>you learned.</em></h2><ul class="activity"><li><strong>Event</strong>What starts your feature?</li><li><strong>Action</strong>What does your JavaScript do?</li><li><strong>Feedback</strong>What did your tester find confusing, and what changed?</li></ul><p class="checkpoint">Done when your capstone has one working interaction and your journal entry is complete.</p>
-            </div><span class="slide-number">11</span>
+              <p class="eyebrow eyebrow--light">STEP 9 OF 11 · YOUR CAPSTONE</p><h2>Build it in <em>your project.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add the HTML elements with labels and unique ids.</span></li><li><span>Select them in script.js with <code>querySelector</code>.</span></li><li><span>Write one function for the action.</span></li><li><span>Connect it with <code>addEventListener</code>.</span></li><li><span>Show a status message, including when nothing matches.</span></li></ol><div class="code-file"><p class="file-tab">pattern to copy and change</p><pre class="workshop-code"><code>const button = document.querySelector(&quot;#my-button&quot;);
+const status = document.querySelector(&quot;#status&quot;);
+
+function handleClick() {
+  // 1. Read your data or the user&#x27;s choice
+  // 2. Decide what to show
+  status.textContent = &quot;Tell the user what happened.&quot;;
+}
+
+button.addEventListener(&quot;click&quot;, handleClick);</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> it works with mouse and keyboard, shows a status message and handles “nothing found”.</p>
+            </div><span class="slide-number slide-number--light">11</span>
           </article>
-          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Next APIs and fetch">
+          <article class="slide slide--gold slide--tutorial" id="slide-12" aria-roledescription="slide" aria-label="12 of 13: Step 10: home user test">
             <div class="slide-content">
-              <p class="eyebrow">NEXT · HOLIDAY WEEK 2</p><h2>Next: fetch data<br><em>from the internet.</em></h2><ul class="activity"><li><strong>Keep</strong>Your working interaction.</li><li><strong>Bring</strong>Questions from your user test.</li><li><strong>Prepare</strong>A data source for your capstone.</li></ul><p class="checkpoint"><a href="week-6-apis-slides.html">Open Lesson 6: APIs and Fetch →</a></p>
+              <p class="eyebrow">STEP 10 OF 11 · HOME TEST</p><h2>Watch someone <em>try it.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Ask a family member or friend to do one task, such as “Find a coding opportunity”.</span></li><li><span>Do not explain or point. Just watch.</span></li><li><span>Write down where they hesitate or get stuck.</span></li><li><span>Fix one thing, then click <strong>Download ZIP</strong>.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> you made one improvement because of what you saw.</p>
             </div><span class="slide-number">12</span>
+          </article>
+          <article class="slide slide--green slide--tutorial" id="slide-13" aria-roledescription="slide" aria-label="13 of 13: Step 11: save and journal">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 11 OF 11 · SAVE + JOURNAL</p><h2>Save it. <em>Write it down.</em></h2><div class="tutorial tutorial--single"><ol class="how-to"><li><span>Click <strong>Download ZIP</strong> and copy it to a flash disk, email or cloud drive.</span></li><li><span>In your journal, write one line each: the event, the action and the feedback of your feature.</span></li><li><span>Write the one thing your tester changed.</span></li></ol></div><p class="expect"><strong>✅ Check:</strong> your capstone has one working interaction, your ZIP is saved and your journal is done.</p><p class="checkpoint"><a href="week-6-apis-slides.html">Next: Lesson 6 — fetch live data →</a></p>
+            </div><span class="slide-number">13</span>
           </article>
         </section>
         <div class="deck-controls">
           <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
-          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>13</span></div></div>
           <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
         </div>
         <nav class="slide-dots" aria-label="Choose a slide">
-          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button><button class="dot" type="button" aria-label="Go to slide 13"></button>
         </nav>
         <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
-        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 13</p>
       </main>
     </div>
     <script src="../script.js"></script>

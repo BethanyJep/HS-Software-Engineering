@@ -44,25 +44,39 @@ A commit is like a labelled save point in a game. Copy these definitions into yo
 ### Step 2 | Set Up Your Repository
 
 1. Sign in to [GitHub](https://github.com/) and turn on two-factor authentication if you can.
-2. Create a new repository for your capstone, for example `cybersmart-quest`.
+2. Create a new **Public** repository for your capstone, for example `cybersmart-quest`. Do **not**
+   tick "Add a README" — leave it empty so your first push works.
 3. Unzip your NitroIDE download into a new folder and open that folder in VS Code
    (**File → Open Folder**). It contains `index.html`, `style.css`, and `script.js`.
-4. In `index.html`, check that the `<head>` links `style.css` and the end of `<body>` loads
-   `script.js`. Change `<title>Exported Project</title>` to your project name, add
-   `<html lang="en">` and `<meta name="viewport" content="width=device-width, initial-scale=1">`,
-   and put any permitted image files in an `images` folder.
+4. In `index.html`, check that the `<head>` links `style.css`, the end of `<body>` loads
+   `script.js`, and the page starts with `<html lang="en">`. Change
+   `<title>Exported Project</title>` to your project name, add
+   `<meta name="viewport" content="width=device-width, initial-scale=1">`, and put any permitted
+   image files in an `images` folder.
 
-If Git is installed, open the VS Code terminal (**Terminal → New Terminal**) and run:
+If Git is installed, open the VS Code terminal (**Terminal → New Terminal**). Tell Git who you are
+(once per computer). To keep your email private, use the "noreply" address from GitHub
+**Settings → Emails**:
+
+```bash
+git config --global user.name "Your First Name"
+git config --global user.email "you@example.com"
+```
+
+Then save your first version and push it to **your own** repository (replace `YOUR-NAME` and the
+repository name):
 
 ```bash
 git init
-git add index.html style.css script.js
+git add .
 git commit -m "Create capstone website"
 git branch -M main
+git remote add origin https://github.com/YOUR-NAME/cybersmart-quest.git
+git push -u origin main
 ```
 
-Then follow the instructions GitHub shows for **your own** repository to connect and push. Never
-copy another person's access token or password. If Git is not installed, use the
+If a sign-in window opens, choose **Sign in with your browser**. Never copy another person's
+access token or password. If Git is not installed, use the
 [Browser-Only Alternative](#browser-only-alternative) below.
 
 ### Step 3 | Make a Useful Commit
@@ -74,6 +88,7 @@ git status
 git diff
 git add index.html
 git commit -m "Improve project introduction"
+git push
 git log --oneline
 ```
 
