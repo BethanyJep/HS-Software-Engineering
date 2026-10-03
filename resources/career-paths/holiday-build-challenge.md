@@ -9,6 +9,10 @@ and share what you made before the holidays end.
 Every project is designed for a beginner. A simple working project is better than a large
 unfinished one.
 
+> 🏠 **Term 3 students:** your required holiday work is Lessons 5–8 and your individual capstone in
+> the [Holiday Self-Study Pack](../../term3/holiday-self-study.md). Treat this challenge as an optional
+> extra once your capstone MVP works.
+
 ---
 
 ## 🌱 New to coding? Start here first

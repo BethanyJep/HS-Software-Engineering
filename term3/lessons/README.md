@@ -2,40 +2,49 @@
 
 **Term:** 3  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Format:** Eight 90-minute, hands-on lessons  
+**Format:** Lessons 1–4 in class (90 minutes each); Lessons 5–8 as holiday self-study  
 **Tools:** A browser, CodePen, Git, and GitHub (all free)
 
 ---
 
 ## Learning Journey
 
-Students build one of the [three capstone projects](../project-ideas.md) throughout the term. Each
-lesson teaches a skill and ends with a capstone checkpoint so that teams leave every session with
-visible progress.
+Students start one of the [three capstone projects](../project-ideas.md) in teams during Lessons
+1–4. Over the holiday, each student completes Lessons 5–8 at home and builds **their own** version of
+the capstone. Each lesson teaches a skill and ends with a capstone checkpoint so that every session
+produces visible progress.
 
-| Lesson | Topic | Capstone checkpoint |
-|---|---|---|
-| [1](lesson-1-html-landing-page.md) | Create a landing page with HTML | Page structure and project content |
-| [2](lesson-2-css-styling.md) | Add CSS to beautify your page | A consistent visual design |
-| [3](lesson-3-advanced-html-css.md) | Advanced HTML/CSS concepts | An accessible, responsive layout |
-| [4](lesson-4-javascript-fundamentals.md) | JavaScript functions, loops, and more | Project data rendered with JavaScript |
-| [5](lesson-5-website-interactivity.md) | Add interactivity to your website | A working user interaction |
-| [6](lesson-6-apis-and-fetch.md) | APIs and fetching internet data | External data with loading and error states |
-| [7](lesson-7-git-and-github.md) | Version control with Git and GitHub | A shared repository with team commits |
-| [8](lesson-8-deployment.md) | Deploy web applications | A tested, public GitHub Pages site |
+| Lesson | Topic | Where | Capstone checkpoint |
+|---|---|---|---|
+| [1](lesson-1-html-landing-page.md) | Create a landing page with HTML | Class | Page structure and project content |
+| [2](lesson-2-css-styling.md) | Add CSS to beautify your page | Class | A consistent visual design |
+| [3](lesson-3-advanced-html-css.md) | Advanced HTML/CSS concepts | Class | An accessible, responsive layout |
+| [4](lesson-4-javascript-fundamentals.md) | JavaScript functions, loops, and more | Class | Project data rendered with JavaScript |
+| [5](lesson-5-website-interactivity.md) | Add interactivity to your website | 🏠 Holiday | A working user interaction |
+| [6](lesson-6-apis-and-fetch.md) | APIs and fetching internet data | 🏠 Holiday | External data with loading and error states |
+| [7](lesson-7-git-and-github.md) | Version control with Git and GitHub | 🏠 Holiday | A personal repository with meaningful commits |
+| [8](lesson-8-deployment.md) | Deploy web applications | 🏠 Holiday | A tested, public GitHub Pages site |
+
+## Holiday Self-Study (Lessons 5–8)
+
+Lessons 5–8 are take-home work. Each guide is written as numbered self-study steps that a student can
+follow alone, with a home user test, a learning journal prompt, and a "done when" check. Students
+should start with the [Holiday Self-Study Pack](../holiday-self-study.md), which includes a weekly
+schedule, a capstone plan, help and safety rules, and the list of what to bring back to school.
 
 ## Suggested Routine
 
-Each lesson follows the same rhythm:
+Each lesson follows the same rhythm, in class or at home:
 
 1. **Connect** the topic to a real product and career.
-2. **Learn** one small set of concepts with a facilitator.
+2. **Learn** one small set of concepts with a facilitator or the self-study guide.
 3. **Build** through a guided activity.
-4. **Apply** the skill to the team's capstone.
-5. **Reflect** with an exit ticket and save all work.
+4. **Apply** the skill to the capstone (team work in class; individual work over the holiday).
+5. **Reflect** with an exit ticket or learning journal entry and save all work.
 
-Students can begin in [CodePen](https://codepen.io/pen) without an account. In Lesson 7, teams move
-their work into a free GitHub repository and use that repository to deploy in Lesson 8.
+Students can begin in [CodePen](https://codepen.io/pen) without an account. In Lesson 7, each
+student moves their capstone into their own free GitHub repository and uses that repository to deploy
+in Lesson 8.
 
 ## Facilitator Preparation
 
@@ -44,5 +53,7 @@ their work into a free GitHub repository and use that repository to deploy in Le
 - Pair students when devices are limited and rotate the person typing.
 - Use placeholder content rather than students' personal details.
 - Never put passwords, API keys, private data, or identifying student information in source code.
-- Reserve the final 20–25 minutes for the capstone checkpoint.
+- Reserve the final 20–25 minutes of each class lesson for the capstone checkpoint.
+- Before the holiday, walk students through the [Holiday Self-Study Pack](../holiday-self-study.md),
+  help each one choose a capstone, and confirm how they will ask for help and submit their work.
 

@@ -7,9 +7,11 @@ This program is a collaboration between **TOFA** and **Alliance Girls Alumni**, 
 The program runs across two school terms:
 
 - **Term 2** – Foundation & Inspiration (2–3 facilitated sessions)
-- **Term 3** – Guided Web Development Lessons, Capstone & Showcase
+- **Term 3** – Guided Web Development Lessons (1–4 in class)
+- **Term 3 Holiday** – Self-Study Lessons 5–8 & Individual Capstone
+- **Showcase** – When school reopens after the holiday
 
-At the end of Term 3, student teams present their solutions and a **prize is awarded to the winning team**.
+When school reopens, each student presents their individual capstone and a **prize is awarded to the winning student(s)**.
 
 This program is also intended to serve as a **reusable roadmap** that can be adapted and rolled out at other schools.
 
@@ -30,12 +32,14 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 | Phase | Timing | Activity |
 |---|---|---|
 | Choose | Week 1 | Teams select one of three capstone briefs |
-| Lessons 1–3 | Weeks 1–3 | Build and style an accessible, responsive landing page |
-| Lessons 4–6 | Weeks 4–6 | Add JavaScript, interactivity, and fetched data |
-| Lessons 7–8 | Weeks 7–8 | Use Git/GitHub and deploy with GitHub Pages |
-| Polish | Weeks 9–10 | Refine MVP, prepare presentation |
-| Showcase | End of Term | Teams present to panel of judges |
-| Prize Ceremony | Showcase Day | Winning team announced and awarded |
+| Lessons 1–3 | Weeks 1–3 (class) | Build and style an accessible, responsive landing page |
+| Lesson 4 | Week 4 (class) | Add JavaScript data, functions, conditions, and loops |
+| Holiday launch | Last class before the holiday | Each student chooses an individual capstone and receives the [Holiday Self-Study Pack](term3/holiday-self-study.md) |
+| Lessons 5–6 | Holiday weeks 1–2 (self-study) | Add interactivity and fetched data to the individual capstone |
+| Lessons 7–8 | Holiday weeks 3–4 (self-study) | Use Git/GitHub and deploy with GitHub Pages |
+| Polish | Holiday weeks 5–6 | Refine MVP, gather feedback, prepare presentation |
+| Showcase | When school reopens | Students present individual capstones to a panel of judges |
+| Prize Ceremony | Showcase Day | Winning student(s) announced and awarded |
 
 ---
 
@@ -45,7 +49,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 2. **Educate** – Give students a foundational understanding of how software is built.
 3. **Empower** – Equip students with starter tools and resources to learn independently.
 4. **Create** – Guide students through building a working solution to a problem that matters.
-5. **Celebrate** – Recognise effort, creativity, and teamwork at the showcase.
+5. **Celebrate** – Recognise effort, creativity, teamwork, and independent learning at the showcase.
 
 ---
 
@@ -57,7 +61,8 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 - Judges panel for the Term 3 showcase (alumni, industry contacts)
 
 ### Suggested Team Size
-- 3–5 students per team for the Term 3 project
+- 3–5 students per team for Lessons 1–4 in class
+- Individual capstones for the holiday self-study (Lessons 5–8)
 
 ### Tools & Platforms
 | Purpose | Suggested Tool | Notes |
@@ -67,7 +72,7 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 | Collaboration | Google Docs / Slides | Already available at school |
 | Version control | Git and GitHub Free | Taught in Term 3 Lesson 7 |
 | Deployment | GitHub Pages | Free static-site hosting taught in Lesson 8 |
-| Communication | WhatsApp group or Google Classroom | Coordinate between sessions |
+| Communication | WhatsApp group or Google Classroom | Coordinate between sessions and support holiday self-study |
 
 ---
 
@@ -88,7 +93,7 @@ To build the reusable roadmap for other schools, collect:
 
 - [ ] Pre- and post-program student surveys (confidence in tech, interest in SE careers)
 - [ ] Session attendance records
-- [ ] Number of teams that complete Term 3 projects
+- [ ] Number of students who complete holiday self-study and individual capstones
 - [ ] Qualitative testimonials from students and facilitators
 - [ ] Photos/videos from the showcase (with consent)
 

@@ -1,43 +1,51 @@
 # Lesson 7 – Version Control with Git and GitHub
 
-**Term:** 3  
-**Duration:** 90 minutes  
+**Term:** 3 · Holiday self-study (week 3)  
+**Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Tools:** Git, a text editor, and GitHub (free)
+
+> 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
+> [Holiday Self-Study Pack](../holiday-self-study.md) first.
 
 ---
 
 ## Learning Objectives
 
-Students will be able to:
+By the end of this lesson, you will be able to:
 
 1. Explain the difference between Git and GitHub.
 2. Create a repository and record changes in commits.
 3. Read repository history and restore an earlier file version with guidance.
-4. Collaborate without sharing passwords or overwriting teammates' work.
+4. Keep your account and repository safe without sharing passwords or private data.
 
 ## Materials
 
-- [ ] Team HTML, CSS, and JavaScript files downloaded from CodePen
-- [ ] Git installed, or access to GitHub's browser file editor
-- [ ] An individual GitHub account for each student, if school policy permits
-- [ ] A facilitator-owned repository as an alternative when students cannot create accounts
+- [ ] Your capstone HTML, CSS, and JavaScript files downloaded from CodePen (**Export → Export .zip**)
+- [ ] Git installed, or a browser to use GitHub's file upload and editor
+- [ ] Your own free GitHub account, created with permission from a parent or guardian
+- [ ] If you cannot create an account, ask your facilitator about another way to submit your files
 
 ---
 
-## Lesson Plan
+## Self-Study Steps
 
-### ⏱ 0–15 min | Connect: A Save Point for Code
+### Step 1 | Connect: A Save Point for Code
 
-Compare a commit to a labelled save point. Clarify:
+A commit is like a labelled save point in a game. Copy these definitions into your journal:
 
-- **Git** records versions on a computer.
-- **GitHub** hosts Git repositories online so teams can share and review work.
-- A repository is not a backup for passwords or private information.
+- **Git** records versions of your files on a computer.
+- **GitHub** hosts Git repositories online so you can share, review, and publish work.
+- A repository is not a place for passwords or private information.
 
-### ⏱ 15–35 min | Guided Setup
+### Step 2 | Set Up Your Repository
 
-Create a repository containing `index.html`, `styles.css`, and `script.js`. If Git is available:
+1. Sign in to [GitHub](https://github.com/) and turn on two-factor authentication if you can.
+2. Create a new repository for your capstone, for example `cybersmart-quest`.
+3. Unzip your CodePen export and rename the files `index.html`, `styles.css`, and `script.js`.
+   Check that `index.html` links to the CSS and JavaScript files.
+
+If Git is installed on your computer, run these commands in your project folder:
 
 ```bash
 git init
@@ -46,12 +54,13 @@ git commit -m "Create capstone website"
 git branch -M main
 ```
 
-Connect the repository using the instructions GitHub shows for the team's own repository. Never copy
-another person's access token or password.
+Then follow the instructions GitHub shows for **your own** repository to connect and push. Never
+copy another person's access token or password. If Git is not installed, use the
+[Browser-Only Alternative](#browser-only-alternative) below.
 
-### ⏱ 35–55 min | Make a Useful Commit
+### Step 3 | Make a Useful Commit
 
-Students make one small page improvement and run:
+Make one small improvement to your page, then run:
 
 ```bash
 git status
@@ -61,33 +70,38 @@ git commit -m "Improve project introduction"
 git log --oneline
 ```
 
-Discuss why commit messages should describe the completed change.
+A good commit message describes the completed change, such as "Add empty state to search", not
+"update" or "stuff".
 
-### ⏱ 55–65 min | Team Workflow
+### Step 4 | Good Habits for Working Alone
 
-Agree on these beginner rules:
-
-1. Pull the newest work before editing.
-2. Work on one agreed task at a time.
-3. Review `git diff` before committing.
-4. Make small commits with clear messages.
+1. Check `git status` and `git diff` before every commit.
+2. Work on one task at a time.
+3. Make small commits with clear messages.
+4. Push at the end of every study session so your work is backed up.
 5. Never commit passwords, private data, or API keys.
-6. Ask before resolving a teammate's merge conflict.
-7. Add teammates as repository collaborators; never share an account or password.
 
-### ⏱ 65–80 min | Capstone Checkpoint
+### Step 5 | Capstone Checkpoint
 
-Each team creates its repository, adds the current project, and records at least two meaningful
-commits. Every member locates the files and commit history on GitHub.
+Your capstone repository must contain your current project and **at least three** meaningful
+commits. For the Opportunities Hub or CyberSmart Quest, move your data into `opportunities.json` or
+`questions.json` now and update your Lesson 6 code to fetch it.
 
-### ⏱ 80–90 min | Exit Ticket
+> `fetch` cannot load a JSON file opened directly from your computer (`file://`). Test it in
+> Lesson 8 on GitHub Pages, or keep your sample-data fallback working until then.
 
-Students explain repository, commit, and history, then show where they would check changed files.
+### Step 6 | Learning Journal
+
+Explain repository, commit, and history in your own words. Write down where on GitHub you would
+look to see which files changed in a commit.
+
+✅ **Done when:** your capstone is in your own GitHub repository with at least three clear commits,
+and your journal entry is complete.
 
 ## Browser-Only Alternative
 
 If Git cannot be installed, create the repository on GitHub, use **Add file → Upload files**, and use
-GitHub's editor for one small change. Show the commit history and compare two versions.
+GitHub's editor for each small change. Open the commit history and compare two versions.
 
 ## Free Practice
 
@@ -97,7 +111,9 @@ GitHub's editor for one small change. Show the commit history and compare two ve
 
 ## Facilitator Notes
 
-- Demonstrate with a practice repository before touching capstone work.
+- Before the holiday, demonstrate account creation and a first commit with a practice repository.
+- Agree a submission route for students who cannot create GitHub accounts, such as sharing a
+  downloaded project folder when school reopens.
 - Use GitHub organisations or classroom tooling only if the school has approved them.
 - Keep repository visibility aligned with school policy and remove personal student data before
   making a project public.

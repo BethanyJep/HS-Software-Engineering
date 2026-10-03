@@ -128,6 +128,20 @@ Students are not expected to invent a project. Help each team choose one of the
 [three capstone options](../term3/project-ideas.md), then use the checkpoint in every
 [lesson](../term3/lessons/README.md) to keep the build moving.
 
+### Supporting Holiday Self-Study
+
+Lessons 5–8 and an individual capstone are completed at home during the holiday using the
+[Holiday Self-Study Pack](../term3/holiday-self-study.md).
+
+- In the last class before the holiday, walk through the pack and Lesson 5, and make sure every
+  student has saved a copy of their team's Lessons 1–4 work.
+- Confirm each student's capstone choice on their Holiday Capstone Plan.
+- Agree how students will ask for help (WhatsApp group or Google Classroom) and when facilitators
+  will reply.
+- Run a short online check-in after Lesson 6 and encourage students who have fallen behind to focus
+  on a smaller MVP.
+- Agree a submission route for students who cannot create a GitHub account or publish online.
+
 ### What good coaching looks like
 - Ask questions, don't give answers: *"What have you tried? What happened? What might you try next?"*
 - Celebrate small progress: *"You got that button working — that's progress."*
@@ -150,19 +164,19 @@ Students are not expected to invent a project. Help each team choose one of the
 
 ### Setup
 - Arrange the room in a presentation format (audience facing a stage / front area).
-- Each team gets a table or space to set up their demo.
+- Each student gets a table or space to set up their demo.
 - Have a judging panel of 3–5 people (alumni, industry guests, a teacher).
 - Share judging criteria with judges in advance (see [Project Guidelines](../term3/project-guidelines.md#judging-criteria)).
 
 ### Running Order
 1. Opening remarks (5 min) — acknowledge the students' effort; set a celebratory tone.
-2. Team presentations (5–7 min each + 3 min Q&A).
+2. Individual capstone presentations (3–5 min each + 2–3 min Q&A). For a large group, run a gallery-style showcase where judges visit each student's demo.
 3. Break while judges deliberate (10–15 min) — use this time for informal demos and photos.
 4. Awards & Prize Ceremony.
 5. Closing remarks — thank facilitators, sponsors, teachers, and students.
 
 ### Award Categories (suggested)
-- 🥇 **Best Overall Project** — top-scoring team by judging criteria
+- 🥇 **Best Overall Project** — top-scoring project by judging criteria
 - 🎨 **Best Design** — most user-friendly and visually appealing solution
 - 💡 **Most Creative Idea** — most original problem or approach
 - 🛠️ **Best Technical Execution** — most functional and technically impressive

@@ -1,16 +1,21 @@
 # Term 3 – Capstone Project Options
 
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Format:** Teams of 3–5 students choose one of the three projects below  
+**Format:** Teams of 3–5 start a project in Lessons 1–4; each student then completes their own
+version as holiday self-study  
 **Cost:** Each option can be completed with free tools
 
 ---
 
 ## Choose One Capstone
 
-Instead of inventing a project idea, each team selects one of these three shared briefs. Teams can
-choose their own name, content, colours, and features, but they should solve the stated problem and
+Instead of inventing a project idea, students select one of these three shared briefs. Each student
+can choose their own name, content, colours, and features, but should solve the stated problem and
 complete the common requirements.
+
+> 🏠 **Holiday capstone:** During the holiday, every student builds and presents an **individual**
+> capstone while working through Lessons 5–8. You may start from your team's Lessons 1–4 code and keep
+> the same brief or switch to another one. See the [Holiday Self-Study Pack](holiday-self-study.md).
 
 | Option | Main career paths | Suggested free tools |
 |---|---|---|
@@ -18,8 +23,8 @@ complete the common requirements.
 | [2. Kenya Weather Dashboard](#option-2--kenya-weather-dashboard) | Data Analysis, Web Development, Cloud & DevOps | CodePen, Open-Meteo, GitHub Pages |
 | [3. CyberSmart Quest](#option-3--cybersmart-quest) | Cybersecurity, Game Development, Quality Assurance | CodePen, MDN, GitHub Pages |
 
-> Every project needs developers, designers, testers, and presenters. Rotate roles so each team member
-> tries more than one career skill.
+> Every project needs developers, designers, testers, and presenters. Working alone, you will practise
+> all of these career skills; ask a family member or friend to be your tester.
 
 ## Requirements for Every Project
 
@@ -30,9 +35,9 @@ By the showcase, every capstone must include:
 - [ ] Readable colour contrast, image alternative text, labelled controls, and keyboard access
 - [ ] JavaScript data, at least one reusable function, a condition, and a loop
 - [ ] One meaningful interaction with clear user feedback
-- [ ] Data loaded with `fetch`, from a suitable public API or a team-created JSON file
+- [ ] Data loaded with `fetch`, from a suitable public API or a JSON file you create
 - [ ] Loading, empty, and error states for fetched data
-- [ ] A GitHub repository with clear commits from the team
+- [ ] Your own GitHub repository with clear, meaningful commits
 - [ ] A tested GitHub Pages deployment, or a local demonstration if school policy prevents publishing
 - [ ] A short `README` crediting data, learning resources, and permitted images
 
@@ -58,7 +63,7 @@ computer.
 - A category filter or keyword search
 - A details view or show/hide section for each opportunity
 - A clear empty state when no opportunities match
-- Opportunity data fetched from a team-created `opportunities.json` file
+- Opportunity data fetched from your own `opportunities.json` file
 
 ### Career Connections
 
@@ -81,7 +86,7 @@ phone numbers, personal email addresses, private schedules, or application detai
 ### Success Looks Like
 
 A first-time visitor can find one relevant opportunity, understand its next step, and use the page
-on a phone without asking the team for help.
+on a phone without asking the builder for help.
 
 ---
 
@@ -117,7 +122,7 @@ A student, teacher, or community member who wants a clear summary rather than a 
 ### Responsible Data Rules
 
 Credit Open-Meteo, show units, and never present a classroom project as an emergency warning service.
-Do not collect a visitor's precise location; use the team's fixed list of approximate city coordinates.
+Do not collect a visitor's precise location; use your fixed list of approximate city coordinates.
 
 ### Stretch Goals
 
@@ -152,7 +157,7 @@ A secondary-school student learning how to recognise common online risks and res
 - Answer buttons with immediate explanations, not only "right" or "wrong"
 - A score or progress indicator created with functions and loops
 - A restart action and a final screen with three practical safety habits
-- Questions fetched from a team-created `questions.json` file
+- Questions fetched from your own `questions.json` file
 
 ### Career Connections
 
@@ -180,12 +185,14 @@ they can take to protect an account.
 
 ---
 
-## Team Selection Activity
+## Selection Activity
 
 1. Read all three briefs.
-2. Each team member privately ranks the options from 1 to 3.
-3. Discuss the rankings and select one option the whole team can support.
+2. Privately rank the options from 1 to 3.
+3. In class, discuss the rankings and select one option the whole team can support for Lessons 1–4.
 4. Write one sentence explaining why that option matters to your target user.
 5. Complete the [Project Kickoff Form](project-guidelines.md#appendix-a--project-kickoff-form).
+6. Before the holiday, confirm your individual choice on the
+   [Holiday Capstone Plan](holiday-self-study.md#holiday-capstone-plan).
 
 Do not add stretch goals until the minimum viable product works.
