@@ -1,0 +1,140 @@
+name: Capstone Showcase Form
+description: Submit your individual Term 3 capstone, with screenshots, to the showcase gallery.
+title: "[Showcase] "
+labels: ["showcase"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🎉 Capstone Showcase Form
+
+        Well done for finishing Lessons 5–8! Fill in this form to share the capstone **you** built
+        over the holiday. A facilitator will check it and then save it to the
+        [showcase gallery](https://github.com/BethanyJep/HS-Software-Engineering/tree/main/showcase),
+        where the judges will review it.
+
+        > ⚠️ **This repository is public.** Use your first name or a nickname only. Do not include
+        > your surname, phone number, email address, home address, school timetable, passwords, or
+        > photos of people — in the text **or** in your screenshots.
+
+  - type: input
+    id: display_name
+    attributes:
+      label: Display name
+      description: Your first name or a nickname (no surname).
+      placeholder: e.g. Wanjiru K.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: capstone
+    attributes:
+      label: Capstone option
+      description: Which brief did you build?
+      options:
+        - School Opportunities Hub
+        - Kenya Weather Dashboard
+        - CyberSmart Quest
+    validations:
+      required: true
+
+  - type: input
+    id: project_name
+    attributes:
+      label: Project name
+      placeholder: e.g. CyberSmart Quest – Safe Clicks Edition
+    validations:
+      required: true
+
+  - type: input
+    id: live_url
+    attributes:
+      label: Live site link
+      description: Your GitHub Pages URL. Leave blank if you were not able to publish.
+      placeholder: https://your-username.github.io/your-project/
+
+  - type: input
+    id: repo_url
+    attributes:
+      label: Repository link
+      description: Your GitHub repository URL, if you have one.
+      placeholder: https://github.com/your-username/your-project
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: |
+        Drag and drop (or paste) **at least two** screenshots of what you built:
+        1. Your project at **phone width**
+        2. Your project at **computer width**
+        3. *(Optional)* Your main feature in action, e.g. a filter result, weather data, or quiz feedback
+
+        Check that no personal information is visible before uploading.
+      placeholder: Drop your screenshot images here.
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem and your user
+      description: Who is your project for, and what problem does it help them with?
+    validations:
+      required: true
+
+  - type: textarea
+    id: features
+    attributes:
+      label: What your project does
+      description: Describe your main feature and how someone uses it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how_built
+    attributes:
+      label: How you built it
+      description: Which skills and tools did you use? (HTML, CSS, JavaScript, fetch/API or JSON, Git, GitHub Pages…)
+    validations:
+      required: true
+
+  - type: textarea
+    id: challenge
+    attributes:
+      label: Hardest part and what you learned
+      description: Describe one bug or problem you solved and how you solved it.
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback
+    attributes:
+      label: Feedback and improvement
+      description: What feedback did a family member or friend give you, and what did you change?
+    validations:
+      required: true
+
+  - type: textarea
+    id: next_steps
+    attributes:
+      label: What you would add next
+      description: If you had one more week, what would you improve or add?
+
+  - type: textarea
+    id: credits
+    attributes:
+      label: Credits
+      description: Credit any data (e.g. Open-Meteo), images, tutorials, or tools you used.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before you submit
+      options:
+        - label: This is my own individual work, and I can explain every part of it.
+          required: true
+        - label: My text and screenshots contain no personal information, passwords, or photos of people.
+          required: true
+        - label: I agree that my answers and screenshots can be saved in the public showcase gallery.
+          required: true

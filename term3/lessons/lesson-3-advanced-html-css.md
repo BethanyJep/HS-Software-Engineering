@@ -78,8 +78,9 @@ Use the element inspector to:
 
 ### ⏱ 60–80 min | Capstone Checkpoint
 
-Teams make their page work at approximately 320 px and desktop width, then add the form or controls
-their project will need. A teammate must complete the main task using only the keyboard.
+Each student makes their page work at approximately 320 px and desktop width, then adds the form or
+controls their project will need. A classmate tests by completing the main task using only the
+keyboard.
 
 ### ⏱ 80–90 min | Exit Ticket
 

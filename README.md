@@ -18,10 +18,11 @@
 | [Session 3 – Resource Session](term2/session-3-resource-session.md) · [Slides](term2/session-3-resources-slides.html) | Tools, platforms, and getting started online |
 | [Tech Careers Panel & Discussion](term2/saturday-25-tech-careers-panel.md) · [Slides](term2/tech-careers-panel-slides.html) | Speaker stories, panel questions, and group discussion |
 | **Term 3 – Lessons & Capstone** | |
-| [Eight Web Development Lessons](term3/lessons/README.md) | HTML, CSS, JavaScript, APIs, Git/GitHub, and deployment (Lessons 5–8 are holiday self-study) |
+| [Eight Web Development Lessons](term3/lessons/README.md) | HTML, CSS, JavaScript, APIs, Git/GitHub, and deployment, each with a slide deck (Lessons 5–8 are holiday self-study) |
 | [Holiday Self-Study Pack](term3/holiday-self-study.md) | Take-home schedule for Lessons 5–8 and the individual capstone |
-| [Project Guidelines](term3/project-guidelines.md) | How to select, plan, build, test, and present |
-| [Three Capstone Options](term3/project-ideas.md) | Career-linked projects designed for free tools, completed individually over the holiday |
+| [Project Guidelines](term3/project-guidelines.md) | How to select, plan, build, test, and submit your individual capstone |
+| [Three Capstone Options](term3/project-ideas.md) | Career-linked projects designed for free tools, built individually |
+| [Capstone Showcase](showcase/README.md) · [Form](https://github.com/BethanyJep/HS-Software-Engineering/issues/new?template=capstone-showcase.yml) | Submit your capstone with screenshots; approved work is saved in the showcase gallery |
 | **Facilitator Resources** | |
 | [Icebreakers](resources/icebreakers.md) | Energisers and team-building activities |
 | [Facilitator Guide](resources/facilitator-guide.md) | Tips, logistics, and facilitation notes |
@@ -35,9 +36,9 @@
 
 ```
 Term 2   ──►  3 Sessions (Intro · Careers · Resources)
-Term 3   ──►  Lessons 1–4 in class (teams)
-Holiday  ──►  Lessons 5–8 self-study  ──►  Individual Capstone
-Return   ──►  Showcase & Prize Ceremony
+Term 3   ──►  Lessons 1–4 in class  ──►  Individual Capstone starts
+Holiday  ──►  Lessons 5–8 self-study  ──►  Capstone Showcase Form (with screenshots)
+Return   ──►  Judging & Prize Ceremony
 ```
 
 ### Goals

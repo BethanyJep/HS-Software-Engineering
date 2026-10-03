@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 7 · Git and GitHub">
+    <title>Term 3 · Lesson 7 · Git and GitHub</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 07</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 3</p><p class="deck-title">Git and GitHub</p></div>
+        <section class="slide-viewport" aria-label="Lesson 7 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Version control at home">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 3</p><h1>Save points<br><em>for code.</em></h1><p class="lead">Put your individual capstone into your own repository with meaningful commits.</p><p class="checkpoint">Use this with the written guide <a href="lessons/lesson-7-git-and-github.md">Lesson 7: Git and GitHub</a> and the <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p><div class="hero-meta"><span>Individual capstone</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Git vs GitHub">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 · ~15 MIN</p><h2>Two tools.<br><em>Different jobs.</em></h2><ul class="activity"><li><strong>Git</strong>Records versions of files on a computer.</li><li><strong>GitHub</strong>Hosts repositories online for backup and publishing.</li><li><strong>Repository</strong>A project folder with history, not a place for secrets.</li></ul><p class="checkpoint">Copy these definitions into your journal in your own words.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Prepare project files">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 2 · ~20 MIN</p><h2>Name files<br><em>clearly.</em></h2><ul class="activity"><li><strong>Export</strong>Download your CodePen project if needed.</li><li><strong>Rename</strong>Use index.html, styles.css and script.js.</li><li><strong>Check</strong>Confirm HTML links to the CSS and JavaScript files.</li></ul><p class="checkpoint">Use your own free GitHub account only with parent or guardian permission.</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Create a repository">
+            <div class="slide-content">
+              <p class="eyebrow">GIT PATH · FIRST COMMIT</p><h2>Start local<br><em>history.</em></h2><pre class="workshop-code"><code>git init
+git add index.html styles.css script.js
+git commit -m &quot;Create capstone website&quot;
+git branch -M main</code></pre><p class="checkpoint">Run commands inside your project folder. Check the messages carefully before continuing.</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--gold" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Connect and push">
+            <div class="slide-content">
+              <p class="eyebrow">GITHUB PATH · BACKUP</p><h2>Send it to<br><em>your repository.</em></h2><ul class="activity"><li><strong>Follow</strong>Use the instructions GitHub shows for your new repository.</li><li><strong>Protect</strong>Never copy another person’s token, key or password.</li><li><strong>Push</strong>Back up at the end of each study session.</li></ul><p class="checkpoint">If Git asks for credentials, use official GitHub sign-in guidance, not shared secrets.</p>
+            </div><span class="slide-number">05</span>
+          </article>
+          <article class="slide slide--blue" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Make a useful commit">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 3 · SMALL IMPROVEMENT</p><h2>One change.<br><em>One commit.</em></h2><pre class="workshop-code"><code>git status
+git diff
+git add index.html
+git commit -m &quot;Improve project introduction&quot;
+git log --oneline</code></pre><p class="checkpoint">Read the diff before committing. It should show only the change you meant to make.</p>
+            </div><span class="slide-number slide-number--light">06</span>
+          </article>
+          <article class="slide slide--pink" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Good commit messages">
+            <div class="slide-content">
+              <p class="eyebrow">HABIT · CLEAR HISTORY</p><h2>Say what<br><em>finished.</em></h2><ul class="activity"><li><strong>Good</strong>Add empty state to search.</li><li><strong>Good</strong>Fetch questions from JSON.</li><li><strong>Avoid</strong>update, stuff, final-final, changes.</li></ul><p class="checkpoint">Use a short verb phrase that would help future you understand the history.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Browser only alternative">
+            <div class="slide-content">
+              <p class="eyebrow">IF GIT IS NOT INSTALLED</p><h2>You can still<br><em>keep history.</em></h2><ul class="activity"><li><strong>Create</strong>Make the repository on GitHub.</li><li><strong>Upload</strong>Use Add file → Upload files for your project.</li><li><strong>Edit</strong>Use GitHub’s editor and write a clear commit message.</li></ul><p class="checkpoint">Open commit history and compare two versions so you can explain what changed.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Read history">
+            <div class="slide-content">
+              <p class="eyebrow">PRACTISE · ~15 MIN</p><h2>History answers<br><em>what changed?</em></h2><ul class="activity"><li><strong>Status</strong>What files changed now?</li><li><strong>Diff</strong>What exact lines changed?</li><li><strong>Log</strong>Which commits were made?</li></ul><p class="checkpoint">If you need to restore an older version, ask a facilitator before using advanced commands.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--dark" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Capstone checkpoint">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 5 · ~45 MIN</p><h2>Your repository<br><em>must tell a story.</em></h2><ul class="activity"><li><strong>Commits</strong>Make at least three meaningful commits.</li><li><strong>Opportunities</strong>Move data into opportunities.json.</li><li><strong>CyberSmart</strong>Move quiz data into questions.json.</li></ul><p class="checkpoint">fetch cannot load local JSON from file://. Keep a sample fallback until Lesson 8 deployment.</p>
+            </div><span class="slide-number slide-number--light">10</span>
+          </article>
+          <article class="slide slide--cream" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Safe solo habits">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 4 · ALWAYS</p><h2>Work alone.<br><em>Stay safe.</em></h2><ul class="activity"><li><strong>Small tasks</strong>Change one feature at a time.</li><li><strong>Check first</strong>Use status and diff before every commit.</li><li><strong>No secrets</strong>No API keys, passwords, private details or personal photos.</li></ul><p class="checkpoint">Your repository should be something you are safe to publish if school policy allows.</p>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Next deployment">
+            <div class="slide-content">
+              <p class="eyebrow">NEXT · HOLIDAY WEEK 4</p><h2>Next: publish<br><em>with GitHub Pages.</em></h2><ul class="activity"><li><strong>Need</strong>Repository with current files.</li><li><strong>Need</strong>At least three clear commits.</li><li><strong>Need</strong>No private information in the project.</li></ul><p class="checkpoint"><a href="week-8-deployment-slides.html">Open Lesson 8: Deployment →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

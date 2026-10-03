@@ -7,6 +7,8 @@
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
+>
+> 🖥️ **Slides:** [Open the Lesson 7 slide deck](../week-7-git-slides.html) to click through the key ideas.
 
 ---
 

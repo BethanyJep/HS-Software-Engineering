@@ -120,60 +120,74 @@ Wherever possible, ask questions rather than giving answers. This builds critica
 
 ---
 
-## Supporting Term 3 Project Teams
+## Supporting Term 3 Students
 
-During Term 3, your role shifts from facilitator to **coach and mentor**.
+During Term 3, your role shifts from facilitator to **coach and mentor**. Every student builds their
+own capstone — there are no project teams.
 
-Students are not expected to invent a project. Help each team choose one of the
+Students are not expected to invent a project. Help each student choose one of the
 [three capstone options](../term3/project-ideas.md), then use the checkpoint in every
 [lesson](../term3/lessons/README.md) to keep the build moving.
 
 ### Supporting Holiday Self-Study
 
-Lessons 5–8 and an individual capstone are completed at home during the holiday using the
-[Holiday Self-Study Pack](../term3/holiday-self-study.md).
+Lessons 5–8 are completed at home during the holiday using the
+[Holiday Self-Study Pack](../term3/holiday-self-study.md), the written lesson guides, and the
+matching slide decks.
 
-- In the last class before the holiday, walk through the pack and Lesson 5, and make sure every
-  student has saved a copy of their team's Lessons 1–4 work.
+- In the last class before the holiday, walk through the pack and the Lesson 5 slides, and make sure
+  every student has saved a copy of their Lessons 1–4 work.
 - Confirm each student's capstone choice on their Holiday Capstone Plan.
 - Agree how students will ask for help (WhatsApp group or Google Classroom) and when facilitators
   will reply.
 - Run a short online check-in after Lesson 6 and encourage students who have fallen behind to focus
   on a smaller MVP.
-- Agree a submission route for students who cannot create a GitHub account or publish online.
+- Agree a route for students who cannot create a GitHub account: they can send their answers and
+  screenshots to you, and you submit the showcase form for them.
 
 ### What good coaching looks like
 - Ask questions, don't give answers: *"What have you tried? What happened? What might you try next?"*
 - Celebrate small progress: *"You got that button working — that's progress."*
-- Help teams prioritise: *"If you could only finish ONE thing this week, what would it be?"*
+- Help students prioritise: *"If you could only finish ONE thing this week, what would it be?"*
 - Be honest about scope: *"This is a great idea for version 2 — let's make version 1 work first."*
 
-### Dealing with common team problems
+### Dealing with common problems
 
 | Problem | Coaching approach |
 |---|---|
-| One person is doing all the work | Facilitate a role conversation: *"How can you split this more evenly?"* |
-| Team has a conflict | Don't take sides. Remind them of the goal: *"What would your user need you to do right now?"* |
-| Team wants to change their idea mid-sprint | Validate the instinct, but ask: *"How much of what you've built can be reused?"* |
-| Team is stuck on a technical problem for days | First, encourage them to search and try independently. Then step in with hints, not solutions. |
-| Team is demotivated | Show them what they HAVE built. Find an external person to give positive feedback. |
+| Student feels isolated working alone | Encourage them to share progress in the group chat and to ask a family member or friend to test their project. |
+| Student wants to change their idea mid-sprint | Validate the instinct, but ask: *"How much of what you've built can be reused?"* |
+| Student is stuck on a technical problem for days | First, encourage them to search and try independently. Then step in with hints, not solutions. |
+| Student has no device or internet at home | Suggest a smaller MVP, a library or family computer, and a facilitator-submitted showcase form. |
+| Student is demotivated | Show them what they HAVE built. Find an external person to give positive feedback. |
 
 ---
 
-## The Showcase – Running the Prize Ceremony
+## The Showcase – Form Submissions and Prizes
 
-### Setup
-- Arrange the room in a presentation format (audience facing a stage / front area).
-- Each student gets a table or space to set up their demo.
+The showcase is a **form**, not a live presentation. Each student submits the
+[Capstone Showcase Form](../showcase/README.md) with screenshots of what they built, and approved
+submissions are saved in the repository's [showcase gallery](../showcase/README.md#showcase-gallery).
+
+### Before the holiday ends
+- Complete the [one-time setup](../showcase/README.md#one-time-setup): create the `showcase` and
+  `showcase-approved` labels and confirm GitHub Actions can push to the default branch.
+- Remind students of the deadline and share the form link.
+
+### Reviewing submissions
+1. Open each new **[Showcase]** issue.
+2. Check the text **and every screenshot** for surnames, contact details, passwords, or photos of people.
+3. Ask the student to edit the form if anything needs fixing.
+4. Add the `showcase-approved` label. The workflow saves the answers and screenshots to
+   `showcase/submissions/`, updates the gallery, comments, and closes the issue.
+
+### Judging
 - Have a judging panel of 3–5 people (alumni, industry guests, a teacher).
-- Share judging criteria with judges in advance (see [Project Guidelines](../term3/project-guidelines.md#judging-criteria)).
-
-### Running Order
-1. Opening remarks (5 min) — acknowledge the students' effort; set a celebratory tone.
-2. Individual capstone presentations (3–5 min each + 2–3 min Q&A). For a large group, run a gallery-style showcase where judges visit each student's demo.
-3. Break while judges deliberate (10–15 min) — use this time for informal demos and photos.
-4. Awards & Prize Ceremony.
-5. Closing remarks — thank facilitators, sponsors, teachers, and students.
+- Share the [judging criteria](../term3/project-guidelines.md#judging-criteria) and the gallery link
+  with judges.
+- Judges score each saved submission, opening the live link where one is provided.
+- Announce winners when school reopens — in assembly, a short ceremony, or the program group — and
+  thank facilitators, sponsors, teachers, and students.
 
 ### Award Categories (suggested)
 - 🥇 **Best Overall Project** — top-scoring project by judging criteria
@@ -182,7 +196,7 @@ Lessons 5–8 and an individual capstone are completed at home during the holida
 - 🛠️ **Best Technical Execution** — most functional and technically impressive
 - ❤️ **Most Impactful** — addresses the most significant community need
 
-> **Note:** Giving multiple categories means more teams are celebrated, which builds a positive culture for the program's next cohort.
+> **Note:** Giving multiple categories means more students are celebrated, which builds a positive culture for the program's next cohort.
 
 ---
 

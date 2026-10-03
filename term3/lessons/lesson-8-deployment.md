@@ -7,6 +7,8 @@
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
+>
+> 🖥️ **Slides:** [Open the Lesson 8 slide deck](../week-8-deployment-slides.html) to click through the key ideas.
 
 ---
 
@@ -80,7 +82,7 @@ complete this release checklist:
 
 Fix one issue they found, commit it, and check that the update appears online.
 
-### Step 6 | Learning Journal and Showcase Prep
+### Step 6 | Learning Journal and Showcase Form
 
 Write down:
 
@@ -91,8 +93,12 @@ Write down:
 Then add a short `README.md` to your repository that explains your project and credits any data,
 learning resources, and images.
 
-✅ **Done when:** your capstone is live (or ready for a local demo), tested by someone else, and
-listed in [What to Bring Back](../holiday-self-study.md#what-to-bring-back).
+Finally, take at least two screenshots (phone width and computer width) and submit the
+[Capstone Showcase Form](../../showcase/README.md). This form **is** your showcase: there is no live
+presentation.
+
+✅ **Done when:** your capstone is live (or saved locally), tested by someone else, and submitted with
+the Capstone Showcase Form, including screenshots.
 
 ## Free Practice
 
@@ -102,7 +108,8 @@ listed in [What to Bring Back](../holiday-self-study.md#what-to-bring-back).
 ## Facilitator Notes
 
 - Confirm public repositories and public student work comply with school policy.
-- A student may demonstrate locally if publishing is not approved; completing the release checklist
-  still meets the lesson goal.
-- Remind students to keep screenshots or a short recording as a showcase backup.
+- If publishing is not approved, a student can submit screenshots of the site running locally;
+  completing the release checklist still meets the lesson goal.
+- Review each Capstone Showcase Form for personal information before adding the
+  `showcase-approved` label (see the [showcase guide](../../showcase/README.md#for-facilitators)).
 

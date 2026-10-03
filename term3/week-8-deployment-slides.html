@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 8 · Deployment">
+    <title>Term 3 · Lesson 8 · Deployment</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 08</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 4</p><p class="deck-title">Deployment</p></div>
+        <section class="slide-viewport" aria-label="Lesson 8 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Deploy at home">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 4</p><h1>Make it live.<br><em>Test it again.</em></h1><p class="lead">Publish your individual capstone with GitHub Pages, then share it with the showcase form.</p><p class="checkpoint">Use this with the written guide <a href="lessons/lesson-8-deployment.md">Lesson 8: Deployment</a> and the <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p><div class="hero-meta"><span>Individual capstone</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Release journey">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 · ~15 MIN</p><h2>From files<br><em>to users.</em></h2><pre class="workshop-code"><code>Edit → Test → Commit → Push → Deploy → Test again</code></pre><p class="checkpoint">Deployment makes software available outside your computer. Always test after publishing.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--gold" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Pre deployment check">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 2 · ~30 MIN</p><h2>Check before<br><em>you publish.</em></h2><ul class="activity"><li><strong>Files</strong>Home page is index.html and links match file names exactly.</li><li><strong>Paths</strong>Images and links use relative paths.</li><li><strong>Safety</strong>No passwords, keys, private details or unlicensed images.</li></ul><p class="checkpoint">Also test the main task with a keyboard and at phone width.</p>
+            </div><span class="slide-number">03</span>
+          </article>
+          <article class="slide slide--dark" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: States and responsiveness">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">PREP · QUALITY CHECK</p><h2>No blank screens.<br><em>No broken phones.</em></h2><ul class="activity"><li><strong>Loading</strong>Users know data is being fetched.</li><li><strong>Empty</strong>No results still explains what happened.</li><li><strong>Error</strong>API failure does not break the whole page.</li></ul><p class="checkpoint">Resize to phone width and make sure the main action still works.</p>
+            </div><span class="slide-number slide-number--light">04</span>
+          </article>
+          <article class="slide slide--cream" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Publish with GitHub Pages">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 3 · SETTINGS</p><h2>Turn on<br><em>Pages.</em></h2><ul class="activity"><li><strong>Settings</strong>Open Settings → Pages in your repository.</li><li><strong>Source</strong>Choose Deploy from a branch.</li><li><strong>Branch</strong>Select main and / (root), then save.</li></ul><p class="checkpoint">GitHub labels can change; use the GitHub Pages quickstart if screens look different.</p>
+            </div><span class="slide-number">05</span>
+          </article>
+          <article class="slide slide--blue" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Check the public URL">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">AFTER DEPLOY · ~15 MIN</p><h2>Open like<br><em>a visitor.</em></h2><ul class="activity"><li><strong>Wait</strong>Give GitHub a few minutes to build.</li><li><strong>Private</strong>Open the URL in a private or incognito window.</li><li><strong>Navigate</strong>Try the main path without signing in.</li></ul><p class="checkpoint">If the public page works, copy the live link for your showcase evidence.</p>
+            </div><span class="slide-number slide-number--light">06</span>
+          </article>
+          <article class="slide slide--pink" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Debug deployment">
+            <div class="slide-content">
+              <p class="eyebrow">WHEN IT FAILS</p><h2>Find the<br><em>first clue.</em></h2><ul class="activity"><li><strong>Pages</strong>Is Pages enabled for the correct branch and folder?</li><li><strong>Index</strong>Is index.html at that location?</li><li><strong>Console</strong>Do Console or Network show missing files or errors?</li></ul><p class="checkpoint">Capital letters matter online: Questions.json and questions.json are different files.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Release check">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 5 · HOME TEST</p><h2>Ask someone<br><em>to try it.</em></h2><ul class="activity"><li><strong>Tester</strong>Send the URL to a family member or friend.</li><li><strong>Phone</strong>Ask them to try the main task on a phone.</li><li><strong>Fix</strong>Commit one issue they found and confirm it appears online.</li></ul><p class="checkpoint">The site should load without sign-in and show no private information.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: README and credits">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 6 · DOCUMENT</p><h2>Explain your<br><em>project.</em></h2><ul class="activity"><li><strong>Purpose</strong>What problem does the capstone solve?</li><li><strong>How</strong>How should someone use it?</li><li><strong>Credits</strong>List data, learning resources and permitted images.</li></ul><p class="checkpoint">A short README helps reviewers understand and credit your work correctly.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--dark" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Showcase prep">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">POLISH · ~30 MIN</p><h2>Prepare proof<br><em>it works.</em></h2><ul class="activity"><li><strong>Proud</strong>Choose one feature to show in a screenshot.</li><li><strong>Problem</strong>Write one deployment issue you solved.</li><li><strong>Improve</strong>List one final improvement before showcase.</li></ul><p class="checkpoint">If publishing is not approved, take screenshots of it running locally instead.</p>
+            </div><span class="slide-number slide-number--light">10</span>
+          </article>
+          <article class="slide slide--cream" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Save your evidence">
+            <div class="slide-content">
+              <p class="eyebrow">HOLIDAY PACK · CHECKLIST</p><h2>Save your<br><em>evidence.</em></h2><ul class="activity"><li><strong>Live link</strong>Your GitHub Pages URL or local files.</li><li><strong>Screenshots</strong>One phone-width and one computer-width screenshot.</li><li><strong>Journal</strong>Completed Lessons 5–8 journal and one feedback improvement.</li></ul><p class="checkpoint">Finished is better than perfect: a small project that works and that you can explain matters.</p>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Submit showcase form">
+            <div class="slide-content">
+              <p class="eyebrow">FINAL · CAPSTONE SHOWCASE</p><h2>Submit your<br><em>showcase form.</em></h2><ul class="activity"><li><strong>Include</strong>Live link, or a note that it runs locally.</li><li><strong>Attach</strong>Phone-width and computer-width screenshots.</li><li><strong>Check</strong>No passwords, API keys or personal private details are visible.</li></ul><p class="checkpoint"><a href="../showcase/README.md">Submit your Capstone Showcase Form →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

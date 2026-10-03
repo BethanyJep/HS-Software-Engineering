@@ -3,7 +3,7 @@
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Format:** Lessons 5–8 as take-home work, plus an **individual** capstone project  
 **Tools:** A browser, CodePen, Git, GitHub, and GitHub Pages (all free)  
-**Due:** The first week back at school, at the capstone showcase
+**Due:** Submit the [Capstone Showcase Form](../showcase/README.md) before school reopens
 
 ---
 
@@ -11,9 +11,11 @@
 
 Lessons 1–4 were taught in class. Over the holiday you will:
 
-1. Teach yourself [Lessons 5–8](lessons/README.md#holiday-self-study-lessons-58) using the step-by-step guides.
+1. Teach yourself [Lessons 5–8](lessons/README.md#holiday-self-study-lessons-58) using the step-by-step guides
+   and slide decks.
 2. Build **your own** version of one of the [three capstone projects](project-ideas.md) as you go.
-3. Keep a short learning journal and bring your finished project back to school.
+3. Keep a short learning journal and submit your finished project, with screenshots, using the
+   [Capstone Showcase Form](../showcase/README.md).
 
 You are not expected to be perfect or to know everything already. Work steadily, test often, and
 ask for help when you are stuck.
@@ -25,28 +27,27 @@ minimum viable product (MVP) before anything else.
 
 | Holiday week | Self-study | Capstone output |
 |---|---|---|
-| Week 1 | [Lesson 5 – Website interactivity](lessons/lesson-5-website-interactivity.md) | A working core interaction |
-| Week 2 | [Lesson 6 – APIs and fetch](lessons/lesson-6-apis-and-fetch.md) | Fetched data with loading and error states |
-| Week 3 | [Lesson 7 – Git and GitHub](lessons/lesson-7-git-and-github.md) | Your own repository with meaningful commits |
-| Week 4 | [Lesson 8 – Deployment](lessons/lesson-8-deployment.md) | A tested GitHub Pages site |
-| Weeks 5–6 | Polish and practise | Fixes from feedback, a `README`, and a rehearsed demo |
+| Week 1 | [Lesson 5 – Website interactivity](lessons/lesson-5-website-interactivity.md) · [Slides](week-5-interactivity-slides.html) | A working core interaction |
+| Week 2 | [Lesson 6 – APIs and fetch](lessons/lesson-6-apis-and-fetch.md) · [Slides](week-6-apis-slides.html) | Fetched data with loading and error states |
+| Week 3 | [Lesson 7 – Git and GitHub](lessons/lesson-7-git-and-github.md) · [Slides](week-7-git-slides.html) | Your own repository with meaningful commits |
+| Week 4 | [Lesson 8 – Deployment](lessons/lesson-8-deployment.md) · [Slides](week-8-deployment-slides.html) | A tested GitHub Pages site |
+| Weeks 5–6 | Polish and submit | Fixes from feedback, a `README`, screenshots, and your [Capstone Showcase Form](../showcase/README.md) |
 
 ## Before You Leave School
 
 - [ ] Choose one capstone option and write it on the [Holiday Capstone Plan](#holiday-capstone-plan).
-- [ ] Save a copy of your team's Lessons 1–4 work (a CodePen fork, downloaded files, or both).
+- [ ] Save a copy of your Lessons 1–4 capstone work (a CodePen fork, downloaded files, or both).
 - [ ] Check that you can open CodePen and the lesson guides on the device you will use at home.
 - [ ] Ask a parent or guardian whether you may create a free GitHub account for Lessons 7–8.
 - [ ] Save the facilitator contact or program group where you can ask questions.
 
 ## Your Individual Capstone
 
-Each student builds and presents their **own** capstone during the holiday.
+Each student builds their **own** capstone during the holiday. There are no teams.
 
 - Use the same three briefs in [Capstone Project Options](project-ideas.md); choose any one.
-- You may start from your team's Lessons 1–4 code, but you must personalise it and be able to explain
-  every part you submit.
-- Teammates may encourage and test each other's projects, but each student writes their own code.
+- Continue from your own Lessons 1–4 code and make sure you can explain every part you submit.
+- Classmates and family may encourage you and test your project, but you write your own code.
 - Meet the [requirements for every project](project-ideas.md#requirements-for-every-project) before
   adding stretch goals.
 
@@ -78,7 +79,7 @@ Each self-study lesson follows the same rhythm used in class:
 
 ## Staying Safe Online
 
-- Never share passwords, access tokens, or one-time codes with anyone, including teammates.
+- Never share passwords, access tokens, or one-time codes with anyone, including classmates.
 - Do not put your phone number, home address, school timetable, or photos of people in your project.
 - Use only fictional data, public facilitator-approved information, or images you are allowed to use.
 - Do not pay for anything; every step in this pack uses free tools.
@@ -123,12 +124,17 @@ One question I still have: _______________________________
 
 ## What to Bring Back
 
-- [ ] Your public GitHub Pages URL, or your project files if publishing was not approved
+Your showcase is the **[Capstone Showcase Form](../showcase/README.md)**. There is no live
+presentation. Before you submit it, gather:
+
+- [ ] Your public GitHub Pages URL, or a note that your project runs locally if publishing was not approved
 - [ ] Your GitHub repository link (if you created one)
-- [ ] Two screenshots: one on a phone-width screen and one on a computer-width screen
+- [ ] At least two screenshots: one at phone width and one at computer width
 - [ ] Your completed learning journal for Lessons 5–8
 - [ ] One piece of feedback you received and the improvement you made
-- [ ] A 3–5 minute demo prepared using the [presentation guidelines](project-guidelines.md#presentation-guidelines)
+
+Once a facilitator approves your form, your answers and screenshots are saved in the
+[showcase gallery](../showcase/README.md#showcase-gallery) in this repository.
 
 > Finished is better than perfect. A small project that works and that you can explain is a real
 > achievement.

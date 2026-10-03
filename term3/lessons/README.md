@@ -9,27 +9,28 @@
 
 ## Learning Journey
 
-Students start one of the [three capstone projects](../project-ideas.md) in teams during Lessons
-1–4. Over the holiday, each student completes Lessons 5–8 at home and builds **their own** version of
-the capstone. Each lesson teaches a skill and ends with a capstone checkpoint so that every session
-produces visible progress.
+Each student chooses one of the [three capstone projects](../project-ideas.md) and builds it
+**individually** — there are no teams. Lessons 1–4 are taught in class; over the holiday, each
+student completes Lessons 5–8 at home and finishes the capstone, then submits it with the
+[Capstone Showcase Form](../../showcase/README.md). Each lesson teaches a skill and ends with a
+capstone checkpoint so that every session produces visible progress.
 
-| Lesson | Topic | Where | Capstone checkpoint |
-|---|---|---|---|
-| [1](lesson-1-html-landing-page.md) | Create a landing page with HTML | Class | Page structure and project content |
-| [2](lesson-2-css-styling.md) | Add CSS to beautify your page | Class | A consistent visual design |
-| [3](lesson-3-advanced-html-css.md) | Advanced HTML/CSS concepts | Class | An accessible, responsive layout |
-| [4](lesson-4-javascript-fundamentals.md) | JavaScript functions, loops, and more | Class | Project data rendered with JavaScript |
-| [5](lesson-5-website-interactivity.md) | Add interactivity to your website | 🏠 Holiday | A working user interaction |
-| [6](lesson-6-apis-and-fetch.md) | APIs and fetching internet data | 🏠 Holiday | External data with loading and error states |
-| [7](lesson-7-git-and-github.md) | Version control with Git and GitHub | 🏠 Holiday | A personal repository with meaningful commits |
-| [8](lesson-8-deployment.md) | Deploy web applications | 🏠 Holiday | A tested, public GitHub Pages site |
+| Lesson | Topic | Where | Slides | Capstone checkpoint |
+|---|---|---|---|---|
+| [1](lesson-1-html-landing-page.md) | Create a landing page with HTML | Class | [Slides](../week-1-computing-slides.html) | Page structure and project content |
+| [2](lesson-2-css-styling.md) | Add CSS to beautify your page | Class | [Slides](../week-2-web-slides.html) | A consistent visual design |
+| [3](lesson-3-advanced-html-css.md) | Advanced HTML/CSS concepts | Class | [Slides](../week-3-responsive-slides.html) | An accessible, responsive layout |
+| [4](lesson-4-javascript-fundamentals.md) | JavaScript functions, loops, and more | Class | [Slides](../week-4-javascript-slides.html) | Project data rendered with JavaScript |
+| [5](lesson-5-website-interactivity.md) | Add interactivity to your website | 🏠 Holiday | [Slides](../week-5-interactivity-slides.html) | A working user interaction |
+| [6](lesson-6-apis-and-fetch.md) | APIs and fetching internet data | 🏠 Holiday | [Slides](../week-6-apis-slides.html) | External data with loading and error states |
+| [7](lesson-7-git-and-github.md) | Version control with Git and GitHub | 🏠 Holiday | [Slides](../week-7-git-slides.html) | A personal repository with meaningful commits |
+| [8](lesson-8-deployment.md) | Deploy web applications | 🏠 Holiday | [Slides](../week-8-deployment-slides.html) | A tested, public GitHub Pages site |
 
 ## Holiday Self-Study (Lessons 5–8)
 
 Lessons 5–8 are take-home work. Each guide is written as numbered self-study steps that a student can
-follow alone, with a home user test, a learning journal prompt, and a "done when" check. Students
-should start with the [Holiday Self-Study Pack](../holiday-self-study.md), which includes a weekly
+follow alone, with a home user test, a learning journal prompt, and a "done when" check, plus a
+matching slide deck to click through at home. Students should start with the [Holiday Self-Study Pack](../holiday-self-study.md), which includes a weekly
 schedule, a capstone plan, help and safety rules, and the list of what to bring back to school.
 
 ## Suggested Routine
@@ -39,7 +40,7 @@ Each lesson follows the same rhythm, in class or at home:
 1. **Connect** the topic to a real product and career.
 2. **Learn** one small set of concepts with a facilitator or the self-study guide.
 3. **Build** through a guided activity.
-4. **Apply** the skill to the capstone (team work in class; individual work over the holiday).
+4. **Apply** the skill to your own capstone.
 5. **Reflect** with an exit ticket or learning journal entry and save all work.
 
 Students can begin in [CodePen](https://codepen.io/pen) without an account. In Lesson 7, each
@@ -50,7 +51,7 @@ in Lesson 8.
 
 - Read the lesson and test every link from the school network.
 - Keep a completed example and screenshots available in case the internet fails.
-- Pair students when devices are limited and rotate the person typing.
+- When devices are limited, let students take turns but make sure each one saves their own copy of the code.
 - Use placeholder content rather than students' personal details.
 - Never put passwords, API keys, private data, or identifying student information in source code.
 - Reserve the final 20–25 minutes of each class lesson for the capstone checkpoint.

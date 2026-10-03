@@ -1,8 +1,7 @@
 # Term 3 – Capstone Project Options
 
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Format:** Teams of 3–5 start a project in Lessons 1–4; each student then completes their own
-version as holiday self-study  
+**Format:** Individual projects — each student builds their own capstone (no teams)  
 **Cost:** Each option can be completed with free tools
 
 ---
@@ -13,9 +12,9 @@ Instead of inventing a project idea, students select one of these three shared b
 can choose their own name, content, colours, and features, but should solve the stated problem and
 complete the common requirements.
 
-> 🏠 **Holiday capstone:** During the holiday, every student builds and presents an **individual**
-> capstone while working through Lessons 5–8. You may start from your team's Lessons 1–4 code and keep
-> the same brief or switch to another one. See the [Holiday Self-Study Pack](holiday-self-study.md).
+> 🏠 **Holiday capstone:** You start your capstone in Lessons 1–4 and finish it at home while working
+> through Lessons 5–8 (see the [Holiday Self-Study Pack](holiday-self-study.md)). You then submit it
+> with the [Capstone Showcase Form](../showcase/README.md), including screenshots.
 
 | Option | Main career paths | Suggested free tools |
 |---|---|---|
@@ -28,7 +27,7 @@ complete the common requirements.
 
 ## Requirements for Every Project
 
-By the showcase, every capstone must include:
+By the time you submit the showcase form, every capstone must include:
 
 - [ ] A semantic HTML landing page with clear headings, navigation, and a footer
 - [ ] Consistent CSS and a layout that works on phones and computers
@@ -38,7 +37,7 @@ By the showcase, every capstone must include:
 - [ ] Data loaded with `fetch`, from a suitable public API or a JSON file you create
 - [ ] Loading, empty, and error states for fetched data
 - [ ] Your own GitHub repository with clear, meaningful commits
-- [ ] A tested GitHub Pages deployment, or a local demonstration if school policy prevents publishing
+- [ ] A tested GitHub Pages deployment, or screenshots of it running locally if school policy prevents publishing
 - [ ] A short `README` crediting data, learning resources, and permitted images
 
 ---
@@ -188,11 +187,10 @@ they can take to protect an account.
 ## Selection Activity
 
 1. Read all three briefs.
-2. Privately rank the options from 1 to 3.
-3. In class, discuss the rankings and select one option the whole team can support for Lessons 1–4.
-4. Write one sentence explaining why that option matters to your target user.
-5. Complete the [Project Kickoff Form](project-guidelines.md#appendix-a--project-kickoff-form).
-6. Before the holiday, confirm your individual choice on the
+2. Rank the options from 1 to 3 and choose the one you are most excited to build.
+3. Write one sentence explaining why that option matters to your target user.
+4. Complete the [Project Kickoff Form](project-guidelines.md#appendix-a--project-kickoff-form).
+5. Before the holiday, confirm your plan on the
    [Holiday Capstone Plan](holiday-self-study.md#holiday-capstone-plan).
 
 Do not add stretch goals until the minimum viable product works.

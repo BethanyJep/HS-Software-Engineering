@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 6 · APIs and Fetch">
+    <title>Term 3 · Lesson 6 · APIs and Fetch</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 06</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 2</p><p class="deck-title">APIs and Fetch</p></div>
+        <section class="slide-viewport" aria-label="Lesson 6 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: APIs at home">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 2</p><h1>Ask for data.<br><em>Show it clearly.</em></h1><p class="lead">Use fetch, async and await to display public or project data in your individual capstone.</p><p class="checkpoint">Use this with the written guide <a href="lessons/lesson-6-apis-and-fetch.md">Lesson 6: APIs and Fetch</a> and the <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p><div class="hero-meta"><span>Individual capstone</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Request and response">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 · ~15 MIN</p><h2>Like ordering<br><em>at a restaurant.</em></h2><pre class="workshop-code"><code>Your page → request → API
+Your page ← JSON response ← API</code></pre><p class="checkpoint">The request asks for data. The response returns JSON your JavaScript can read.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Keep API use safe">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">SAFETY CHECK · ~10 MIN</p><h2>Public data.<br><em>Private secrets.</em></h2><ul class="activity"><li><strong>Never publish</strong>Passwords, API keys, tokens or private personal information.</li><li><strong>Ask less</strong>Request only the data your page needs.</li><li><strong>Plan fallback</strong>Show a useful message when internet or service fails.</li></ul><p class="checkpoint">Open APIs with no key, like Open-Meteo, are safest for browser practice.</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Open Meteo setup">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 2 · HTML</p><h2>Start with<br><em>a status.</em></h2><pre class="workshop-code"><code>&lt;p id=&quot;weather-status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
+&lt;button id=&quot;refresh&quot; type=&quot;button&quot;&gt;Refresh&lt;/button&gt;</code></pre><p class="checkpoint">The status paragraph tells the user when data is loading, ready or unavailable.</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Fetch with async await">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD · JAVASCRIPT</p><h2>Wait for<br><em>the response.</em></h2><pre class="workshop-code"><code>const status = document.querySelector(&quot;#weather-status&quot;);
+
+async function loadWeather() {
+  status.textContent = &quot;Loading weather…&quot;;
+  const response = await fetch(weatherUrl);
+  const data = await response.json();
+  status.textContent = `Nairobi: ${data.current.temperature_2m} °C`;
+}</code></pre><p class="checkpoint">async lets the function use await. await pauses until fetch or json is ready.</p>
+            </div><span class="slide-number slide-number--light">05</span>
+          </article>
+          <article class="slide slide--gold" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Use a real Open Meteo URL">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD · NO KEY NEEDED</p><h2>Coordinates choose<br><em>the place.</em></h2><pre class="workshop-code"><code>const weatherUrl =
+  &quot;https://api.open-meteo.com/v1/forecast&quot; +
+  &quot;?latitude=-1.2864&amp;longitude=36.8172&quot; +
+  &quot;&amp;current=temperature_2m&quot;;
+
+loadWeather();</code></pre><p class="checkpoint">Open the URL in a new tab. Find current.temperature_2m in the raw JSON.</p>
+            </div><span class="slide-number">06</span>
+          </article>
+          <article class="slide slide--pink" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Try catch errors">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD · FRIENDLY FAILURE</p><h2>Errors should<br><em>not blank the page.</em></h2><pre class="workshop-code"><code>try {
+  const response = await fetch(weatherUrl);
+  if (!response.ok) {
+    throw new Error(`Request failed: ${response.status}`);
+  }
+  const data = await response.json();
+  status.textContent = `Nairobi: ${data.current.temperature_2m} °C`;
+} catch (error) {
+  status.textContent = &quot;Weather is unavailable. Try again later.&quot;;
+  console.error(error);
+}</code></pre><p class="checkpoint">A helpful error message is better than a silent broken feature.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Experiments">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 3 · ~35 MIN</p><h2>Change one thing.<br><em>Retest.</em></h2><ul class="activity"><li><strong>Place</strong>Use coordinates for another Kenyan town.</li><li><strong>Field</strong>Add one current-weather value from the docs.</li><li><strong>Refresh</strong>Make the button call loadWeather again.</li></ul><p class="checkpoint">Temporarily break the URL to confirm the error appears, then restore it.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Responsible API use">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 4 · JOURNAL</p><h2>Use services<br><em>respectfully.</em></h2><ul class="activity"><li><strong>Docs</strong>Read limits and required credit.</li><li><strong>Secrets</strong>Do not commit keys, tokens or passwords.</li><li><strong>Fallback</strong>Design loading, empty and error states.</li></ul><p class="checkpoint">If a site asks for payment details or a secret key, choose a different practice API.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--blue" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Capstone checkpoint">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 5 · ~45 MIN</p><h2>Fetch data for<br><em>your capstone.</em></h2><ul class="activity"><li><strong>Opportunities</strong>Fetch your own opportunities.json file.</li><li><strong>Weather</strong>Fetch Open-Meteo current weather for chosen locations.</li><li><strong>CyberSmart</strong>Fetch your own questions.json file.</li></ul><p class="checkpoint">Show loading, success, empty and friendly error states; never leave a blank screen.</p>
+            </div><span class="slide-number slide-number--light">10</span>
+          </article>
+          <article class="slide slide--cream" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Learning journal">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 6 · ~15 MIN</p><h2>Explain the<br><em>data journey.</em></h2><ul class="activity"><li><strong>Flow</strong>Draw request → API → JSON response.</li><li><strong>Await</strong>Explain what the code waits for.</li><li><strong>Try/catch</strong>Describe what happens when the request fails.</li></ul><p class="checkpoint">Done when your capstone displays fetched or clearly labelled sample data with states.</p>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Next Git and GitHub">
+            <div class="slide-content">
+              <p class="eyebrow">NEXT · HOLIDAY WEEK 3</p><h2>Next: save your<br><em>project history.</em></h2><ul class="activity"><li><strong>Export</strong>Download your capstone files from CodePen if needed.</li><li><strong>Check</strong>Keep private data out of files.</li><li><strong>Prepare</strong>Ask permission for your own GitHub account.</li></ul><p class="checkpoint"><a href="week-7-git-slides.html">Open Lesson 7: Git and GitHub →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

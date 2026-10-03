@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1022">
+    <meta name="description" content="Term 3 · Lesson 5 · Website Interactivity">
+    <title>Term 3 · Lesson 5 · Website Interactivity</title>
+    <link rel="stylesheet" href="session-slides.css">
+  </head>
+  <body class="workshop">
+    <div class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="../index.html#term-3" aria-label="Back to all Term 3 slide decks"><span class="brand-mark" aria-hidden="true">&lt;/&gt;</span><span><strong>Software Engineering</strong><small>Alliance Girls High School</small></span></a>
+        <div class="session-label"><span class="live-dot" aria-hidden="true"></span>TERM 3 <b>/</b> LESSON 05</div>
+        <button class="icon-button" id="fullscreen-button" type="button" aria-label="Enter fullscreen" title="Enter fullscreen"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"></path></svg></button>
+      </header>
+      <main class="deck-shell">
+        <div class="deck-heading"><p class="eyebrow">HOLIDAY SELF-STUDY · WEEK 1</p><p class="deck-title">Website Interactivity</p></div>
+        <section class="slide-viewport" aria-label="Lesson 5 presentation slides">
+          <article class="slide slide--blue is-active" id="slide-1" aria-roledescription="slide" aria-label="1 of 12: Website interactivity at home">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">HOLIDAY SELF-STUDY · WEEK 1</p><h1>Make your page.<br><em>Respond.</em></h1><p class="lead">Use DOM events to turn your individual capstone into a useful experience.</p><p class="checkpoint">Use this with the written guide <a href="lessons/lesson-5-website-interactivity.md">Lesson 5: Website Interactivity</a> and the <a href="holiday-self-study.md">Holiday Self-Study Pack</a>.</p><div class="hero-meta"><span>Individual capstone</span><span>Grade 10 · Term 3</span></div>
+            </div><span class="slide-number slide-number--light">01</span>
+          </article>
+          <article class="slide slide--cream" id="slide-2" aria-roledescription="slide" aria-label="2 of 12: Event action feedback">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 1 · ~15 MIN</p><h2>Event → action →<br><em>feedback.</em></h2><ul class="activity"><li><strong>Event</strong>A click, typing, submit, Enter or Space.</li><li><strong>Action</strong>JavaScript reads data and decides what to show.</li><li><strong>Feedback</strong>The page updates text so the user knows what happened.</li></ul><p class="checkpoint">Journal one example: lift button, M-Pesa prompt, or school portal feedback.</p>
+            </div><span class="slide-number">02</span>
+          </article>
+          <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Set up the DOM">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 2 · ~20 MIN</p><h2>Give JavaScript<br><em>targets.</em></h2><pre class="workshop-code"><code>&lt;label for=&quot;search&quot;&gt;Find a resource&lt;/label&gt;
+&lt;input id=&quot;search&quot; type=&quot;search&quot;&gt;
+&lt;button id=&quot;search-button&quot; type=&quot;button&quot;&gt;Search&lt;/button&gt;
+&lt;button id=&quot;reset&quot; type=&quot;button&quot;&gt;Reset&lt;/button&gt;
+&lt;p id=&quot;status&quot; aria-live=&quot;polite&quot;&gt;&lt;/p&gt;
+&lt;ul id=&quot;results&quot;&gt;&lt;/ul&gt;</code></pre><p class="checkpoint">Unique ids let JavaScript find the input, buttons, status and result list.</p>
+            </div><span class="slide-number slide-number--light">03</span>
+          </article>
+          <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Select elements and data">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD · JAVASCRIPT PANEL</p><h2>Choose elements.<br><em>Store data.</em></h2><pre class="workshop-code"><code>const resources = [
+  { title: &quot;Revision group&quot; },
+  { title: &quot;Science fair&quot; },
+  { title: &quot;Coding club&quot; }
+];
+const searchInput = document.querySelector(&quot;#search&quot;);
+const searchButton = document.querySelector(&quot;#search-button&quot;);
+const resetButton = document.querySelector(&quot;#reset&quot;);
+const status = document.querySelector(&quot;#status&quot;);
+const results = document.querySelector(&quot;#results&quot;);</code></pre><p class="checkpoint">Read each const aloud: what value or element does it hold?</p>
+            </div><span class="slide-number">04</span>
+          </article>
+          <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Render results safely">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">BUILD · SAFE OUTPUT</p><h2>Show results.<br><em>Safely.</em></h2><pre class="workshop-code"><code>function showResults(items) {
+  results.replaceChildren();
+  for (const item of items) {
+    const listItem = document.createElement(&quot;li&quot;);
+    listItem.textContent = item.title;
+    results.append(listItem);
+  }
+  status.textContent = `${items.length} result(s) found.`;
+}</code></pre><p class="checkpoint">Use textContent for ordinary text. Do not put user or API text into innerHTML.</p>
+            </div><span class="slide-number slide-number--light">05</span>
+          </article>
+          <article class="slide slide--gold" id="slide-6" aria-roledescription="slide" aria-label="6 of 12: Search and filter">
+            <div class="slide-content">
+              <p class="eyebrow">BUILD · USER ACTION</p><h2>Filter what<br><em>matches.</em></h2><pre class="workshop-code"><code>function searchResources() {
+  const query = searchInput.value.trim().toLowerCase();
+  const matches = resources.filter((item) =&gt;
+    item.title.toLowerCase().includes(query)
+  );
+  showResults(matches);
+}
+searchButton.addEventListener(&quot;click&quot;, searchResources);</code></pre><p class="checkpoint">The event is click. The action is filter. The feedback is the result list and status.</p>
+            </div><span class="slide-number">06</span>
+          </article>
+          <article class="slide slide--pink" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Empty state and reset">
+            <div class="slide-content">
+              <p class="eyebrow">PRACTISE · ~25 MIN</p><h2>Plan for<br><em>nothing found.</em></h2><pre class="workshop-code"><code>if (items.length === 0) {
+  status.textContent = &quot;No resources match your search.&quot;;
+}
+
+resetButton.addEventListener(&quot;click&quot;, () =&gt; {
+  searchInput.value = &quot;&quot;;
+  showResults(resources);
+});</code></pre><p class="checkpoint">Add a fourth resource, test a search with no match, then reset to all resources.</p>
+            </div><span class="slide-number">07</span>
+          </article>
+          <article class="slide slide--green" id="slide-8" aria-roledescription="slide" aria-label="8 of 12: Keyboard test">
+            <div class="slide-content">
+              <p class="eyebrow">TEST · ~15 MIN</p><h2>No mouse?<br><em>Still works.</em></h2><ul class="activity"><li><strong>Tab</strong>Move to search, Search button and Reset button.</li><li><strong>Enter</strong>Activate each button from the keyboard.</li><li><strong>Space</strong>Try Space on buttons and check visible feedback.</li></ul><p class="checkpoint">If a control cannot be reached or understood, fix labels, button types and status text.</p>
+            </div><span class="slide-number">08</span>
+          </article>
+          <article class="slide slide--cream" id="slide-9" aria-roledescription="slide" aria-label="9 of 12: Capstone checkpoint">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 4 · ~45 MIN</p><h2>Apply one<br><em>core interaction.</em></h2><ul class="activity"><li><strong>Opportunities</strong>School Opportunities Hub: filter or search opportunities.json.</li><li><strong>Weather</strong>Kenya Weather Dashboard: choose a location.</li><li><strong>CyberSmart</strong>CyberSmart Quest: answer buttons show explanations.</li></ul><p class="checkpoint">It must work with mouse and keyboard, show status, and handle no results.</p>
+            </div><span class="slide-number">09</span>
+          </article>
+          <article class="slide slide--dark" id="slide-10" aria-roledescription="slide" aria-label="10 of 12: Home user test">
+            <div class="slide-content">
+              <p class="eyebrow eyebrow--light">STEP 5 · ~20 MIN</p><h2>Watch a real<br><em>first try.</em></h2><ul class="activity"><li><strong>Ask</strong>Give a family member or friend one task.</li><li><strong>Observe</strong>Do not explain. Note hesitation, success and surprises.</li><li><strong>Improve</strong>Fix one thing based on what you saw.</li></ul><p class="checkpoint">A small reliable interaction is better than many unfinished controls.</p>
+            </div><span class="slide-number slide-number--light">10</span>
+          </article>
+          <article class="slide slide--cream" id="slide-11" aria-roledescription="slide" aria-label="11 of 12: Learning journal">
+            <div class="slide-content">
+              <p class="eyebrow">STEP 6 · ~15 MIN</p><h2>Write what<br><em>you learned.</em></h2><ul class="activity"><li><strong>Event</strong>What starts your feature?</li><li><strong>Action</strong>What does your JavaScript do?</li><li><strong>Feedback</strong>What did your tester find confusing, and what changed?</li></ul><p class="checkpoint">Done when your capstone has one working interaction and your journal entry is complete.</p>
+            </div><span class="slide-number">11</span>
+          </article>
+          <article class="slide slide--gold" id="slide-12" aria-roledescription="slide" aria-label="12 of 12: Next APIs and fetch">
+            <div class="slide-content">
+              <p class="eyebrow">NEXT · HOLIDAY WEEK 2</p><h2>Next: fetch data<br><em>from the internet.</em></h2><ul class="activity"><li><strong>Keep</strong>Your working interaction.</li><li><strong>Bring</strong>Questions from your user test.</li><li><strong>Prepare</strong>A data source for your capstone.</li></ul><p class="checkpoint"><a href="week-6-apis-slides.html">Open Lesson 6: APIs and Fetch →</a></p>
+            </div><span class="slide-number">12</span>
+          </article>
+        </section>
+        <div class="deck-controls">
+          <button class="control-button" id="previous-button" type="button" aria-label="Previous slide"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"></path></svg><span>Back</span></button>
+          <div class="progress-wrap"><div class="progress-track" aria-hidden="true"><span id="progress-bar"></span></div><div class="slide-counter" aria-live="polite"><strong id="current-slide">01</strong><span>/</span><span>12</span></div></div>
+          <button class="control-button control-button--next" id="next-button" type="button" aria-label="Next slide"><span>Next</span><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"></path></svg></button>
+        </div>
+        <nav class="slide-dots" aria-label="Choose a slide">
+          <button class="dot is-active" type="button" aria-label="Go to slide 1" aria-current="true"></button><button class="dot" type="button" aria-label="Go to slide 2"></button><button class="dot" type="button" aria-label="Go to slide 3"></button><button class="dot" type="button" aria-label="Go to slide 4"></button><button class="dot" type="button" aria-label="Go to slide 5"></button><button class="dot" type="button" aria-label="Go to slide 6"></button><button class="dot" type="button" aria-label="Go to slide 7"></button><button class="dot" type="button" aria-label="Go to slide 8"></button><button class="dot" type="button" aria-label="Go to slide 9"></button><button class="dot" type="button" aria-label="Go to slide 10"></button><button class="dot" type="button" aria-label="Go to slide 11"></button><button class="dot" type="button" aria-label="Go to slide 12"></button>
+        </nav>
+        <p class="keyboard-hint"><span>←</span> <span>→</span> to navigate · <span>F</span> fullscreen</p>
+        <p class="sr-only" id="slide-status" aria-live="polite">Slide 1 of 12</p>
+      </main>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -40,7 +40,7 @@ Open `index.html` in a browser to run either version (internet needed for the fo
 | L4 Learn (10-30) | v1 `app.js` steps 1 to 3: variables, `cardMatches` (parameters and return), `showTopic` (loop and `if`). Do the lesson's array-of-objects console exercise alongside it |
 | L4 Guided practice (30-50) | v1 step 4 and the "Try it yourself" list at the bottom of `app.js` |
 | L4 Debugging (50-60) | `debug-challenge.js` |
-| Capstone checkpoint | Teams copy a card, change the words, images and `data-category`. Stretch: move their content into an array of objects, as in v2 |
+| Capstone checkpoint | Each student copies a card, changes the words, images and `data-category`. Stretch: move their content into an array of objects, as in v2 |
 | Stretch or later week | v2, one feature at a time |
 
 ## Version 1 vs Version 2
