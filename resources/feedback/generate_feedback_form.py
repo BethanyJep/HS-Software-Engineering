@@ -1,4 +1,4 @@
-"""Generate the fillable end-of-program student feedback form (PDF).
+"""Generate the one-page end-of-program student feedback form (PDF).
 
 Usage (from the repository root):
 
@@ -6,7 +6,13 @@ Usage (from the repository root):
     python resources/feedback/generate_feedback_form.py
 
 The PDF is written next to this script as ``student-feedback-form.pdf``.
-Edit the question lists below and re-run the script to update the form.
+
+The form is designed to be printed and filled in by hand: every answer box and
+writing line is drawn on the page itself. Invisible form fields sit on top of
+them so the same PDF can also be completed on screen.
+
+Edit the question lists below and re-run the script to update the form. The
+script stops with an error if the content no longer fits on a single page.
 """
 
 from pathlib import Path
@@ -18,9 +24,11 @@ from reportlab.pdfgen import canvas
 OUTPUT = Path(__file__).with_name("student-feedback-form.pdf")
 
 PAGE_W, PAGE_H = A4
-MARGIN = 40
-BOTTOM = 45
+MARGIN = 32
+GUTTER = 16
+BOTTOM = 34
 CONTENT_W = PAGE_W - 2 * MARGIN
+HALF_W = (CONTENT_W - GUTTER) / 2
 
 NAVY = colors.HexColor("#0b1022")
 BLUE = colors.HexColor("#315ee7")
@@ -29,55 +37,46 @@ GOLD = colors.HexColor("#f5c95f")
 GREEN = colors.HexColor("#72c4a7")
 CREAM = colors.HexColor("#f8f4ea")
 GREY = colors.HexColor("#5b6275")
-FIELD_BG = colors.HexColor("#f4f6fd")
+LINE = colors.HexColor("#b8bdcc")
 
-PROGRAM_SESSIONS = [
-    ("t2_s1", "Term 2 · Session 1 – Introduction to Software Engineering"),
-    ("t2_s2", "Term 2 · Session 2 – Career Conversations"),
-    ("t2_s3", "Term 2 · Session 3 – Resource Session"),
-    ("t2_panel", "Term 2 · Tech Careers Panel & Group Discussion"),
-    ("t3_l1", "Lesson 1 – Create a landing page with HTML"),
-    ("t3_l2", "Lesson 2 – Add CSS to beautify your page"),
-    ("t3_l3", "Lesson 3 – Advanced HTML/CSS concepts"),
-    ("t3_l4", "Lesson 4 – JavaScript functions, loops, and more"),
-    ("t3_l5", "Lesson 5 – Add interactivity to your website"),
-    ("t3_l6", "Lesson 6 – APIs and fetching internet data"),
-    ("t3_l7", "Lesson 7 – Version control with Git and GitHub"),
-    ("t3_l8", "Lesson 8 – Deploy web applications"),
+BOX = 9
+ROW_H = 14.5
+COL_STEP = 19
+
+SESSIONS_LEFT = [
+    ("t2_s1", "T2 · Intro to Software Engineering"),
+    ("t2_s2", "T2 · Career Conversations"),
+    ("t2_s3", "T2 · Resource Session"),
+    ("t2_panel", "T2 · Tech Careers Panel"),
+    ("t3_l1", "L1 · HTML landing page"),
+    ("t3_l2", "L2 · CSS styling"),
+]
+SESSIONS_RIGHT = [
+    ("t3_l3", "L3 · Advanced HTML/CSS"),
+    ("t3_l4", "L4 · JavaScript fundamentals"),
+    ("t3_l5", "L5 · Website interactivity"),
+    ("t3_l6", "L6 · APIs and fetching data"),
+    ("t3_l7", "L7 · Git and GitHub"),
+    ("t3_l8", "L8 · Deploying your site"),
 ]
 
 SKILLS = [
-    ("html", "Writing HTML to structure a web page"),
-    ("css", "Styling a page with CSS (incl. responsive layouts)"),
-    ("js", "Writing JavaScript (functions, loops, events)"),
+    ("html", "Structuring a page with HTML"),
+    ("css", "Styling & responsive layouts (CSS)"),
+    ("js", "JavaScript functions, loops, events"),
     ("api", "Fetching data from an API"),
     ("git", "Using Git and GitHub with a team"),
-    ("deploy", "Deploying a website with GitHub Pages"),
+    ("deploy", "Deploying with GitHub Pages"),
 ]
 
 STATEMENTS = [
-    ("pace", "The lessons moved at a good pace for me."),
-    ("explain", "Facilitators explained concepts clearly."),
-    ("help", "I could get help when I was stuck."),
-    ("tools", "I had enough access to devices and the internet."),
-    ("capstone", "The capstone helped me apply what I learned."),
-    ("team", "My team worked well together."),
-    ("career", "I can picture myself in a tech career."),
-]
-
-CAPSTONES = [
-    ("hub", "School Opportunities Hub"),
-    ("weather", "Kenya Weather Dashboard"),
-    ("cyber", "CyberSmart Quest"),
-    ("none", "Did not build one"),
-]
-
-INTEREST_SCALE = [
-    ("1", "Not at all"),
-    ("2", "A little"),
-    ("3", "Somewhat"),
-    ("4", "Very"),
-    ("5", "Extremely"),
+    ("pace", "The lessons moved at a good pace"),
+    ("explain", "Concepts were explained clearly"),
+    ("help", "I could get help when I was stuck"),
+    ("tools", "I had enough device/internet access"),
+    ("capstone", "The capstone helped me apply skills"),
+    ("team", "My team worked well together"),
+    ("career", "I can picture myself in a tech career"),
 ]
 
 CAREER_PATHS = [
@@ -85,269 +84,231 @@ CAREER_PATHS = [
     ("mobile", "Mobile Development"),
     ("security", "Cybersecurity"),
     ("ai", "AI & Machine Learning"),
-    ("data", "Data Analysis & Science"),
+    ("data", "Data Analysis"),
     ("cloud", "Cloud & DevOps"),
     ("uiux", "UI/UX Design"),
     ("games", "Game Development"),
-    ("qa", "Quality Assurance & Testing"),
+    ("qa", "QA & Testing"),
     ("unsure", "Not sure yet"),
 ]
 
-BUTTON_STYLE = dict(
-    borderColor=BLUE, fillColor=colors.white, textColor=BLUE, borderWidth=0.8, forceBorder=True,
-)
-FIELD_STYLE = dict(
-    fontSize=10, borderWidth=0.8, borderColor=GREY, fillColor=FIELD_BG, textColor=NAVY,
-    forceBorder=True,
-)
+OPEN_QUESTIONS = [
+    ("enjoyed_most", "What did you enjoy most, and why?"),
+    ("hardest", "What was hardest? What would have helped?"),
+    ("change", "What should we change or add for the next group?"),
+    ("message", "A message for the facilitators and volunteers"),
+]
+
+# Form widgets are invisible: the printed boxes and lines are drawn on the page.
+HIDDEN = dict(borderWidth=0, borderColor=colors.transparent, fillColor=colors.transparent)
 
 
-class FormBuilder:
-    """Small helper that tracks the cursor position while drawing the form."""
-
+class OnePageForm:
     def __init__(self, path):
         self.c = canvas.Canvas(str(path), pagesize=A4)
         self.c.setTitle("Student Feedback Form – Software Engineering Program")
         self.c.setAuthor("TOFA & Alliance Girls Alumni")
         self.c.setSubject("End-of-program student feedback")
         self.form = self.c.acroForm
-        self.page = 0
-        self.y = 0
-        self.new_page()
+        self.y = PAGE_H
 
-    # ----- page furniture -------------------------------------------------
-    def new_page(self):
-        if self.page:
-            self.footer()
-            self.c.showPage()
-        self.page += 1
-        self.y = PAGE_H - MARGIN
-        if self.page == 1:
-            self.title_block()
-        else:
-            self.c.setFillColor(GREY)
-            self.c.setFont("Helvetica", 8)
-            self.c.drawString(MARGIN, self.y, "Student Feedback Form · Software Engineering Program")
-            self.y -= 22
+    # ----- drawing primitives ---------------------------------------------
+    def text(self, x, y, value, size=8, bold=False, color=NAVY, align="left"):
+        self.c.setFillColor(color)
+        self.c.setFont("Helvetica-Bold" if bold else "Helvetica", size)
+        draw = {"left": self.c.drawString, "centre": self.c.drawCentredString,
+                "right": self.c.drawRightString}[align]
+        draw(x, y, value)
 
-    def footer(self):
-        self.c.setFillColor(GREY)
-        self.c.setFont("Helvetica", 8)
-        self.c.drawString(MARGIN, 22, "TOFA × Alliance Girls Alumni · Alliance Girls High School")
-        self.c.drawRightString(PAGE_W - MARGIN, 22, f"Page {self.page}")
+    def box(self, x, y):
+        """Printed tick box with its lower-left corner at (x, y)."""
+        self.c.setStrokeColor(NAVY)
+        self.c.setLineWidth(0.7)
+        self.c.setFillColor(colors.white)
+        self.c.rect(x, y, BOX, BOX, stroke=1, fill=1)
 
-    def ensure(self, height):
-        if self.y - height < BOTTOM:
-            self.new_page()
+    def radio(self, group, value, tooltip, x, y):
+        self.box(x, y)
+        self.form.radio(name=group, value=value, tooltip=tooltip, selected=False, x=x, y=y,
+                        size=BOX, buttonStyle="circle", shape="square", textColor=BLUE,
+                        **HIDDEN)
 
-    def title_block(self):
-        band_h = 92
+    def checkbox(self, name, tooltip, x, y):
+        self.box(x, y)
+        self.form.checkbox(name=name, tooltip=tooltip, x=x, y=y, size=BOX,
+                           buttonStyle="check", textColor=BLUE, **HIDDEN)
+
+    def bar(self, x, width, title):
+        self.c.setFillColor(BLUE)
+        self.c.roundRect(x, self.y - 14, width, 16, 3, stroke=0, fill=1)
+        self.text(x + 7, self.y - 9, title, size=9.5, bold=True, color=colors.white)
+
+    # ----- page sections ----------------------------------------------------
+    def header(self):
+        band_h = 58
         self.c.setFillColor(NAVY)
         self.c.rect(0, PAGE_H - band_h, PAGE_W, band_h, stroke=0, fill=1)
         stripe_w = PAGE_W / 4
         for i, col in enumerate((BLUE, PINK, GOLD, GREEN)):
             self.c.setFillColor(col)
-            self.c.rect(i * stripe_w, PAGE_H - band_h - 5, stripe_w, 5, stroke=0, fill=1)
-        self.c.setFillColor(GOLD)
-        self.c.setFont("Helvetica-Bold", 9)
-        self.c.drawString(MARGIN, PAGE_H - 30,
-                          "ALLIANCE GIRLS HIGH SCHOOL · SOFTWARE ENGINEERING PROGRAM")
-        self.c.setFillColor(colors.white)
-        self.c.setFont("Helvetica-Bold", 22)
-        self.c.drawString(MARGIN, PAGE_H - 58, "Student Feedback Form")
-        self.c.setFont("Helvetica", 10)
-        self.c.setFillColor(CREAM)
-        self.c.drawString(MARGIN, PAGE_H - 77,
-                          "Final class · Term 2 sessions, Term 3 lessons and capstone")
-        self.y = PAGE_H - band_h - 24
-        intro = [
-            "Thank you for being part of this program! Your honest answers help us improve it for",
-            "future students at Alliance Girls and at other schools. Your name is optional and there",
-            "are no wrong answers. Click a box to choose an answer and type in the shaded boxes",
-            "to write – or print this form and fill it in by hand.",
-        ]
-        self.c.setFillColor(NAVY)
-        self.c.setFont("Helvetica", 9.5)
-        for line in intro:
-            self.c.drawString(MARGIN, self.y, line)
-            self.y -= 13
-        self.y -= 6
+            self.c.rect(i * stripe_w, PAGE_H - band_h - 4, stripe_w, 4, stroke=0, fill=1)
+        self.text(MARGIN, PAGE_H - 20,
+                  "ALLIANCE GIRLS HIGH SCHOOL · SOFTWARE ENGINEERING PROGRAM",
+                  size=7.5, bold=True, color=GOLD)
+        self.text(MARGIN, PAGE_H - 44, "Student Feedback Form", size=19, bold=True,
+                  color=colors.white)
+        self.text(PAGE_W - MARGIN, PAGE_H - 44, "Term 2 sessions · Term 3 lessons & capstone",
+                  size=8.5, color=CREAM, align="right")
+        self.y = PAGE_H - band_h - 18
+        self.text(MARGIN, self.y,
+                  "Thank you for being part of this program! Please answer honestly – you do not "
+                  "need to write your name.", size=8.5)
+        self.y -= 11
+        self.text(MARGIN, self.y,
+                  "Tick (or shade) one box per row with a pen. You can also fill this form in "
+                  "on screen.", size=8.5, color=GREY)
+        self.y -= 12
 
-    # ----- content helpers ------------------------------------------------
-    def section(self, letter, title, hint=None, keep_with=60):
-        self.ensure(30 + (14 if hint else 0) + keep_with)
-        self.y -= 6
-        self.c.setFillColor(BLUE)
-        self.c.roundRect(MARGIN, self.y - 16, CONTENT_W, 20, 4, stroke=0, fill=1)
-        self.c.setFillColor(colors.white)
-        self.c.setFont("Helvetica-Bold", 11)
-        self.c.drawString(MARGIN + 8, self.y - 10, f"{letter}. {title}")
-        self.y -= 30
-        if hint:
-            self.c.setFillColor(GREY)
-            self.c.setFont("Helvetica-Oblique", 8.5)
-            self.c.drawString(MARGIN, self.y, hint)
-            self.y -= 14
-
-    def label(self, text):
-        self.c.setFillColor(NAVY)
-        self.c.setFont("Helvetica-Bold", 9.5)
-        self.c.drawString(MARGIN, self.y, text)
-
-    def text_field(self, name, label, tooltip, x, width, label_w):
-        self.c.setFillColor(NAVY)
-        self.c.setFont("Helvetica-Bold", 9.5)
-        self.c.drawString(x, self.y, label)
-        self.form.textfield(name=name, tooltip=tooltip, x=x + label_w, y=self.y - 5,
-                            width=width - label_w, height=17, **FIELD_STYLE)
-
-    def text_area(self, name, question, tooltip, height=70):
-        self.ensure(height + 26)
-        self.label(question)
-        self.y -= 6
-        self.form.textfield(name=name, tooltip=tooltip, x=MARGIN, y=self.y - height,
-                            width=CONTENT_W, height=height, fieldFlags="multiline doNotScroll",
-                            **FIELD_STYLE)
-        self.y -= height + 18
-
-    def scale_header(self, labels, x0, step, first_col):
-        lines = max(len(text.split("\n")) for text in labels)
-        self.c.setFillColor(GREY)
-        self.c.setFont("Helvetica-Bold", 7.5)
-        self.c.drawString(MARGIN + 4, self.y - 9 * (lines - 1), first_col)
-        for i, text in enumerate(labels):
-            for j, part in enumerate(text.split("\n")):
-                self.c.drawCentredString(x0 + i * step, self.y - 9 * j, part)
-        self.y -= 9 * (lines - 1) + 10
-
-    def rating_grid(self, rows, labels, values, prefix, first_col):
-        step = 46
-        x0 = PAGE_W - MARGIN - step * (len(labels) - 1) - 20
-        self.ensure(40)
-        self.scale_header(labels, x0, step, first_col)
-        for index, (key, text) in enumerate(rows):
-            if self.y - 18 < BOTTOM:
-                self.new_page()
-                self.scale_header(labels, x0, step, first_col)
+    def grid(self, x, width, rows, labels, values, prefix, legend, first_col):
+        """Rating grid inside a column starting at ``x``; returns the bottom y."""
+        y = self.y
+        self.text(x, y, legend, size=7, color=GREY)
+        y -= 12
+        x_last = x + width - BOX / 2 - 4
+        col_x = [x_last - (len(labels) - 1 - i) * COL_STEP for i in range(len(labels))]
+        self.text(x + 3, y, first_col, size=6.5, bold=True, color=GREY)
+        for cx, label in zip(col_x, labels):
+            self.text(cx, y, label, size=6.5, bold=True, color=GREY, align="centre")
+        y -= 4
+        for index, (key, label) in enumerate(rows):
             if index % 2 == 0:
                 self.c.setFillColor(CREAM)
-                self.c.rect(MARGIN, self.y - 13, CONTENT_W, 18, stroke=0, fill=1)
-            self.c.setFillColor(NAVY)
-            self.c.setFont("Helvetica", 9)
-            self.c.drawString(MARGIN + 4, self.y - 7, text)
-            for i, value in enumerate(values):
-                self.form.radio(name=f"{prefix}_{key}", tooltip=f"{text}: {labels[i]}",
-                                value=value, selected=False, x=x0 + i * step - 5.5,
-                                y=self.y - 9.5, size=11, buttonStyle="circle", shape="square",
-                                **BUTTON_STYLE)
-            self.y -= 18
-        self.y -= 10
+                self.c.rect(x, y - ROW_H, width, ROW_H, stroke=0, fill=1)
+            self.text(x + 3, y - ROW_H + 4.5, label, size=7.5)
+            for cx, value, col_label in zip(col_x, values, labels):
+                self.radio(f"{prefix}_{key}", value, f"{label}: {col_label}",
+                           cx - BOX / 2, y - ROW_H + (ROW_H - BOX) / 2)
+            y -= ROW_H
+        return y
 
-    def inline_radios(self, group, options, tooltip):
+    def sessions(self):
+        self.y -= 4
+        self.bar(MARGIN, CONTENT_W, "1. Rate each session")
+        self.y -= 26
+        labels = ["1", "2", "3", "4", "5", "N/A"]
+        values = ["1", "2", "3", "4", "5", "NA"]
+        legend = "1 = not useful  ·  5 = very useful  ·  N/A = I missed it"
+        left = self.grid(MARGIN, HALF_W, SESSIONS_LEFT, labels, values, "rate", legend,
+                         "SESSION")
+        right = self.grid(MARGIN + HALF_W + GUTTER, HALF_W, SESSIONS_RIGHT, labels, values,
+                          "rate", "", "LESSON")
+        self.y = min(left, right) - 10
+
+    def skills_and_experience(self):
+        right_x = MARGIN + HALF_W + GUTTER
+        self.bar(MARGIN, HALF_W, "2. Your skills now")
+        self.bar(right_x, HALF_W, "3. The program experience")
+        self.y -= 26
+        scale = ["1", "2", "3", "4", "5"]
+        left = self.grid(MARGIN, HALF_W, SKILLS, scale, scale, "skill",
+                         "1 = not confident yet  ·  5 = very confident", "SKILL")
+        right = self.grid(right_x, HALF_W, STATEMENTS, scale, scale, "agree",
+                          "1 = strongly disagree  ·  5 = strongly agree", "STATEMENT")
+        self.y = min(left, right) - 10
+
+    def inline_choices(self, x, y, group, options, tooltip):
+        for value, label in options:
+            self.radio(group, value, f"{tooltip}: {label}", x, y - 2)
+            self.text(x + BOX + 3, y, label, size=7.5)
+            x += BOX + 3 + self.c.stringWidth(label, "Helvetica", 7.5) + 9
+        return x
+
+    def looking_ahead(self):
+        self.bar(MARGIN, CONTENT_W, "4. Looking ahead")
+        self.y -= 28
+        scale = [(str(i), str(i)) for i in range(1, 6)]
         x = MARGIN
-        for value, text in options:
-            self.form.radio(name=group, tooltip=f"{tooltip}: {text}", value=value,
-                            selected=False, x=x, y=self.y - 3, size=11, buttonStyle="circle",
-                            shape="square", **BUTTON_STYLE)
-            self.c.setFillColor(NAVY)
-            self.c.setFont("Helvetica", 9)
-            self.c.drawString(x + 15, self.y, text)
-            x += 15 + self.c.stringWidth(text, "Helvetica", 9) + 18
-
-    def radio_question(self, question, group, options, tooltip):
-        self.ensure(40)
-        self.label(question)
-        self.y -= 16
-        self.inline_radios(group, options, tooltip)
-        self.y -= 24
-
-    def checkbox(self, name, text, tooltip, x, y):
-        self.form.checkbox(name=name, tooltip=tooltip, x=x, y=y - 10, size=11,
-                           buttonStyle="check", **BUTTON_STYLE)
-        self.c.setFillColor(NAVY)
-        self.c.setFont("Helvetica", 9)
-        self.c.drawString(x + 16, y - 8, text)
-
-    def checkbox_question(self, question, prefix, options, columns, tooltip):
-        rows = (len(options) + columns - 1) // columns
-        self.ensure(rows * 18 + 30)
-        self.label(question)
-        self.y -= 10
+        self.text(x, self.y, "Interest in a tech career  BEFORE:", size=8, bold=True)
+        x += self.c.stringWidth("Interest in a tech career  BEFORE:", "Helvetica-Bold", 8) + 6
+        x = self.inline_choices(x, self.y, "interest_before", scale, "Interest before")
+        self.text(x + 4, self.y, "NOW:", size=8, bold=True)
+        x += 4 + self.c.stringWidth("NOW:", "Helvetica-Bold", 8) + 6
+        x = self.inline_choices(x, self.y, "interest_now", scale, "Interest now")
+        self.text(x, self.y, "(1 = not at all · 5 = extremely)", size=7, color=GREY)
+        self.y -= 17
+        label = "Would you recommend this program to a friend?"
+        self.text(MARGIN, self.y, label, size=8, bold=True)
+        self.inline_choices(MARGIN + self.c.stringWidth(label, "Helvetica-Bold", 8) + 8,
+                            self.y, "recommend",
+                            [("yes", "Yes"), ("maybe", "Maybe"), ("no", "No")], "Recommend")
+        self.y -= 17
+        self.text(MARGIN, self.y, "Which tech fields would you like to explore next? "
+                  "(tick all that apply)", size=8, bold=True)
+        self.y -= 15
+        columns = 5
         col_w = CONTENT_W / columns
-        for i, (key, text) in enumerate(options):
-            col, row = i % columns, i // columns
-            self.checkbox(f"{prefix}_{key}", text, f"{tooltip}: {text}",
-                          MARGIN + col * col_w, self.y - row * 18)
-        self.y -= rows * 18 + 12
+        for i, (key, label) in enumerate(CAREER_PATHS):
+            x = MARGIN + (i % columns) * col_w
+            y = self.y - (i // columns) * 14
+            self.checkbox(f"explore_{key}", f"Field to explore: {label}", x, y - 2)
+            self.text(x + BOX + 4, y, label, size=7.5)
+        rows = (len(CAREER_PATHS) + columns - 1) // columns
+        self.y -= (rows - 1) * 14 + 16
+
+    def writing_box(self, name, question, x, width, lines):
+        line_gap = 17
+        self.text(x, self.y, question, size=8, bold=True)
+        top = self.y - 5
+        height = lines * line_gap + 4
+        self.c.setStrokeColor(LINE)
+        self.c.setLineWidth(0.7)
+        self.c.roundRect(x, top - height, width, height, 3, stroke=1, fill=0)
+        self.c.setLineWidth(0.5)
+        for i in range(1, lines + 1):
+            ly = top - i * line_gap
+            self.c.line(x + 6, ly, x + width - 6, ly)
+        self.form.textfield(name=name, tooltip=question, x=x + 2, y=top - height + 2,
+                            width=width - 4, height=height - 4, fontSize=9, textColor=NAVY,
+                            fieldFlags="multiline doNotScroll", **HIDDEN)
+        return top - height
+
+    def tell_us_more(self, lines):
+        self.bar(MARGIN, CONTENT_W, "5. Tell us more")
+        self.y -= 28
+        pairs = [OPEN_QUESTIONS[i:i + 2] for i in range(0, len(OPEN_QUESTIONS), 2)]
+        for pair in pairs:
+            bottoms = [self.writing_box(name, question, MARGIN + i * (HALF_W + GUTTER),
+                                        HALF_W, lines)
+                       for i, (name, question) in enumerate(pair)]
+            self.y = min(bottoms) - 14
+
+    def closing(self):
+        self.checkbox("quote_consent", "Consent to share comments anonymously", MARGIN,
+                      self.y - 2)
+        self.text(MARGIN + BOX + 5, self.y,
+                  "I agree that my comments may be shared anonymously (without my name) to "
+                  "improve the program.", size=7.5)
+        self.text(PAGE_W - MARGIN, self.y, "Thank you – keep building!", size=9.5, bold=True,
+                  color=PINK, align="right")
+        self.y -= 10
+        if self.y < BOTTOM:
+            raise SystemExit("Feedback form no longer fits on one page – shorten the content.")
+        self.text(MARGIN, 18, "TOFA × Alliance Girls Alumni · Alliance Girls High School",
+                  size=7, color=GREY)
 
     def save(self):
-        self.footer()
         self.c.save()
 
 
-def build(path=OUTPUT):
-    f = FormBuilder(path)
-
-    f.section("A", "About you")
-    half = CONTENT_W / 2
-    f.text_field("name", "Name (optional)", "Your name (optional)", MARGIN, half - 10, 88)
-    f.text_field("team", "Team name", "Your capstone team name", MARGIN + half + 10,
-                 half - 10, 62)
-    f.y -= 28
-    f.radio_question("Which capstone did your team build?", "capstone", CAPSTONES,
-                     "Capstone built")
-
-    f.section("B", "Rate each session",
-              "1 = not useful / did not enjoy  ·  5 = very useful / loved it  ·  "
-              "N/A = I missed this session", keep_with=60)
-    f.rating_grid(PROGRAM_SESSIONS, ["1", "2", "3", "4", "5", "N/A"],
-                  ["1", "2", "3", "4", "5", "NA"], "rate", "SESSION")
-
-    f.section("C", "Your skills now",
-              "How confident do you feel doing each of these on your own today?",
-              keep_with=6 * 18 + 30)
-    f.rating_grid(SKILLS, ["Not yet", "A little", "Somewhat", "Confident", "Very\nconfident"],
-                  ["1", "2", "3", "4", "5"], "skill", "SKILL")
-
-    f.section("D", "The program experience", "How much do you agree with each statement?",
-              keep_with=7 * 18 + 30)
-    f.rating_grid(STATEMENTS, ["Strongly\ndisagree", "Disagree", "Neutral", "Agree",
-                               "Strongly\nagree"],
-                  ["1", "2", "3", "4", "5"], "agree", "STATEMENT")
-
-    f.section("E", "Looking ahead")
-    f.radio_question("Before this program, how interested were you in a tech career?",
-                     "interest_before", INTEREST_SCALE, "Interest before the program")
-    f.radio_question("How interested are you in a tech career now?", "interest_now",
-                     INTEREST_SCALE, "Interest now")
-    f.radio_question("Would you recommend this program to a friend?", "recommend",
-                     [("yes", "Yes"), ("maybe", "Maybe"), ("no", "No")], "Recommend to a friend")
-    f.checkbox_question("Which tech fields would you like to explore next? (tick all that apply)",
-                        "explore", CAREER_PATHS, 3, "Field to explore")
-
-    f.section("F", "Tell us more", keep_with=96)
-    f.text_area("enjoyed_most", "What did you enjoy most, and why?", "What you enjoyed most")
-    f.text_area("hardest", "What was the hardest part? What would have helped?",
-                "Hardest part and what would have helped")
-    f.text_area("proudest", "What are you most proud of building or learning?",
-                "What you are most proud of")
-    f.text_area("change",
-                "What should we change, add, or remove for the next group of students?",
-                "Suggestions for next time", height=90)
-    f.text_area("message", "Any message for the facilitators, speakers, or alumni volunteers?",
-                "Message for facilitators")
-
-    f.ensure(50)
-    f.checkbox("quote_consent",
-               "I agree that my comments may be shared anonymously (without my name) to "
-               "improve the program.",
-               "Consent to share comments anonymously", MARGIN, f.y)
-    f.y -= 34
-    f.c.setFillColor(PINK)
-    f.c.setFont("Helvetica-Bold", 12)
-    f.c.drawCentredString(PAGE_W / 2, f.y, "Thank you – keep building!")
-
-    f.save()
+def build(path=OUTPUT, writing_lines=6):
+    form = OnePageForm(path)
+    form.header()
+    form.sessions()
+    form.skills_and_experience()
+    form.looking_ahead()
+    form.tell_us_more(writing_lines)
+    form.closing()
+    form.save()
     return path
 
 
