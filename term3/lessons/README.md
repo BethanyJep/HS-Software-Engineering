@@ -3,7 +3,7 @@
 **Term:** 3  
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Format:** Lessons 1–4 in class (90 minutes each); Lessons 5–8 as holiday self-study  
-**Tools:** A browser, CodePen, Git, and GitHub (all free)
+**Tools:** A browser, [NitroIDE](https://nitroide.com/tools/codebox.html) (Lessons 1–6), [Visual Studio Code](https://code.visualstudio.com/) (Lessons 7–8), Git, and GitHub (all free)
 
 ---
 
@@ -43,15 +43,38 @@ Each lesson follows the same rhythm, in class or at home:
 4. **Apply** the skill to your own capstone.
 5. **Reflect** with an exit ticket or learning journal entry and save all work.
 
-Students can begin in [CodePen](https://codepen.io/pen) without an account. In Lesson 7, each
-student moves their capstone into their own free GitHub repository and uses that repository to deploy
-in Lesson 8.
+## Coding Tools
+
+| Lessons | Default editor | Why |
+|---|---|---|
+| 1–6 (basic coding) | [NitroIDE](https://nitroide.com/tools/codebox.html) | Free, runs in the browser, no account or install, live preview and console |
+| 7–8 (advanced work) | [Visual Studio Code](https://code.visualstudio.com/) | Real project files, a terminal for Git, and the editor professionals use |
+
+**Working in NitroIDE (Lessons 1–6)**
+
+- `index.html` holds only what goes inside `<body>`. NitroIDE adds the page head and connects
+  `style.css` and `script.js` for you, so you do not need `<link>` or `<script src>` tags there.
+- Work is saved in **that browser on that device only**. At the end of every session, open the
+  options menu and choose **Download ZIP** to keep a copy.
+- Use a facilitator-approved image URL for pictures. Downloaded ZIPs contain only the HTML, CSS, and
+  JavaScript files, so image files are added later in VS Code.
+- Ignore the optional AI panel and never paste any key or password into it.
+
+**Moving to VS Code (Lesson 7)**
+
+Each student unzips their NitroIDE download, opens the folder in VS Code, and moves the capstone
+into their own free GitHub repository. That repository is used to deploy in Lesson 8. If VS Code
+cannot be installed, press `.` in the GitHub repository to open the same editor in the browser
+(github.dev).
 
 ## Facilitator Preparation
 
 - Read the lesson and test every link from the school network.
 - Keep a completed example and screenshots available in case the internet fails.
 - When devices are limited, let students take turns but make sure each one saves their own copy of the code.
+- Check that `nitroide.com` loads on school devices before Lesson 1. The site shows ads, and on shared
+  computers the next user can see saved NitroIDE projects, so students should download their ZIP and
+  delete their project before leaving.
 - Use placeholder content rather than students' personal details.
 - Never put passwords, API keys, private data, or identifying student information in source code.
 - Reserve the final 20–25 minutes of each class lesson for the capstone checkpoint.

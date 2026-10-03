@@ -80,7 +80,7 @@ You can start testing **today** — no special setup needed.
 
 1. **Bug hunt** — pick any app you use and find 5 things that could be clearer or that break. Write each up as a bug report.
 2. **Write a test plan** — list every step to test a login screen (right password, wrong password, blank fields).
-3. **Break a classmate's project** — test a friend's CodePen or Scratch project and report what breaks.
+3. **Break a classmate's project** — test a friend's NitroIDE or Scratch project and report what breaks.
 4. **Cross-device check** — open a website on a phone and a laptop; note what looks different or wrong.
 5. **First automated test** — follow a Playwright "hello world" tutorial to make a test run by itself.
 

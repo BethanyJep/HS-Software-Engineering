@@ -58,10 +58,10 @@ By the end of this session, students will be able to:
 - Open a new project and change the cat's costume (just to confirm it works!)
 - Facilitator demos: *"In 2 minutes I'm going to make this cat say hello."*
 
-#### Step 3 – Set up on CodePen (codepen.io) — for more advanced students
-- Go to `codepen.io/pen`
-- No account is needed for a quick coding session.
-- In the HTML panel, write `<h1>Hello, Alliance Girls!</h1>`
+#### Step 3 – Set up on NitroIDE (nitroide.com) — for more advanced students
+- Go to `nitroide.com/tools/codebox.html`
+- No account or install is needed.
+- In `index.html`, write `<h1>Hello, Alliance Girls!</h1>`
 - Run it and celebrate! 🎉
 
 #### Step 4 – Bookmark these learning resources
@@ -144,7 +144,7 @@ Facilitator and peers offer one **"warm"** (positive) and one **"wonder"** (ques
 │  Alliance Girls High School – Software Engineering Program         │
 │                                                                    │
 │  My username/email for Scratch: ___________________________        │
-│  My CodePen pen URL: _____________________________________         │
+│  Where I saved my NitroIDE ZIP: __________________________         │
 │                                                                    │
 │  My go-to learning platform: ____________________________          │
 │                                                                    │

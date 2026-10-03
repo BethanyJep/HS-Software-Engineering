@@ -69,7 +69,8 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 ### Tools & Platforms
 | Purpose | Suggested Tool | Notes |
 |---|---|---|
-| Coding | CodePen or an installed text editor (HTML/CSS/JavaScript) | Free; CodePen works in a browser |
+| Coding (basic) | NitroIDE (HTML/CSS/JavaScript) | Free; runs in a browser, no account |
+| Coding (advanced) | Visual Studio Code | Free; VS Code for the Web (github.dev) if it cannot be installed |
 | Design | Paper or Figma Starter | No paid plan required |
 | Collaboration | Google Docs / Slides | Already available at school |
 | Version control | Git and GitHub Free | Taught in Term 3 Lesson 7 |

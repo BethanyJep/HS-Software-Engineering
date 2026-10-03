@@ -3,7 +3,7 @@
 **Term:** 3 · Holiday self-study (week 3)  
 **Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Git, a text editor, and GitHub (free)
+**Tools:** [Visual Studio Code](https://code.visualstudio.com/), Git, and GitHub (all free)
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
@@ -23,8 +23,9 @@ By the end of this lesson, you will be able to:
 
 ## Materials
 
-- [ ] Your capstone HTML, CSS, and JavaScript files downloaded from CodePen (**Export → Export .zip**)
-- [ ] Git installed, or a browser to use GitHub's file upload and editor
+- [ ] Your capstone downloaded from NitroIDE (options menu → **Download ZIP**)
+- [ ] [Visual Studio Code](https://code.visualstudio.com/) and [Git](https://git-scm.com/downloads) installed, or a browser to use
+  GitHub's upload page and VS Code for the Web (github.dev)
 - [ ] Your own free GitHub account, created with permission from a parent or guardian
 - [ ] If you cannot create an account, ask your facilitator about another way to submit your files
 
@@ -44,14 +45,18 @@ A commit is like a labelled save point in a game. Copy these definitions into yo
 
 1. Sign in to [GitHub](https://github.com/) and turn on two-factor authentication if you can.
 2. Create a new repository for your capstone, for example `cybersmart-quest`.
-3. Unzip your CodePen export and rename the files `index.html`, `styles.css`, and `script.js`.
-   Check that `index.html` links to the CSS and JavaScript files.
+3. Unzip your NitroIDE download into a new folder and open that folder in VS Code
+   (**File → Open Folder**). It contains `index.html`, `style.css`, and `script.js`.
+4. In `index.html`, check that the `<head>` links `style.css` and the end of `<body>` loads
+   `script.js`. Change `<title>Exported Project</title>` to your project name, add
+   `<html lang="en">` and `<meta name="viewport" content="width=device-width, initial-scale=1">`,
+   and put any permitted image files in an `images` folder.
 
-If Git is installed on your computer, run these commands in your project folder:
+If Git is installed, open the VS Code terminal (**Terminal → New Terminal**) and run:
 
 ```bash
 git init
-git add index.html styles.css script.js
+git add index.html style.css script.js
 git commit -m "Create capstone website"
 git branch -M main
 ```
@@ -102,8 +107,10 @@ and your journal entry is complete.
 
 ## Browser-Only Alternative
 
-If Git cannot be installed, create the repository on GitHub, use **Add file → Upload files**, and use
-GitHub's editor for each small change. Open the commit history and compare two versions.
+If VS Code or Git cannot be installed, create the repository on GitHub and use **Add file → Upload
+files**. Then press `.` on the repository page to open it in VS Code for the Web (github.dev). Edit
+your files there and commit from the **Source Control** panel with a clear message. Open the commit
+history and compare two versions.
 
 ## Free Practice
 
@@ -113,7 +120,8 @@ GitHub's editor for each small change. Open the commit history and compare two v
 
 ## Facilitator Notes
 
-- Before the holiday, demonstrate account creation and a first commit with a practice repository.
+- Before the holiday, demonstrate opening a NitroIDE ZIP in VS Code, account creation, and a first
+  commit with a practice repository.
 - Agree a submission route for students who cannot create GitHub accounts, such as sharing a
   downloaded project folder when school reopens.
 - Use GitHub organisations or classroom tooling only if the school has approved them.

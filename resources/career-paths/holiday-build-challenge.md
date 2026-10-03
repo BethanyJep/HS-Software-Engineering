@@ -62,7 +62,8 @@ school events, revision resources, or career paths.
 
 ### Use
 
-[CodePen](https://codepen.io/) or [GitHub Pages](https://pages.github.com/). You only need
+[NitroIDE](https://nitroide.com/tools/codebox.html) to build, then [Visual Studio Code](https://code.visualstudio.com/) and
+[GitHub Pages](https://pages.github.com/) to publish. You only need
 HTML and CSS to begin. Add JavaScript if you want an interactive feature.
 
 **▶️ Learn the basics first:**

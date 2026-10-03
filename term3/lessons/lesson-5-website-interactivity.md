@@ -3,7 +3,7 @@
 **Term:** 3 · Holiday self-study (week 1)  
 **Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser and CodePen
+**Tools:** Browser and [NitroIDE](https://nitroide.com/tools/codebox.html)
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
@@ -30,7 +30,8 @@ down one example. Interfaces listen for **events**, do some **work**, and show t
 
 ### Step 2 | Learn: DOM and Events
 
-Open a new pen in [CodePen](https://codepen.io/pen). Paste this into the HTML panel:
+Open [NitroIDE](https://nitroide.com/tools/codebox.html) and start a **New Project** for practice, so your capstone stays safe. Paste this
+into `index.html`:
 
 ```html
 <label for="search">Find a resource</label>
@@ -40,7 +41,7 @@ Open a new pen in [CodePen](https://codepen.io/pen). Paste this into the HTML pa
 <ul id="results"></ul>
 ```
 
-Paste this into the JavaScript panel:
+Paste this into `script.js`:
 
 ```javascript
 const resources = [
@@ -77,7 +78,7 @@ inserting HTML that came from a user or another website.
 
 ### Step 3 | Practise
 
-In the same practice pen, add:
+In the same practice project, add:
 
 - An empty-state message such as "No resources match your search."
 - A **Reset** button that clears the search box and shows every resource again
@@ -121,6 +122,6 @@ journal entry is complete.
 ## Facilitator Notes
 
 - Before the holiday, check that each student has a saved copy of their Lessons 1–4 capstone work.
-- Keep JavaScript in the JavaScript panel or a separate file rather than inline `onclick` attributes.
+- Keep JavaScript in `script.js` rather than inline `onclick` attributes.
 - Prefer `textContent` and DOM methods for displaying user or API data.
 - A smaller interaction that is clear and reliable is better than many unfinished controls.

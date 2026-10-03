@@ -2,7 +2,7 @@
 
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Format:** Lessons 5–8 as take-home work, plus an **individual** capstone project  
-**Tools:** A browser, CodePen, Git, GitHub, and GitHub Pages (all free)  
+**Tools:** A browser, [NitroIDE](https://nitroide.com/tools/codebox.html) (Lessons 5–6), [Visual Studio Code](https://code.visualstudio.com/) (Lessons 7–8), Git, GitHub, and GitHub Pages (all free)  
 **Due:** Submit the [Capstone Showcase Form](../showcase/README.md) before school reopens
 
 ---
@@ -36,8 +36,11 @@ minimum viable product (MVP) before anything else.
 ## Before You Leave School
 
 - [ ] Choose one capstone option and write it on the [Holiday Capstone Plan](#holiday-capstone-plan).
-- [ ] Save a copy of your Lessons 1–4 capstone work (a CodePen fork, downloaded files, or both).
-- [ ] Check that you can open CodePen and the lesson guides on the device you will use at home.
+- [ ] Save a copy of your Lessons 1–4 capstone work (NitroIDE **Download ZIP**, then keep the ZIP
+  on a flash disk, email, or cloud drive). NitroIDE saves only in the browser you used.
+- [ ] Check that you can open NitroIDE and the lesson guides on the device you will use at home.
+- [ ] Ask whether you can install Visual Studio Code for Lessons 7–8. If not, you will use VS Code
+  for the Web (github.dev) in the browser.
 - [ ] Ask a parent or guardian whether you may create a free GitHub account for Lessons 7–8.
 - [ ] Save the facilitator contact or program group where you can ask questions.
 
@@ -56,14 +59,15 @@ Each student builds their **own** capstone during the holiday. There are no team
 Each self-study lesson follows the same rhythm used in class:
 
 1. **Read** the "Connect" and "Learn" steps.
-2. **Try** the example code in a new CodePen before touching your capstone.
+2. **Try** the example code in a new NitroIDE project before touching your capstone.
 3. **Apply** the skill in the "Capstone Checkpoint" step.
 4. **Test** with a family member or friend who has not seen your project.
 5. **Reflect** by answering the lesson's journal questions.
 
 ## No Laptop or Limited Internet?
 
-- CodePen works in a phone browser; turn the phone sideways for more space.
+- NitroIDE works in a phone browser; turn the phone sideways for more space. Choose **Download
+  ZIP** at the end of every session.
 - Read the lesson guide, plan, and sketch on paper while offline, then type the code when you are
   online.
 - Use a library, family computer, or approved cyber café, and always sign out afterwards.

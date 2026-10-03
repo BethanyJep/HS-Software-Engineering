@@ -3,7 +3,7 @@
 **Term:** 3 · Holiday self-study (week 4)  
 **Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser, GitHub, and GitHub Pages (free)
+**Tools:** [Visual Studio Code](https://code.visualstudio.com/), GitHub, and GitHub Pages (all free)
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
@@ -80,7 +80,7 @@ complete this release checklist:
 - [ ] No private information is visible.
 - [ ] The footer credits you and any permitted external content.
 
-Fix one issue they found, commit it, and check that the update appears online.
+Fix one issue they found in VS Code, commit and push it, and check that the update appears online.
 
 ### Step 6 | Learning Journal and Showcase Form
 

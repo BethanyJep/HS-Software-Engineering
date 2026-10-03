@@ -3,7 +3,7 @@
 **Term:** 3  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser, CodePen, and browser developer tools
+**Tools:** Browser, [NitroIDE](https://nitroide.com/tools/codebox.html), and browser developer tools
 
 ---
 

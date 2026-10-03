@@ -31,14 +31,13 @@
               <p class="eyebrow">SET UP · 5 MIN</p><h2>Give JavaScript<br><em>a place to work.</em></h2>
               <pre class="workshop-code"><code>&lt;button id="show" type="button"&gt;Show activities&lt;/button&gt;
 &lt;ul id="activities"&gt;&lt;/ul&gt;
-&lt;p id="status" role="status"&gt;&lt;/p&gt;
-&lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
-              <p class="checkpoint">Add this inside body. Create app.js beside index.html. In CodePen, omit the script tag and use the JS panel.</p>
+&lt;p id="status" role="status"&gt;&lt;/p&gt;</code></pre>
+              <p class="checkpoint">Add this to index.html in NitroIDE. Write your JavaScript in script.js; NitroIDE runs it after your HTML, so no script tag is needed.</p>
             </div><span class="slide-number">02</span>
           </article>
           <article class="slide slide--dark" id="slide-3" aria-roledescription="slide" aria-label="3 of 12: Store data and select elements">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">BUILD ALONG · APP.JS · 5 MIN</p><h2>Data + elements.<br><em>Meet your ingredients.</em></h2>
+              <p class="eyebrow eyebrow--light">BUILD ALONG · SCRIPT.JS · 5 MIN</p><h2>Data + elements.<br><em>Meet your ingredients.</em></h2>
               <pre class="workshop-code"><code>const activities = ["Coding club", "Design challenge"];
 const list = document.querySelector("#activities");
 const status = document.querySelector("#status");
@@ -49,7 +48,7 @@ console.log(activities.length);</code></pre>
           </article>
           <article class="slide slide--cream" id="slide-4" aria-roledescription="slide" aria-label="4 of 12: Write a reusable function">
             <div class="slide-content">
-              <p class="eyebrow">BUILD ALONG · APPEND TO APP.JS · 7 MIN</p><h2>A function is<br><em>a reusable recipe.</em></h2>
+              <p class="eyebrow">BUILD ALONG · APPEND TO SCRIPT.JS · 7 MIN</p><h2>A function is<br><em>a reusable recipe.</em></h2>
               <pre class="workshop-code"><code>function addActivity(name) {
   const item = document.createElement("li");
   item.textContent = name;
@@ -61,7 +60,7 @@ addActivity("Try a new skill");</code></pre>
           </article>
           <article class="slide slide--blue" id="slide-5" aria-roledescription="slide" aria-label="5 of 12: Repeat with a loop">
             <div class="slide-content">
-              <p class="eyebrow eyebrow--light">BUILD ALONG · APPEND TO APP.JS · 7 MIN</p><h2>One instruction.<br><em>Every activity.</em></h2>
+              <p class="eyebrow eyebrow--light">BUILD ALONG · APPEND TO SCRIPT.JS · 7 MIN</p><h2>One instruction.<br><em>Every activity.</em></h2>
               <pre class="workshop-code"><code>function showActivities() {
   list.replaceChildren();
   for (const activity of activities) {
@@ -85,7 +84,7 @@ showActivities();</code></pre>
           </article>
           <article class="slide slide--gold" id="slide-7" aria-roledescription="slide" aria-label="7 of 12: Listen for a click">
             <div class="slide-content">
-              <p class="eyebrow">BUILD ALONG · BOTTOM OF APP.JS · 5 MIN</p><h2>Now connect<br><em>the click.</em></h2>
+              <p class="eyebrow">BUILD ALONG · BOTTOM OF SCRIPT.JS · 5 MIN</p><h2>Now connect<br><em>the click.</em></h2>
               <pre class="workshop-code"><code>button.addEventListener("click", showActivities);</code></pre>
               <ul class="activity">
                 <li><strong>Click</strong>Your list should appear.</li>

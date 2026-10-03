@@ -28,7 +28,7 @@ You don't need to be an expert. You need curiosity, persistence, and willingness
 
 - [ ] Read all three capstone briefs and choose one.
 - [ ] Explain why that capstone's stated problem matters to its target user.
-- [ ] Open CodePen and decide where you will save your work between lessons.
+- [ ] Open NitroIDE and decide where you will keep your **Download ZIP** copy between lessons.
 - [ ] Fill in and submit the **Project Kickoff Form** (see Appendix A).
 - [ ] Before the holiday, complete the
   [Holiday Capstone Plan](holiday-self-study.md#holiday-capstone-plan).
@@ -154,8 +154,8 @@ The core project must use the same approachable web stack taught in the lessons:
 | Purpose | Free option |
 |---|---|
 | Plan and sketch | Paper or Figma Starter |
-| Build in the browser | CodePen |
-| Build in files | Any installed text editor |
+| Basic coding (Lessons 1–6) | [NitroIDE](https://nitroide.com/tools/codebox.html) in the browser |
+| Advanced work in files (Lessons 7–8) | [Visual Studio Code](https://code.visualstudio.com/) or VS Code for the Web (github.dev) |
 | Version control | Git and GitHub Free |
 | Public data | Open-Meteo or a JSON file you create |
 | Deployment | GitHub Pages |

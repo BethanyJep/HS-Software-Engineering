@@ -3,7 +3,7 @@
 **Term:** 3 · Holiday self-study (week 2)  
 **Time:** About 2–3 hours, split into shorter sessions  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser, CodePen, and [Open-Meteo](https://open-meteo.com/) (free; no API key)
+**Tools:** Browser, [NitroIDE](https://nitroide.com/tools/codebox.html), and [Open-Meteo](https://open-meteo.com/) (free; no API key)
 
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
@@ -38,8 +38,8 @@ API.
 
 ### Step 2 | Learn: Fetch Current Weather
 
-In a new CodePen, add `<p id="weather-status"></p>` to the HTML panel. Then paste this into the
-JavaScript panel. It uses Open-Meteo's no-key endpoint with Nairobi coordinates:
+In a new NitroIDE practice project, add `<p id="weather-status"></p>` to `index.html`. Then paste
+this into `script.js`. It uses Open-Meteo's no-key endpoint with Nairobi coordinates:
 
 ```javascript
 const status = document.querySelector("#weather-status");
@@ -99,8 +99,8 @@ Add fetched data to your own capstone:
 | CyberSmart Quest | Your own `questions.json` file |
 
 Your feature must show a loading message, a friendly error message, and an empty state, never a
-blank screen. In CodePen, you can keep the JSON in an array until Lesson 7, then move it into its
-own file in your repository.
+blank screen. In NitroIDE, you can keep the JSON in an array until Lesson 7, then move it into its
+own file in VS Code.
 
 ### Step 6 | Learning Journal
 

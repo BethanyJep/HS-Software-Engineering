@@ -18,9 +18,9 @@ complete the common requirements.
 
 | Option | Main career paths | Suggested free tools |
 |---|---|---|
-| [1. School Opportunities Hub](#option-1--school-opportunities-hub) | Web Development, UI/UX Design, Quality Assurance | CodePen, Figma or paper, GitHub Pages |
-| [2. Kenya Weather Dashboard](#option-2--kenya-weather-dashboard) | Data Analysis, Web Development, Cloud & DevOps | CodePen, Open-Meteo, GitHub Pages |
-| [3. CyberSmart Quest](#option-3--cybersmart-quest) | Cybersecurity, Game Development, Quality Assurance | CodePen, MDN, GitHub Pages |
+| [1. School Opportunities Hub](#option-1--school-opportunities-hub) | Web Development, UI/UX Design, Quality Assurance | NitroIDE, VS Code, Figma or paper, GitHub Pages |
+| [2. Kenya Weather Dashboard](#option-2--kenya-weather-dashboard) | Data Analysis, Web Development, Cloud & DevOps | NitroIDE, VS Code, Open-Meteo, GitHub Pages |
+| [3. CyberSmart Quest](#option-3--cybersmart-quest) | Cybersecurity, Game Development, Quality Assurance | NitroIDE, VS Code, MDN, GitHub Pages |
 
 > Every project needs developers, designers, testers, and presenters. Working alone, you will practise
 > all of these career skills; ask a family member or friend to be your tester.

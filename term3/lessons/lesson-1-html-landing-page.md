@@ -3,7 +3,7 @@
 **Term:** 3  
 **Duration:** 90 minutes  
 **Audience:** Grade 10 students, Alliance Girls High School  
-**Tools:** Browser and [CodePen](https://codepen.io/pen) (free; no account required)
+**Tools:** Browser and [NitroIDE](https://nitroide.com/tools/codebox.html) (free; no account or install required)
 
 ---
 
@@ -21,7 +21,7 @@ By the end of this lesson, students will be able to:
 - [ ] One computer per student where possible (if devices are shared, each student saves their own copy)
 - [ ] Projector and facilitator example
 - [ ] Capstone option selected from [Capstone Project Options](../project-ideas.md)
-- [ ] Offline text editor as a backup
+- [ ] Visual Studio Code or another text editor as an offline backup
 
 ---
 
@@ -107,4 +107,7 @@ Invite two students to show their page. Students submit:
 
 - Focus on meaningful structure rather than memorising every tag.
 - Use only images students created or have permission to reuse.
-- If internet access fails, students can write the same HTML in a text editor and open it locally.
+- In NitroIDE, `index.html` holds only the content inside `<body>`; it adds the head for you.
+  Students should choose **Download ZIP** before leaving so work is not lost if the browser is cleared.
+- If internet access fails, students can write the same HTML in VS Code or another text editor and
+  open it locally.
