@@ -106,12 +106,13 @@ Eldoret   latitude=0.5143    longitude=35.2698</code></pre></div></div><p class=
           </article>
           <article class="slide slide--cream slide--tutorial" id="slide-9" aria-roledescription="slide" aria-label="9 of 13: Step 8: add wind speed">
             <div class="slide-content">
-              <p class="eyebrow">STEP 8 OF 11 · EXPERIMENT</p><h2>Add wind <em>speed.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add <code>,wind_speed_10m</code> to the end of the <code>current=</code> part.</span></li><li><span>Read the wind value and unit inside <code>try</code>.</span></li><li><span>Show both values in the status message.</span></li></ol><div class="code-file"><p class="file-tab">script.js · two changes</p><pre class="workshop-code"><code>// in weatherUrl
+              <p class="eyebrow">STEP 8 OF 11 · EXPERIMENT</p><h2>Add wind <em>speed.</em></h2><div class="tutorial"><ol class="how-to"><li><span>Add <code>,wind_speed_10m</code> to the end of the <code>current=</code> part.</span></li><li><span>Inside <code>try</code>, add the two wind lines after the <code>unit</code> line.</span></li><li><span>Replace the old <code>status.textContent</code> line with the new one.</span></li></ol><div class="code-file"><p class="file-tab">script.js · two changes</p><pre class="workshop-code"><code>// in weatherUrl
   &quot;&amp;current=temperature_2m,wind_speed_10m&quot;;
 
-// inside try, after the unit line
+// inside try: add after the unit line
 const wind = data.current.wind_speed_10m;
 const windUnit = data.current_units.wind_speed_10m;
+// replace the old status line with:
 status.textContent =
   `Nairobi: ${temp} ${unit}, wind ${wind} ${windUnit}`;</code></pre></div></div><p class="expect"><strong>✅ Check:</strong> something like <code>Nairobi: 21.4 °C, wind 12.3 km/h</code>.</p>
             </div><span class="slide-number">09</span>
