@@ -30,8 +30,9 @@ capstone checkpoint so that every session produces visible progress.
 
 Lessons 5–8 are take-home work. Each guide is written as numbered self-study steps that a student can
 follow alone, with a home user test, a learning journal prompt, and a "done when" check, plus a
-matching slide deck to click through at home. Students should start with the [Holiday Self-Study Pack](../holiday-self-study.md), which includes a weekly
-schedule, a capstone plan, help and safety rules, and the list of what to bring back to school.
+matching slide deck to click through at home. Students should start with the [November–December Holiday Task](../november-december-holiday-task.md), a dated
+week-by-week plan that links to every resource, and the [Holiday Self-Study Pack](../holiday-self-study.md), which includes a
+capstone plan, help and safety rules, and the list of what to bring back to school.
 
 ## Suggested Routine
 

@@ -37,11 +37,11 @@ This program is also intended to serve as a **reusable roadmap** that can be ada
 | Choose | Week 1 | Each student selects one of three capstone briefs |
 | Lessons 1–3 | Weeks 1–3 (class) | Build and style an accessible, responsive landing page for your capstone |
 | Lesson 4 | Week 4 (class) | Add JavaScript data, functions, conditions, and loops |
-| Holiday launch | Last class before the holiday | Each student confirms their capstone plan and receives the [Holiday Self-Study Pack](term3/holiday-self-study.md) |
+| Holiday launch | Last class before the holiday | Each student confirms their capstone plan and receives the [November–December Holiday Task](term3/november-december-holiday-task.md) and [Holiday Self-Study Pack](term3/holiday-self-study.md) |
 | Lessons 5–6 | Holiday weeks 1–2 (self-study, with slides) | Add interactivity and fetched data to the capstone |
 | Lessons 7–8 | Holiday weeks 3–4 (self-study, with slides) | Use Git/GitHub and deploy with GitHub Pages |
-| Polish | Holiday weeks 5–6 | Refine MVP, gather feedback, take screenshots |
-| Showcase | End of the holiday | Students submit the [Capstone Showcase Form](showcase/README.md) with screenshots; approved work is saved to the repo |
+| Polish | Holiday weeks 5–7 | Refine MVP, gather feedback, take screenshots |
+| Showcase | By Sunday 20 December | Students submit the [Capstone Showcase Form](showcase/README.md) with screenshots; approved work is saved to the repo |
 | Judging & Prizes | When school reopens | Judges review saved submissions; winning student(s) announced and awarded |
 
 ---

@@ -2,7 +2,7 @@
 
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Format:** An online form submitted by each student. There is no live presentation.  
-**When:** By the end of the holiday, after you finish [Lessons 5–8](../term3/lessons/README.md)
+**When:** By **Sunday 20 December 2026**, after you finish [Lessons 5–8](../term3/lessons/README.md) (see the [November–December Holiday Task](../term3/november-december-holiday-task.md))
 
 ---
 

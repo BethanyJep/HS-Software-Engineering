@@ -19,6 +19,7 @@
 | [Tech Careers Panel & Discussion](term2/saturday-25-tech-careers-panel.md) · [Slides](term2/tech-careers-panel-slides.html) | Speaker stories, panel questions, and group discussion |
 | **Term 3 – Lessons & Capstone** | |
 | [Eight Web Development Lessons](term3/lessons/README.md) | HTML, CSS, JavaScript, APIs, Git/GitHub, and deployment, each with a slide deck (Lessons 5–8 are holiday self-study) |
+| [November–December Holiday Task](term3/november-december-holiday-task.md) | Dated week-by-week holiday plan (2 Nov – 20 Dec) with links to every resource students need |
 | [Holiday Self-Study Pack](term3/holiday-self-study.md) | Take-home schedule for Lessons 5–8 and the individual capstone |
 | [Project Guidelines](term3/project-guidelines.md) | How to select, plan, build, test, and submit your individual capstone |
 | [Three Capstone Options](term3/project-ideas.md) | Career-linked projects designed for free tools, built individually |

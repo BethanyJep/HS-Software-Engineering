@@ -3,7 +3,8 @@
 **Audience:** Grade 10 students, Alliance Girls High School  
 **Format:** Lessons 5–8 as take-home work, plus an **individual** capstone project  
 **Tools:** A browser, [NitroIDE](https://nitroide.com/tools/codebox.html) (Lessons 5–6), [Visual Studio Code](https://code.visualstudio.com/) (Lessons 7–8), Git, GitHub, and GitHub Pages (all free)  
-**Due:** Submit the [Capstone Showcase Form](../showcase/README.md) before school reopens
+**Due:** Submit the [Capstone Showcase Form](../showcase/README.md) by **Sunday 20 December 2026**  
+**Dated plan:** Follow the [November–December Holiday Task](november-december-holiday-task.md) for week-by-week dates and links to every resource
 
 ---
 
@@ -31,7 +32,7 @@ minimum viable product (MVP) before anything else.
 | Week 2 | [Lesson 6 – APIs and fetch](lessons/lesson-6-apis-and-fetch.md) · [Slides](week-6-apis-slides.html) | Fetched data with loading and error states |
 | Week 3 | [Lesson 7 – Git and GitHub](lessons/lesson-7-git-and-github.md) · [Slides](week-7-git-slides.html) | Your own repository with meaningful commits |
 | Week 4 | [Lesson 8 – Deployment](lessons/lesson-8-deployment.md) · [Slides](week-8-deployment-slides.html) | A tested GitHub Pages site |
-| Weeks 5–6 | Polish and submit | Fixes from feedback, a `README`, screenshots, and your [Capstone Showcase Form](../showcase/README.md) |
+| Weeks 5–7 | Polish and submit | Fixes from feedback, a `README`, screenshots, and your [Capstone Showcase Form](../showcase/README.md) |
 
 ## Before You Leave School
 
