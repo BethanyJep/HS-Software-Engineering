@@ -30,14 +30,12 @@ BOTTOM = 34
 CONTENT_W = PAGE_W - 2 * MARGIN
 HALF_W = (CONTENT_W - GUTTER) / 2
 
-NAVY = colors.HexColor("#0b1022")
-BLUE = colors.HexColor("#315ee7")
-PINK = colors.HexColor("#ed6a9a")
-GOLD = colors.HexColor("#f5c95f")
-GREEN = colors.HexColor("#72c4a7")
-CREAM = colors.HexColor("#f8f4ea")
-GREY = colors.HexColor("#5b6275")
-LINE = colors.HexColor("#b8bdcc")
+# Black-and-white palette so the form prints clearly on any printer.
+INK = colors.black
+SHADE = colors.HexColor("#d9d9d9")
+ROW_SHADE = colors.HexColor("#f0f0f0")
+GREY = colors.HexColor("#444444")
+LINE = colors.HexColor("#808080")
 
 BOX = 9
 ROW_H = 14.5
@@ -48,25 +46,18 @@ SESSIONS_LEFT = [
     ("t2_s2", "T2 · Career Conversations"),
     ("t2_s3", "T2 · Resource Session"),
     ("t2_panel", "T2 · Tech Careers Panel"),
-    ("t3_l1", "L1 · HTML landing page"),
-    ("t3_l2", "L2 · CSS styling"),
 ]
 SESSIONS_RIGHT = [
+    ("t3_l1", "L1 · HTML landing page"),
+    ("t3_l2", "L2 · CSS styling"),
     ("t3_l3", "L3 · Advanced HTML/CSS"),
     ("t3_l4", "L4 · JavaScript fundamentals"),
-    ("t3_l5", "L5 · Website interactivity"),
-    ("t3_l6", "L6 · APIs and fetching data"),
-    ("t3_l7", "L7 · Git and GitHub"),
-    ("t3_l8", "L8 · Deploying your site"),
 ]
 
 SKILLS = [
     ("html", "Structuring a page with HTML"),
     ("css", "Styling & responsive layouts (CSS)"),
     ("js", "JavaScript functions, loops, events"),
-    ("api", "Fetching data from an API"),
-    ("git", "Using Git and GitHub with a team"),
-    ("deploy", "Deploying with GitHub Pages"),
 ]
 
 STATEMENTS = [
@@ -74,8 +65,6 @@ STATEMENTS = [
     ("explain", "Concepts were explained clearly"),
     ("help", "I could get help when I was stuck"),
     ("tools", "I had enough device/internet access"),
-    ("capstone", "The capstone helped me apply skills"),
-    ("team", "My team worked well together"),
     ("career", "I can picture myself in a tech career"),
 ]
 
@@ -113,7 +102,7 @@ class OnePageForm:
         self.y = PAGE_H
 
     # ----- drawing primitives ---------------------------------------------
-    def text(self, x, y, value, size=8, bold=False, color=NAVY, align="left"):
+    def text(self, x, y, value, size=8, bold=False, color=INK, align="left"):
         self.c.setFillColor(color)
         self.c.setFont("Helvetica-Bold" if bold else "Helvetica", size)
         draw = {"left": self.c.drawString, "centre": self.c.drawCentredString,
@@ -122,7 +111,7 @@ class OnePageForm:
 
     def box(self, x, y):
         """Printed tick box with its lower-left corner at (x, y)."""
-        self.c.setStrokeColor(NAVY)
+        self.c.setStrokeColor(INK)
         self.c.setLineWidth(0.7)
         self.c.setFillColor(colors.white)
         self.c.rect(x, y, BOX, BOX, stroke=1, fill=1)
@@ -130,35 +119,33 @@ class OnePageForm:
     def radio(self, group, value, tooltip, x, y):
         self.box(x, y)
         self.form.radio(name=group, value=value, tooltip=tooltip, selected=False, x=x, y=y,
-                        size=BOX, buttonStyle="circle", shape="square", textColor=BLUE,
+                        size=BOX, buttonStyle="circle", shape="square", textColor=INK,
                         **HIDDEN)
 
     def checkbox(self, name, tooltip, x, y):
         self.box(x, y)
         self.form.checkbox(name=name, tooltip=tooltip, x=x, y=y, size=BOX,
-                           buttonStyle="check", textColor=BLUE, **HIDDEN)
+                           buttonStyle="check", textColor=INK, **HIDDEN)
 
     def bar(self, x, width, title):
-        self.c.setFillColor(BLUE)
-        self.c.roundRect(x, self.y - 14, width, 16, 3, stroke=0, fill=1)
-        self.text(x + 7, self.y - 9, title, size=9.5, bold=True, color=colors.white)
+        self.c.setFillColor(SHADE)
+        self.c.setStrokeColor(INK)
+        self.c.setLineWidth(0.7)
+        self.c.roundRect(x, self.y - 14, width, 16, 3, stroke=1, fill=1)
+        self.text(x + 7, self.y - 9, title, size=9.5, bold=True)
 
     # ----- page sections ----------------------------------------------------
     def header(self):
         band_h = 58
-        self.c.setFillColor(NAVY)
-        self.c.rect(0, PAGE_H - band_h, PAGE_W, band_h, stroke=0, fill=1)
-        stripe_w = PAGE_W / 4
-        for i, col in enumerate((BLUE, PINK, GOLD, GREEN)):
-            self.c.setFillColor(col)
-            self.c.rect(i * stripe_w, PAGE_H - band_h - 4, stripe_w, 4, stroke=0, fill=1)
         self.text(MARGIN, PAGE_H - 20,
                   "ALLIANCE GIRLS HIGH SCHOOL · SOFTWARE ENGINEERING PROGRAM",
-                  size=7.5, bold=True, color=GOLD)
-        self.text(MARGIN, PAGE_H - 44, "Student Feedback Form", size=19, bold=True,
-                  color=colors.white)
-        self.text(PAGE_W - MARGIN, PAGE_H - 44, "Term 2 sessions · Term 3 lessons & capstone",
-                  size=8.5, color=CREAM, align="right")
+                  size=7.5, bold=True, color=GREY)
+        self.text(MARGIN, PAGE_H - 44, "Student Feedback Form", size=19, bold=True)
+        self.text(PAGE_W - MARGIN, PAGE_H - 44, "Term 2 sessions · Term 3 lessons",
+                  size=8.5, color=GREY, align="right")
+        self.c.setStrokeColor(INK)
+        self.c.setLineWidth(1.5)
+        self.c.line(MARGIN, PAGE_H - band_h + 4, PAGE_W - MARGIN, PAGE_H - band_h + 4)
         self.y = PAGE_H - band_h - 18
         self.text(MARGIN, self.y,
                   "Thank you for being part of this program! Please answer honestly – you do not "
@@ -182,7 +169,7 @@ class OnePageForm:
         y -= 4
         for index, (key, label) in enumerate(rows):
             if index % 2 == 0:
-                self.c.setFillColor(CREAM)
+                self.c.setFillColor(ROW_SHADE)
                 self.c.rect(x, y - ROW_H, width, ROW_H, stroke=0, fill=1)
             self.text(x + 3, y - ROW_H + 4.5, label, size=7.5)
             for cx, value, col_label in zip(col_x, values, labels):
@@ -268,7 +255,7 @@ class OnePageForm:
             ly = top - i * line_gap
             self.c.line(x + 6, ly, x + width - 6, ly)
         self.form.textfield(name=name, tooltip=question, x=x + 2, y=top - height + 2,
-                            width=width - 4, height=height - 4, fontSize=9, textColor=NAVY,
+                            width=width - 4, height=height - 4, fontSize=9, textColor=INK,
                             fieldFlags="multiline doNotScroll", **HIDDEN)
         return top - height
 
@@ -289,7 +276,7 @@ class OnePageForm:
                   "I agree that my comments may be shared anonymously (without my name) to "
                   "improve the program.", size=7.5)
         self.text(PAGE_W - MARGIN, self.y, "Thank you – keep building!", size=9.5, bold=True,
-                  color=PINK, align="right")
+                  align="right")
         self.y -= 10
         if self.y < BOTTOM:
             raise SystemExit("Feedback form no longer fits on one page – shorten the content.")
@@ -300,7 +287,7 @@ class OnePageForm:
         self.c.save()
 
 
-def build(path=OUTPUT, writing_lines=6):
+def build(path=OUTPUT, writing_lines=8):
     form = OnePageForm(path)
     form.header()
     form.sessions()
