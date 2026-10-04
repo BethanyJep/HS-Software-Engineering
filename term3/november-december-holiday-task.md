@@ -31,10 +31,10 @@ any extras, and use Week 7 to catch up.
 
 | Week | Dates | Main job | Open these |
 |---|---|---|---|
-| 1 | 2 – 8 Nov | Set up, then Lesson 5: interactivity | [Lesson 5 guide](lessons/lesson-5-website-interactivity.md) · [Lesson 5 slides](week-5-interactivity-slides.html) |
-| 2 | 9 – 15 Nov | Lesson 6: APIs and fetch | [Lesson 6 guide](lessons/lesson-6-apis-and-fetch.md) · [Lesson 6 slides](week-6-apis-slides.html) |
-| 3 | 16 – 22 Nov | Lesson 7: Git and GitHub | [Lesson 7 guide](lessons/lesson-7-git-and-github.md) · [Lesson 7 slides](week-7-git-slides.html) |
-| 4 | 23 – 29 Nov | Lesson 8: deploy with GitHub Pages | [Lesson 8 guide](lessons/lesson-8-deployment.md) · [Lesson 8 slides](week-8-deployment-slides.html) |
+| 1 | 2 – 8 Nov | Set up, then Lesson 5: interactivity | [Lesson 5 guide](lessons/lesson-5-website-interactivity.md) · [Lesson 5 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-5-interactivity-slides.html) |
+| 2 | 9 – 15 Nov | Lesson 6: APIs and fetch | [Lesson 6 guide](lessons/lesson-6-apis-and-fetch.md) · [Lesson 6 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-6-apis-slides.html) |
+| 3 | 16 – 22 Nov | Lesson 7: Git and GitHub | [Lesson 7 guide](lessons/lesson-7-git-and-github.md) · [Lesson 7 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-7-git-slides.html) |
+| 4 | 23 – 29 Nov | Lesson 8: deploy with GitHub Pages | [Lesson 8 guide](lessons/lesson-8-deployment.md) · [Lesson 8 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-8-deployment-slides.html) |
 | 5 | 30 Nov – 6 Dec | Test and polish | [Requirements](project-ideas.md#requirements-for-every-project) · [Judging criteria](project-guidelines.md#judging-criteria) |
 | 6 | 7 – 13 Dec | README and screenshots | [Showcase guide](../showcase/README.md) |
 | 7 | 14 – 20 Dec | Catch up and **submit** | [Capstone Showcase Form](https://github.com/BethanyJep/HS-Software-Engineering/issues/new?template=capstone-showcase.yml) |
@@ -58,7 +58,7 @@ any extras, and use Week 7 to catch up.
 
 **Then: Lesson 5**
 
-- [ ] Work through the [Lesson 5 slides](week-5-interactivity-slides.html) step by step, with the
+- [ ] Work through the [Lesson 5 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-5-interactivity-slides.html) step by step, with the
   [Lesson 5 written guide](lessons/lesson-5-website-interactivity.md) open for extra detail.
 - [ ] Add one working interaction to your capstone.
 - [ ] Choose **Prefs → Download ZIP** in NitroIDE at the end of every session.
@@ -68,7 +68,7 @@ for Lesson 5.
 
 ### Week 2 · 9 – 15 November · Load Data with Fetch
 
-- [ ] Work through the [Lesson 6 slides](week-6-apis-slides.html) and the
+- [ ] Work through the [Lesson 6 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-6-apis-slides.html) and the
   [Lesson 6 written guide](lessons/lesson-6-apis-and-fetch.md).
 - [ ] Build the practice weather widget with [Open-Meteo](https://open-meteo.com/) (free, no key).
 - [ ] Add loading, empty, and error messages to your capstone's data.
@@ -83,7 +83,7 @@ a blank screen.
 - [ ] Install [Visual Studio Code](https://code.visualstudio.com/) and
   [Git](https://git-scm.com/downloads). If you cannot install software, use the browser-only path
   in the lesson.
-- [ ] Work through the [Lesson 7 slides](week-7-git-slides.html) and the
+- [ ] Work through the [Lesson 7 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-7-git-slides.html) and the
   [Lesson 7 written guide](lessons/lesson-7-git-and-github.md).
 - [ ] Make at least three commits with clear messages.
 
@@ -92,7 +92,7 @@ your commits.
 
 ### Week 4 · 23 – 29 November · Publish Your Website
 
-- [ ] Work through the [Lesson 8 slides](week-8-deployment-slides.html) and the
+- [ ] Work through the [Lesson 8 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-8-deployment-slides.html) and the
   [Lesson 8 written guide](lessons/lesson-8-deployment.md).
 - [ ] Turn on [GitHub Pages](https://docs.github.com/en/pages/quickstart) and open your live link.
 - [ ] Test the live site on a phone and on a computer.
@@ -119,7 +119,7 @@ publish, run it from your folder and note that in your journal.
 ### Week 6 · 7 – 13 December · README and Screenshots
 
 - [ ] Add a `README.md` to your repository (Step 7 of the
-  [Lesson 8 slides](week-8-deployment-slides.html)). Credit your data, learning resources, and
+  [Lesson 8 slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-8-deployment-slides.html)). Credit your data, learning resources, and
   any images you used.
 - [ ] Take your screenshots using the
   [how-to-screenshot table](../showcase/README.md#how-to-take-a-screenshot):
@@ -173,17 +173,18 @@ Lessons 1–4 were taught in class. Use them to revise if you forget something.
 
 | Lesson | Written guide | Slides | Where |
 |---|---|---|---|
-| 1 · HTML landing page | [Guide](lessons/lesson-1-html-landing-page.md) | [Slides](week-1-computing-slides.html) | Revision |
-| 2 · CSS styling | [Guide](lessons/lesson-2-css-styling.md) | [Slides](week-2-web-slides.html) | Revision |
-| 3 · Responsive, accessible layout | [Guide](lessons/lesson-3-advanced-html-css.md) | [Slides](week-3-responsive-slides.html) | Revision |
-| 4 · JavaScript fundamentals | [Guide](lessons/lesson-4-javascript-fundamentals.md) | [Slides](week-4-javascript-slides.html) | Revision |
-| 5 · Website interactivity | [Guide](lessons/lesson-5-website-interactivity.md) | [Slides](week-5-interactivity-slides.html) | 🏠 Week 1 |
-| 6 · APIs and fetch | [Guide](lessons/lesson-6-apis-and-fetch.md) | [Slides](week-6-apis-slides.html) | 🏠 Week 2 |
-| 7 · Git and GitHub | [Guide](lessons/lesson-7-git-and-github.md) | [Slides](week-7-git-slides.html) | 🏠 Week 3 |
-| 8 · Deployment | [Guide](lessons/lesson-8-deployment.md) | [Slides](week-8-deployment-slides.html) | 🏠 Week 4 |
+| 1 · HTML landing page | [Guide](lessons/lesson-1-html-landing-page.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-1-computing-slides.html) | Revision |
+| 2 · CSS styling | [Guide](lessons/lesson-2-css-styling.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-2-web-slides.html) | Revision |
+| 3 · Responsive, accessible layout | [Guide](lessons/lesson-3-advanced-html-css.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-3-responsive-slides.html) | Revision |
+| 4 · JavaScript fundamentals | [Guide](lessons/lesson-4-javascript-fundamentals.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-4-javascript-slides.html) | Revision |
+| 5 · Website interactivity | [Guide](lessons/lesson-5-website-interactivity.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-5-interactivity-slides.html) | 🏠 Week 1 |
+| 6 · APIs and fetch | [Guide](lessons/lesson-6-apis-and-fetch.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-6-apis-slides.html) | 🏠 Week 2 |
+| 7 · Git and GitHub | [Guide](lessons/lesson-7-git-and-github.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-7-git-slides.html) | 🏠 Week 3 |
+| 8 · Deployment | [Guide](lessons/lesson-8-deployment.md) | [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-8-deployment-slides.html) | 🏠 Week 4 |
 
-> 💡 The slides open best from the [slide deck website](../index.html#term-3). Use **←** and **→**
-> to move between steps.
+> 💡 Every slide link on this page opens the live
+> [slide deck website](https://bethanyjep.github.io/HS-Software-Engineering/#term-3), so it works on
+> a phone or computer. Use **←** and **→** (or swipe) to move between steps.
 
 ### Free Tools
 
