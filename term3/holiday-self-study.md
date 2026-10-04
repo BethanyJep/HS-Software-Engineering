@@ -28,10 +28,10 @@ minimum viable product (MVP) before anything else.
 
 | Holiday week | Self-study | Capstone output |
 |---|---|---|
-| Week 1 | [Lesson 5 – Website interactivity](lessons/lesson-5-website-interactivity.md) · [Slides](week-5-interactivity-slides.html) | A working core interaction |
-| Week 2 | [Lesson 6 – APIs and fetch](lessons/lesson-6-apis-and-fetch.md) · [Slides](week-6-apis-slides.html) | Fetched data with loading and error states |
-| Week 3 | [Lesson 7 – Git and GitHub](lessons/lesson-7-git-and-github.md) · [Slides](week-7-git-slides.html) | Your own repository with meaningful commits |
-| Week 4 | [Lesson 8 – Deployment](lessons/lesson-8-deployment.md) · [Slides](week-8-deployment-slides.html) | A tested GitHub Pages site |
+| Week 1 | [Lesson 5 – Website interactivity](lessons/lesson-5-website-interactivity.md) · [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-5-interactivity-slides.html) | A working core interaction |
+| Week 2 | [Lesson 6 – APIs and fetch](lessons/lesson-6-apis-and-fetch.md) · [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-6-apis-slides.html) | Fetched data with loading and error states |
+| Week 3 | [Lesson 7 – Git and GitHub](lessons/lesson-7-git-and-github.md) · [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-7-git-slides.html) | Your own repository with meaningful commits |
+| Week 4 | [Lesson 8 – Deployment](lessons/lesson-8-deployment.md) · [Slides](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-8-deployment-slides.html) | A tested GitHub Pages site |
 | Weeks 5–7 | Polish and submit | Fixes from feedback, a `README`, screenshots, and your [Capstone Showcase Form](../showcase/README.md) |
 
 ## Before You Leave School

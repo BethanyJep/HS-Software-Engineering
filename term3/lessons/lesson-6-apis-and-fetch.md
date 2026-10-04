@@ -8,7 +8,7 @@
 > 🏠 **Take-home lesson:** Work through these steps on your own during the holiday. Read the
 > [Holiday Self-Study Pack](../holiday-self-study.md) first.
 >
-> 🖥️ **Slides:** [Open the Lesson 6 slide deck](../week-6-apis-slides.html) to click through the key ideas.
+> 🖥️ **Slides:** [Open the Lesson 6 slide deck](https://bethanyjep.github.io/HS-Software-Engineering/term3/week-6-apis-slides.html) to click through the key ideas.
 
 ---
 
